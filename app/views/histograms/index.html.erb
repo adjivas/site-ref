@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Histograms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Date</th>
+      <th>Preamble</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @histograms.each do |histogram| %>
+      <tr>
+        <td><%= histogram.title %></td>
+        <td><%= histogram.date %></td>
+        <td><%= histogram.preamble %></td>
+        <td><%= link_to 'Show', histogram %></td>
+        <td><%= link_to 'Edit', edit_histogram_path(histogram) %></td>
+        <td><%= link_to 'Destroy', histogram, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Histogram', new_histogram_path %>

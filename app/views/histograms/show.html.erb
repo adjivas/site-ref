@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @histogram.title %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @histogram.date %>
+</p>
+
+<p>
+  <strong>Preamble:</strong>
+  <%= @histogram.preamble %>
+</p>
+
+<%= link_to 'Edit', edit_histogram_path(@histogram) %> |
+<%= link_to 'Back', histograms_path %>

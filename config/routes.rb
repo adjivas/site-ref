@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :tutor_patients
+  resources :histograms
+  resources :references
+  resources :diagnostics
+  resources :patients
   resources :tutors
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
