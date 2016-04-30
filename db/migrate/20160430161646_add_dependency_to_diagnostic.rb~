@@ -1,0 +1,5 @@
+class AddDependencyToDiagnostic < ActiveRecord::Migration
+  def change
+    add_column :diagnostics, :dependency, :references 
+  end
+end
