@@ -2,7 +2,16 @@ language: ruby
 rvm:
   - 2.2
 
+before_install:
+   - rvm install 2.1.5
+
+install:
+  - bundle install --path vendor/bundle
+  - npm install
+
 script:
   - bundle update
   - bundle install
+  - bundle exec rake build
+  - bundle exec rake builddoc
   - rake db:migrate
