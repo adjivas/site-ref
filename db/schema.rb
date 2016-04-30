@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430154448) do
+ActiveRecord::Schema.define(version: 20160430160738) do
+
+  create_table "diagnostic_trees", force: :cascade do |t|
+    t.integer  "diagnostic_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "diagnostic_trees", ["diagnostic_id"], name: "index_diagnostic_trees_on_diagnostic_id"
 
   create_table "diagnostics", force: :cascade do |t|
     t.string   "title"

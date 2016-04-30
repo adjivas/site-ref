@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Diagnostic Trees</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Diagnostic</th>
+      <th>Diagnostic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @diagnostic_trees.each do |diagnostic_tree| %>
+      <tr>
+        <td><%= diagnostic_tree.diagnostic %></td>
+        <td><%= diagnostic_tree.diagnostic %></td>
+        <td><%= link_to 'Show', diagnostic_tree %></td>
+        <td><%= link_to 'Edit', edit_diagnostic_tree_path(diagnostic_tree) %></td>
+        <td><%= link_to 'Destroy', diagnostic_tree, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Diagnostic tree', new_diagnostic_tree_path %>

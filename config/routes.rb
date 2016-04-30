@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :diagnostic_trees
   resources :tutor_patients
   resources :histograms
   resources :references
