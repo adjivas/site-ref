@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Histogram:</strong>
+  <%= @histogram_reference_diagnostic.histogram %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @histogram_reference_diagnostic.reference %>
+</p>
+
+<p>
+  <strong>Diagnostic:</strong>
+  <%= @histogram_reference_diagnostic.diagnostic %>
+</p>
+
 <%= link_to 'Edit', edit_histogram_reference_diagnostic_path(@histogram_reference_diagnostic) %> |
 <%= link_to 'Back', histogram_reference_diagnostics_path %>

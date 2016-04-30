@@ -18,7 +18,7 @@ class HistogramReferenceDiagnosticsControllerTest < ActionController::TestCase
 
   test "should create histogram_reference_diagnostic" do
     assert_difference('HistogramReferenceDiagnostic.count') do
-      post :create, histogram_reference_diagnostic: {  }
+      post :create, histogram_reference_diagnostic: { diagnostic_id: @histogram_reference_diagnostic.diagnostic_id, histogram_id: @histogram_reference_diagnostic.histogram_id, reference_id: @histogram_reference_diagnostic.reference_id }
     end
 
     assert_redirected_to histogram_reference_diagnostic_path(assigns(:histogram_reference_diagnostic))
@@ -35,7 +35,7 @@ class HistogramReferenceDiagnosticsControllerTest < ActionController::TestCase
   end
 
   test "should update histogram_reference_diagnostic" do
-    patch :update, id: @histogram_reference_diagnostic, histogram_reference_diagnostic: {  }
+    patch :update, id: @histogram_reference_diagnostic, histogram_reference_diagnostic: { diagnostic_id: @histogram_reference_diagnostic.diagnostic_id, histogram_id: @histogram_reference_diagnostic.histogram_id, reference_id: @histogram_reference_diagnostic.reference_id }
     assert_redirected_to histogram_reference_diagnostic_path(assigns(:histogram_reference_diagnostic))
   end
 

@@ -69,6 +69,6 @@ class HistogramReferenceDiagnosticsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def histogram_reference_diagnostic_params
-      params.fetch(:histogram_reference_diagnostic, {})
+      params.require(:histogram_reference_diagnostic).permit(:histogram_id, :reference_id, :diagnostic_id)
     end
 end
