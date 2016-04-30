@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430161646) do
+ActiveRecord::Schema.define(version: 20160430164047) do
 
   create_table "diagnostics", force: :cascade do |t|
     t.string   "title"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(version: 20160430161646) do
   end
 
   add_index "diagnostics", ["dependency_id"], name: "index_diagnostics_on_dependency_id"
+
+  create_table "histogram_reference_diagnostics", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "histograms", force: :cascade do |t|
     t.string   "title"

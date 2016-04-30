@@ -1,0 +1,17 @@
+<%= form_for(@histogram_reference_diagnostic) do |f| %>
+  <% if @histogram_reference_diagnostic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@histogram_reference_diagnostic.errors.count, "error") %> prohibited this histogram_reference_diagnostic from being saved:</h2>
+
+      <ul>
+      <% @histogram_reference_diagnostic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
