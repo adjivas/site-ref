@@ -1,4 +1,14 @@
 language: ruby
+sudo: false
+group: stable
+cache: bundler
+addons:
+  postgresql: '9.3'
+  apt:
+    packages:
+      - libpcap-dev
+      - graphviz
+language: ruby
 rvm:
   - 2.2
 
@@ -6,11 +16,10 @@ node_js:
   - "5"
 
 before_install:
-   - rvm install 2.1.5
+   - rake --version
 
 install:
   - bundle install --path vendor/bundle
-  - npm install
 
 script:
   - bundle update
