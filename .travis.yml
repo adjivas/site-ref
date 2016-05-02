@@ -16,7 +16,13 @@ node_js:
   - "5"
 
 before_install:
-   - rake --version
+  - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
+  - rake --version
+
+before_script:
+  - bundle exec rake --version
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
 
 install:
   - bundle install --path vendor/bundle
@@ -24,6 +30,4 @@ install:
 script:
   - bundle update
   - bundle install
-  - bundle exec rake build
-  - bundle exec rake builddoc
   - rake db:migrate
