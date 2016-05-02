@@ -29,5 +29,6 @@ install:
 
 script:
   - bundle update
+  - bundle update rake
   - bundle install
-  - rake db:migrate
+  - bundle exec rake db:migrate
