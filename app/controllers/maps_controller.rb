@@ -5,6 +5,9 @@ class MapsController < ApplicationController
   # GET /maps.json
   def index
     @maps = Map.all
+    @hash = Gmaps4rails.build_markers(@maps) do |map, marker|
+      marker.address map.address
+    end
   end
 
   # GET /maps/1

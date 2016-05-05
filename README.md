@@ -2,6 +2,14 @@
 
 [![Build Status](https://travis-ci.org/adjivas/site-ref.svg?branch=master)](https://travis-ci.org/adjivas/site-ref)
 
+
+# How to save with Heroku
+```shell
+heroku login
+git push heroku origin
+heroku run rake db:migrate
+```
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
