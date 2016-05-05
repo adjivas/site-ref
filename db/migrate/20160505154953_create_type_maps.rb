@@ -1,9 +1,0 @@
-class CreateTypeMaps < ActiveRecord::Migration
-  def change
-    create_table :type_maps do |t|
-      t.string :description
-
-      t.timestamps null: false
-    end
-  end
-end
