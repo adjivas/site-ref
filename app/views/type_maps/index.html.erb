@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Type Maps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_maps.each do |type_map| %>
+      <tr>
+        <td><%= type_map.description %></td>
+        <td><%= link_to 'Show', type_map %></td>
+        <td><%= link_to 'Edit', edit_type_map_path(type_map) %></td>
+        <td><%= link_to 'Destroy', type_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type map', new_type_map_path %>
