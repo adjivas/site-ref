@@ -9,11 +9,17 @@ addons:
       - libpcap-dev
       - graphviz
 language: ruby
-rvm:
-  - 2.2
-
 node_js: 
   - "5"
+rvm:
+  - 2.2
+deploy:
+  provider: heroku
+  app:
+    master: site-ref-adjivas
+  api_key: 
+    secure: "mGHyGNuY2fnzyEx05m71xJN7C2OH0jZO18yYcAEvCQcuWLdzUFrGIm0Fy6OA9ZLh1GsdhMgb+t73vlX/rK4C6TkYrXykZtLLSM/VORqI71qDKrlfUHjSPKnwyI6n3Xxzl6HLJaXXnA63xuhcQtaG8V07R/ZMKKmSNlYerTLsV0ltqcgvJSkUUVf3whLAEzMmwP21lY/q0N5vSTu8KH1ht4zu1iQwZJ0RAfhsmJCwyUVTftk5HRXjdfoFsRh69YxuC4UYkGEz8fYLUrGePO+AVtF2HkX1OyvpeYDDJZ9Qz5P7D5KwFpxLZ6/lJDfP8HYtZk7uSlfprIZveKM4K6e5A+ZGAdfH2npg5GvbuAmf8lKxSBtImFLqQ6ZJn+oWK8Wgl3nTL0VdPKYd01dO9PZ7dEBFe4yQmxAxPK8hYcDr2tyjE9QLJPZ8MDeCDQrxnBrP+9QN1mkzjNyxNdhWpv5icjBePy4API+Au0FXe8TOfGse2+uNGGOXwaneKkLJM86Sm8FmbRk8ibDDzDrDYikwI7MsYpIecTXtXoWgUyJV1NZqcC8cCi5ZIBGkKXeIVO+Lh/q/YnoaI21uHkGsOGGf9xV51tVyX5CffsL6PbeCzidXZz2aN2ZNjTzQ9L3T6VNlkwEygDpbk6Ilz9seHLFR8fcFq0X5IALo2cdDPaIDVS4="
+  run: "rake db:migrate"
 
 before_install:
   - "echo 'gem: --no-ri --no-rdoc' > ~/.gemrc"
