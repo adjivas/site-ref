@@ -6,7 +6,7 @@ class CreateMaps < ActiveRecord::Migration
       t.string :email
       t.string :description
       t.string :departement
-      t.TypeMap :type
+      t.references :type_map, index: true, foreign_key: true
 
       t.timestamps null: false
     end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430164922) do
+ActiveRecord::Schema.define(version: 20160505162113) do
 
   create_table "diagnostics", force: :cascade do |t|
     t.string   "title"
@@ -43,6 +43,19 @@ ActiveRecord::Schema.define(version: 20160430164922) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "maps", force: :cascade do |t|
+    t.string   "address"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "description"
+    t.string   "departement"
+    t.integer  "type_map_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "maps", ["type_map_id"], name: "index_maps_on_type_map_id"
 
   create_table "patients", force: :cascade do |t|
     t.string   "pseudonym"
@@ -77,6 +90,12 @@ ActiveRecord::Schema.define(version: 20160430164922) do
     t.string   "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "type_maps", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

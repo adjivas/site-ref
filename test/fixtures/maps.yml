@@ -6,7 +6,7 @@ one:
   email: MyString
   description: MyString
   departement: MyString
-  type: 
+  type_map_id: 
 
 two:
   address: MyString
@@ -14,4 +14,4 @@ two:
   email: MyString
   description: MyString
   departement: MyString
-  type: 
+  type_map_id: 
