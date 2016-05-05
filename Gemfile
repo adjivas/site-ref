@@ -48,4 +48,7 @@ end
 gem 'geocoder'
 gem 'gmaps4rails'
 
-
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
