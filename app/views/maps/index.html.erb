@@ -8,7 +8,23 @@
 </div>
 
 <script>
-  markers = handler.addMarkers(<%=raw @hash.to_json %>);
+handler = Gmaps.build('Google');
+handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+  markers = handler.addMarkers([
+    {
+      "lat": 48.8721388,
+      "lng": 2.3389655,
+      "picture": {
+        "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+        "width":  32,
+        "height": 32
+      },
+      "infowindow": "hello!"
+    }
+  ]);
+  handler.bounds.extendWith(markers);
+  handler.fitMapToBounds();
+});
 </script>
 
 <h1>Listing Maps</h1>

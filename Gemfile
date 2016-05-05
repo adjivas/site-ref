@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Google map
 gem 'gmaps4rails', '~> 2.1', '>= 2.1.2'
+gem 'geocoder'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
