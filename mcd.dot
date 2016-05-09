@@ -1,0 +1,173 @@
+graph siteRef {
+  //! `dot -Tpng > mcd.png mcd.dot`
+
+	splines = true;
+	overlap = scalexy;
+	node [fontsize = 11];
+
+	/// Table
+
+	nodeTablePaper [label = "{
+		Paper
+			|
+				name (string)\l
+				description (string)\l
+				published (date)\l
+				diagnostic (Diagnostic)\l
+				proposed (Proposition)\l
+	}", shape=record];
+
+	nodeTableStructure [label = "{
+		Structure
+		  |
+				name (string)\l
+				type (StructureTag)\l
+				description (string)\l
+				longitude (int)\l
+				latitude (int)\l
+				email (string)\l
+				phone (string)\l
+				departement (Departement)\l
+				proposed (Proposition)\l
+	}", shape=record];
+
+	nodeTableStructureTag [label = "{
+		StructureTag
+		  |
+				name (string)\l
+	}", shape=record];
+
+	nodeTableDepartement [label = "{
+		Departement
+		  |
+				name (string)\l
+	}", shape=record];
+
+	nodeTableProject [label = "{
+		Project
+		  |
+				name (string)\l
+				from (Author)\l
+				link (string)\l
+				notation (int)\l
+				interoperable (bool)\l
+				customizable (bool)\l
+				related (RelationTag)\l
+				usabled (UsabilityTag)\l
+				proposed (Proposition)\l
+	}", shape=record];
+
+	nodeTableAuthor [label = "{
+		Author
+			|
+				name (string)\l
+				email (string)\l
+				link (int)\l
+	}", shape=record];
+
+	nodeTableRelationTag [label = "{
+		RelationTag
+			|
+				name (string)\l
+	}", shape=record];
+
+	nodeTableUsabilityTag [label = "{
+		UsabilityTag
+			|
+				name (string)\l
+	}", shape=record];
+
+	nodeTableComment [label = "{
+		Comment
+			|
+				user (User)\l
+				message (string)\l
+				grade (int)\l
+				published (date)\l
+	}", shape=record];
+
+	nodeTableProposition [label = "{
+		Proposition
+			|
+				published (date)\l
+				message (string)\l
+				reply (string)\l
+				user (User)\l
+				admin (Admin)\l
+				approved (bool)\l
+	}", shape=record];
+
+	nodeTableDiagnostic [label = "{
+		Diagnostic
+			|
+				name (string)\l
+				description (string)\l
+				help (string)\l
+				adult (bool)\l
+				dependency (Diagnostic)\l
+				departement (Departement)\l
+	}", shape=record];
+
+	nodeTableUser [label = "{
+		User
+			|
+				pseudonym (string)\l
+				link (string)\l
+				email (string)\l
+				password (string)\l
+				patient (bool)\l
+				gender (bool)\l
+				birthdate (date)\l
+				beginDiagnostic (date)\l
+				endDiagnostic (date)\l
+				departement (Departement)\l
+	}", shape=record];
+
+	/// Relation
+
+	nodeRelationPaperDiagnostic [label = "{PaperDiagnostic}", shape = Mrecord];
+	nodeRelationPaperProposition [label = "{PaperProposition}", shape = Mrecord];
+	nodeRelationStructureStructureTag [label = "{StructureStructureTag}", shape = Mrecord];
+	nodeRelationStructureDepartement [label = "{StructureDepartement}", shape = Mrecord];
+	nodeRelationStructureProposition [label = "{StructureProposition}", shape = Mrecord];
+	nodeRelationProjectRelationTag [label = "{RelationTag}", shape = Mrecord];
+	nodeRelationProjectUsabilityTag [label = "{UsabilityTag}", shape = Mrecord];
+	nodeRelationProjectProposition [label = "{ProjectProposition}", shape = Mrecord];
+	nodeRelationProjectAuthor [label = "{ProjectAuthor}", shape = Mrecord];
+	nodeRelationCommentUser [label = "{CommentUser}", shape = Mrecord];
+	nodeRelationDiagnosticDiagnostic [label = "{DiagnosticDiagnostic}", shape = Mrecord];
+	nodeRelationDiagnosticDepartement [label = "{DiagnosticDepartement}", shape = Mrecord];
+	nodeRelationUserDepartement [label = "{UserDepartement}", shape = Mrecord];
+	nodeRelationUserDiagnostic [label = "{UserDiagnostic}", shape = Mrecord];
+
+	/// Cardinality
+
+	nodeTablePaper -- nodeRelationPaperDiagnostic [headlabel = "0,n", labeldistance = 3];
+	nodeRelationPaperDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
+	nodeTablePaper -- nodeRelationPaperProposition [headlabel = "1,1", labeldistance = 3];
+	nodeRelationPaperProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3];
+	nodeTableStructure -- nodeRelationStructureStructureTag [headlabel = "1,1", labeldistance = 3];
+	nodeRelationStructureStructureTag -- nodeTableStructureTag [headlabel = "0,n", labeldistance = 3];
+	nodeTableStructure -- nodeRelationStructureDepartement [headlabel = "1,1", labeldistance = 3];
+	nodeRelationStructureDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
+	nodeTableStructure -- nodeRelationStructureProposition [headlabel = "1,1", labeldistance = 3];
+	nodeRelationStructureProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3];
+	nodeTableProject -- nodeRelationProjectRelationTag [headlabel = "1,n", labeldistance = 3];
+	nodeRelationProjectRelationTag -- nodeTableRelationTag [headlabel = "0,n", labeldistance = 3];
+	nodeTableProject -- nodeRelationProjectUsabilityTag [headlabel = "1,1", labeldistance = 3];
+	nodeRelationProjectUsabilityTag -- nodeTableUsabilityTag [headlabel = "0,n", labeldistance = 3];
+	nodeTableProject -- nodeRelationProjectProposition [headlabel = "1,1", labeldistance = 3];
+	nodeRelationProjectProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3];
+	nodeTableProject -- nodeRelationProjectAuthor [headlabel = "0,n", labeldistance = 3];
+	nodeRelationProjectAuthor -- nodeTableAuthor [headlabel = "1,n", labeldistance = 3];
+	nodeTableComment -- nodeRelationCommentUser [headlabel = "1,1", labeldistance = 3];
+	nodeRelationCommentUser -- nodeTableUser [headlabel = "0,n", labeldistance = 3];
+	nodeTableDiagnostic -- nodeRelationDiagnosticDiagnostic [headlabel = "0,n", labeldistance = 3];
+	nodeRelationDiagnosticDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
+	nodeTableDiagnostic -- nodeRelationDiagnosticDepartement [headlabel = "0,n", labeldistance = 3];
+	nodeRelationDiagnosticDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
+	nodeTableUser -- nodeRelationUserDepartement [headlabel = "0,n", labeldistance = 3];
+	nodeRelationUserDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
+	nodeTableUser -- nodeRelationUserDiagnostic [headlabel = "0,1", labeldistance = 3];
+	nodeRelationUserDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
+}
