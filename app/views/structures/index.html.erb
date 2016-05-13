@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Structures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Juridical</th>
+      <th>Description</th>
+      <th>Address</th>
+      <th>Longitude</th>
+      <th>Latitude</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Departement</th>
+      <th>Proposition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @structures.each do |structure| %>
+      <tr>
+        <td><%= structure.name %></td>
+        <td><%= structure.juridical %></td>
+        <td><%= structure.description %></td>
+        <td><%= structure.address %></td>
+        <td><%= structure.longitude %></td>
+        <td><%= structure.latitude %></td>
+        <td><%= structure.email %></td>
+        <td><%= structure.phone %></td>
+        <td><%= structure.departement %></td>
+        <td><%= structure.proposition %></td>
+        <td><%= link_to 'Show', structure %></td>
+        <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
+        <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Structure', new_structure_path %>

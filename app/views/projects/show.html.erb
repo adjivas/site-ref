@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @project.name %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @project.from %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @project.link %>
+</p>
+
+<p>
+  <strong>Notation:</strong>
+  <%= @project.notation %>
+</p>
+
+<p>
+  <strong>Interoperable:</strong>
+  <%= @project.interoperable %>
+</p>
+
+<p>
+  <strong>Customizable:</strong>
+  <%= @project.customizable %>
+</p>
+
+<p>
+  <strong>Relation:</strong>
+  <%= @project.relation %>
+</p>
+
+<p>
+  <strong>Usability:</strong>
+  <%= @project.usability %>
+</p>
+
+<p>
+  <strong>Proposition:</strong>
+  <%= @project.proposition %>
+</p>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

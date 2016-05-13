@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @structure.name %>
+</p>
+
+<p>
+  <strong>Juridical:</strong>
+  <%= @structure.juridical %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @structure.description %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @structure.address %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @structure.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @structure.latitude %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @structure.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @structure.phone %>
+</p>
+
+<p>
+  <strong>Departement:</strong>
+  <%= @structure.departement %>
+</p>
+
+<p>
+  <strong>Proposition:</strong>
+  <%= @structure.proposition %>
+</p>
+
+<%= link_to 'Edit', edit_structure_path(@structure) %> |
+<%= link_to 'Back', structures_path %>

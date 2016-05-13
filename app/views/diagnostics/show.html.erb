@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @diagnostic.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @diagnostic.description %>
+</p>
+
+<p>
+  <strong>Help:</strong>
+  <%= @diagnostic.help %>
+</p>
+
+<p>
+  <strong>Adult:</strong>
+  <%= @diagnostic.adult %>
+</p>
+
+<p>
+  <strong>Diagnostic:</strong>
+  <%= @diagnostic.diagnostic %>
+</p>
+
+<p>
+  <strong>Departement:</strong>
+  <%= @diagnostic.departement %>
+</p>
+
+<%= link_to 'Edit', edit_diagnostic_path(@diagnostic) %> |
+<%= link_to 'Back', diagnostics_path %>

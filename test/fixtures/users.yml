@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pseudonym: MyString
+  link: MyString
+  patient: 1
+  gender: 1
+  birthdate: 2016-05-13
+  begin: 2016-05-13
+  end: 2016-05-13
+  departement_id: 
+
+two:
+  pseudonym: MyString
+  link: MyString
+  patient: 1
+  gender: 1
+  birthdate: 2016-05-13
+  begin: 2016-05-13
+  end: 2016-05-13
+  departement_id: 

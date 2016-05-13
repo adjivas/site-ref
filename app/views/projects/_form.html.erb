@@ -1,0 +1,53 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :from %><br>
+    <%= f.text_field :from %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br>
+    <%= f.text_field :link %>
+  </div>
+  <div class="field">
+    <%= f.label :notation %><br>
+    <%= f.number_field :notation %>
+  </div>
+  <div class="field">
+    <%= f.label :interoperable %><br>
+    <%= f.number_field :interoperable %>
+  </div>
+  <div class="field">
+    <%= f.label :customizable %><br>
+    <%= f.number_field :customizable %>
+  </div>
+  <div class="field">
+    <%= f.label :relation_id %><br>
+    <%= f.text_field :relation_id %>
+  </div>
+  <div class="field">
+    <%= f.label :usability_id %><br>
+    <%= f.text_field :usability_id %>
+  </div>
+  <div class="field">
+    <%= f.label :proposition_id %><br>
+    <%= f.text_field :proposition_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

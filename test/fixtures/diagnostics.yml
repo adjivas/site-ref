@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  help: MyString
+  adult: 1
+  diagnostic_id: 
+  departement_id: 
+
+two:
+  name: MyString
+  description: MyText
+  help: MyString
+  adult: 1
+  diagnostic_id: 
+  departement_id: 

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  from: MyString
+  link: MyString
+  notation: 1
+  interoperable: 1
+  customizable: 1
+  relation_id: 
+  usability_id: 
+  proposition_id: 
+
+two:
+  name: MyString
+  from: MyString
+  link: MyString
+  notation: 1
+  interoperable: 1
+  customizable: 1
+  relation_id: 
+  usability_id: 
+  proposition_id: 
