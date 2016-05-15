@@ -1,4 +1,4 @@
-FROM base/archlinux
+FROM logankoester/archlinux
 LABEL name="archonrails"
 MAINTAINER adjivas <adjivas@users.noreply.github.com>
 
@@ -8,11 +8,7 @@ ENV TERM xterm-256color
 ENV EDITOR nano
 ENV HOME /home/$USER
 
-RUN pacman -Sy --noconfirm && \
-    pacman-key --refresh-keys && \
-    pacman -Su --noconfirm && \
-    pacman-db-upgrade ;
-RUN pacman -S --noconfirm base-devel ;
+RUN pacman -S --needed --noprogressbar --noconfirm base-devel ;
 RUN pacman -S --noconfirm emacs ;
 RUN pacman -S --noconfirm vim ;
 RUN pacman -S --noconfirm ruby ;
@@ -26,7 +22,7 @@ RUN echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers ;
 RUN useradd --create-home $USER ;
 RUN echo -e "$USER\n$USER" | passwd ;
 RUN git clone https://github.com/adjivas/site-ref.git $HOME/ref ;
-RUN chown -R $USER $HOME/ref
+RUN chown $USER $HOME/ref
 USER $USER
 
 # Configuration *Ruby on Rails*
