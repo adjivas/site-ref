@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :departements
   resources :projects
   resources :relations
   resources :authors
