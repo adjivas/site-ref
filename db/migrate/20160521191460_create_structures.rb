@@ -5,8 +5,8 @@ class CreateStructures < ActiveRecord::Migration
       t.references :juridical, index: true, foreign_key: true
       t.string :description
       t.string :address
-      t.integer :longitude
-      t.integer :latitude
+      t.float :longitude
+      t.float :latitude
       t.string :email
       t.string :phone
       t.references :link, index: true, foreign_key: true

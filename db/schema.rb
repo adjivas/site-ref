@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160521173840) do
+ActiveRecord::Schema.define(version: 20160521191159) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -111,8 +111,8 @@ ActiveRecord::Schema.define(version: 20160521173840) do
     t.integer  "juridical_id"
     t.string   "description"
     t.string   "address"
-    t.integer  "longitude"
-    t.integer  "latitude"
+    t.float    "longitude"
+    t.float    "latitude"
     t.string   "email"
     t.string   "phone"
     t.integer  "link_id"

@@ -5,8 +5,8 @@ one:
   juridical_id: 
   description: MyString
   address: MyString
-  longitude: 1
-  latitude: 1
+  longitude: 1.5
+  latitude: 1.5
   email: MyString
   phone: MyString
   link_id: 
@@ -18,8 +18,8 @@ two:
   juridical_id: 
   description: MyString
   address: MyString
-  longitude: 1
-  latitude: 1
+  longitude: 1.5
+  latitude: 1.5
   email: MyString
   phone: MyString
   link_id: 
