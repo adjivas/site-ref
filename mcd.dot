@@ -131,8 +131,8 @@ graph siteRef {
 	nodeRelationStructureJuridical [label = "{StructureJuridical}", shape = Mrecord];
 	nodeRelationStructureDepartement [label = "{StructureDepartement}", shape = Mrecord];
 	nodeRelationStructureProposition [label = "{StructureProposition}", shape = Mrecord];
-	nodeRelationProjectRelation [label = "{Relation}", shape = Mrecord];
-	nodeRelationProjectUsability [label = "{Usability}", shape = Mrecord];
+	nodeRelationProjectRelation [label = "{ProjectRelation}", shape = Mrecord];
+	nodeRelationProjectUsability [label = "{ProjectUsability}", shape = Mrecord];
 	nodeRelationProjectProposition [label = "{ProjectProposition}", shape = Mrecord];
 	nodeRelationProjectAuthor [label = "{ProjectAuthor}", shape = Mrecord];
 	nodeRelationDiagnosticDiagnostic [label = "{DiagnosticDiagnostic}", shape = Mrecord];
