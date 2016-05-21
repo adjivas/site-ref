@@ -28,6 +28,7 @@ graph siteRef {
 				latitude (int)\l
 				email (string)\l
 				phone (string)\l
+                                link (string)\l
 				departement (Departement)\l
 				proposition (Proposition)\l
 	}", shape=record];
@@ -96,6 +97,7 @@ graph siteRef {
 				description (text)\l
 				help (string)\l
 				adult (bool)\l
+                                duration (date)\l
 				dependency (Diagnostic)\l
 				departement (Departement)\l
 	}", shape=record];
@@ -107,21 +109,19 @@ graph siteRef {
 				link (string)\l
 				email (string)\l
 				password (string)\l
-	}", shape=record];
-
-    nodeTablePatient [label = "{
-		Patient
-		    |
-			    pseudonym (string)\l
-				gender (int)\l
+				patient (bool)\l
+				gender (bool)\l
 				birthdate (date)\l
 				begin (date)\l
 				end (date)\l
 				departement (Departement)\l
 				diagnostic (Diagnostic)\l
-                scolarisation (int)\l
-                mdph (int)\l
-                helpHome (int)\l
+	}", shape=record];
+
+	nodeTableLanguage [label = "{
+		Language
+			|
+				name (string)\l
 	}", shape=record];
 
 	/// Relation
@@ -137,16 +137,18 @@ graph siteRef {
 	nodeRelationProjectAuthor [label = "{ProjectAuthor}", shape = Mrecord];
 	nodeRelationDiagnosticDiagnostic [label = "{DiagnosticDiagnostic}", shape = Mrecord];
 	nodeRelationDiagnosticDepartement [label = "{DiagnosticDepartement}", shape = Mrecord];
-	nodeRelationPatientDepartement [label = "{PatientDepartement}", shape = Mrecord];
-	nodeRelationPatientDiagnostic [label = "{PatientDiagnostic}", shape = Mrecord];
-	nodeRelationUserPatient [label = "{UserPatient}", shape = Mrecord];
+	nodeRelationUserDepartement [label = "{UserDepartement}", shape = Mrecord];
+	nodeRelationUserDiagnostic [label = "{UserDiagnostic}", shape = Mrecord];
+	nodeRelationPaperLanguage [label = "{PaperLanguage}", shape = Mrecord];
 
 	/// Cardinality
 
 	nodeTablePaper -- nodeRelationPaperDiagnostic [headlabel = "0,n", labeldistance = 3];
 	nodeRelationPaperDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
 	nodeTablePaper -- nodeRelationPaperProposition [headlabel = "1,1", labeldistance = 3];
-	nodeRelationPaperProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3];
+	nodeRelationPaperProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3]
+	nodeTablePaper -- nodeRelationPaperLanguage [headlabel = "1,1", labeldistance = 3];
+	nodeRelationPaperLanguage -- nodeTableLanguage [headlabel = "0,n", labeldistance = 3]
 	nodeTableStructure -- nodeRelationStructureJuridical [headlabel = "1,1", labeldistance = 3];
 	nodeRelationStructureJuridical -- nodeTableJuridical [headlabel = "0,n", labeldistance = 3];
 	nodeTableStructure -- nodeRelationStructureDepartement [headlabel = "1,1", labeldistance = 3];
@@ -165,10 +167,8 @@ graph siteRef {
 	nodeRelationDiagnosticDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
 	nodeTableDiagnostic -- nodeRelationDiagnosticDepartement [headlabel = "0,n", labeldistance = 3];
 	nodeRelationDiagnosticDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
-	nodeTablePatient -- nodeRelationPatientDepartement [headlabel = "0,n", labeldistance = 3];
-	nodeRelationPatientDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
-	nodeTablePatient -- nodeRelationPatientDiagnostic [headlabel = "0,1", labeldistance = 3];
-	nodeRelationPatientDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
-	nodeTableUser -- nodeRelationUserPatient [headlabel = "0,n", labeldistance = 3];
-	nodeRelationUserPatient -- nodeTablePatient [headlabel = "1,1", labeldistance = 3];
+	nodeTableUser -- nodeRelationUserDepartement [headlabel = "0,n", labeldistance = 3];
+	nodeRelationUserDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
+	nodeTableUser -- nodeRelationUserDiagnostic [headlabel = "0,1", labeldistance = 3];
+	nodeRelationUserDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
 }
