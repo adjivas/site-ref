@@ -23,12 +23,12 @@ graph siteRef {
 				name (string)\l
 				juridical: (Juridical)\l
 				description (string)\l
-                                address (string)\l
+                address (string)\l
 				longitude (int)\l
 				latitude (int)\l
 				email (string)\l
 				phone (string)\l
-                                link (string)\l
+                link (string)\l
 				departement (Departement)\l
 				proposition (Proposition)\l
 	}", shape=record];
@@ -140,6 +140,7 @@ graph siteRef {
 	nodeRelationUserDepartement [label = "{UserDepartement}", shape = Mrecord];
 	nodeRelationUserDiagnostic [label = "{UserDiagnostic}", shape = Mrecord];
 	nodeRelationPaperLanguage [label = "{PaperLanguage}", shape = Mrecord];
+	nodeRelationUserProposition [label = "{UserProposition}", shape = Mrecord];
 
 	/// Cardinality
 
@@ -171,4 +172,6 @@ graph siteRef {
 	nodeRelationUserDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
 	nodeTableUser -- nodeRelationUserDiagnostic [headlabel = "0,1", labeldistance = 3];
 	nodeRelationUserDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
+	nodeTableUser -- nodeRelationUserProposition [headlabel = "0,n", labeldistance = 3];
+	nodeRelationUserProposition -- nodeTableProposition [headlabel = "1,1", labeldistance = 3];
 }
