@@ -13,6 +13,7 @@ graph siteRef {
 				name (string)\l
 				description (string)\l
 				published (date)\l
+				language: (Language)\l
 				diagnostic (Diagnostic)\l
 				proposition (Proposition)\l
 	}", shape=record];
