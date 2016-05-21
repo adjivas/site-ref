@@ -22,7 +22,7 @@ RUN echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers ;
 RUN useradd --create-home $USER ;
 RUN echo -e "$USER\n$USER" | passwd ;
 RUN git clone https://github.com/adjivas/site-ref.git $HOME/ref ;
-RUN chown $USER $HOME/ref
+RUN chown -R $USER $HOME/ref
 USER $USER
 
 # Configuration *Ruby on Rails*
