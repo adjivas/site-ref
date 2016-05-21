@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  pseudonym: MyString
   link: MyString
   patient: 1
   gender: 1
-  birthdate: 2016-05-13
-  begin: 2016-05-13
-  end: 2016-05-13
+  birthdate: 2016-05-21
+  begin: 2016-05-21
+  end: 2016-05-21
   departement_id: 
+  diagnostic_id: 
 
 two:
-  pseudonym: MyString
   link: MyString
   patient: 1
   gender: 1
-  birthdate: 2016-05-13
-  begin: 2016-05-13
-  end: 2016-05-13
+  birthdate: 2016-05-21
+  begin: 2016-05-21
+  end: 2016-05-21
   departement_id: 
+  diagnostic_id: 

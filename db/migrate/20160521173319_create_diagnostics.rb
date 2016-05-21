@@ -5,6 +5,7 @@ class CreateDiagnostics < ActiveRecord::Migration
       t.text :description
       t.string :help
       t.integer :adult
+      t.date :duration
       t.references :diagnostic, index: true, foreign_key: true
       t.references :departement, index: true, foreign_key: true
 

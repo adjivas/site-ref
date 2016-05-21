@@ -2,7 +2,8 @@
 
 one:
   name: MyString
-  from: MyString
+  author_id: 
+  link: MyString
   link: MyString
   notation: 1
   interoperable: 1
@@ -13,7 +14,8 @@ one:
 
 two:
   name: MyString
-  from: MyString
+  author_id: 
+  link: MyString
   link: MyString
   notation: 1
   interoperable: 1

@@ -9,6 +9,7 @@ one:
   latitude: 1
   email: MyString
   phone: MyString
+  link_id: 
   departement_id: 
   proposition_id: 
 
@@ -21,5 +22,6 @@ two:
   latitude: 1
   email: MyString
   phone: MyString
+  link_id: 
   departement_id: 
   proposition_id: 

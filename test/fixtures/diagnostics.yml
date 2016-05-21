@@ -5,6 +5,7 @@ one:
   description: MyText
   help: MyString
   adult: 1
+  duration: 2016-05-21
   diagnostic_id: 
   departement_id: 
 
@@ -13,5 +14,6 @@ two:
   description: MyText
   help: MyString
   adult: 1
+  duration: 2016-05-21
   diagnostic_id: 
   departement_id: 

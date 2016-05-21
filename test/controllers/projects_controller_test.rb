@@ -18,7 +18,7 @@ class ProjectsControllerTest < ActionController::TestCase
 
   test "should create project" do
     assert_difference('Project.count') do
-      post :create, project: { customizable: @project.customizable, from: @project.from, interoperable: @project.interoperable, link: @project.link, name: @project.name, notation: @project.notation, proposition_id: @project.proposition_id, relation_id: @project.relation_id, usability_id: @project.usability_id }
+      post :create, project: { author_id: @project.author_id, customizable: @project.customizable, interoperable: @project.interoperable, link: @project.link, link: @project.link, name: @project.name, notation: @project.notation, proposition_id: @project.proposition_id, relation_id: @project.relation_id, usability_id: @project.usability_id }
     end
 
     assert_redirected_to project_path(assigns(:project))
@@ -35,7 +35,7 @@ class ProjectsControllerTest < ActionController::TestCase
   end
 
   test "should update project" do
-    patch :update, id: @project, project: { customizable: @project.customizable, from: @project.from, interoperable: @project.interoperable, link: @project.link, name: @project.name, notation: @project.notation, proposition_id: @project.proposition_id, relation_id: @project.relation_id, usability_id: @project.usability_id }
+    patch :update, id: @project, project: { author_id: @project.author_id, customizable: @project.customizable, interoperable: @project.interoperable, link: @project.link, link: @project.link, name: @project.name, notation: @project.notation, proposition_id: @project.proposition_id, relation_id: @project.relation_id, usability_id: @project.usability_id }
     assert_redirected_to project_path(assigns(:project))
   end
 

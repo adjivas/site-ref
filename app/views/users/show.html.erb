@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Pseudonym:</strong>
-  <%= @user.pseudonym %>
-</p>
-
-<p>
   <strong>Link:</strong>
   <%= @user.link %>
 </p>
@@ -38,6 +33,11 @@
 <p>
   <strong>Departement:</strong>
   <%= @user.departement %>
+</p>
+
+<p>
+  <strong>Diagnostic:</strong>
+  <%= @user.diagnostic %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

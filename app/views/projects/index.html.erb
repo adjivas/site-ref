@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>From</th>
+      <th>Author</th>
+      <th>Link</th>
       <th>Link</th>
       <th>Notation</th>
       <th>Interoperable</th>
@@ -22,7 +23,8 @@
     <% @projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
-        <td><%= project.from %></td>
+        <td><%= project.author %></td>
+        <td><%= project.link %></td>
         <td><%= project.link %></td>
         <td><%= project.notation %></td>
         <td><%= project.interoperable %></td>

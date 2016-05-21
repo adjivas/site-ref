@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160513033910) do
+ActiveRecord::Schema.define(version: 20160521173840) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20160513033910) do
     t.text     "description"
     t.string   "help"
     t.integer  "adult"
+    t.date     "duration"
     t.integer  "diagnostic_id"
     t.integer  "departement_id"
     t.datetime "created_at",     null: false
@@ -47,10 +48,17 @@ ActiveRecord::Schema.define(version: 20160513033910) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "languages", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "papers", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
     t.date     "published"
+    t.integer  "language_id"
     t.integer  "diagnostic_id"
     t.integer  "proposition_id"
     t.datetime "created_at",     null: false
@@ -58,11 +66,12 @@ ActiveRecord::Schema.define(version: 20160513033910) do
   end
 
   add_index "papers", ["diagnostic_id"], name: "index_papers_on_diagnostic_id"
+  add_index "papers", ["language_id"], name: "index_papers_on_language_id"
   add_index "papers", ["proposition_id"], name: "index_papers_on_proposition_id"
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
-    t.string   "from"
+    t.integer  "author_id"
     t.string   "link"
     t.integer  "notation"
     t.integer  "interoperable"
@@ -74,6 +83,7 @@ ActiveRecord::Schema.define(version: 20160513033910) do
     t.datetime "updated_at",     null: false
   end
 
+  add_index "projects", ["author_id"], name: "index_projects_on_author_id"
   add_index "projects", ["proposition_id"], name: "index_projects_on_proposition_id"
   add_index "projects", ["relation_id"], name: "index_projects_on_relation_id"
   add_index "projects", ["usability_id"], name: "index_projects_on_usability_id"
@@ -105,6 +115,7 @@ ActiveRecord::Schema.define(version: 20160513033910) do
     t.integer  "latitude"
     t.string   "email"
     t.string   "phone"
+    t.integer  "link_id"
     t.integer  "departement_id"
     t.integer  "proposition_id"
     t.datetime "created_at",     null: false
@@ -113,6 +124,7 @@ ActiveRecord::Schema.define(version: 20160513033910) do
 
   add_index "structures", ["departement_id"], name: "index_structures_on_departement_id"
   add_index "structures", ["juridical_id"], name: "index_structures_on_juridical_id"
+  add_index "structures", ["link_id"], name: "index_structures_on_link_id"
   add_index "structures", ["proposition_id"], name: "index_structures_on_proposition_id"
 
   create_table "usabilities", force: :cascade do |t|
@@ -122,7 +134,6 @@ ActiveRecord::Schema.define(version: 20160513033910) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "pseudonym"
     t.string   "link"
     t.integer  "patient"
     t.integer  "gender"
@@ -130,10 +141,12 @@ ActiveRecord::Schema.define(version: 20160513033910) do
     t.date     "begin"
     t.date     "end"
     t.integer  "departement_id"
+    t.integer  "diagnostic_id"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
   add_index "users", ["departement_id"], name: "index_users_on_departement_id"
+  add_index "users", ["diagnostic_id"], name: "index_users_on_diagnostic_id"
 
 end

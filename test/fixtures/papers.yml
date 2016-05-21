@@ -3,13 +3,15 @@
 one:
   name: MyString
   description: MyString
-  published: 2016-05-13
+  published: 2016-05-21
+  language_id: 
   diagnostic_id: 
   proposition_id: 
 
 two:
   name: MyString
   description: MyString
-  published: 2016-05-13
+  published: 2016-05-21
+  language_id: 
   diagnostic_id: 
   proposition_id: 

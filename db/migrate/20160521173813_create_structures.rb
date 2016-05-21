@@ -9,6 +9,7 @@ class CreateStructures < ActiveRecord::Migration
       t.integer :latitude
       t.string :email
       t.string :phone
+      t.references :link, index: true, foreign_key: true
       t.references :departement, index: true, foreign_key: true
       t.references :proposition, index: true, foreign_key: true
 

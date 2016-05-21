@@ -2,7 +2,8 @@ class CreateProjects < ActiveRecord::Migration
   def change
     create_table :projects do |t|
       t.string :name
-      t.string :from
+      t.references :author, index: true, foreign_key: true
+      t.string :link
       t.string :link
       t.integer :notation
       t.integer :interoperable

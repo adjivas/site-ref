@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :structures
   resources :juridicals
   resources :propositions
+  resources :languages
   resources :users
   resources :diagnostics
   resources :departements
