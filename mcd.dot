@@ -52,7 +52,8 @@ graph siteRef {
     name (string)\l
     author (Author)\l
     link (string)\l
-    notation (int)\l
+    description (string)\l
+	logo (text)\
     interoperable (bool)\l
     customizable (bool)\l
     relation (Relation)\l
