@@ -2,4 +2,4 @@ services:
   - docker
 
 script:
-  - make build
+  - make -C debian build
