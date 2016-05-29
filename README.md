@@ -12,6 +12,20 @@ git clone -b docker https://github.com/adjivas/site-ref.git && cd site-ref/debia
 make run
 ```
 
+### How to use at 42 and in 2016
+```shell
+zsh --login "/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resources/Scripts/start.sh"
+# If there is any problem of certificat, do this and retry the back command.
+# ```shell
+# ^D
+# docker-machine rm default
+# docker-machine --debug regenerate-certs -f default
+# docker-machine --debug env default
+# ```
+git clone -b docker https://github.com/adjivas/site-ref.git && cd site-ref/debian
+make run
+```
+
 ### Directory-Tree
 ```shell
 .
