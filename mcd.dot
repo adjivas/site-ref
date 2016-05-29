@@ -48,76 +48,78 @@ graph siteRef {
 
  nodeTableProject [label = "{
   Project
-    |
-    name (string)\l
-    author (Author)\l
-    link (string)\l
-    description (string)\l
-	logo (text)\l
-    interoperable (bool)\l
-    customizable (bool)\l
-    relation (Relation)\l
-    usability (Usability)\l
-    proposition (Proposition)\l
+   |
+   name (string)\l
+   author (Author)\l
+   link (string)\l
+   description (string)\l
+   logo (text)\l
+   interoperable (bool)\l
+   customizable (bool)\l
+   relation (Relation)\l
+   usability (Usability)\l
+   proposition (Proposition)\l
  }", shape=record];
 
  nodeTableAuthor [label = "{
   Author
    |
-    name (string)\l
-    email (string)\l
-    link (string)\l
+   name (string)\l
+   email (string)\l
+   link (string)\l
  }", shape=record];
 
  nodeTableRelation [label = "{
   Relation
    |
-    name (string)\l
+   name (string)\l
  }", shape=record];
 
  nodeTableUsability [label = "{
   Usability
    |
-    name (string)\l
+   name (string)\l
  }", shape=record];
 
  nodeTableProposition [label = "{
   Proposition
    |
-    published (date)\l
-    message (text)\l
-    reply (text)\l
-    user (User)\l
-    admin (Admin)\l
-    approved (bool)\l
+   published (date)\l
+   message (text)\l
+   reply (text)\l
+   user (User)\l
+   admin (Admin)\l
+   approved (bool)\l
  }", shape=record];
 
  nodeTableDiagnostic [label = "{
   Diagnostic
    |
-    name (string)\l
-    description (text)\l
-    help (string)\l
-    adult (bool)\l
-                                duration (date)\l
-    dependency (Diagnostic)\l
-    departement (Departement)\l
+   name (string)\l
+   description (text)\l
+   help (string)\l
+   adult (bool)\l
+   duration (date)\l
+   dependency (Diagnostic)\l
+   departement (Departement)\l
  }", shape=record];
 
  nodeTableUser [label = "{
   User
    |
-    pseudonym (string)\l
-    link (string)\l
-    email (string)\l
-    password (string)\l
-    patient (bool)\l
-    gender (bool)\l
-    birthdate (date)\l
-    begin (date)\l
-    end (date)\l
-    departement (Departement)\l
-    diagnostic (Diagnostic)\l
+   pseudonym (string)\l
+   link (string)\l
+   email (string)\l
+   password (string)\l
+   patient (int)\l
+   gender (int)\l
+   birthdate (date)\l
+   begin (date)\l
+   end (date)\l
+   info_research (bool)\l
+   email_research (bool)\l
+   departement (Departement)\l
+   diagnostic (Diagnostic)\l
  }", shape=record];
 
  nodeTableLanguage [label = "{
