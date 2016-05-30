@@ -174,7 +174,7 @@ graph siteRef {
  nodeRelationDiagnosticDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
  nodeTableUser -- nodeRelationUserDepartement [headlabel = "0,n", labeldistance = 3];
  nodeRelationUserDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
- nodeTableUser -- nodeRelationUserDiagnostic [headlabel = "0,1", labeldistance = 3];
+ nodeTableUser -- nodeRelationUserDiagnostic [headlabel = "0,n", labeldistance = 3];
  nodeRelationUserDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
  nodeTableUser -- nodeRelationUserProposition [headlabel = "0,n", labeldistance = 3];
  nodeRelationUserProposition -- nodeTableProposition [headlabel = "1,1", labeldistance = 3];
