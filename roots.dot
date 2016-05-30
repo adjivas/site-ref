@@ -1,0 +1,188 @@
+graph siteRefUser {
+  //! `dot -Tpng > mcd.png mcd.dot`
+
+  ranksep=0.2;
+  compound=true;
+  splines = true;
+  node [fontsize = 11];
+  graph [fontsize=10, compound=true];
+
+
+  # Actor
+
+  nodeUser [label = "User \"Loutre\"", shape=egg];
+
+  # View
+
+  subgraph clusterTitleConnect {
+    label="Connect";
+    nodeFormUserConnect [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Email</FONT></TD>
+          <TD BGCOLOR="#F3F3F4" ROWSPAN="2">Sign in</TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Password</FONT></TD>
+        </TR>
+    </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+  }
+
+  subgraph clusterTitleJoin {
+    label="Join";
+    nodeFormUserJoin [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Pseudonym</FONT></TD>
+          <TD BGCOLOR="#F3F3F4" ROWSPAN="2">Sign up</TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Link</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Email</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Password</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Description</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Patient</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Gender</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Birthdate</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Begin diagnostic</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">End diagnostic</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Info research</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Email research</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Departement</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Diagnostic</FONT></TD>
+        </TR>
+    </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+  }
+
+  subgraph clusterTitlePaperPropose {
+    label="Propose Paper";
+    nodeFormPaperPropose [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Name</FONT></TD>
+          <TD BGCOLOR="#F3F3F4" ROWSPAN="2">Send</TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Description</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Published</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Language</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Diagnostic</FONT></TD>
+        </TR>
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+    nodeFormPaperPropositionSend [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">message</FONT></TD>
+        </TR>
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+  }
+
+  subgraph clusterTitleStructurePropose {
+    label="Propose Structure";
+    nodeFormStructurePropose [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Name</FONT></TD>
+          <TD BGCOLOR="#F3F3F4" ROWSPAN="2">Send</TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Juridical</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Description</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Address</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Longitude</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Latitude</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Email</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Phone</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Link</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Departement</FONT></TD>
+        </TR>
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+    nodeFormStructurePropositionSend [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">message</FONT></TD>
+        </TR>
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+  }
+
+  subgraph clusterTitleProjectPropose {
+    label="Propose Project";
+    nodeFormProjectPropose [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Name</FONT></TD>
+          <TD BGCOLOR="#F3F3F4" ROWSPAN="2">Send</TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Link</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Description</FONT></TD>
+        </TR>
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Logo</FONT></TD>
+        </TR>
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+    nodeFormProjectPropositionSend [label=<
+      <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
+        <TR>
+  	      <TD ALIGN="LEFT"><FONT COLOR="#454545">message</FONT></TD>
+        </TR>
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+  }
+
+  # Redirection
+
+  nodeUser -- nodeFormUserConnect [lhead=clusterTitleConnect];
+  nodeUser -- nodeFormUserJoin [lhead=clusterTitleJoin];
+  nodeFormUserJoin -- nodeFormUserConnect [lhead=clusterTitleConnect];
+  nodeFormUserConnect -- nodeFormPaperPropose [lhead=clusterTitlePaperPropose];
+  nodeFormUserConnect -- nodeFormStructurePropose [lhead=clusterTitleStructurePropose];
+  nodeFormUserConnect -- nodeFormProjectPropose [lhead=clusterTitleProjectPropose];
+}
