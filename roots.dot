@@ -1,16 +1,15 @@
 graph siteRefUser {
-  //! `dot -Tpng > mcd.png mcd.dot`
+  //! `dot -Tpng > roots.png roots.dot`
 
-  ranksep=0.2;
-  compound=true;
-  splines = true;
-  node [fontsize = 11];
-  graph [fontsize=10, compound=true];
+  graph [splines=ortho, compound=true, rankdir=TB];
+
+  node [fontsize=8];
+  edge [arrowsize=0.5];
 
 
   # Actor
 
-  nodeUser [label = "User \"Loutre\"", shape=egg];
+  nodeUser [label = "Anonym", shape=egg];
 
   # View
 
@@ -25,7 +24,7 @@ graph siteRefUser {
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Password</FONT></TD>
         </TR>
-    </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+    </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
   }
 
   subgraph clusterTitleJoin {
@@ -75,11 +74,12 @@ graph siteRefUser {
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Diagnostic</FONT></TD>
         </TR>
-    </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+    </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
   }
 
   subgraph clusterTitlePaperPropose {
     label="Propose Paper";
+	rankdir=LR;
     nodeFormPaperPropose [label=<
       <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
         <TR>
@@ -98,13 +98,13 @@ graph siteRefUser {
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Diagnostic</FONT></TD>
         </TR>
-      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
     nodeFormPaperPropositionSend [label=<
       <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">message</FONT></TD>
         </TR>
-      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
   }
 
   subgraph clusterTitleStructurePropose {
@@ -142,13 +142,13 @@ graph siteRefUser {
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Departement</FONT></TD>
         </TR>
-      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
     nodeFormStructurePropositionSend [label=<
       <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">message</FONT></TD>
         </TR>
-      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
   }
 
   subgraph clusterTitleProjectPropose {
@@ -168,21 +168,27 @@ graph siteRefUser {
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">Logo</FONT></TD>
         </TR>
-      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
     nodeFormProjectPropositionSend [label=<
       <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white">
         <TR>
   	      <TD ALIGN="LEFT"><FONT COLOR="#454545">message</FONT></TD>
         </TR>
-      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="9"];
+      </TABLE>>, shape="tab", style="filled", fillcolor="#F3F4F4", fontsize="7"];
   }
+
+  # Controleur
+
+  nodeControleurConnect [label = "{Authentified, user=Loutre}", shape = Mrecord];
+
 
   # Redirection
 
-  nodeUser -- nodeFormUserConnect [lhead=clusterTitleConnect];
-  nodeUser -- nodeFormUserJoin [lhead=clusterTitleJoin];
-  nodeFormUserJoin -- nodeFormUserConnect [lhead=clusterTitleConnect];
-  nodeFormUserConnect -- nodeFormPaperPropose [lhead=clusterTitlePaperPropose];
-  nodeFormUserConnect -- nodeFormStructurePropose [lhead=clusterTitleStructurePropose];
-  nodeFormUserConnect -- nodeFormProjectPropose [lhead=clusterTitleProjectPropose];
+  nodeUser -- nodeFormUserConnect [lhead=clusterTitleConnect, dir=forward];
+  nodeUser -- nodeFormUserJoin [lhead=clusterTitleJoin, dir=forward];
+  nodeFormUserJoin -- nodeFormUserConnect [lhead=clusterTitleConnect, dir=forward];
+  nodeFormUserConnect -- nodeControleurConnect [labeldistance = 3, dir=forward];
+  nodeControleurConnect -- nodeFormPaperPropose [lhead=clusterTitlePaperPropose, dir=forward];
+  nodeControleurConnect -- nodeFormProjectPropose [lhead=clusterTitleProjectPropose, dir=forward];
+  nodeControleurConnect -- nodeFormStructurePropose [lhead=clusterTitleStructurePropose, dir=forward];
 }
