@@ -1,0 +1,2892 @@
+var lst =  [
+	{
+    name: "Centre de Ressources Autisme Région Alsace",
+	  address: "15 rue Cranach (Hôpital Elsau) 67200 Strasbourg",
+	  phone: "03 88 11 59 52",
+	  description: "Pôle régional Enfants et Adolescents et antenne 68, Unité d’évaluation des troubles du développement, Dr Catherine Chabaux-Delarai"
+	},
+	{
+    name: "Centre de Ressources Autisme Région Alsace",
+	  address: "141 avenue de Strasbourg (EPSAN secteur 67G03) BP 83 67173 Brumath CEDEX",
+	  phone: "03 88 64 57 37",
+	  description: "Pôle départemental Adultes 67, Dr Codruta Ionescu-Ion – Dr Arielle Hochner"
+	},
+	{
+    name: "MDPH Bas Rhin",
+	  address: "6a rue du Verdon 67100 Strasbourg",
+	  phone: "08 00 74 79 00, 03 69 06 71 00",
+	  email: "accueil.mdph@cg67.fr"
+	},
+	{
+    name: "ABA67",
+	  address: "15 route de Krauterghersheim (Chez Karine Maehrel) 67870 Bischoffsheim",
+	  phone: "06 08 32 19 65",
+	  email: "aba67.asso@gmail.com"
+	},
+	{
+    name: "Autisme Alsace",
+	  address: "19 rue Louis Wiedemann 67230 Huttenheim"
+	},
+	{
+    name: "Réseau Familles – Pôle départemental Adultes 67",
+	  address: "141 avenue de Strasbourg 67173 Brumath CEDEX",
+	  phone: "03 88 64 57 37"
+	},
+	{
+    name: "Pôle régional Enfants et Adolescents et Antenne 68",
+	  address: "15 rue Cranach 67200 Strasbourg",
+	  phone: "03 88 11 59 52"
+	},
+	{
+    name: "Centre de Ressources Autisme Région Alsace",
+	  address: "27 rue du 4ème RSM (CH Rouffach) 68250 Rouffach",
+	  phone: "03 89 78 78 10",
+	  description: "Antenne 68"
+	},
+	{
+    name: "Centre de Ressources Autisme Région Alsace",
+	  address: "13 rue Charles Sandherr (Espace Autismes) 68000 Colmar",
+	  phone: "03 89 24 99 23",
+	  description: "Pôle départemental Adultes 68, Dr Christian Schaal – Dr Ayman Murad"
+	},
+	{
+    name: "MDPH Haut Rhin",
+	  address: "48 avenue de la République BP 20351 68006 Colmar CEDEX",
+	  phone: "03 89 30 68 10",
+	  email: "mdph@cg68.fr"
+	},
+	{
+    name: "Als’Asperger",
+	  address: "Centre Hospitalier de Rouffach 68250 Rouffach",
+	  phone: "07 81 98 64 33",
+	  email: "alsasperger@free.fr"
+	},
+	{
+    name: "Amitiés Autisme",
+	  address: "6 rue Runzbach (Mme Vix Fabienne) 68230 Soultzbach-les-Bains",
+	  phone: "03 89 71 13 48",
+	  email: "amitieautisme@gmail.com"
+	},
+	{
+    name: "Vital Autiste",
+	  address: "1 rue Edighoffen 68000 Colmar",
+	  phone: "03 89 27 10 55, 06 84 10 41 16"
+	},
+	{
+    name: "Collectif Autisme Sud-Alsace",  phone: "contact@collectifautisme68.fr"
+	},
+	{
+    name: "CRA Pôle adultes 68 – Espace Autismes",
+	  address: "13 rue Charles Sandherr 68000 Colmar",
+	  phone: "03 89 24 99 23, 03 89 23 11 01"
+	},
+	{
+    name: "Centre de Ressources Autisme Aquitaine",
+	  address: "9 avenue Albert Calmette (Centre Hospitalier Samuel Pozzi) 24108 Bergerac",
+	  phone: "05 53 63 86 63, 05 53 63 86 58",
+	  description: "Antenne de Bergerac, Médecin référent : Dr Toky Rajerison"
+	},
+	{
+    name: "MDPH Dordogne",
+	  address: "Rue du 26ème Régiment d’Infanterie (Bâtiment E - Cité Administrative Bugeaud) 24016 Périgueux CEDEX",
+	  phone: "05 53 03 33 55, 05 53 03 33 56",
+	  email: "mdp24@dordogne.fr"
+	},
+	{
+    name: "APEA Champcevinel",
+	  address: "Lieu-dit Majoulet 24750 Champcevinel",
+	  phone: "05 53 13 20 11",
+	  description: "la Directrice : Mme SIRAU, dépend de la Fondation de l’Isle de Périgueux"
+	},
+	{
+    name: "Fondation John Bost",
+	  address: "6 rue John Bost 24130 La Force",
+	  phone: "05 53 58 01 03, 05 53 58 54 13"
+	},
+	{
+    name: "Sésame Autisme",
+	  address: "6 rue de la Dordogne 24680 Gardonne",
+	  phone: "05 53 27 07 51",
+	  email: "sesameautisme24@wanadoo.fr"
+	},
+	{
+    name: "Réseau Bulle 24",
+	  address: "24680 Gardonne",
+	  phone: "06 22 58 52 64 (Vincent)",
+	  email: "association24@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Centre de Ressources Autisme Aquitaine",
+	  address: "121 rue de la Béchade (Hôpital Charles Perrens) 33076 Bordeaux CEDEX",
+	  phone: "05 56 56 67 19, 05 56 56 67 10",
+	  description: "Coordonnateur : Dr Anouk Amestoy par délégation du Pr Bouvard"
+	},
+	{
+    name: "MDPH Gironde",
+	  address: "264 boulevard Godard (Immeuble le Phénix) 33300 Bordeaux",
+	  phone: "05 56 99 69 00, 05 56 99 69 50",
+	  email: "mdph-accueil@cg33.fr"
+	},
+	{
+    name: "D’une rive à l’autre",
+	  address: "19 rue La Tourasse 33750 Saint-Quentin-de-Baron",
+	  phone: "association.dunerivealautre@gmail.com"
+	},
+	{
+    name: "J’suis autiste mais j’me soigne",
+	  address: "21 route du Port 33820 Braud-et-Saint-Louis",
+	  phone: "06 28 43 58 92",
+	  email: "abavb@vaincrelautisme.org"
+	},
+	{
+    name: "Lo Camin",
+	  address: "Rue du Canton (Maison de Pays) 33490 Saint-Macaire",
+	  phone: "05 56 63 06 22, 06 31 47 41 80",
+	  email: "asso.locamin@gmail.com"
+	},
+	{
+    name: "ABA Attitude",
+	  address: "51 cours Tartas (Maison des Associations) 33120 Arcachon",
+	  phone: "05 56 66 69 18, 06 83 05 80 34",
+	  email: "aba.attitude@gmail.com"
+	},
+	{
+    name: "Teddy",
+	  address: "9 rue Émile Combes 33270 Floirac",
+	  phone: "05 57 54 88 41, 06 43 88 74 72",
+	  email: "assoc.teddy@hotmail.fr"
+	},
+	{
+    name: "ADAPEI Gironde",
+	  address: "39 rue Robert Caumont (Bureaux du lac II – bât. R) 33049 Bordeaux CEDEX",
+	  phone: "05 56 11 11 11, 05 56 11 11 12",
+	  email: "siege@adapei33.com"
+	},
+	{
+    name: "Alter z’égaux",
+	  address: "5 square Jean Pionneau (Résidence du Parc, appt. 433) 33520 Bruges",
+	  phone: "05 47 29 75 99, 06 16 06 54 73",
+	  email: "enfantfee@modulonet.fr"
+	},
+	{
+    name: "APEI de Bègles Mussonville",
+	  address: "98 rue Alexie Labro 33130 Bègles",
+	  phone: "05 56 87 87 70, 06 18 02 80 98",
+	  email: "chcl.bardou@free.fr,, michele.houles@neuf.fr"
+	},
+	{
+    name: "ARA Réseau Aquitaine Autisme et Troubles apparentés",
+	  address: "6 chemin de Lou Poumey 33610 Cestas",
+	  phone: "05 57 83 57 43",
+	  email: "aureag@wanadoo.fr"
+	},
+	{
+    name: "Asper 33",
+	  address: "45 rue Saint Genès 33000 Bordeaux",
+	  phone: "05 56 24 10 30",
+	  email: "asper33@free.fr"
+	},
+	{
+    name: "Autisme Sud Gironde",
+	  address: "2 rue de la Cavalle (Z.I. de la Briqueterie) 33610 Canéjan",
+	  phone: "05 56 89 89 12, 06 17 32 28 04",
+	  email: "celes.sl@wanadoo.fr"
+	},
+	{
+    name: "Autisme Gironde",
+	  address: "6 rue des Chevreuils (Lotissement Lestrille) 33370 Artigues-près-Bordeaux",
+	  phone: "05 56 31 76 62, 05 56 74 23 04",
+	  email: "contact@autisme-gironde.fr,, leclercjj@wanadoo.fr"
+	},
+	{
+    name: "Handi Intégration",
+	  address: "49 rue Armand Dulamon 33000 Bordeaux",
+	  phone: "05 56 69 70 67",
+	  email: "chan.sew.family@wanadoo.fr"
+	},
+	{
+    name: "Inter-phases",
+	  address: "42 rue Marcelin Berthelot 33140 Villenave-d’Ornon",
+	  phone: "06 79 90 60 35",
+	  email: "interphases@laposte.net"
+	},
+	{
+    name: "P’tit Dom",
+	  address: "15 chemin de Pichey 33170 Gradignan",
+	  phone: "06 76 38 04 25, 06 32 39 25 71",
+	  email: "ptitdom33@voila.fr"
+	},
+	{
+    name: "Nuage Bleu",
+	  address: "3 rue Samuel Kirz (Résidence Québec) 33000 Bordeaux",
+	  phone: "05 56 50 37 11",
+	  email: "nuagebleu.association@orange.fr"
+	},
+	{
+    name: "Sésame Autisme Aquitaine",
+	  address: "11 rue Rémi Belleau (Résidence Jean Monet) 33400 Talence",
+	  phone: "05 56 84 91 71",
+	  email: "sesame-autisme.aquitaine@wanadoo.f,, daniellequoix@aol.com"
+	},
+	{
+    name: "Association Sésame Autisme en Pays Foyen (ASAPF)",
+	  address: "Route du Tizac 33220 Port-Sainte-Foy-et-Ponchapt",
+	  phone: "05 53 27 07 51",
+	  email: "sesaasapf@free.fr"
+	},
+	{
+    name: "Scolarited",
+	  address: "7 route de Touty 33370 Pompignac",
+	  phone: "06 65 25 97 24",
+	  email: "scolarited@aol.com",
+	  description: "Intégration sociale pour enfants « Asperger » et autistes de haut niveau"
+	},
+	{
+    name: "Unis Vers",
+	  address: "2 lieu-dit Loubeyre 33190 Barie",
+	  phone: "06 10 35 21 48",
+	  email: "unis_vers33@yahoo.fr"
+	},
+	{
+    name: "URAPEI Aquitaine",
+	  address: "4 bis avenue de Chavailles (Les Bureaux du Lac I bât. 9) 33190 Bruges",
+	  phone: "05 56 75 53 03, 05 56 75 57 64",
+	  email: "urapei-aquitaine@wanadoo.fr"
+	},
+	{
+    name: "Union Régionale Autisme France Aquitaine",
+	  address: "6 rue des Chevreuils (Lotissement Lestrille) 33370 Artigues-près-Bordeaux",
+	  phone: "05 56 74 23 04",
+	  email: "leclercjj@wanadoo.fr,, leclerc.jeanjacques@neuf.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Aquitaine",
+	  address: "Avenue de Nonères (Hôpital de jour « Maison d’Oze ») 40024 Mont-de-Marsan",
+	  phone: "de Mont-de-Marsan",
+	  description: "Médecin référent : Dr Julie Farbos"
+	},
+	{
+    name: "MDPH Landes",
+	  address: "836 avenue Eloi Ducom 40025 Mont-de-Marsan CEDEX",
+	  phone: "05 58 51 53 73, 05 58 46 12 54",
+	  email: "mlph@cg40.fr"
+	},
+	{
+    name: "Autisme Amitié",
+	  address: "1665 route de Soustons 40140 Magescq",
+	  phone: "05 58 47 77 44",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Landes",
+	  address: "Maison Rome (c/o Mme Isabelle Toullec) 40300 Saint-Lon-les-Mines",
+	  phone: "05 58 57 62 63, 06 63 16 26 98",
+	  email: "autisme.landes@club-internet.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Aquitaine",
+	  address: "47916 Agen",
+	  phone: "05 53 77 69 82, 05 53 77 39 02",
+	  description: "Antenne d’Agen, Médecin référent : Dr Cédric Galera"
+	},
+	{
+    name: "MDPH Lot-et-Garonne",
+	  address: "1633 avenue du Maréchal Leclerc (Hôtel du Département) 47916 Agen CEDEX 9",
+	  phone: "05 53 69 20 50, 05 53 69 20 80",
+	  email: "mdph47@cg47.fr"
+	},
+	{
+    name: "Planète Autisme",
+	  address: "10 rue Debussy 47000 Agen",
+	  phone: "09 65 27 57 95, 06 83 41 86 66",
+	  email: "planeteautisme@gmail.com",
+	  description: "Médecin référent : Dr Cédric Galera"
+	},
+	{
+    name: "Centre de Ressources Autisme Aquitaine",
+	  address: "29 avenue du Général Leclerc (Centre Hospitalier des Pyrénées) 64039 Pau CEDEX",
+	  phone: "05 59 80 94 53, 05 59 80 95 49",
+	  description: "Antenne de Pau, La Directrice : Mme SIRAU"
+	},
+	{
+    name: "Centre de Ressources Autisme Aquitaine",
+	  address: "13 avenue de l’Interne Jacques Loeb (Centre Hospitalier de la Côte Basque) 64109 Bayonne",
+	  phone: "05 59 44 35 35, 05 59 63 35 88",
+	  description: "Antenne de Bayonne, Médecin référent : Dr Pierre Liange"
+	},
+	{
+    name: "MDPH Pyrénées Atlantiques",
+	  address: "Rue Pierre Bonnard (Cité administrative) 64000 Pau",
+	  phone: "05 59 27 50 50, 05 59 27 50 51",
+	  email: "mdph.pau@mdph64.com"
+	},
+	{
+    name: "AGPI (Association pour la Guidance Parentale et Infantile)",
+	  address: "16 bis rue Jacques Terrier 64000 Pau",
+	  phone: "05 59 06 93 18",
+	  email: "agpi64@free.fr"
+	},
+	{
+    name: "ADAPEI des Pyrénées Atlantiques",
+	  address: "105 avenue des Lilas BP 123 64001 Pau CEDEX",
+	  phone: "05 59 84 64 89",
+	  email: "adapei@adapei64.fr"
+	},
+	{
+    name: "Autisme et TED Côte Basque",
+	  address: "130 chemin des Galharret 64690 Mouguerre",
+	  phone: "06 14 60 95 03",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Désir d’Ailes",
+	  address: "11 rue Tran BP 21 64420 Pau",
+	  phone: "06 82 84 84 86",
+	  email: "desir-dailes@hotmail.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Pau Béarn",
+	  address: "12 avenue du 18ème RI 64000 Pau",
+	  phone: "05 59 68 20 94, 05 59 68 24 42",
+	  email: "autisme.pau.bearn@hotmail.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme 64 A.T.G.D.P.A.",
+	  address: "Bourg (Mairie) 64120 Larceveau-Arros-Cibits",
+	  phone: "05 59 80 24 28 (président), 06 15 99 53 46 (trésorière), 05 59 65 43 86",
+	  email: "busquetj@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "F.A.M. Bizideki",
+	  address: "Quartier Cibits 64120 Larceveau-Arros-Cibits",
+	  phone: "05 59 37 91 50",
+	  email: "foyer.bizideki@orange.fr"
+	},
+	{
+    name: "Chrysalide",
+	  address: "10 place André Emlinger (Le Forum) 64100 Bayonne",
+	  phone: "05 59 42 16 03",
+	  email: "asschrysalide@wanadoo.fr"
+	},
+	{
+    name: "TED et TSA vont à l’École",
+	  address: "15 rue du Ruisseau 64420 Artigueloutan",
+	  phone: "05 59 80 19 79",
+	  email: "ted.et.tsa@orange.fr"
+	},
+	{
+    name: "Un Nouveau Regard",
+	  address: "Quartier Minhotz (Maison Batea) 64240 Hasparren",
+	  phone: "05 59 29 49 86",
+	  email: "daugreilh.jean-guy@neuf.fr",
+	  description: "Partenaire Autisme France, Pour les parents d’enfants autistes"
+	},
+	{
+    name: "MDPH Allier",
+	  address: "Rue Aristide Briand (Château de Bellevue) 03400 Yzeure",
+	  phone: "04 70 34 15 25, 04 70 34 15 21",
+	  email: "contact@mdph03.fr"
+	},
+	{
+    name: "Allier Sésame Autisme",
+	  address: "5 route de Vallon-en-Sully 03370 Chazemais",
+	  phone: "04 70 06 75 32",
+	  email: "contact@autisme03.fr"
+	},
+	{
+    name: "APEAH",
+	  address: "35 rue du Docteur ROUX BP 1225 03104 Montluçon",
+	  phone: "04 70 02 24 21",
+	  email: "apeah@apeah.org",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "MDPH Cantal",
+	  address: "Rue Alexandre Pinard (Conseil général du Cantal) 15000 Aurillac",
+	  phone: "04 71 49 79 79",
+	  email: "acourchinoux@cg15.fr"
+	},
+	{
+    name: "ADAPEI Cantal",
+	  address: "1 rue Laparra de Fieux (Rez-de-chaussée) 15000 Aurillac",
+	  phone: "04 71 48 44 97, 04 71 48 85 33",
+	  email: "adapeiasso@adapei15.com"
+	},
+	{
+    name: "Association Éducautisme",
+	  address: "Les Roussinches 15230 Brezons",
+	  phone: "04 71 20 97 66, 06 85 08 36 97",
+	  email: "dolcherjean@orange.fr"
+	},
+	{
+    name: "ADA 15",
+	  address: "3bis rue Louis Farges 15000 Aurillac",
+	  phone: "06 88 22 66 94",
+	  email: "autisme.ada15@gmail.com",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Sésame Autisme Cantal",
+	  address: "10 rue Paul Doumer 15400 Riom-ès-Montagnes",
+	  phone: "04 71 78 17 50"
+	},
+	{
+    name: "MDPH Haute-Loire",
+	  address: "9 rue des Moulins CS 40114 43009 Le Puy-en-Velay",
+	  phone: "04 71 07 21 80, 04 71 07 21 99",
+	  email: "accueil@mdph43.fr"
+	},
+	{
+    name: "Autisme Haute-Loire",
+	  address: "7 avenue de la Libération (Mairie) 43120 Monistrol-sur-Loire",
+	  phone: "04 71 75 33 05",
+	  email: "c.bapt@wanadoo.fr"
+	},
+	{
+    name: "Haute-Loire Avenir",
+	  address: "15 rue Saint Antoine 43200 Yssingeaux",
+	  phone: "04 71 56 02 78, 04 71 56 01 58",
+	  email: "hte-loire.avenir@wanadoo.fr"
+	},
+	{
+    name: "Centre de Ressources Autisme Auvergne",
+	  address: "28 place Henri Dunant (CHU de Clermont-Ferrand) 63000 Clermont-Ferrand",
+	  phone: "04 73 75 19 48 (enfants et ados), 04 73 75 49 93 (adultes)"
+	},
+	{
+    name: "MDPH Puy-de-Dôme",
+	  address: "11 rue Vaucanson 63100 Clermont-Ferrand",
+	  phone: "04 73 74 51 20, 04 73 74 51 28",
+	  email: "mdph@mdph63.fr"
+	},
+	{
+    name: "T’Asperger",
+	  address: "4 avenue de Royat 63130 Royat",
+	  phone: "tasperger63@gmail.com"
+	},
+	{
+    name: "Agir pour vivre ensemble nos différences",
+	  address: "2 allée du Clos des Palles 63200 Marsat",
+	  phone: "06 82 94 88 18",
+	  email: "avec@laposte.net"
+	},
+	{
+    name: "Autisme Action",
+	  address: "4 avenue Anatole France (Résidence Orée du Parc - appt. 166) 63130 Royat",
+	  phone: "04 73 28 44 41, 04 73 28 44 41",
+	  email: "contact@autisme-action.com",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "A.B.A. - Auvergne",
+	  address: "1 rue de la Coutellerie 63350 Saint-Rémy-sur-Durolle",
+	  phone: "asso.aba.auvergne@gmail.com"
+	},
+	{
+    name: "Autisme Auvergne",
+	  address: "17 rue de Riom (Crouzol) 63530 Volvic",
+	  phone: "04 73 71 45 90",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Progrès 63",
+	  address: "22 avenue Gershwin 63200 Riom",
+	  phone: "04 43 98 00 11",
+	  email: "autismeprogres63@gmail.com"
+	},
+	{
+    name: "Notre Petit Prince Asperger",
+	  address: "63940 Marsac-en-Livradois",
+	  phone: "notrepetitprinceasperger@gmail.com"
+	},
+	{
+    name: "Sésame Autisme",
+	  address: "24 allée des Amandiers 63170 Aubière",
+	  phone: "04 73 44 52 81"
+	},
+	{
+    name: "Centre de Ressources Autisme Basse-Normandie",
+	  address: "27 boulevard Bertrand (CHU de Caen – Service de psychiatrie de l’enfant et de l’adolescent) 14033 Caen CEDEX 9",
+	  phone: "02 31 06 58 20, 02 31 06 58 21, 02 31 06 58 33",
+	  description: "Coordonnateur : Dr Edgar Moussaoui, Chef de service : Pr Jean-Marc Baleyte"
+	},
+	{
+    name: "A.B.A. - Apprendre Autrement Normandie",
+	  address: "BP 64 14160 Dives-sur-Mer",
+	  phone: "abanormandie@sfr.fr"
+	},
+	{
+    name: "Autisme Basse-Normandie",
+	  address: "54 rue Eustache Restout 14000 Caen",
+	  phone: "02 31 52 04 27, 02 31 52 04 27",
+	  email: "evelyne.nove@wanadoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "MDPH Calvados",
+	  address: "17 rue du 11 Novembre 14000 Caen",
+	  phone: "08 00 10 05 22",
+	  email: "mdph@calvados.fr"
+	},
+	{
+    name: "MDPH Manche",
+	  address: "586 rue de l’Exode (Maison des Solidarités de la Manche) 50008 Saint Lô CEDEX",
+	  phone: "08 10 10 10 50, 02 33 55 86 17",
+	  email: "mda@manche.fr"
+	},
+	{
+    name: "APAEIA (Association des Parents et Amis d’Enfants & Adultes Inadaptés de l’Avranchin)",
+	  address: "Rue de Dunkerque BP 135 50301 Avranches",
+	  phone: "02 33 79 03 50, 02 33 79 03 69",
+	  email: "as.apaeia@laposte.net"
+	},
+	{
+    name: "Autisme Manche",
+	  address: "Les Coignardières 50300 Le Val-Saint-Père",
+	  phone: "02 33 58 90 95, 02 33 04 64 70",
+	  email: "philippe.dumas-milne-edwards@wanadoo.fr,, nathalie.baudry6@wanadoo.fr",
+	  description: "Autre coordonnées : La Campionnerie 50260 L’Étang-Bertrand"
+	},
+	{
+    name: "Autisme Basse-Normandie",
+	  address: "122 bis rue du Val-de-Saire 50100 Cherbourg",
+	  phone: "02 31 52 04 27",
+	  email: "autisme.basse.normandie@orange.fr"
+	},
+	{
+    name: "Autisme Orne",
+	  address: "6 rue Desaix 61300 L’Aigle",
+	  phone: "02 33 24 74 62, 02 33 24 05 59",
+	  email: "agnes.woimant@wanadoo.fr"
+	},
+	{
+    name: "MDPH Orne",
+	  address: "13 rue Marchand Saillant BP 169 61005 Alençon",
+	  phone: "02 33 15 00 31",
+	  email: "mdph@cg61.fr"
+	},
+	{
+    name: "ADAPEI de l’Orne",
+	  address: "48 rue Lazare Carnot BP 278 61008 Alençon CEDEX",
+	  phone: "02 33 82 58 00, 02 33 26 63 55",
+	  email: "adapei.orne@adapei61.fr"
+	},
+	{
+    name: "Centre de Ressources Autisme Bourgogne",
+	  address: "10 boulevard du Maréchal de Lattre de Tassigny (Unité régionale de diagnostic et d’évaluation, CHU du Bocage – école des cadres infirmiers – 2ème étage,) BP 77908 21077 Dijon",
+	  phone: "03 80 29 54 19, 03 80 29 53 10",
+	  description: "Coordonnateur : Fabien Joly, Responsable médicale : Dr Céline Henry"
+	},
+	{
+    name: "MDPH Côte d’Or",
+	  address: "1 rue Joseph Tissot (Cité départementale Henri Berger) BP 1601 21000 Dijon CEDEX",
+	  phone: "08 00 80 10 90",
+	  email: "mdph@cg21.fr"
+	},
+	{
+    name: "SESSAD RESAM Autisme",
+	  address: "2 rue Jean Sans Peur 21850 Saint-Apollinaire",
+	  phone: "03 45 21 42 92, 03 80 66 76 48",
+	  email: "sessad-ted@ugecam-bfc.cnamts.fr"
+	},
+	{
+    name: "SESSAD « Centre Aurore »",
+	  address: "17 bis rue Jean XXIII 21000 Dijon",
+	  phone: "03 80 59 16 38",
+	  email: "sessad@acodege.fr"
+	},
+	{
+    name: "Institut Médico-Éducatif La Pyramide",
+	  address: "20 rue Saint Vincent de Paul 21000 Dijon",
+	  phone: "03 80 28 00 08",
+	  email: "ime.pyramide@acodege.fr"
+	},
+	{
+    name: "IME Les Colibris",
+	  address: "3 B rue Gilbert Bécaud 21800 Chevigny-Saint-Sauveur",
+	  phone: "03 80 42 84 13",
+	  email: "colibris@acodege.fr"
+	},
+	{
+    name: "FAM Résidence du Parc",
+	  address: "2 rue du Lavoir 21700 Agencourt",
+	  phone: "03 80 61 05 47, 03 80 61 14 27"
+	},
+	{
+    name: "Respir Bourgogne",
+	  address: "75D rue de Talant 21000 Dijon",
+	  phone: "03 45 21 42 92",
+	  email: "contact@respir-bourgogne.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "ADAPEI de la Nièvre",
+	  address: "120 route de Beauregard (FEUILLES) 58130 Urzy",
+	  phone: "03 86 93 07 77",
+	  email: "siege.nevers@adapei58.asso.fr"
+	},
+	{
+    name: "Autisme 58",
+	  address: "76 Grande rue 58130 Guérigny",
+	  phone: "03 86 37 31 85",
+	  email: "asso.autisme58@gmail.com"
+	},
+	{
+    name: "Centre de Ressources Autisme Bourgogne - Saône-et-Loire",
+	  address: "55 rue Auguste Champion (Unité départementale de la Saône et Loire, CHS de Sevrey) 71331 Chalon sur Saône CEDEX",
+	  phone: "03 85 92 83 98",
+	  description: "Coordonnateur : Fabien Joly, Responsable médicale : Dr Céline Henry"
+	},
+	{
+    name: "Les TED’S",
+	  address: "Route du Moulin (Chamottey) 71580 Saillenard",
+	  phone: "03 84 24 02 42, 06 89 89 22 73",
+	  email: "lesteds@batiex.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme 71 – GEPAP",
+	  address: "8 impasse Déesse Epona 71640 Saint-Martin-sous-Montaigu",
+	  phone: "03 85 45 23 05, 06 09 72 64 22"
+	},
+	{
+    name: "Réseau Bulle 71",
+	  address: "71570 Chânes",
+	  phone: "06 32 12 17 69 (Coralie)",
+	  email: "association71@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Centre de Ressources Autisme Bourgogne - Yonne",
+	  address: "1 rue Girard de Cailleux (Unité départementale de l’Yonne, CHS) 89000 Auxerre",
+	  phone: "03 86 94 39 88, 03 86 72 12 32",
+	  description: "Coordonnateur : Fabien Joly, Responsable médicale : Dr Céline Henry"
+	},
+	{
+    name: "Autisme et T.E.D. 89",
+	  address: "8 rue des Sœurs 89580 Migé",
+	  phone: "06 38 60 44 08",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Sésame Autisme 89",
+	  address: "14 rue Jean Jaurès 89190 Villeneuve-l’Archevêque",
+	  phone: "03 58 15 05 52",
+	  email: "sesame-autisme89@hotmail.fr"
+	},
+	{
+    name: "MDPH 22",
+	  address: "3 rue Villiers de l’Isle Adam CS 50401 22194 Plérin CEDEX",
+	  phone: "0 800 11 55 28 (n° vert), 02 96 01 01 80",
+	  email: "mdph@mdph.cotesdarmor.fr"
+	},
+	{
+    name: "Autisme Ouest 22",
+	  address: "Liffiac 22590 Trégomeur",
+	  phone: "02 96 79 15 28",
+	  email: "autisme_ouest_22@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Trégor Goëlo",
+	  address: "24 chemin de Kerwégan (Servel) 22300 Lannion",
+	  phone: "02 96 54 61 54",
+	  email: "autisme_tregorgoelo@orange.fr"
+	},
+	{
+    name: "Mélodie",
+	  address: "4 rue de Ker Nheli 22560 Trébeurden",
+	  phone: "06 21 04 05 58",
+	  email: "autisme.melodie@gmail.com"
+	},
+	{
+    name: "Autisme Breizh Autonomie",
+	  address: "21 rue Bécôt 22500 Paimpol",
+	  phone: "02 96 55 12 87",
+	  email: "autisme.breizh.autonomie22@orange.fr"
+	},
+	{
+    name: "Centre de Ressources Autisme Bretagne",
+	  address: "125 rue Jean Monnet (ZA Prat Pip Sud) 29490 Guipavas",
+	  phone: "02 98 89 47 70",
+	  email: "contact@cra.bzh",
+	  description: "Unité d’Appui et de Coordination"
+	},
+	{
+    name: "Autisme Fédération Bretagne Pays de la Loire",
+	  address: "55 rue de la Vierge Noire 29600 Morlaix",
+	  phone: "07 87 56 86 40",
+	  email: "secretariat@afbpl.fr"
+	},
+	{
+    name: "Asperansa",
+	  address: "10 rue Monge 29200 Brest",
+	  phone: "06 89 24 03 04",
+	  email: "asperansa@asperansa.org",
+	  description: "Partenaire Autisme France, Alliance les 4A"
+	},
+	{
+    name: "MDPH du Finistère",
+	  address: "1C rue Félix Le Dantec CS 52019 29018 Quimper CEDEX",
+	  phone: "02 98 90 50 50, 02 98 90 90 51",
+	  email: "contact@mdph29.fr"
+	},
+	{
+    name: "Autisme Cornouaille",
+	  address: "40 rue du Ménez 29500 Ergué-Gabéric",
+	  phone: "06 82 33 69 73, 06 66 77 02 97",
+	  email: "autismecornouaille@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Lud’Autisme",
+	  address: "8 rue Traverse 29800 Landerneau",
+	  phone: "ludautisme@gmail.com"
+	},
+	{
+    name: "A.B.A. - Finistère",
+	  address: "10 rue de Kérogan 29000 Quimper",
+	  phone: "09 64 11 03 75",
+	  email: "aba.finistere@orange.fr"
+	},
+	{
+    name: "MDPH 35",
+	  address: "13 avenue de Cucillé CS 13103 35031 Rennes CEDEX",
+	  phone: "08 10 01 19 19",
+	  email: "contact@mdph35.fr"
+	},
+	{
+    name: "Autisme Côte d’Émeraude",
+	  address: "57 rue du Dr Célestin Huet 35400 Saint-Malo",
+	  phone: "02 99 81 96 58, 02 99 16 98 60",
+	  email: "autisme.emeraude@free.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autism’Aide 35",
+	  address: "8 rue Gabriel Germain 35000 Rennes",
+	  phone: "06 36 77 55 87",
+	  email: "autismaide35@free.fr"
+	},
+	{
+    name: "Union Régionale Autisme France Bretagne",
+	  address: "10 allée de Berne (chez M. Denis Hue) 35200 Rennes",
+	  phone: "Autisme France"
+	},
+	{
+    name: "Goanag",
+	  address: "10 allée de Berne 35200 Rennes",
+	  phone: "02 99 53 88 81",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Association s’Éveiller et Sourire",
+	  address: "36 boulevard Albert 1er 35200 Rennes",
+	  phone: "Autisme France"
+	},
+	{
+    name: "TED Dit - Autisme Pays de Fougères",
+	  address: "9 bis rue du Fresne 35460 Saint-Brice-en-Coglès",
+	  phone: "02 99 97 89 04",
+	  email: "famille.mellier@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "A.B.A. - Ille-et-Vilaine",
+	  address: "81 boulevard Albert 1er 35200 Rennes",
+	  phone: "06 52 57 79 02",
+	  email: "aba.illeetvilaine.ca@gmail.com"
+	},
+	{
+    name: "Maison Départementale de l’Autonomie du Morbihan",
+	  address: "16 rue Ella Maillart (parc d’activité de Laroiseau) 56000 Vannes",
+	  phone: "02 97 62 74 74",
+	  email: "contact@mda56.fr"
+	},
+	{
+    name: "Je TED à Aller à l’École",
+	  address: "Place Penvern (Maison des Associations) 56600 Lanester",
+	  phone: "06 84 02 95 67",
+	  email: "tedecole@yahoo.com"
+	},
+	{
+    name: "Antenne Asperansa Lorient",
+	  address: "5 rue Jacques Brel 56100 Lorient",
+	  phone: "02 97 65 59 94",
+	  email: "antenne_asperansa.lorient@yahoo.fr"
+	},
+	{
+    name: "Papa, Maman et Moi contre l’Autisme",
+	  address: "31 rue Guillaume Le Bartz (Maison des Associations) 56000 Vannes",
+	  phone: "07 89 92 25 07",
+	  email: "pmmca56@gmail.com"
+	},
+	{
+    name: "Autisme Écoute et Partage",
+	  address: "13 rue du 19ème dragon 56520 Guidel",
+	  phone: "02 97 65 39 55, 06 66 13 83 43",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Dialogue-Autisme",  phone: "06 23 13 15 83",
+	  email: "dialogueautisme@orange.fr"
+	},
+	{
+    name: "Sésame Autisme Cher",
+	  address: "10 rue de Sarrebourg 18000 Bourges",
+	  phone: "06 78 03 62 67",
+	  email: "sesame.autisme.cher@wanadoo.fr,, directeur@sesame-autisme-cher.org"
+	},
+	{
+    name: "MDPH Eure-et-Loir",
+	  address: "57 bis rue du Docteur-Maunoury 28000 Chartres",
+	  phone: "0 800 82 83 28 (n° vert)",
+	  email: "contact@mdph28.fr"
+	},
+	{
+    name: "Autisme 28",
+	  address: "4 rue Antoine de St-Exupéry 28300 Lèves",
+	  phone: "02 37 36 35 36, 06 79 27 20 52",
+	  description: "Présidente Martine Vandermeersch"
+	},
+	{
+    name: "FAM La Chanterelle",
+	  address: "4 rue Antoine de St-Exupéry 28300 Lèves",
+	  phone: "02 37 84 13 20, 02 37 84 13 29",
+	  email: "chanterelle.28@wanadoo.fr",
+	  description: "Géré par Autisme 28"
+	},
+	{
+    name: "MDPH Indre",
+	  address: "4 rue Eugène Rolland (Centre Colbert, bâtiment E) BP 627 36020 Châteauroux CEDEX",
+	  phone: "02 54 35 24 24, 02 54 35 24 29",
+	  email: "mdph36@mdph36.fr"
+	},
+	{
+    name: "Pas à pas Indre",
+	  address: "Route de Velles (Blanche-de-Fontarce) 36000 Châteauroux",
+	  phone: "02 54 36 33 28"
+	},
+	{
+    name: "Centre de Ressources Autisme Centre",
+	  address: "2 boulevard Tonnellé (CHRU Bretonneau) 37044 Tours CEDEX 9",
+	  phone: "02 47 47 86 46, 02 18 37 05 46, 02 47 47 87 70",
+	  description: "Coordonnateur : Pr. Catherine Barthélémy"
+	},
+	{
+    name: "MDPH Indre-et-Loire",
+	  address: "19 rue Édouard Vaillant CS 14233 37042 Tours CEDEX 1",
+	  phone: "02 47 75 26 66",
+	  email: "info@mdph37.fr"
+	},
+	{
+    name: "Sésame Autisme 37",
+	  address: "62 rue Jolivet 37000 Tours",
+	  phone: "02 47 32 91 68",
+	  email: "apn_sa37@club-internet.fr"
+	},
+	{
+    name: "AMDR « Les Maisonnées »",
+	  address: "59 avenue de la Gare 37190 Azay-le-Rideau",
+	  phone: "02 47 45 24 70",
+	  email: "maisonnees.azay@wanadoo.fr",
+	  description: "Membre de Autisme Centre et de Sésame Autisme"
+	},
+	{
+    name: "ARAPI",
+	  address: "BP 1603 37016 Tours CEDEX 1",
+	  phone: "02 47 35 92 78, 02 47 35 92 78",
+	  email: "contact@arapi-autisme.fr"
+	},
+	{
+    name: "Association Vivre Autrement l’Autisme",
+	  address: "Place des Droits de l’Homme (La Maison pour Tous) 37300 Joué-lès-Tours",
+	  phone: "02 47 50 29 10"
+	},
+	{
+    name: "MDPH Loir-et-Cher",
+	  address: "34 avenue Maunoury (Cité administrative, porte D) 41000 Blois",
+	  phone: "0 800 77 77 41 (n° vert)",
+	  email: "accueil-mdph@cg41.fr"
+	},
+	{
+    name: "Sésame Autisme Loir-et-Cher",
+	  address: "12 rue du Docteur Eugène Richard 41800 Montoire-sur-le-Loir",
+	  phone: "02 54 86 44 00"
+	},
+	{
+    name: "SESSAD Dialogue Autisme",
+	  address: "641 avenue du Grain d’Or 41350 Vineuil",
+	  phone: "02 54 87 78 78",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "MDPH Loiret",
+	  address: "131 rue du Faubourg Bannier (Cité administrative Coligny - Bât. C1 / 3ème étage) 45042 Orléans CEDEX 1",
+	  phone: "02 38 25 40 40",
+	  email: "contact@mdph45.fr"
+	},
+	{
+    name: "Dialogue Autisme",
+	  address: "BP 248 45162 Olivet CEDEX",
+	  phone: "06 23 13 15 83",
+	  email: "dialogue-autisme@voila.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "MDPH Ardennes",
+	  address: "55 avenue Charles de Gaulle 08000 Charleville-Mézières",
+	  phone: "03 24 41 39 50, 03 24 41 39 76",
+	  email: "courrier@mdph08.fr"
+	},
+	{
+    name: "Ensemble pour Aurélien & Jason",
+	  address: "7 bis rue du Général de Gaulle 08230 Bourg-Fidèle",
+	  phone: "06 30 51 86 33",
+	  email: "ensembleaurelienetjason@gmail.com"
+	},
+	{
+    name: "ADAPEI 08",
+	  address: "2 bis - 4 boulevard Gambetta 08000 Charleville-Mézières",
+	  phone: "03 24 39 67 91",
+	  email: "a.d.a.p.e.iardennes@gmail.com",
+	  description: "Commission Autisme de l’Adapei 08, Collectif Autisme (région Champagne-Ardenne)"
+	},
+	{
+    name: "MDPH Aube",
+	  address: "BP 770 10026 Troyes CEDEX",
+	  phone: "03 25 42 65 70, 03 25 42 65 73",
+	  email: "mdph@cg10.fr"
+	},
+	{
+    name: "Autisme Aube",
+	  address: "80 avenue Pasteur 10000 Troyes",
+	  phone: "06 68 00 18 11",
+	  description: "Partenaire Autisme France, Collectif Autisme (région Champagne-Ardenne)"
+	},
+	{
+    name: "SESSAD Aubtimisme",
+	  address: "80 avenue Pasteur 10000 Troyes",
+	  phone: "03 25 79 00 12",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Réseau Bulle 10",
+	  address: "10350 Marigny-le-Châtel",
+	  phone: "06 16 17 14 57 (Céline)",
+	  email: "association10@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Autisme Marne",
+	  address: "36 rue René Franquet 51000 Reims",
+	  phone: "03 26 86 42 30, 06 81 35 34 51",
+	  email: "autisme-marne@orange.fr"
+	},
+	{
+    name: "Centre de Ressources Autisme Champagne-Ardenne",
+	  address: "Avenue du Général Kœnig (Diagnostic & Évaluation, Service de Psychothérapie de l’Enfant et de l’Adolescent – Hôpital Robert Debré) 51092 Reims CEDEX",
+	  phone: "03 26 78 39 67, 03 26 78 39 67",
+	  description: "Coordonnatrice : Dr Nathalie Golovkine, Horaires : le jeudi de 9h à 18h pour les bilans"
+	},
+	{
+    name: "CREAI Champagne-Ardenne",
+	  address: "51036 Châlons-en-Champagne CEDEX",
+	  phone: "03 26 68 35 71, 03 26 68 53 85",
+	  email: "cra.ca.infodoc@wanadoo.fr",
+	  description: "Directeur : M. Thibault Marmont"
+	},
+	{
+    name: "MDPH Marne",
+	  address: "50 avenue du Général Patton (Centre d’affaires Patton - Entrée A) 51000 Châlons-en-Champagne",
+	  phone: "03 26 21 57 70",
+	  email: "accueil@mdph51.fr"
+	},
+	{
+    name: "APIPA-Asperger-TSA",
+	  address: "6 Grande Rue 51500 Puisieulx",
+	  phone: "03 26 49 13 05",
+	  email: "apipa.aspergerted@orange.fr",
+	  description: "Partenaire Autisme France, Alliance les 4A, Collectif Autisme (région Champagne-Ardenne)"
+	},
+	{
+    name: "Autisme Marne",
+	  address: "36 rue du Professeur René Franquet 51100 Reims",
+	  phone: "03 26 86 42 30",
+	  description: "Partenaire Autisme France, Collectif Autisme (région Champagne-Ardenne)"
+	},
+	{
+    name: "Les Papillons Blancs de Reims",
+	  address: "6 rue Gabriel Voisin 51100 Reims",
+	  phone: "03 26 06 57 05, 03 26 24 46 67",
+	  email: "secretariat@papillonsblancs-reims.org",
+	  description: "Collectif Autisme (région Champagne-Ardenne), Affiliée UNAPEI, Association de Parents, de Personnes Handicapées Mentales et de leurs Amis"
+	},
+	{
+    name: "ACPEI",
+	  address: "43 avenue Jeanne d’Arc BP 72 51017 Châlons-en-Champagne",
+	  phone: "03 26 21 80 21",
+	  description: "Partenaire Autisme France, Collectif Autisme (région Champagne-Ardenne)"
+	},
+	{
+    name: "MDPH Haute-Marne",
+	  address: "4 cours Marcel Baron BP 42021 52901 Chaumont CEDEX 9",
+	  phone: "03 25 01 19 51",
+	  email: "mdph@haute-marne.fr"
+	},
+	{
+    name: "Autisme Un pas vers l’avenir",
+	  address: "1 place de l’Abbé Cordier 52200 Langres",
+	  phone: "07 80 45 57 10"
+	},
+	{
+    name: "Chrysalide 52",
+	  address: "5 rue Martin 52300 Donjeux",
+	  phone: "03 25 05 24 03",
+	  email: "hanon.michel0647@orange.fr",
+	  description: "Association de personnes autistes, Président : Michel HANON"
+	},
+	{
+    name: "Centre de Ressources Autisme - Corse-du-Sud",
+	  address: "4 avenue du Maréchal Juin (Pôle d’Ajaccio (Corse-du-Sud) IME des Salines) 20090 Ajaccio",
+	  phone: "04 95 56 58 50",
+	  description: "Horaires : le jeudi de 8h00 à 11h30 et de 13h à 16h30 – Le vendredi de 8h00 à 11h30"
+	},
+	{
+    name: "TED et les Autres",
+	  address: "Chemin des Vignes (Ghjunchiccia) 20167 Afa",
+	  phone: "04 95 21 70 03, 06 75 19 63 31",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Association Bulle d’Espoir",
+	  address: "La Crucciata 20166 Pietrosella",
+	  phone: "associationbulledespoir@gmail.com"
+	},
+	{
+    name: "Centre de Ressources Autisme - Haute-Corse",
+	  address: "3 rue Victor Hugo (Pôle de Bastia (Haute-Corse) Villa Marie) 20600 Bastia",
+	  phone: "04 95 56 58 50",
+	  description: "Horaires : lundi et mardi de 8h30 à 12h00 – Jeudi de 14h00 à 17h00"
+	},
+	{
+    name: "Espoir Autisme Corse",
+	  address: "Résidence la Citadelle (Lieu-dit Badello) 20250 Corte",
+	  phone: "04 95 46 31 39",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Franche-Comté",
+	  address: "2 place Saint-Jacques (CHU Saint-Jacques – Service de psychiatrie infanto-juvénile) 25030 Besançon CEDEX",
+	  phone: "03 81 21 82 44, 03 81 21 82 62",
+	  description: "Coordonnateurs : Dr Géraldine Ropers, Pr Sylvie Nezelof"
+	},
+	{
+    name: "CIRRUS",
+	  address: "6 chemin des Taraux (M. Aubert Rémy) 25160 Les Grangettes",
+	  phone: "03 81 69 62 62",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Jura",
+	  address: "21 rue Étienne Lamy 39300 Cize",
+	  phone: "03 84 52 64 89",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme 70",
+	  address: "Place Sentupéry 70100 Arc-lès-Gray"
+	},
+	{
+    name: "Autisme 90",
+	  address: "51/53 rue de Mulhouse (c/o UDAF) 90012 Belfort CEDEX",
+	  phone: "03 84 26 79 01",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Asperger Accueil",
+	  address: "1 rue Fellini 27000 Évreux",
+	  phone: "06 74 28 50 93",
+	  email: "aspergeraccueil@yahoo.fr",
+	  description: "Partenaire Autisme France, Alliance les 4A"
+	},
+	{
+    name: "Association Marie-Hélène",
+	  address: "12 boulevard Jules Janin 27000 Évreux",
+	  phone: "02 32 62 93 50, 02 32 62 93 51",
+	  email: "homes-siege@wanadoo.fr",
+	  description: "Plusieurs établissements répartis dans l’Eure"
+	},
+	{
+    name: "Les Blés en Herbe",
+	  address: "7 Grande Rue 27370 Saint-Ouen-de-Pontcheuil",
+	  phone: "06 83 79 45 13",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Les Rêves de Louis",
+	  address: "8 rue Philippe Bréant (Maison des Associations) 27300 Bernay",
+	  phone: "02 32 44 00 31",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Haute-Normandie",
+	  address: "4 rue Paul Éluard (Centre Hospitalier du Rouvray) BP 45 76301 Sotteville-lès-Rouen",
+	  phone: "02 32 95 18 64, 02 32 95 18 65"
+	},
+	{
+    name: "A.D.I.S.P.A.",
+	  address: "177 allée du Château 76190 Hautot-le-Vatois",
+	  phone: "02 35 95 20 49, 06 23 07 07 58",
+	  email: "adispa@free.fr"
+	},
+	{
+    name: "Autisme, un autre monde",
+	  address: "1607 hameau de Peromare 76170 Touffreville-la-Cable",
+	  phone: "02 32 84 33 68",
+	  email: "oangelheart@aol.com"
+	},
+	{
+    name: "Réseau Bulle 76",
+	  address: "76890 Saint-Victor-l’Abbaye",
+	  phone: "06 83 99 30 17 (Lise)",
+	  email: "association76@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Kytanlou",
+	  address: "Rue Jules Cantais (Maison des Associations) 76170 La Trinité-du-Mont",
+	  phone: "06 29 28 35 92",
+	  email: "kytanlou@neuf.fr"
+	},
+	{
+    name: "Centre de Ressources Autisme Île-de-France",
+	  address: "27 rue de Rambouillet 75012 Paris",
+	  phone: "01 49 28 54 20, 01 49 28 54 21",
+	  email: "contact@craif.org"
+	},
+	{
+    name: "MDPH Paris",
+	  address: "69 rue de la Victoire 75009 Paris",
+	  phone: "08 05 80 09 09 (n° vert), 01 53 32 37 22",
+	  email: "contact@mdph.paris.fr"
+	},
+	{
+    name: "Hopital Robert Debré",
+	  address: "48 boulevard Sérurier (Hopital Robert Debré) 75019 Paris",
+	  phone: "01 40 03 20 00",
+	  description: "Service de Psychiatrie de l’Enfant et de l’Adolescent (jusu’à 15 ans)"
+	},
+	{
+    name: "Centre Referent de Diagnostic d’Autisme",
+	  address: "47-83 boulevard de l’hôpital (Groupe Hospitalier Pitié-Salpétrière) 75013 Paris",
+	  phone: "01 42 16 23 33, 01 42 16 23 31",
+	  email: "amina.djebbar@psl.aphp.fr",
+	  description: "Service de Psychiatrie de l’Enfant et de l’Adolescent"
+	},
+	{
+    name: "Centre de Recherche et de Diagnostic Autisme et Trouble Apparentés (CREDAT)",
+	  address: "1 rue Cabanis (Centre Hospitalier Sainte-Anne) 75014 Paris",
+	  phone: "01 45 65 83 37, 01 45 65 80 61",
+	  description: "Service de Psychopathologies de l’Enfant et de l’Adolescent, Docteur Gilles Martinez"
+	},
+	{
+    name: "Centre Diagnostic et d’Évaluation Autisme Adulte (CDEAA)",
+	  address: "47-83 boulevard de l’Hôpital (Groupe Hospitalier Pitié-Salpétrière) 75013 Paris",
+	  phone: "01 42 16 28 09",
+	  description: "Service de Psychiatrie pour Adulte"
+	},
+	{
+    name: "Agir et Vivre l’Autisme, et de l’École pilote A.B.A. de Paris",
+	  address: "67 rue Archereau 75019 Paris"
+	},
+	{
+    name: "Autisme 75",
+	  address: "78 rue du Dessous-des-Berges 75000 Paris",
+	  phone: "01 45 84 29 59, 01 45 85 23 12",
+	  email: "a75.siege@autisme75.org"
+	},
+	{
+    name: "La Vie en Bleu",
+	  address: "8 rue Chevreul 75011 Paris",
+	  phone: "09 54 89 31 00",
+	  email: "sarah@lavieenbleu.org"
+	},
+	{
+    name: "TouPI",
+	  address: "120 boulevard Magenta 75010 Paris",
+	  phone: "07 81 82 45 62",
+	  email: "toupi@outlook.fr"
+	},
+	{
+    name: "AFG Autisme",
+	  address: "11 rue de la Vistule 75013 Paris",
+	  phone: "01 42 73 35 20, 09 75 24 37 88, 01 40 56 98 12",
+	  email: "afg@afg-autisme.com",
+	  description: "Association Française de Gestion de services et établissements pour personnes autistes"
+	},
+	{
+    name: "Autistes sans frontières",
+	  address: "92 avenue Niel 75017 Paris",
+	  phone: "01 46 22 18 16, 01 46 22 18 16"
+	},
+	{
+    name: "PRO Aid Autisme",
+	  address: "19 rue des Martyrs 75009 Paris",
+	  phone: "01 45 41 52 93, 01 45 41 52 93"
+	},
+	{
+    name: "Fédération française Sésame Autisme",
+	  address: "53 rue Clisson 75013 Paris",
+	  phone: "01 44 24 50 00"
+	},
+	{
+    name: "SOS Autisme France",
+	  address: "156 boulevard Pereire 75017 Paris"
+	},
+	{
+    name: "Sur les Bancs de l’École",
+	  address: "12 bis rue Léon Delhomme 75015 Paris",
+	  phone: "01 56 23 00 44",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "UNAFAM (Union nationale des amis et familles de malades psychiques)",
+	  address: "12 villa Compoint 75017 Paris",
+	  phone: "01 53 06 30 43, 01 42 63 03 03 (n° d’écoute), 01 42 63 44 00"
+	},
+	{
+    name: "UNAPEI (Union nationale des associations de parents et amis de personnes handicapées mentales)",
+	  address: "15 rue Coysevox 75876 Paris CEDEX 18",
+	  phone: "01 44 85 50 50, 01 44 85 50 60"
+	},
+	{
+    name: "Vaincre L’Autisme",
+	  address: "51 rue Servan 75011 Paris",
+	  phone: "01 47 00 47 83, 01 43 73 64 49"
+	},
+	{
+    name: "ARIA",
+	  address: "24 bis rue des Plantes 75014 Paris",
+	  phone: "01 45 41 38 88, 06 60 18 34 07",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "ASAP",
+	  address: "21 rue du Faubourg Saint-Antoine 75011 Paris",
+	  phone: "01 45 08 93 18",
+	  email: "lespetitesvictoires-asap@wanadoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Avenir",
+	  address: "96 bis rue Didot (Hôpital Broussais - Pavillon Leriche, porte 11) 75014 Paris CEDEX",
+	  phone: "01 43 47 19 70",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "IME Les Petites Victoires",
+	  address: "21 rue du Faubourg Saint-Antoine 75011 Paris",
+	  phone: "01 45 08 93 18, 01 45 08 92 32",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Plate-Forme Passage",
+	  address: "63 boulevard Lefebvre 75015 Paris",
+	  phone: "01 43 06 88 03",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "ASF 75 – Vivement l’école",
+	  address: "92 avenue Niel 75017 Paris",
+	  phone: "06 68 00 90 00",
+	  email: "delphine.piloquet@wanadoo.fr,, vivementlecole@wanadoo.fr",
+	  description: "Réseau Autistes Sans Frontières"
+	},
+	{
+    name: "LFDDE",
+	  address: "75 rue de Lourmel 75015 Paris"
+	},
+	{
+    name: "AFPSSU",
+	  address: "242 boulevard Voltaire 75011 Paris",
+	  phone: "06 07 99 26 92"
+	},
+	{
+    name: "MDPH Seine-et-Marne",
+	  address: "16 rue de l’Aluminium 77176 Savigny-le-Temple",
+	  phone: "01 64 19 11 40, 01 64 19 11 43",
+	  email: "contact@mdph77.fr"
+	},
+	{
+    name: "Clin d’œil Handicap",
+	  address: "1 hameau de la Jarrie 77750 Bussières",
+	  phone: "06 64 86 52 84"
+	},
+	{
+    name: "Un Espoir pour Enzo",
+	  address: "11 grande Allée des Charmilles 77185 Lognes",
+	  phone: "06 32 76 36 05"
+	},
+	{
+    name: "UNI-TEDS",
+	  address: "154 avenue Henri-Barbusse 77190 Dammarie-les-Lys",
+	  phone: "01 60 63 56 47",
+	  email: "secretariat@uni-teds.fr",
+	  description: "gestionnaire du SACS Uni-teds"
+	},
+	{
+    name: "Association Départementale des Parents et Amis de Personnes Handicapées Mentales de Seine-et-Marne (Adapei 77)",
+	  address: "2 ter rue René Cassin (Hall B) 77000 Melun",
+	  phone: "01 60 56 54 71, 01 60 56 54 72",
+	  email: "adapei77@wanadoo.fr"
+	},
+	{
+    name: "AURA 77 - Réseau de santé",
+	  address: "8 mail Barthélémy Thimmonier 77185 Lognes",
+	  phone: "01 60 36 45 45"
+	},
+	{
+    name: "Tedi 77",
+	  address: "8 rue des Louvières 77130 Saint-Germain-Laval",
+	  phone: "astedi77@orange.fr",
+	  description: "Réseau Autistes Sans Frontières"
+	},
+	{
+    name: "ASDAA - Association pour Sortir Divya et ses Amis de l’Autisme",
+	  address: "48 rue du Bois de Nanteau 77150 Lésigny",
+	  phone: "09 50 19 20 05, 06 34 07 06 66"
+	},
+	{
+    name: "ISTED - Intégration scolaire et troubles envahissants du développement",
+	  address: "77260 La Ferté-sous-Jouarre",
+	  phone: "01 64 20 56 44",
+	  email: "rioulab@wanadoo.fr"
+	},
+	{
+    name: "AIME 77 - Autisme Intégration par Méthodes Éducatives",
+	  address: "91 avenue André Malraux 77600 Bussy-Saint-Georges",
+	  phone: "06 22 90 85 53, 06 63 09 20 35",
+	  email: "aime77@orange,fr"
+	},
+	{
+    name: "Association des parents et amis d’enfants inadaptés de la Brie (APAEI)",
+	  address: "6 rue Georges Bizet 77380 Combs la Ville",
+	  phone: "01 60 60 18 20",
+	  email: "apaeibrie@wanadoo.fr"
+	},
+	{
+    name: "DISJETED",
+	  address: "28 avenue de Verdun 77290 Mitry-Mory",
+	  phone: "06 23 80 85 56, 06 35 36 13 94",
+	  email: "disjeted@aede.fr",
+	  description: "« Dispositif d’Intervention et de Soins pour Jeunes Enfants porteurs de Troubles Envahissants du Développement », Structure d’accueil pour enfants autistes"
+	},
+	{
+    name: "Les Récrés Éducatives",
+	  address: "4 rue ambroise Paré 77430 Champagne-sur-Seine",
+	  phone: "06 65 35 67 36, 06 33 18 17 35",
+	  email: "recres.educatives@free.fr"
+	},
+	{
+    name: "Pas à pas",
+	  address: "28 rue Victor Hugo 77250 Veneux-les-Sablons",
+	  phone: "06 63 60 39 39",
+	  email: "pasapas77sud@gmail.com",
+	  description: "Réseau Autistes Sans Frontières"
+	},
+	{
+    name: "MDPH Yvelines",
+	  address: "9 rue de la Patte d’Oie 78000 Versailles",
+	  phone: "01 39 07 55 60, 01 39 07 55 87",
+	  email: "contact@mdph.yvelines.fr"
+	},
+	{
+    name: "Unité ATED (Adultes avec Troubles Envahissants du Développement)",
+	  address: "30 rue Marc Laurent (C.H. Jean-Martin Charcot) BP 20 78375 Plaisir CEDEX",
+	  phone: "01 30 81 88 10, 01 30 81 85 66",
+	  email: "secretariat-ated@ch-charcot78.fr"
+	},
+	{
+    name: "ACANTHE",
+	  address: "38 orée de Marly 78590 Noisy-le-Roi",
+	  phone: "01 34 62 92 38"
+	},
+	{
+    name: "ADAPTED",
+	  address: "22 rue Francisco Ferrer 78240 Saint-Cyr-l’École",
+	  phone: "secretariat@adapted.fr"
+	},
+	{
+    name: "AIDERA Yvelines",
+	  address: "3 rue des Neréides 78180 Montigny le Bretonneux",
+	  phone: "01 30 43 06 89",
+	  email: "contact@aiderayvelines.org"
+	},
+	{
+    name: "Tous à l’École",
+	  address: "22 rue de des Boers 78800 Houilles",
+	  phone: "01 30 21 49 78, 01 30 21 49 78",
+	  email: "benoit.fosse@cegetel.net,, richard.pandevant@banquedorsay.fr",
+	  description: "Réseau Autistes Sans Frontières"
+	},
+	{
+    name: "Tous à l’École",
+	  address: "6 allée des Bièvres (Résidence de l’Étang) 78800 Versailles",
+	  phone: "01 30 21 49 78, 06 73 60 43 26",
+	  email: "tousalecole@laposte.net",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme en Yvelines",
+	  address: "2 bis rue Francisco Ferrer 78201 Saint-Cyr-l’École",
+	  phone: "Autisme France"
+	},
+	{
+    name: "MDPH Essonne",
+	  address: "93 rue Henri Rochefort 91000 Évry",
+	  phone: "mdphe@cg91.fr"
+	},
+	{
+    name: "AIDERA Essonne",
+	  address: "5 - 7 rue Lavoisier 91540 Mennecy",
+	  phone: "01 69 03 90 12",
+	  email: "aidera.essonne@free.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "ECOLALIES",
+	  address: "6 chemin des Cendriers 91450 Étiolles",
+	  phone: "01 69 89 00 32, 06 72 91 18 03",
+	  email: "ecolalies@yahoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Sur le Chemin des Écoliers",
+	  address: "3 allée des Monégasques 91300 Massy",
+	  phone: "06 86 72 71 96, 09 50 63 28 01",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme 91",
+	  address: "3 avenue de Rigny 91130 Ris-Orangis",
+	  phone: "01 69 06 93 57, 01 69 06 93 57",
+	  email: "carlaa2@wanadoo.fr"
+	},
+	{
+    name: "Combattre l’Autisme Aujourd’hui",
+	  address: "2 rue A. Revenaz 91000 Évry",
+	  phone: "01 60 78 31 73",
+	  email: "caa91@wanadoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "La Chalouette – Autisme Essonne",
+	  address: "78 bis rue de Valorge 91220 Brétigny-sur-Orge",
+	  phone: "01 69 88 43 62, 01 64 56 04 32, 01 69 88 43 79",
+	  email: "chalouette.autisme@wanadoo.fr"
+	},
+	{
+    name: "SAUGE (Solidarité AUtisme GEstion)",
+	  address: "8 allée des Coudraies 91190 Gif-sur-Yvette",
+	  phone: "01 69 07 82 78",
+	  email: "clairechstenet@aol.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "F.A.M. La Lendemaine",
+	  address: "Rue des Fonds d’Armenon 91470 Les Molières",
+	  phone: "01 69 92 24 05",
+	  email: "accueil@la-lendemaine.fr",
+	  description: "Contact aussi via association SAUGE"
+	},
+	{
+    name: "MDPH Hauts-de-Seine",
+	  address: "2 rue Rigault 92000 Nanterre",
+	  phone: "01 41 91 92 50, 01 41 91 93 09",
+	  email: "mdph@mdph92.fr"
+	},
+	{
+    name: "Appedia",
+	  address: "2 rue Paul Gauguin (La Butte Rouge) 92290 Châtenay-Malabry",
+	  phone: "01 46 30 39 04, 01 46 01 09 84",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Les Premières Classes",
+	  address: "53 rue d’Arthelon 92190 Meudon",
+	  phone: "gerhards.tribu@wanadoo.fr",
+	  description: "Réseau Autistes Sans Frontières"
+	},
+	{
+    name: "Association Perce-Neige",
+	  address: "102 bis boulevard Saint-Denis 92415 Courbevoie CEDEX",
+	  phone: "01 47 17 19 30"
+	},
+	{
+    name: "Mosaïques X Fragile",
+	  address: "28 avenue Gambetta 92270 Bois-Colombes",
+	  phone: "01 47 60 24 99",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "AEVE (Autisme Espoir Vers l’École)",
+	  address: "35 rue Émile Landrin 92100 Boulogne-Billancourt",
+	  phone: "08 20 99 76 34",
+	  description: "Méthode des 3i"
+	},
+	{
+    name: "Autisme 93",
+	  address: "7 rue Jules Verne 93100 Montreuil",
+	  phone: "01 42 87 21 67, 07 81 29 64 68",
+	  description: "Partenaire Autisme France, Association pour l’Avenir des Adultes"
+	},
+	{
+    name: "MDPH Créteil",
+	  address: "7 - 9 voie Félix Eboué (Bâtiment Solidarités) 94046 Créteil CEDEX",
+	  phone: "01 43 99 79 00",
+	  email: "mdph94@cg94.fr"
+	},
+	{
+    name: "Centre Expert Asperger Albert Chenevier",
+	  address: "40 rue de Mesly (Hôpital Albert Chenevier) 94010 Créteil CEDEX",
+	  phone: "01 49 81 32 90, 01 49 81 33 90",
+	  email: "creteil.psy@ach.aphp.fr",
+	  description: "Service du Prof. Marion Leboyer, Equipe 15 Psychiatrie génétique"
+	},
+	{
+    name: "SAMSAH de la Pointe du Lac",
+	  address: "67 avenue Magellan 94000 Créteil",
+	  phone: "01 41 94 80 60, 01 58 43 01 86",
+	  email: "samsahpointedulac@apogei94.net"
+	},
+	{
+    name: "FAM de la Pointe du Lac",
+	  address: "67 avenue Magellan 94000 Créteil",
+	  phone: "01 41 94 80 60, 01 58 43 01 86",
+	  email: "famdelapointedulac@apogei94.net"
+	},
+	{
+    name: "Envol Marne-la-Vallée",
+	  address: "3 chemin de la Croix 94500 Champigny-sur-Marne",
+	  phone: "01 41 77 19 53",
+	  email: "envolmarnelavallee@live.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Asperger Aide",
+	  address: "23 rue de Paris 94340 Joinville-le-Pont",
+	  phone: "06 83 50 35 74",
+	  email: "aspergeraidefrance@yahoo.fr"
+	},
+	{
+    name: "L’École pour tous",
+	  address: "6 rue Gérard de Nerval 94450 Limeil-Brévannes",
+	  phone: "01 45 69 22 86",
+	  email: "michael@gnjsupply.com",
+	  description: "Réseau Autistes Sans Frontières"
+	},
+	{
+    name: "École de Ted et ses Amis",
+	  address: "35 bis boulevard de la Marne 94100 Saint-Maur-des-Fossés",
+	  phone: "06 10 61 55 59",
+	  email: "contact@ecoledetedetsesamis.fr",
+	  description: "École pour les enfants du 94 atteins de plutihandicap dont TED Autisme"
+	},
+	{
+    name: "Espoir Autisme 94",
+	  address: "9 allée Verte 94440 Villecresnes",
+	  phone: "06 61 61 99 34",
+	  email: "tinabento.blmtp@gmail.com",
+	  description: "Écoles pour enfants autistes"
+	},
+	{
+    name: "APEI 94 - Ariane",
+	  address: "96 avenue Victor Hugo 94100 Saint-Maur-des-Fossés",
+	  phone: "01 48 85 51 64, 01 42 83 60 28",
+	  email: "ariane@apei94.org",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "MDPH du Val d’Oise",
+	  address: "2 avenue du Parc CS 20201 Cergy (Conseil général du Val d’Oise) 95032 Cergy-Pontoise CEDEX",
+	  phone: "01 34 25 16 50",
+	  email: "maisonduhandicap@valdoise.fr"
+	},
+	{
+    name: "Autisme Ensemble 95",
+	  address: "3 rue Pierre de Coubertin (Groupe scolaire Jules Verne) 95300 Pontoise",
+	  phone: "contact@autismeensemble95.com"
+	},
+	{
+    name: "Écoute Parents Enfants Autistes",
+	  address: "13 rue de Montigny 95240 Cormeilles-en-Parisis",
+	  phone: "01 39 31 71 22, 06 61 98 75 97"
+	},
+	{
+    name: "Entraide Autisme en Val-d’Oise (EVAO)",
+	  address: "20 rue de Montmorency 95350 Saint-Brice-sous-Forêt",
+	  phone: "01 39 94 21 09, 06 12 14 74 77",
+	  email: "frederiquejeanne.besson@sfr.fr"
+	},
+	{
+    name: "La Garenne du Val",
+	  address: "Allée de la Clairière 95630 Mériel",
+	  phone: "01 34 48 15 60, 01 43 99 27 56",
+	  email: "lgv.mariette.chapus@wanadoo.fr"
+	},
+	{
+    name: "AVEA - Autisme Vivons Ensemble dans L’AUDE",
+	  address: "19 bis rue Montségur 11150 Bram",
+	  phone: "04 68 76 52 62",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Réseau HandiLib’30",
+	  address: "8 allée Serge Loiseau 30000 Nîmes",
+	  phone: "06 10 63 73 40",
+	  email: "reseauhandilib30@gmail.com"
+	},
+	{
+    name: "Autisme Gard",
+	  address: "53 bis rue de la biche 30000 Nîmes",
+	  phone: "04 66 76 07 74",
+	  email: "autisme30@live.fr"
+	},
+	{
+    name: "Evan-Dys",
+	  address: "13 chemin Fouquet 30200 Bagnols-sur-Cèze"
+	},
+	{
+    name: "Centre de Ressources Autisme Languedoc-Roussillon",
+	  address: "291 avenue du Doyen Giraud (SMPEA Peyre Plantade - CHRU de Montpellier) 34295 Montpellier CEDEX 5",
+	  phone: "04 67 33 99 68, 04 67 33 08 32",
+	  email: "contact.ancra@gmail.com,, cent-ress-autisme@chu-montpellier.fr"
+	},
+	{
+    name: "Sortir De Ma Bulle",
+	  address: "27 rue Alfred de Vigny 34920 Le Crès",
+	  phone: "contact@sortirdemabulle.fr"
+	},
+	{
+    name: "Union Régionale Autisme France Languedoc-Roussillon",
+	  address: "89 avenue Louisville (Res. Lesurville - bât. 1, esc. 6) 34080 Montpellier",
+	  phone: "Autisme France"
+	},
+	{
+    name: "Autiste et Écolier 34",
+	  address: "385 avenue des Frères Bühler 34000 Montpellier",
+	  phone: "06 78 52 54 77, 06 21 32 78 13",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Solidarité Autisme LR",
+	  address: "125 rue Nigel Burgess 34500 Béziers",
+	  phone: "06 95 22 20 29",
+	  email: "solidariteautisme@gmail.com"
+	},
+	{
+    name: "L’Étoile d’Asperger",
+	  address: "11 rue du Calciné 66150 Arles-sur-Tech",
+	  phone: "06 79 65 24 09",
+	  email: "letoiledasperger@hotmail.fr"
+	},
+	{
+    name: "Autisme 66 Esperanza",
+	  address: "8 rue François Arago 66450 Pollestres",
+	  phone: "04 68 73 70 84",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Soleil Corrézien Autisme et TED",
+	  address: "Bas Roche 19350 Juillac",
+	  phone: "05 55 25 54 07",
+	  email: "soleil.correzien@orange.fr"
+	},
+	{
+    name: "Autisme 23",
+	  address: "La Rue Haute (Mme Rivière) 23000 La Chapelle-Taillefert",
+	  phone: "05 55 81 60 47",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Réseau Bulle 23",
+	  address: "23700 Mainsat",
+	  phone: "07 77 05 10 09 (Marie-Christine)",
+	  email: "association23@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Centre Régional de Diagnostic et de Ressources sur l’Autisme du Limousin (C.R.D.R.A.L)",
+	  address: "6 rue du Buisson 87170 Isle",
+	  phone: "05 55 01 78 67, 05 55 01 78 69",
+	  description: "Coordonnatrice : Nathalie Etienne"
+	},
+	{
+    name: "Pôle Diagnostic et Évaluation",
+	  address: "6 rue du Buisson (Site du CREAIL) 87170 Isle",
+	  phone: "05 55 01 78 67, 05 55 01 78 69"
+	},
+	{
+    name: "Autisme 87",
+	  address: "42 avenue de la Révolution 87000 Limoges",
+	  phone: "06 29 14 36 65",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Réseau Bulle 87",
+	  address: "87800 Nexon",
+	  phone: "06 51 08 47 72 (Marjorie)",
+	  email: "association87@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "EMAAF Limousin",
+	  address: "53 avenue de la Révolution 87000 Limoges",
+	  phone: "05 55 31 20 74",
+	  email: "docteur.mace@laposte.net"
+	},
+	{
+    name: "Centre de Ressources Autisme Lorraine",
+	  address: "1 rue du Docteur Archambault (Centre Psychothérapique de Nancy) BP 11010 54521 Laxou CEDEX",
+	  phone: "03 83 92 66 76, 03 83 92 66 79",
+	  email: "ressourcesautisme@cpn-laxou.com",
+	  description: "Coordonnateur : Jean-Luc Fabry"
+	},
+	{
+    name: "SESSAD Vivre avec l’Autisme",
+	  address: "54220 Malzéville",
+	  phone: "04 83 96 12 86",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "FAM Les Charmilles",
+	  address: "54220 Malzéville",
+	  phone: "05 83 96 12 86",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Vivre avec L’Autisme en Meurthe-et-Moselle",
+	  address: "54220 Malzéville",
+	  phone: "03 83 96 12 86",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Asperger Lorraine",
+	  address: "55 rue Anne Fériet (chez Mme Corinne Krux) 54000 Nancy",
+	  phone: "contact@aspergerlorraine.fr",
+	  description: "Partenaire Alliance les 4A"
+	},
+	{
+    name: "MDPH Moselle",
+	  address: "1 rue Claude Chappe (Europlaza, Bâtiment D, entrée D3) CS 95 213 57076 Metz CEDEX 03",
+	  phone: "03 87 21 83 00, 03 87 21 83 39",
+	  email: "mdph@moselle.fr"
+	},
+	{
+    name: "Envol Lorraine",
+	  address: "6 petit Vésinet 57690 Créhange",
+	  phone: "03 87 94 39 15, 03 87 94 39 15",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Vosges",
+	  address: "55 route du Beillard 88400 Liézey",
+	  phone: "03 29 25 96 54",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Ariège",
+	  address: "4 place du Sémalié 09100 Saint-Jean-du-Falga",
+	  phone: "05 61 69 29 21",
+	  email: "autismariege@gmail.com",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "Centre Évaluation Autisme et autres TED",
+	  address: "22 rue du Général Viala 12000 Rodez",
+	  phone: "05 65 55 16 35, 05 65 55 16 29",
+	  description: "Equipe associée d’évaluation enfants de l’Aveyron"
+	},
+	{
+    name: "Autisme Aveyron",
+	  address: "12000 Le Monastère",
+	  phone: "09 51 12 47 31, 09 56 12 47 31",
+	  email: "autisme.aveyron@free.fr"
+	},
+	{
+    name: "MANO Autisme",
+	  address: "4 rue du Claux 12850 Onet-le-Château",
+	  phone: "05 65 78 00 75",
+	  email: "patrick-barbara.lacroux@orange.fr",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "ADAPEI Aveyron/Tarn-et-Garonne",
+	  address: "Saint-Mayme 12850 Onet-le-Château",
+	  phone: "05 65 77 22 40, 05 65 77 22 41",
+	  email: "secretariat.siege@adapei12-82.fr"
+	},
+	{
+    name: "Centre de Ressources Autisme Midi-Pyrénées",
+	  address: "Place Lange (CHU La Grave) TSA 60033 31059 Toulouse CEDEX 9",
+	  phone: "05 61 31 08 24, 05 62 21 12 78",
+	  description: "Coordonnateur : Dr Thierry Maffre"
+	},
+	{
+    name: "Unité régionale d’évaluation des enfants SUPEA CHU Toulouse",
+	  address: "Place Lange (CHU La Grave) TSA 60033 31059 Toulouse CEDEX 9",
+	  phone: "05 61 77 79 55, 05 61 77 79 02"
+	},
+	{
+    name: "Unité mobile d’évaluation enfants du Grand Toulouse SUPEA CHU Toulouse",
+	  address: "Place Lange (CHU La Grave) TSA 60033 31059 Toulouse CEDEX 9",
+	  phone: "05 61 77 79 55",
+	  description: "Enfants de moins de 5 ans"
+	},
+	{
+    name: "Autisme 31",
+	  address: "116 rue des Amidonniers 31000 Toulouse",
+	  phone: "05 61 73 12 73, 05 61 73 12 73",
+	  email: "autisme31@gmail.com,, autisme31@wanadoo.fr",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "Autisme Midi-Pyrénées",
+	  address: "30 rue des Mûriers 31700 Blagnac",
+	  phone: "09 77 60 96 42",
+	  email: "autismidipy@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "CAPTED",
+	  address: "44 route de Gratentour 31150 Bruguières",
+	  phone: "05 62 18 52 45, 06 13 07 57 10",
+	  email: "capted.tsa@gmail.com,, capted@orange.fr",
+	  description: "Membre URAF-MPy"
+	},
+	{
+    name: "CeRESA",
+	  address: "1 impasse de Lisieux 31300 Toulouse",
+	  phone: "05 61 16 53 43",
+	  email: "contact@ceresa.fr",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "Les Enfants de TSA",
+	  address: "133 avenue du Lauragais 31320 Castanet-Tolosan",
+	  phone: "06 59 41 23 76",
+	  email: "lesenfantsdetsa@gmail.com"
+	},
+	{
+    name: "SESSAD A.C.C.E.S.",
+	  address: "1 impasse de Lisieux 31300 Toulouse",
+	  phone: "05 61 16 53 43",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Sésame Autisme Midi-Pyrénées",
+	  address: "31380 Montastruc-la-Conseillère",
+	  phone: "05 61 84 32 93",
+	  email: "contact@sesame-mp.fr,, sesame.autisme.mp@gmail.com"
+	},
+	{
+    name: "Terre d’Ados",
+	  address: "11 rue des Fauvettes 31320 Castanet-Tolosan",
+	  phone: "06 80 73 53 61",
+	  email: "terredados@gmail.com",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "Autisme Gers",
+	  address: "36 rue des Canaris BP 20587 32022 Auch CEDEX 9",
+	  phone: "05 62 62 67 02, 06 79 37 93 63",
+	  email: "autismegers@yahoo.fr",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "URAF-MPy (Union Régionale Autisme France Midi-Pyrénées)",
+	  address: "Les Bourdettes 32130 Lahas",
+	  phone: "05 62 62 67 02, 06 79 37 93 63",
+	  email: "urafmpy@gmail.com",
+	  description: "Partenaire Autisme France, Regroupement de 10 associations"
+	},
+	{
+    name: "A.V.A.A. 32",
+	  address: "57 rue Paul Verlaine 32000 Auch",
+	  phone: "06 67 21 90 40",
+	  email: "avaa32@orange.fr",
+	  description: "Membre URAF-MPy"
+	},
+	{
+    name: "CRI 46 - Choix Rationnel d’Intégration",
+	  address: "Bagadou Bas 46600 Martel",
+	  phone: "05 65 37 40 07",
+	  email: "cri46@wanadoo.fr",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "Autisme 65",
+	  address: "5 rue de Belfort 65000 Tarbes",
+	  phone: "05 62 53 17 37, 06 88 36 59 10",
+	  email: "autisme65@orange.fr"
+	},
+	{
+    name: "CAMSP Bon Sauveur d’Alby",
+	  address: "1 boulevard Clémenceau (Unité d’évaluation autisme) 81000 Albi",
+	  phone: "05 63 48 55 40, 05 63 48 54 25",
+	  description: "Equipe associée d’évaluation enfants du Tarn"
+	},
+	{
+    name: "I.A.C.A (Intervenants Accompagnements Certifiés Agrées)",
+	  address: "5 square Paul Éluard 81100 Castres",
+	  phone: "06 29 65 28 36",
+	  email: "lambert.ch@msn.com"
+	},
+	{
+    name: "Envol Tarn",
+	  address: "1 route de Lezert (Camp Blanc) 81990 Cambon d’Albi",
+	  phone: "05 63 78 80 80",
+	  email: "envol-tarn@wanadoo.fr",
+	  description: "Partenaire Autisme France, Membre URAF-MPy"
+	},
+	{
+    name: "FAM Lou Bouscaillou",
+	  address: "Route Mouzieys 81430 Villefranche-d’Albigeois",
+	  phone: "05 63 78 80 80",
+	  description: "Géré par l’association « Envol Tarn », Partenaire Autisme France"
+	},
+	{
+    name: "Autisme 82",
+	  address: "10 rue Jean Carmet (Maison des Associations) 82000 Montauban",
+	  phone: "06 01 48 40 60",
+	  email: "autisme.montauban.82@gmail.com"
+	},
+	{
+    name: "Centre de Ressources Autisme Nord-Pas-de-Calais",
+	  address: "150 rue du docteur Alexandre Yersin (Parc Eurasanté Ouest) 59120 Loos",
+	  phone: "03 20 60 62 59, 03 20 60 62 50"
+	},
+	{
+    name: "Union Régionale Autisme France Nord-Pas-de-Calais",
+	  address: "250 rue du Commandant Bayard BP 12 59242 Genech",
+	  phone: "03 20 05 52 70",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Maison Loisirs Littoral",
+	  address: "46 boulevard Léo Lagrange 59820 Gravelines",
+	  phone: "03 28 23 43 66",
+	  email: "maisonloisirslittoral@yahoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Pas à pas",
+	  address: "Rue Convention 59650 Villeneuve d’Ascq",
+	  phone: "03 20 47 80 91"
+	},
+	{
+    name: "Autisme Nord",
+	  address: "250 rue du Cdt Bayart BP 12 59242 Genech",
+	  phone: "03 20 05 52 70, 03 27 87 46 42",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "FAM la Ferme au Bois",
+	  address: "250 rue Bayard BP 40 59242 Genech",
+	  phone: "Autisme France"
+	},
+	{
+    name: "La Main Tendue, Handicap, Autisme",
+	  address: "38 Dievenstraete 59270 Bailleul",
+	  phone: "03 28 49 66 32",
+	  email: "lamaintendue.handicapautisme@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Loisirs",
+	  address: "43 rue du maréchal Lyautey (rés. Europe, app 2113, bât. C3) 59370 Mons-en-Barœul",
+	  phone: "03 20 91 36 89",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "L’ASS des AS’",
+	  address: "Boulevard du Pr. Jules Leclercq (1 Bâtiment Paul Boulanger) 59000 Lille",
+	  phone: "06 36 62 91 08",
+	  email: "ass.des.as@gmail.com",
+	  description: "Alliance des 4A"
+	},
+	{
+    name: "EPAJ 59",
+	  address: "22 rue de Wattiessart 59113 Seclin",
+	  phone: "06 65 13 59 77",
+	  email: "epaj59@yahoo.fr"
+	},
+	{
+    name: "Réseau Bulle (national)",
+	  address: "84 rue du Faubourg de Paris (Maison des Associations) 59300 Valenciennes",
+	  phone: "06 21 26 53 91",
+	  email: "association@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Réseau Bulle 59",
+	  address: "59300 Valenciennes",
+	  phone: "06 21 26 53 91 (Cédric)",
+	  email: "association59@reseaubulle.fr"
+	},
+	{
+    name: "Autisme Pas-de-Calais",
+	  address: "14 bis rue Léon Blum 62300 Lens",
+	  phone: "03 21 43 82 04"
+	},
+	{
+    name: "Opale Autisme 62",
+	  address: "49 rue des Chataigners 62231 Coquelles",
+	  phone: "06 03 68 66 21, 03 21 19 07 51",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Guadeloupe",
+	  address: "Rue Thomas Edison (Immeuble Nevada – n°39 Bât B -  ZI de Jarry) 97122 Baie-Mahault",
+	  phone: "+590 25 23 90, +590 41 12 77",
+	  description: "Coordonnateurs : M Francis Farant – Mme Maryse Christophe"
+	},
+	{
+    name: "Association J’Existe",
+	  address: "413 chemin Saint-Michel 97123 Baillif",
+	  phone: "Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Martinique",
+	  address: "81 rue Raymond Garcin 97200 Fort-de-France",
+	  phone: "+596 56 07 02, +596 56 64 05"
+	},
+	{
+    name: "Espace Anita et Léon Laouchez",
+	  address: "Boulevard Nelson Mandela, Dillon (Eaux Découpées) 97200 Fort-de-France",
+	  phone: "+596 48 39 95",
+	  email: "martiniqueautisme@orange.fr"
+	},
+	{
+    name: "Martinique Autisme",
+	  address: "Boulevard Nelson Mandela (Espace Anita et Léon Laouchez - Les Eaux Découpées) 97200 Fort-de-France",
+	  phone: "+596 48 03 95",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Association SHSM",
+	  address: "Route de Zaïre (Centre Atoumaux – Quartier Bellay) 97228 Sainte-Luce",
+	  phone: "+596 63 12 02, 06 96 17 91 93",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Guyane",
+	  address: "10 rue des Galaxies (Service de pédopsychiatrie - Novaparc VII – Bât. M) 97300 Cayenne",
+	  phone: "+594 29 84 24, +594 29 84 30,",
+	  email: "cr-autisme@ch-cayenne.fr"
+	},
+	{
+    name: "Centre de Ressources Inter-régional Autisme Réunion-Mayotte",
+	  address: "14 ruelle Rivière 97436 Saint-Leu",
+	  phone: "+262 22 59 52, +262 44 26 33",
+	  description: "Coordonnateur : Dr Valérie Trommsdorff"
+	},
+	{
+    name: "Autisme Bel Avenir",
+	  address: "5A rue Victor Hugo 97450 Saint-Louis",
+	  phone: "+262 70 99 99, +262 39 58 86,",
+	  email: "contact@autismebelavenir.re"
+	},
+	{
+    name: "Autisme Réunion",
+	  address: "61 chemin Ringuet 97441 Sainte-Suzanne",
+	  phone: "+262 23 86 83, +262 48 57 43",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autism’Espoir Nouvelle-Calédonie",
+	  address: "19 rue Jenner (Vallée du Génie) BP 18462 98807 Nouméa CEDEX",
+	  phone: "+687 26 40 40",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Association « Moi Je TED »",
+	  address: "4 rue Adolphe Unger (Vallée des Colons) BP 18344 98857 Nouméa",
+	  phone: "+687 86 71 12",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre Ressources Autisme des Pays de la Loire Antenne de Nantes",
+	  address: "36 a rue de la Chauvinière 44800 Saint-Herblain",
+	  phone: "02 40 94 94 00, 02 40 63 53 15"
+	},
+	{
+    name: "Autisme 44",
+	  address: "18 avenue Jean Moulin 44100 Nantes",
+	  phone: "06 28 05 33 07",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Ouest 44",
+	  address: "13 avenue Landes de la Touche 44240 Sucé-sur-Erdre",
+	  phone: "06 28 05 33 07",
+	  email: "autismeouest44@live.fr"
+	},
+	{
+    name: "Change ton Regard",
+	  address: "9 rue du Vivier (CSC-Ragon) 44400 Rezé",
+	  phone: "changetonregard@gmail.com"
+	},
+	{
+    name: "La Chrysalide de l’Être",
+	  address: "Route du Noëllo 44500 La Baule",
+	  phone: "06 81 94 23 95",
+	  email: "contact@lachrysalidedeletre.fr",
+	  description: "École Privée spécialisée"
+	},
+	{
+    name: "Centre Ressources Autisme des Pays de la Loire",
+	  address: "4 rue Larrey (CHU d’Angers) 49933 Angers CEDEX 9",
+	  phone: "02 41 35 31 21, 02 41 35 31 29",
+	  description: "Coordonnateur : Pr Philippe Duverger, Directeur : Matthieu Pichot"
+	},
+	{
+    name: "Autisme 49",
+	  address: "53 rue René Lacombe 49000 Angers",
+	  phone: "06 78 02 58 68",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Coup de Pouce",
+	  address: "51 rue Jean Jaurès 49400 Saumur",
+	  phone: "02 41 52 11 75, 06 01 23 04 62",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Mayenne « Pour vivre autrement »",
+	  address: "2 boulevard Frédéric Simon (Chanteil) 53200 Château-Gontier",
+	  phone: "02 43 07 89 68",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Cocci’Bleue",
+	  address: "4 rue de la Caillerie 53960 Bonchamp-lès-Laval",
+	  phone: "02 43 69 68 54",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Sarthe – L’Éclaircie",
+	  address: "6 rue de Vaux 72000 Le Mans",
+	  phone: "02 43 87 43 66",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Vendée",
+	  address: "12 impasse du Bois Dormant 85160 Saint-Jean-de-Monts",
+	  phone: "02 51 58 86 34",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Hop’Autisme 02",
+	  address: "14 avenue de la Résistance (Résidence Alsace) 02100 Saint-Quentin",
+	  phone: "06 85 84 84 21",
+	  email: "melusine02100@hotmail.fr"
+	},
+	{
+    name: "Autisme 02",
+	  address: "28 rue Philadelphie 02300 Villequier-Aumont",
+	  phone: "03 23 39 58 77, 06 47 24 30 49",
+	  email: "autisme.02@wanadoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "FAM La Maison Ducellier",
+	  address: "28 rue Philadelphie 02300 Villequier-Aumont",
+	  phone: "03 23 57 57 57, 09 66 95 13 41",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "SESSAD Un Jour Bleu",
+	  address: "31 rue Kennedy 02000 Laon",
+	  phone: "Autisme France"
+	},
+	{
+    name: "Autisme Oise",
+	  address: "Place Bertrand Labarre (Le Muguet - La maison du Parc) 60400 Noyon",
+	  phone: "06 47 12 21 06",
+	  email: "lemuguet60@gmail.com"
+	},
+	{
+    name: "Envol Picardie",
+	  address: "81 rue Marcel Guerin (F.A.M. le Chemin) 60280 Margny-lès-Compiègne",
+	  phone: "03 44 36 49 10, 03 44 90 17 63",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Le Muguet - Autisme Oise",
+	  address: "Place Bertrand Labarre (Mairie de NOYON - Hôtel de Ville) 60400 Noyon",
+	  phone: "06 47 12 21 06",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Centre de Ressources Autisme Picardie",
+	  address: "4 rue Grenier et Bernard 80000 Amiens",
+	  phone: "03 22 66 75 40, 03 22 66 75 99"
+	},
+	{
+    name: "Réseau Bulle 60",
+	  address: "60126 Longueil-Sainte-Marie",
+	  phone: "06 37 19 45 14 (Stéphane)",
+	  email: "association60@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Autisme Picardie 80",
+	  address: "12 rue de Chuignes 80340 Cappy",
+	  phone: "03 22 76 15 55, 06 32 30 10 82",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "APEA 80",
+	  address: "12 rue Frédérique Petit 80000 Amiens",
+	  phone: "06 60 70 49 49",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "A.T.E.D. 80",
+	  address: "4 rue de l’Union 80000 Amiens",
+	  phone: "03 22 46 74 10"
+	},
+	{
+    name: "Autisme Charente",
+	  address: "16170 Sonneville",
+	  phone: "05 45 96 02 51",
+	  email: "hespel.muriel@aliceadsl.fr,, hlne_bk@nordnet.fr"
+	},
+	{
+    name: "Autisme Charente-Maritime",
+	  address: "31 rue du Cormier (Maison des Associations) 17100 Saintes",
+	  phone: "06 98 80 53 94",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "ABA17 - Au bonheur des Autistes",
+	  address: "8 avenue d’Aquitaine (Petit Niort) 17150 Mirambeau",
+	  phone: "06 99 59 76 16 (Eloïse), 06 99 57 11 74 (Karine)",
+	  email: "aba.17@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Union Régionale Autisme France Poitou-Charentes",
+	  address: "23 rue Noire 79000 Niort",
+	  phone: "06 52 65 41 61",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme 79 - Deux-Sèvres",
+	  address: "23 rue Noire 79000 Niort",
+	  phone: "05 49 24 14 87",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Canal Autisme",
+	  address: "Futuroscope BP 80300 86963 Chasseneuil-du-Poitou CEDEX",
+	  phone: "05 49 49 34 00",
+	  email: "canalautisme@cned.fr"
+	},
+	{
+    name: "Centre de Ressources Autisme Poitou-Charentes",
+	  address: "370 avenue Jacques Cœur (Centre Hospitalier Henri Laborit) BP 587 86021 Poitiers CEDEX",
+	  phone: "05 49 44 57 59, 05 49 44 57 51",
+	  description: "Coordonnateur : Pr. Ludovic Gicquel"
+	},
+	{
+    name: "Autisme CAAP",
+	  address: "72 route de Chauvigny 86210 Vouneuil-sur-Vienne",
+	  phone: "05 49 52 63 67",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Vienne",
+	  address: "BP 70830 86108 Châtellerault CEDEX",
+	  phone: "06 02 25 05 12",
+	  email: "secretariat@autisme-vienne.org"
+	},
+	{
+    name: "FAM le CAAP",
+	  address: "8 Allée Jacquard BP 20 86580 Vouneuil-sous-Biard",
+	  phone: "05 49 52 63 67",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "ADAPEI des Alpes-de-Haute-Provence",
+	  address: "Route de Saint-Jean BP 38 04160 Château-Arnoux-Saint-Auban",
+	  phone: "04 92 64 96 00, 04 92 64 96 02",
+	  email: "adapei.04@wanadoo.fr"
+	},
+	{
+    name: "Sésame Autisme 05",
+	  address: "Pré Gentil 05260 Saint-Jean-Saint-Nicolas",
+	  phone: "v.gonfard@orange.fr"
+	},
+	{
+    name: "ALDO",
+	  address: "9 rue de Chateauneuf 06400 Cannes",
+	  phone: "06 09 56 44 15, 04 93 39 08 42",
+	  email: "aldo.lenorcy@laposte.net",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme 06",
+	  address: "87 avenue des Anciens Combattants d’Afrique du Nord 06700 Saint-Laurent-du-Var",
+	  phone: "09 51 44 01 88, 06 98 62 42 35",
+	  email: "autisme06@free.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "AME Autisme Méditerranée",
+	  address: "14 rue Marius Aune 06400 Cannes",
+	  phone: "09 53 97 63 32, 09 73 54 07 59",
+	  email: "maxartuso@wanadoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "FAM Les Clémentines",
+	  address: "9 boulevard Oxford 06400 Cannes",
+	  phone: "04 93 38 40 26",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Apprendre Autrement",
+	  address: "Chemin de la Solidarité 06510 Carros",
+	  phone: "04 92 08 28 04, 04 93 73 53 92"
+	},
+	{
+    name: "TED Réponses Éducatives à l’Autisme et aux Troubles Envahissants du Développement",
+	  address: "5 avenue Châteaubriand 06100 Nice",
+	  phone: "04 93 51 44 68",
+	  email: "s.sbedico@infonie.fr,, ted.nice@infonie.fr"
+	},
+	{
+    name: "TED à Domicile",
+	  address: "3 avenue de la Victoire 06320 La Turbie",
+	  phone: "06 29 52 86 88",
+	  email: "tedadomicile@yahoo.fr"
+	},
+	{
+    name: "Union Régionale Autisme France Sud-Est",
+	  address: "3 allée de la Grimpette 13821 La Penne-sur-Huveaune",
+	  phone: "07 81 32 72 80, 04 91 43 33 34",
+	  description: "Partenaire Autisme france"
+	},
+	{
+    name: "ARCO IRIS Atouts Avenir Autiste Asperger",
+	  address: "285 rue d’Endoume (Centre socio-culturel d’Endoume) 13007 Marseille",
+	  phone: "06 07 83 37 95"
+	},
+	{
+    name: "Autisme 13 - ARCO IRIS",
+	  address: "3 allée de la Grimpette 13821 La Penne-sur-Huveaune",
+	  phone: "04 91 43 33 34",
+	  email: "secretariat@autisme13.fr,, michel.tirlot@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "L’Avancée",
+	  address: "1 rue de la Futaie (Maison de Quartier de Trigance) 13800 Istres",
+	  phone: "09 80 58 51 75, 06 17 71 10 68",
+	  email: "l.avancee.ted@gmail.com,, l.avancee@laposte.net",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Les Tournesols",
+	  address: "21 boulevard François Camoin 13013 Marseille",
+	  phone: "06 80 94 60 88",
+	  email: "les.tournesols.org@free.fr"
+	},
+	{
+    name: "Pas à Part Bouches-du-Rhône",
+	  address: "2 avenue du général Maxime Weygand 13010 Marseille",
+	  phone: "06 34 49 52 15",
+	  email: "contact@pasapart-bdr.fr"
+	},
+	{
+    name: "Pélagie",
+	  address: "321 place du Général de Gaulle 13300 Salon-de-Provence",
+	  phone: "06 17 82 08 06",
+	  email: "secretaire.pelagie@sfr.fr,, ricalevy@hotmail.fr",
+	  description: "Membre du RHAAP"
+	},
+	{
+    name: "APAR",
+	  address: "195 avenue de Provence 13300 Salon-de-Provence",
+	  phone: "04 86 22 00 09",
+	  email: "apar@apar.asso.fr"
+	},
+	{
+    name: "SOLIANE",
+	  address: "44 boulevard Rabatau 13008 Marseille",
+	  phone: "04 91 29 39 40",
+	  email: "contact@associationsoliane.fr,, associationsoliane@hotmail.com"
+	},
+	{
+    name: "TEDeam",
+	  address: "1 rue de Lorraine 13008 Marseille",
+	  phone: "06 11 15 55 70",
+	  email: "natacha.didier@free.fr"
+	},
+	{
+    name: "La Sainte-Victoire contre l’Autisme",
+	  address: "Château Coussin Sainte-Victoire 13530 Trets",
+	  phone: "06 80 11 22 56",
+	  email: "jhr@jhrodetconsulting.com"
+	},
+	{
+    name: "TED & Jules",
+	  address: "93 La Canebière 13001 Marseille",
+	  phone: "pat.roux@neuf.fr"
+	},
+	{
+    name: "Un Rêve de Sport et de Loisirs pour enfants Autistes",
+	  address: "89 boulevard Longchamp 13001 Marseille",
+	  phone: "06 66 38 50 50",
+	  email: "unrevesportsloisirs@gmail.fr"
+	},
+	{
+    name: "URAFSE",
+	  address: "3 allée de la Grimpette 13821 La Penne-sur-Huveaune",
+	  phone: "urafse@autisme13.fr",
+	  email: "urafse@orange.fr",
+	  description: "Regroupement de 16 associations"
+	},
+	{
+    name: "AIDERA Var",
+	  address: "16 rue des Citronniers 83130 La Garde",
+	  phone: "06 03 58 01 29, 08 72 72 74 07",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme PACA",
+	  address: "443 avenue du Brusc 83140 Six-Fours-les-Plages",
+	  phone: "06 37 80 92 10",
+	  email: "autismepaca@gmail.com"
+	},
+	{
+    name: "Autisme Relais Accompagnement",
+	  address: "712 Les Plantades 83510 Saint-Antonin-du-Var",
+	  phone: "06 07 99 16 14",
+	  email: "autisme.relais@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Solidarité",
+	  address: "97 chemin de l’Eau Salée 83670 Barjols",
+	  phone: "04 94 77 14 71, 06 79 59 69 01, 04 94 77 14 71",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Var Autisme",
+	  address: "18 rue Fréderic mireur 83300 Draguignan",
+	  phone: "04 94 85 06 95, 06 61 85 86 22",
+	  email: "varautisme@yahoo.fr"
+	},
+	{
+    name: "Le Pas",
+	  address: "Route des Cabannes (Quartier le Brou) 84860 Caderousse",
+	  phone: "le.pas84@wanadoo.fr"
+	},
+	{
+    name: "TEDAI 84",
+	  address: "33 rue Santo Estello (Clos les Félibres) 84000 Avignon",
+	  phone: "04 90 82 59 41",
+	  email: "tedai84@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Réseau Autistes Sans Frontières – Pas à pas",
+	  address: "Quartier La Gayères 84260 Sarrians",
+	  phone: "04 90 65 48 00"
+	},
+	{
+    name: "Centre d’Évaluation et de Diagnostic de l’Autisme de l’Ain",
+	  address: "14 rue de l’École 01000 Bourg-en-Bresse",
+	  phone: "04 74 52 27 08"
+	},
+	{
+    name: "ACABADOM",
+	  address: "07230 Lablachère",
+	  phone: "06 76 18 98 64",
+	  email: "contact@acabadom.fr"
+	},
+	{
+    name: "ADAPEI 07",
+	  address: "07100 Roiffieux",
+	  phone: "04 75 69 11 92",
+	  email: "elchambert@aol.com"
+	},
+	{
+    name: "Plateforme d’Informations et de Formations Autisme - PIFA",
+	  address: "07200 Vesseaux",
+	  phone: "06 43 26 66 85",
+	  email: "pifaardeche@gmail.com"
+	},
+	{
+    name: "Planète Autisme",
+	  address: "4 rue Saint Jean (Bureau 204 - Maison des Sociétés) 26000 Valence",
+	  phone: "06 82 27 39 53",
+	  email: "planete.autisme.drome.ardeche@gmail.com",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "APESA 26/07",
+	  address: "15 boulevard Joliot Curie 26130 Saint-Paul-Trois-Châteaux",
+	  phone: "04 75 92 41 97, 06 32 79 96 79",
+	  description: "Partenaire Autisme France, C/O Marie-Hélène AUDIER"
+	},
+	{
+    name: "Agir pour L’Autisme",
+	  address: "920 chemin de la Graveline 26780 Malataverne",
+	  phone: "06 81 90 36 74",
+	  email: "agirpourlautisme@gmail.com"
+	},
+	{
+    name: "Centre Alpin de DIagnostic Précoce de l’Autisme (CADIPA)",
+	  address: "3 rue de la Gare CS 20100 38521 Saint-Égrève CEDEX",
+	  phone: "04 76 56 44 04"
+	},
+	{
+    name: "La compagnie des TED",
+	  address: "15 rue de la république 38000 Grenoble",
+	  phone: "compagniedested@yahoo.fr"
+	},
+	{
+    name: "L’Atypik",
+	  address: "10 place Edmond Arnaud 38000 Grenoble",
+	  phone: "09 67 33 12 94",
+	  email: "atypik38@yahoo.fr"
+	},
+	{
+    name: "Le Tremplin Autisme Isère",
+	  address: "12 bis place de la Liberté 38400 Saint-Martin-d’Hères",
+	  phone: "04 76 44 65 58, 06 13 64 41 18",
+	  email: "contact@aba-isere.org"
+	},
+	{
+    name: "Iceberg A.T.E.D.",
+	  address: "2 avenue Abbé Morin 38144 Notre-Dame-de-Vaulx",
+	  phone: "04 76 30 46 72",
+	  email: "icebergated@yahoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Vies",
+	  address: "104 avenue Ambroise Croizat 38400 Saint-Martin-d’Hères",
+	  phone: "04 76 24 45 49, 06 15 33 32 35",
+	  email: "autisme-vies@wanadoo.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Envol Isère",
+	  address: "BP 241 38305 Bourgoin-Jallieu CEDEX 5",
+	  phone: "04 74 54 31 80, 04 76 53 19 71, 04 74 54 31 80",
+	  email: "envol.isere.autisme38@orange.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Sésame Autisme Dauphiné Savoie",
+	  address: "2457 route de Meylan 38330 Biviers",
+	  phone: "04 76 41 05 19",
+	  email: "sesames@yahoo.fr"
+	},
+	{
+    name: "SAtedI",
+	  address: "6 boulevard de la Résistance 38450 Vif",
+	  phone: "secretariat@satedi.net",
+	  description: "Association d’autistes à vocation internationale : site internet, forum, journal, rencontres"
+	},
+	{
+    name: "FAM l’Envolée",
+	  address: "29 rue du Creuzat BP 26 38081 L’Isle-d’Abeau",
+	  phone: "04 74 27 55 80",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "SESSAD Outrebleu",
+	  address: "3 rue Anatole France 38150 Roussillon",
+	  phone: "07 60 18 83 32",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "SESSAD Orion",
+	  address: "19 boulevard Chantourne 38700 La tronche",
+	  phone: "07 60 18 83 32",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Fédération des services de Pédiatrie génétique et psychiatrique de l’enfant",
+	  address: "CHU de Saint-Étienne 42055 Saint-Étienne CEDEX 2",
+	  phone: "04 77 12 79 96"
+	},
+	{
+    name: "Autisme Loire",
+	  address: "11 rue René Cassin 42100 Saint-Étienne",
+	  phone: "04 77 80 53 60"
+	},
+	{
+    name: "Autistes dans la Cité",
+	  address: "15 rue de la Découverte 42100 Saint-Étienne",
+	  phone: "04 77 37 17 87, 06 21 77 31 98",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "EURECAH",
+	  address: "16 rue Antoine Dumaine 42400 Saint-Chamond",
+	  phone: "04 77 31 72 71, 06 76 74 48 30",
+	  email: "associationeurecah@gmail.com"
+	},
+	{
+    name: "Les Yeux du Cœur",
+	  address: "452 rue du Viognier 42560 Boisset-Saint-Priest",
+	  phone: "04 77 76 25 48",
+	  description: "Personnes autistes et aveugles"
+	},
+	{
+    name: "A.B.A. - Apprendre autrement Loire Forez",
+	  address: "81 rue Georges Brassens 42210 Saint André le Puy",
+	  phone: "abaloireforez@laposte.net"
+	},
+	{
+    name: "Autisme Forez les dauphins",
+	  address: "Impasse de l’Industrie 42600 Savigneux",
+	  phone: "04 77 58 71 08",
+	  description: "Aide aux familles et aux structures"
+	},
+	{
+    name: "Le Château d’Aix",
+	  address: "42260 Saint-Martin La Sauveté",
+	  phone: "04 77 62 57 57",
+	  description: "Ensemble de structures d’accueil"
+	},
+	{
+    name: "Centre de Ressources Autisme Rhône-Alpes",
+	  address: "95 boulevard Pinel (Centre Hospitalier Le Vinatier) BP 300 39 69678 Bron CEDEX",
+	  phone: "04 37 91 54 65, 04 37 91 54 37"
+	},
+	{
+    name: "Centre d’Évaluation et de Diagnostic de l’Autisme Donald T.",
+	  address: "95 boulevard Pinel (Centre Hospitalier Le Vinatier, bât. 355b) BP 300 39 69678 Bron CEDEX",
+	  phone: "04 37 91 52 30",
+	  description: "Responsables : Dr. E. Venet, Dr. D. Frassati"
+	},
+	{
+    name: "Autisme Rhône",
+	  address: "111 rue du commandant Charcot 69110 Sainte-Foy-lès-Lyon",
+	  phone: "04 72 84 29 74",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Ambition Avenir",
+	  address: "Allée du Petit Prince (Immeuble le Trait d’Union) 69220 Belleville",
+	  phone: "07 81 81 58 48",
+	  email: "nadege.alloisio@gmail.com"
+	},
+	{
+    name: "A.F.I.R.R.A.",
+	  address: "39 rue Bellecombe 69006 Lyon",
+	  phone: "06 83 83 43 74",
+	  email: "contact@afirra.org",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "URAFRA",
+	  address: "7 rue du Capitaine 69003 Lyon",
+	  phone: "04 50 68 18 99",
+	  email: "urafra@gmail.com"
+	},
+	{
+    name: "Autisme Éducation",
+	  address: "46 rue Joliot Curie 69005 Lyon",
+	  phone: "meliegonz@yahoo.fr"
+	},
+	{
+    name: "Sésame Autisme Rhône-Alpes",
+	  address: "16 rue Pizay 69001 Lyon",
+	  phone: "04 72 98 31 81",
+	  email: "contact@sesame-autisme-ra.com"
+	},
+	{
+    name: "LIBERTE Autisme QUAD 01",
+	  address: "01380 Dommartin",
+	  phone: "09 80 50 20 14",
+	  email: "ass.laq01@gmail.com"
+	},
+	{
+    name: "Réseau Bulle 69",
+	  address: "69005 Lyon",
+	  phone: "06 60 25 44 19 (Marie)",
+	  email: "association69@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "Centre d’Évaluation Savoyard de l’Autisme",
+	  address: "Rue Longefand 73000 Bassens",
+	  phone: "04 79 60 52 53",
+	  email: "cesa@chs-savoie.fr"
+	},
+	{
+    name: "CPEA Savoie",
+	  address: "1097 avenue des Landiers (Centre Commercial Chamnord) 73000 Chambéry",
+	  phone: "04 79 44 35 07",
+	  email: "infos@cpea-savoie.com"
+	},
+	{
+    name: "EMAAS (Équipe Mobile Autisme Adulte Savoie)",
+	  address: "CHS de la Savoie BP 41 126 73011 Chambéry CEDEX",
+	  phone: "04 79 60 32 45, 04 79 60 32 28",
+	  email: "emaas@chs-savoie.fr"
+	},
+	{
+    name: "Autisme SAVOIE",
+	  address: "21 rue Georges Lamarque 73200 Albertville",
+	  phone: "04 79 61 60 04",
+	  email: "ted73@voila.fr",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "AS DYS et TDA",
+	  address: "1 rue De l’Espérance (Maison des Associations) 74100 Ville-la-Grand"
+	},
+	{
+    name: "Autisme Bassin Lémanique",
+	  address: "3 place de la Mairie 74200 Margencel",
+	  phone: "contact@autismebassinlemanique.com"
+	},
+	{
+    name: "SESSAD Autisme Éveil d’Annecy",
+	  address: "96 Avenue de Brogny (Le Wall Street) 74000 Annecy",
+	  phone: "Autisme France"
+	},
+	{
+    name: "Autisme Avenir 74",
+	  address: "179 rue des Narcisses 74330 Épagny",
+	  phone: "04 50 24 00 88",
+	  email: "autisme.avenir74@gmail.com",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Autisme Éveil",
+	  address: "182 allée des Sitelles 74370 Argonay",
+	  phone: "04 50 27 25 44",
+	  email: "autisme.bl@gmail.com",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Réseau Bulle 74",
+	  address: "74700 Sallanches",
+	  phone: "07 64 08 58 06 (Cindy)",
+	  email: "association74@reseaubulle.fr",
+	  description: "Entraide et solidarité pour les familles et les personnes concernées par l’autisme"
+	},
+	{
+    name: "ASBL l’Arboretum",
+	  address: "Rue de Briffœil BP 29 7600 Péruwelz",
+	  phone: "+32 69 77 98 50, +32 69 77 98 51",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Groupe Asperger",  phone: "+41 (0)21 646 56 15",
+	  email: "groupe-asperger@autisme.ch"
+	},
+	{
+    name: "Autisme Genève",
+	  address: "4 rue des Pavillons 1205 Genève",
+	  phone: "+41 (0)22 329 32 07, +41 (0)79 363 15 28",
+	  email: "info@autisme-ge.ch"
+	},
+	{
+    name: "TED-Autisme Jura",
+	  address: "44 route du Monterri (c/o Véronique et Pascal Berberat) 2950 Courgenay",
+	  phone: "+41 (0)32 471 29 39",
+	  email: "ted-autisme.jura@bluewin.ch"
+	},
+	{
+    name: "Autisme Neuchâtel",
+	  address: "Case postale 81 (Frédéric Maillard) 2074 Marin-Epagnier",
+	  phone: "+41 (0)79 133 88 42",
+	  email: "nfo@autisme-neuchatel.ch"
+	},
+	{
+    name: "Autisme Suisse Romande",
+	  address: "4 avenue de la Chablière 1004 Lausanne",
+	  phone: "+41 (0)21 646 56 15",
+	  email: "secretariat@autisme.ch",
+	  description: "Partenaire Autisme France"
+	},
+	{
+    name: "Groupe de parents Lausanne et environs",
+	  address: "4 chemin du Jura (Margrit Durussel) 1024 Ecublens",
+	  phone: "+41 (0)21 691 41 76, +41 (0)79 201 66 92",
+	  email: "margrit.63@gmail.com"
+	},
+	{
+    name: "Autisme Valais",  phone: "+41 (0)79 700 51 19",
+	  email: "info@autisme-valais.ch"
+	},
+	{
+    name: "Sprechstunde für Autismusspektrumstörungen bei Erwachsenen",
+	  address: "16 Bleichemattstrasse (ZPPA Aarau) 5001 Aarau",
+	  phone: "+41 (0)56 461 91 00",
+	  email: "epd.autismus@pdag.ch"
+	},
+	{
+    name: "Dipl.-Psych. Piero Rossi",
+	  address: "39 Ausserdorfstrasse (Fachpsychologe für Psychotherapie FSP) 5603 Staufen",
+	  phone: "+41 (0)62 891 77 90",
+	  email: "piero.rossi@hin.ch"
+	},
+	{
+    name: "Psychiatrische Dienste Aargau AG",
+	  address: "605 Postfach (Autismus Beratung IAS) 5201 Brugg",
+	  phone: "+41 (0)56 461 99 80",
+	  email: "autismusberatung@pdag.ch"
+	},
+	{
+    name: "Autismus Deutsche Schweiz",
+	  address: "354 Riedhofstrasse 8049 Zürich",
+	  phone: "+41 (0)44 341 13 13",
+	  email: "info@autismus.ch"
+	},
+	{
+    name: "AutismeSuisse (AutismusSchweiz / AutismoSvizzera)",
+	  address: "19 Neuengasse 2502 Biel-Bienne",
+	  phone: "+41 (0)32 322 10 25",
+	  email: "sekretariat@autism.ch"
+	},
+];
+
+console.log("name,juridical,description,address,longitude,latitude,email,phone,link,departement,proposition");
+for (i=0; i < lst.length; i++) {
+	var result = "";
+
+	result += '"' + lst[i].name + '"' + ','; // Name.
+	result += ','; // Juridical.
+	result += '"' + lst[i].description + '"' + ','; // Description.
+	result += '"' + lst[i].address + '"' + ','; // Address.
+	result += ','; // Longitude.
+	result += ','; // Latitude.
+	result += '"' + lst[i].email + '"' + ','; // Email.
+	result += '"' + lst[i].phone + '"' + ','; // Phone.
+	result += ','; // Link.
+	result += ','; // Departement.
+	result += ','; // Proposition.
+	result += ','; // Proposition.
+	result += '\n'; // Proposition.
+	console.log(result);
+}
