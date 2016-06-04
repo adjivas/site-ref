@@ -49,14 +49,10 @@ graph siteRef {
   Project
    |
    name (string)\l
-   author (Author)\l
    link (string)\l
    description (string)\l
    logo (text)\l
-   interoperable (bool)\l
-   customizable (bool)\l
-   relation (Relation)\l
-   usability (Usability)\l
+   published (Date)\l
    proposition (Proposition)\l
  }", shape=record];
 
@@ -66,9 +62,9 @@ graph siteRef {
    published (date)\l
    message (text)\l
    reply (text)\l
+   approved (integer)\l
    user (User)\l
    admin (Admin)\l
-   approved (bool)\l
  }", shape=record];
 
  nodeTableDiagnostic [label = "{
