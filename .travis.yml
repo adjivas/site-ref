@@ -33,3 +33,4 @@ script:
 - bundle update rake
 - bundle install
 - bundle exec rake db:migrate
+- bundle exec rake import
