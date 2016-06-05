@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
+  get 'authorrails/g'
+
+  get 'authorrails/controller'
+
+  get 'authorrails/Author'
+
+  get 'authorrails/g'
+
+  get 'authorrails/controller'
+
+  get 'authorrails/Author'
+
   resources :projects
   resources :papers
   resources :structures
   resources :juridicals
-  resources :propositions
   resources :languages
   resources :users
   resources :diagnostics

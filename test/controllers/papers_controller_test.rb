@@ -18,7 +18,7 @@ class PapersControllerTest < ActionController::TestCase
 
   test "should create paper" do
     assert_difference('Paper.count') do
-      post :create, paper: { description: @paper.description, diagnostic_id: @paper.diagnostic_id, language_id: @paper.language_id, name: @paper.name, proposition_id: @paper.proposition_id, published: @paper.published }
+      post :create, paper: { approved: @paper.approved, description: @paper.description, diagnostic_id: @paper.diagnostic_id, language_id: @paper.language_id, message: @paper.message, name: @paper.name, published: @paper.published, published: @paper.published, reply: @paper.reply, user_id: @paper.user_id }
     end
 
     assert_redirected_to paper_path(assigns(:paper))
@@ -35,7 +35,7 @@ class PapersControllerTest < ActionController::TestCase
   end
 
   test "should update paper" do
-    patch :update, id: @paper, paper: { description: @paper.description, diagnostic_id: @paper.diagnostic_id, language_id: @paper.language_id, name: @paper.name, proposition_id: @paper.proposition_id, published: @paper.published }
+    patch :update, id: @paper, paper: { approved: @paper.approved, description: @paper.description, diagnostic_id: @paper.diagnostic_id, language_id: @paper.language_id, message: @paper.message, name: @paper.name, published: @paper.published, published: @paper.published, reply: @paper.reply, user_id: @paper.user_id }
     assert_redirected_to paper_path(assigns(:paper))
   end
 

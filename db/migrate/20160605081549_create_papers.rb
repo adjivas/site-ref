@@ -6,7 +6,11 @@ class CreatePapers < ActiveRecord::Migration
       t.date :published
       t.references :language, index: true, foreign_key: true
       t.references :diagnostic, index: true, foreign_key: true
-      t.references :proposition, index: true, foreign_key: true
+      t.date :published
+      t.text :message
+      t.text :reply
+      t.references :user, index: true, foreign_key: true
+      t.integer :approved
 
       t.timestamps null: false
     end

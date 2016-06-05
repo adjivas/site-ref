@@ -1,7 +1,7 @@
 class Structure < ActiveRecord::Base
   belongs_to :juridical
   belongs_to :departement
-  belongs_to :proposition
+  belongs_to :user
 
   geocoded_by :address
   after_validation :geocode

@@ -26,8 +26,28 @@
 </p>
 
 <p>
-  <strong>Proposition:</strong>
-  <%= @paper.proposition %>
+  <strong>Published:</strong>
+  <%= @paper.published %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @paper.message %>
+</p>
+
+<p>
+  <strong>Reply:</strong>
+  <%= @paper.reply %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @paper.user %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @paper.approved %>
 </p>
 
 <%= link_to 'Edit', edit_paper_path(@paper) %> |

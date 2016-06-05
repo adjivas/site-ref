@@ -51,8 +51,28 @@
 </p>
 
 <p>
-  <strong>Proposition:</strong>
-  <%= @structure.proposition %>
+  <strong>Published:</strong>
+  <%= @structure.published %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @structure.message %>
+</p>
+
+<p>
+  <strong>Reply:</strong>
+  <%= @structure.reply %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @structure.user %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @structure.approved %>
 </p>
 
 <%= link_to 'Edit', edit_structure_path(@structure) %> |

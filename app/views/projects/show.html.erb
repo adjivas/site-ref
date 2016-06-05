@@ -26,8 +26,28 @@
 </p>
 
 <p>
-  <strong>Proposition:</strong>
-  <%= @project.proposition %>
+  <strong>Published:</strong>
+  <%= @project.published %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @project.message %>
+</p>
+
+<p>
+  <strong>Reply:</strong>
+  <%= @project.reply %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @project.user %>
+</p>
+
+<p>
+  <strong>Approved:</strong>
+  <%= @project.approved %>
 </p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

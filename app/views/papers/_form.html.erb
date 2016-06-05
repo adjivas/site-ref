@@ -32,8 +32,24 @@
     <%= f.text_field :diagnostic_id %>
   </div>
   <div class="field">
-    <%= f.label :proposition_id %><br>
-    <%= f.text_field :proposition_id %>
+    <%= f.label :published %><br>
+    <%= f.date_select :published %>
+  </div>
+  <div class="field">
+    <%= f.label :message %><br>
+    <%= f.text_area :message %>
+  </div>
+  <div class="field">
+    <%= f.label :reply %><br>
+    <%= f.text_area :reply %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :approved %><br>
+    <%= f.number_field :approved %>
   </div>
   <div class="actions">
     <%= f.submit %>

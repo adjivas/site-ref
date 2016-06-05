@@ -18,7 +18,7 @@ class StructuresControllerTest < ActionController::TestCase
 
   test "should create structure" do
     assert_difference('Structure.count') do
-      post :create, structure: { address: @structure.address, departement_id: @structure.departement_id, description: @structure.description, email: @structure.email, juridical_id: @structure.juridical_id, latitude: @structure.latitude, link: @structure.link, longitude: @structure.longitude, name: @structure.name, phone: @structure.phone, proposition_id: @structure.proposition_id }
+      post :create, structure: { address: @structure.address, approved: @structure.approved, departement_id: @structure.departement_id, description: @structure.description, email: @structure.email, juridical_id: @structure.juridical_id, latitude: @structure.latitude, link: @structure.link, longitude: @structure.longitude, message: @structure.message, name: @structure.name, phone: @structure.phone, published: @structure.published, reply: @structure.reply, user_id: @structure.user_id }
     end
 
     assert_redirected_to structure_path(assigns(:structure))
@@ -35,7 +35,7 @@ class StructuresControllerTest < ActionController::TestCase
   end
 
   test "should update structure" do
-    patch :update, id: @structure, structure: { address: @structure.address, departement_id: @structure.departement_id, description: @structure.description, email: @structure.email, juridical_id: @structure.juridical_id, latitude: @structure.latitude, link: @structure.link, longitude: @structure.longitude, name: @structure.name, phone: @structure.phone, proposition_id: @structure.proposition_id }
+    patch :update, id: @structure, structure: { address: @structure.address, approved: @structure.approved, departement_id: @structure.departement_id, description: @structure.description, email: @structure.email, juridical_id: @structure.juridical_id, latitude: @structure.latitude, link: @structure.link, longitude: @structure.longitude, message: @structure.message, name: @structure.name, phone: @structure.phone, published: @structure.published, reply: @structure.reply, user_id: @structure.user_id }
     assert_redirected_to structure_path(assigns(:structure))
   end
 

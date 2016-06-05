@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160604155630) do
+ActiveRecord::Schema.define(version: 20160605081550) do
 
   create_table "departements", force: :cascade do |t|
     t.string   "name"
@@ -52,14 +52,17 @@ ActiveRecord::Schema.define(version: 20160604155630) do
     t.date     "published"
     t.integer  "language_id"
     t.integer  "diagnostic_id"
-    t.integer  "proposition_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.text     "message"
+    t.text     "reply"
+    t.integer  "user_id"
+    t.integer  "approved"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   add_index "papers", ["diagnostic_id"], name: "index_papers_on_diagnostic_id"
   add_index "papers", ["language_id"], name: "index_papers_on_language_id"
-  add_index "papers", ["proposition_id"], name: "index_papers_on_proposition_id"
+  add_index "papers", ["user_id"], name: "index_papers_on_user_id"
 
   create_table "projects", force: :cascade do |t|
     t.string   "name"
@@ -67,24 +70,15 @@ ActiveRecord::Schema.define(version: 20160604155630) do
     t.string   "description"
     t.date     "published"
     t.text     "logo"
-    t.integer  "proposition_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-  end
-
-  add_index "projects", ["proposition_id"], name: "index_projects_on_proposition_id"
-
-  create_table "propositions", force: :cascade do |t|
-    t.date     "published"
     t.text     "message"
     t.text     "reply"
     t.integer  "user_id"
     t.integer  "approved"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  add_index "propositions", ["user_id"], name: "index_propositions_on_user_id"
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
 
   create_table "structures", force: :cascade do |t|
     t.string   "name"
@@ -97,14 +91,18 @@ ActiveRecord::Schema.define(version: 20160604155630) do
     t.string   "phone"
     t.string   "link"
     t.integer  "departement_id"
-    t.integer  "proposition_id"
+    t.date     "published"
+    t.text     "message"
+    t.text     "reply"
+    t.integer  "user_id"
+    t.integer  "approved"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
 
   add_index "structures", ["departement_id"], name: "index_structures_on_departement_id"
   add_index "structures", ["juridical_id"], name: "index_structures_on_juridical_id"
-  add_index "structures", ["proposition_id"], name: "index_structures_on_proposition_id"
+  add_index "structures", ["user_id"], name: "index_structures_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "link"

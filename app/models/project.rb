@@ -1,3 +1,3 @@
 class Project < ActiveRecord::Base
-  belongs_to :proposition
+  belongs_to :user
 end
