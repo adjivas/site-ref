@@ -8,29 +8,42 @@ graph siteRef {
 
  nodeTablePaper [label = "{
   Paper
-    |
-    name (string)\l
-    description (string)\l
-    published (date)\l
-    language: (Language)\l
-    diagnostic (Diagnostic)\l
-    proposition (Proposition)\l
+   |
+   name (string)\l
+   description (string)\l
+   published (date)\l
+   language: (Language)\l
+   diagnostic (Diagnostic)\l
+   |
+   published (date)\l
+   message (text)\l
+   reply (text)\l
+   approved (integer)\l
+   user (User)\l
+   admin (Admin)\l
+
  }", shape=record];
 
  nodeTableStructure [label = "{
   Structure
-    |
-    name (string)\l
-    juridical: (Juridical)\l
-    description (string)\l
-    address (string)\l
-    longitude (float)\l
-    latitude (float)\l
-    email (string)\l
-    phone (string)\l
-    link (string)\l
-    departement (Departement)\l
-    proposition (Proposition)\l
+   |
+   name (string)\l
+   juridical: (Juridical)\l
+   description (string)\l
+   address (string)\l
+   longitude (float)\l
+   latitude (float)\l
+   email (string)\l
+   phone (string)\l
+   link (string)\l
+   departement (Departement)\l
+   |
+   published (date)\l
+   message (text)\l
+   reply (text)\l
+   approved (integer)\l
+   user (User)\l
+   admin (Admin)\l
  }", shape=record];
 
  nodeTableJuridical [label = "{
@@ -52,12 +65,6 @@ graph siteRef {
    link (string)\l
    description (string)\l
    logo (text)\l
-   published (Date)\l
-   proposition (Proposition)\l
- }", shape=record];
-
- nodeTableProposition [label = "{
-  Proposition
    |
    published (date)\l
    message (text)\l
@@ -106,34 +113,27 @@ graph siteRef {
  /// Relation
 
  nodeRelationPaperDiagnostic [label = "{PaperDiagnostic}", shape = Mrecord];
- nodeRelationPaperProposition [label = "{PaperProposition}", shape = Mrecord];
  nodeRelationStructureJuridical [label = "{StructureJuridical}", shape = Mrecord];
  nodeRelationStructureDepartement [label = "{StructureDepartement}", shape = Mrecord];
- nodeRelationStructureProposition [label = "{StructureProposition}", shape = Mrecord];
- nodeRelationProjectProposition [label = "{ProjectProposition}", shape = Mrecord];
  nodeRelationDiagnosticDiagnostic [label = "{DiagnosticDiagnostic}", shape = Mrecord];
  nodeRelationDiagnosticDepartement [label = "{DiagnosticDepartement}", shape = Mrecord];
  nodeRelationUserDepartement [label = "{UserDepartement}", shape = Mrecord];
  nodeRelationUserDiagnostic [label = "{UserDiagnostic}", shape = Mrecord];
  nodeRelationPaperLanguage [label = "{PaperLanguage}", shape = Mrecord];
- nodeRelationUserProposition [label = "{UserProposition}", shape = Mrecord];
+ nodeRelationStructureUser [label = "{StructureUser}", shape = Mrecord];
+ nodeRelationPaperUser [label = "{PaperUser}", shape = Mrecord];
+ nodeRelationProjectUser [label = "{ProjectUser}", shape = Mrecord];
 
  /// Cardinality
 
  nodeTablePaper -- nodeRelationPaperDiagnostic [headlabel = "0,n", labeldistance = 3];
  nodeRelationPaperDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
- nodeTablePaper -- nodeRelationPaperProposition [headlabel = "1,1", labeldistance = 3];
- nodeRelationPaperProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3]
  nodeTablePaper -- nodeRelationPaperLanguage [headlabel = "1,1", labeldistance = 3];
  nodeRelationPaperLanguage -- nodeTableLanguage [headlabel = "0,n", labeldistance = 3]
  nodeTableStructure -- nodeRelationStructureJuridical [headlabel = "1,1", labeldistance = 3];
  nodeRelationStructureJuridical -- nodeTableJuridical [headlabel = "0,n", labeldistance = 3];
  nodeTableStructure -- nodeRelationStructureDepartement [headlabel = "1,1", labeldistance = 3];
  nodeRelationStructureDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
- nodeTableStructure -- nodeRelationStructureProposition [headlabel = "1,1", labeldistance = 3];
- nodeRelationStructureProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3];
- nodeTableProject -- nodeRelationProjectProposition [headlabel = "1,1", labeldistance = 3];
- nodeRelationProjectProposition -- nodeTableProposition [headlabel = "0,1", labeldistance = 3];
  nodeTableDiagnostic -- nodeRelationDiagnosticDiagnostic [headlabel = "0,n", labeldistance = 3];
  nodeRelationDiagnosticDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
  nodeTableDiagnostic -- nodeRelationDiagnosticDepartement [headlabel = "0,n", labeldistance = 3];
@@ -142,6 +142,11 @@ graph siteRef {
  nodeRelationUserDepartement -- nodeTableDepartement [headlabel = "0,n", labeldistance = 3];
  nodeTableUser -- nodeRelationUserDiagnostic [headlabel = "0,n", labeldistance = 3];
  nodeRelationUserDiagnostic -- nodeTableDiagnostic [headlabel = "0,n", labeldistance = 3];
- nodeTableUser -- nodeRelationUserProposition [headlabel = "0,n", labeldistance = 3];
- nodeRelationUserProposition -- nodeTableProposition [headlabel = "1,1", labeldistance = 3];
+ nodeTablePaper -- nodeRelationPaperUser [headlabel = "1,1", labeldistance = 3];
+ nodeRelationPaperUser -- nodeTableUser [headlabel = "0,1", labeldistance = 3];
+ nodeTableStructure -- nodeRelationStructureUser [headlabel = "1,1", labeldistance = 3];
+ nodeRelationStructureUser -- nodeTableUser [headlabel = "0,n", labeldistance = 3];
+ nodeTableProject -- nodeRelationProjectUser [headlabel = "1,1", labeldistance = 3];
+ nodeRelationProjectUser -- nodeTableUser [headlabel = "0,n", labeldistance = 3];
+
 }
