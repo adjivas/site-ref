@@ -56,3 +56,10 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+ # front-end gems
+gem 'gsdk', '>= 1.0.0.4'
+gem 'polymer-rails', github: 'alchapone/polymer-rails'
+gem 'polymer-paper-rails', github: 'alchapone/polymer-paper-rails'
+gem 'polymer-elements-rails', github: 'alchapone/polymer-elements-rails'
+gem 'polymer-iron-rails', github: 'alchapone/polymer-iron-rails'
+gem 'polymer-neon-rails', github: 'alchapone/polymer-neon-rails'

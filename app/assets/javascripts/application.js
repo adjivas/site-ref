@@ -12,7 +12,36 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require gsdk
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
 //= require_tree .
+
+var diag = document.getElementById("diag");
+var two = document.getElementById("two");
+var three = document.getElementById("three");
+     console.log(diag);
+        console.log(two);
+        console.log(three);
+if (diag)
+{
+  diag.addEventListener("click", function (){
+    document.querySelector('parkour-selector').showParkour('parkour-diagnostique');
+  });
+}
+
+if (two)
+{
+ 
+  two.addEventListener("click", function (){
+     console.log("ok : ")
+    document.querySelector('parkour-selector').showParkour('template-deux-parkour');
+  });
+}
+if (three)
+{
+  three.addEventListener("click", function (){
+    document.querySelector('parkour-selector').showParkour('template-trois-parkour');
+  });
+}

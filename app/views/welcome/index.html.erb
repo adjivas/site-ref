@@ -1,0 +1,108 @@
+<% content_for :features, "navbar-transparent" %>
+<div id="navbar-full">
+  <div id="navbar">
+    <nav class="navbar navbar-ct-green navbar-transparent navbar-fixed-top" role="navigation">
+      <div class="alert alert-success hidden">
+        <div class="container" style="color: red">
+          <b>Lorem ipsum</b> dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="border motto"><%= link_to(image_tag("interactblanc", size: "120x60"), '/') %></div>
+          <!--<a class="navbar-brand"><%= link_to(image_tag("interact", size: "120x60"), '/') %></a>-->
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Nos applications</a></li>
+            <li class="active"><a href="https://interact-autism-elacombe.c9users.io/?_c9_id=livepreview0&_c9_host=https://ide.c9.io">Mes parcours</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#atr">Les troubles associés</a></li>
+                  <li><a href="#">Définition et classification des TSA</a></li>
+                  <li><a href="#">Les manifestations des TSA</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+            <li>
+              <a href="javascript:void(0);" data-toggle="search" class="hidden-xs"><i class="fa fa-search"></i></a>
+            </li>
+          </ul>
+              <form class="navbar-form navbar-left navbar-search-form" role="search">
+                <div class="form-group">
+                  <input type="text" value="" class="form-control" placeholder="Search...">
+                </div>
+              </form>
+             <ul class="nav navbar-nav navbar-right">
+                   <li><button href="#" class="btn btn-round btn-default" style="background-color: #00FE7E; border-width: 0; color: #000080">Connexion Interact</button></li>
+                   <li>&nbsp;&nbsp;</li>
+                   <li><button href="#" style="border-color: #00FE7E; border-width: 2px; color: #000080" class="btn btn-round btn-default">Inscription</button></li>
+              </ul>
+           </div>
+         </div>
+       </nav>
+    <div class="blurred-container">
+<!--        <div class="motto">
+        
+        <div class="border"><%= link_to(image_tag("interactblanc", size: "250x100"), '/') %></div>
+        <div>Autisme</div>
+    </div>-->
+  <iframe style="width: 100%" src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1aMvTia8QYiLyG1Jpc1CqIBXUZneNZPnFL095QiTdfw4&font=Default&lang=en&initial_zoom=2&height=550' width='750' height='550' frameborder='0'></iframe>
+
+           <!--<div class="img-src" style="background-image: url('http://golfstinks.com/blog/wp-content/uploads/2014/08/left-brain-right-brain.png')"></div>-->
+       </div>
+   </div>
+
+</div>
+
+
+
+<% if user_signed_in? %>
+    <div class="row">
+    <section class="col-md-12 col-sm-12 col-xs-12">
+      <div class="col-md-6" style="text-align: left">
+          <button id="diag" class="btn btn-block btn-lg btn-info btn-fill">Les interventions globales et coordonneées</button>
+      </div>
+      <div class="col-md-6">
+          <button id="two" class="btn btn-block btn-lg btn-info btn-fill">Diagnostic</button>
+      </div>
+      <div class="col-md-6">
+          <button id="three" class="btn btn-block btn-lg btn-info btn-fill">Diagnostic</button>
+      </div>
+    </section>
+    </div>
+</article>
+<!--<paper-button>flat button</paper-button>-->
+<div class="col-md-12 col-lg-12  col-xs-12">
+<parkour-selector></parkour-selector>
+</div>
+<% else %>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<%# else %>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end main -->
+
