@@ -14,7 +14,7 @@ RUN apt-get install -y vim ;
 RUN apt-get install -y ruby ;
 RUN apt-get install -y nodejs ;
 RUN apt-get install -y postgresql ;
-RUN apt-get install -y sqlite ;
+RUN apt-get install -y libsqlite3-dev ;
 RUN apt-get install -y nginx ;
 RUN apt-get install -y git ;
 RUN apt-get install -y rails ;
