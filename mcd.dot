@@ -10,18 +10,18 @@ graph siteRef {
   Paper
    |
    name (string)\l
+   link (string)\l
    description (string)\l
-   published (date)\l
+   from (date)\l
    language: (Language)\l
    diagnostic (Diagnostic)\l
    |
    published (date)\l
    message (text)\l
    reply (text)\l
-   approved (integer)\l
    user (User)\l
-   admin (Admin)\l
-
+   admin (User)\l
+   approved (integer)\l
  }", shape=record];
 
  nodeTableStructure [label = "{
@@ -41,21 +41,21 @@ graph siteRef {
    published (date)\l
    message (text)\l
    reply (text)\l
-   approved (integer)\l
    user (User)\l
-   admin (Admin)\l
+   admin (User)\l
+   approved (integer)\l
  }", shape=record];
 
  nodeTableJuridical [label = "{
   Juridical
-    |
-    name (string)\l
+   |
+   name (string)\l
  }", shape=record];
 
  nodeTableDepartement [label = "{
   Departement
-    |
-    name (string)\l
+   |
+   name (string)\l
  }", shape=record];
 
  nodeTableProject [label = "{
@@ -64,14 +64,15 @@ graph siteRef {
    name (string)\l
    link (string)\l
    description (string)\l
+   from:date\l
    logo (text)\l
    |
    published (date)\l
    message (text)\l
    reply (text)\l
-   approved (integer)\l
    user (User)\l
-   admin (Admin)\l
+   admin (User)\l
+   approved (integer)\l
  }", shape=record];
 
  nodeTableDiagnostic [label = "{
@@ -89,6 +90,7 @@ graph siteRef {
  nodeTableUser [label = "{
   User
    |
+   is_admin:boolean\l
    pseudonym (string)\l
    link (string)\l
    email (string)\l
@@ -107,7 +109,7 @@ graph siteRef {
  nodeTableLanguage [label = "{
   Language
    |
-    name (string)\l
+   name (string)\l
  }", shape=record];
 
  /// Relation
