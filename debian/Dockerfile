@@ -17,6 +17,7 @@ RUN apt-get install -y postgresql ;
 RUN apt-get install -y sqlite ;
 RUN apt-get install -y nginx ;
 RUN apt-get install -y git ;
+RUN apt-get install -y rails ;
 
 RUN apt-get install -y locales
 RUN dpkg-reconfigure locales && \
