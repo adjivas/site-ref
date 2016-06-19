@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  juridical_id: 
+  description: MyString
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  email: MyString
+  phone: MyString
+  link: MyString
+  departement_id: 
+  published: 2016-06-19
+  message: MyText
+  reply: MyText
+  user_id: 
+  admin_id: 
+  approved: 1
+
+two:
+  name: MyString
+  juridical_id: 
+  description: MyString
+  address: MyString
+  longitude: 1.5
+  latitude: 1.5
+  email: MyString
+  phone: MyString
+  link: MyString
+  departement_id: 
+  published: 2016-06-19
+  message: MyText
+  reply: MyText
+  user_id: 
+  admin_id: 
+  approved: 1

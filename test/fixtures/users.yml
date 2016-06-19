@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  is_admin: false
+  link: MyString
+  gender: 1
+  birthdate: 2016-06-19
+  begin: 2016-06-19
+  end: 2016-06-19
+  info_research: false
+  email_research: false
+  departement_id: 
+  diagnostic_id: 
+
+two:
+  is_admin: false
+  link: MyString
+  gender: 1
+  birthdate: 2016-06-19
+  begin: 2016-06-19
+  end: 2016-06-19
+  info_research: false
+  email_research: false
+  departement_id: 
+  diagnostic_id: 

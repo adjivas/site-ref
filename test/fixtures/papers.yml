@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  link: MyString
+  description: MyString
+  from: 2016-06-19
+  language_id: 
+  diagnostic_id: 
+  published: 2016-06-19
+  message: MyText
+  reply: MyText
+  user_id: 
+  admin_id: 
+  approved: 1
+
+two:
+  name: MyString
+  link: MyString
+  description: MyString
+  from: 2016-06-19
+  language_id: 
+  diagnostic_id: 
+  published: 2016-06-19
+  message: MyText
+  reply: MyText
+  user_id: 
+  admin_id: 
+  approved: 1
