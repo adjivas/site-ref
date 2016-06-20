@@ -17,8 +17,8 @@
           <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
           <td><%= link_to 'Destroy', departement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
-      <% else redirect_to_front %>
-      <% end %>
+      <%= else redirect_to_front %>
+      <%= end %>
     <% end %>
   </tbody>
 </table>
