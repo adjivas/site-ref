@@ -13,13 +13,15 @@ RUN apt-get install -y emacs ;
 RUN apt-get install -y vim ;
 RUN apt-get install -y ruby ;
 RUN apt-get install -y nodejs ;
+RUN apt-get install -y rails ;
 RUN apt-get install -y libpq-dev ;
 RUN apt-get install -y postgresql ;
 RUN apt-get install -y libsqlite3-dev ;
 RUN apt-get install -y curl ;
 RUN apt-get install -y man ;
 RUN apt-get install -y git ;
-RUN apt-get install -y rails ;
+RUN apt-get install -y tmux ;
+RUN apt-get install -y links ;
 
 RUN apt-get install -y locales
 RUN dpkg-reconfigure locales && \
@@ -71,5 +73,5 @@ RUN echo ":set number" >> $HOME/.vimrc ;
 
 # Main
 
-ENTRYPOINT bash
+ENTRYPOINT tmux
 WORKDIR $HOME/ref
