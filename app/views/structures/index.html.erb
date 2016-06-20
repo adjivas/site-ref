@@ -27,7 +27,7 @@
 
   <tbody>
     <% @structures.each do |structure| %>
-      <%= if current_user.is_admin == 2
+      <%= if current_user.is_admin ?
           or structure.approved == 1 %>
         <tr>
         <td><%= structure.name %></td>
@@ -46,7 +46,7 @@
         <td><%= structure.user %></td>
         <td><%= structure.admin %></td>
         <td><%= structure.approved %></td>
-	<%= if current_user.is_admin == 2 %>
+	<%= if current_user.is_admin ? %>
         <td><%= link_to 'Show', structure %></td>
         <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
         <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>

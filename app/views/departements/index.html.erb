@@ -10,7 +10,7 @@
 
   <tbody>
     <% @departements.each do |departement| %>
-      <%= if current_user.is_admin == 2 %>
+      <%= if current_user.is_admin ? %>
         <tr>
           <td><%= departement.name %></td>
           <td><%= link_to 'Show', departement %></td>
