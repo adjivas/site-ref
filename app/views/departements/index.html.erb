@@ -10,12 +10,15 @@
 
   <tbody>
     <% @departements.each do |departement| %>
-      <tr>
-        <td><%= departement.name %></td>
-        <td><%= link_to 'Show', departement %></td>
-        <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
-        <td><%= link_to 'Destroy', departement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <%= if current_user.id_admin == 2 %>
+        <tr>
+          <td><%= departement.name %></td>
+          <td><%= link_to 'Show', departement %></td>
+          <td><%= link_to 'Edit', edit_departement_path(departement) %></td>
+          <td><%= link_to 'Destroy', departement, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% else redirect_to_front %>
+      <% end %>
     <% end %>
   </tbody>
 </table>
