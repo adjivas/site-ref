@@ -1,5 +1,7 @@
 <%= form_for(@user) do |f| %>
-  <% @current = User.all.find(current_user.id)
+  <% if user_signed_in? %>
+   <% 
+     @current = User.all.find(current_user.id)
      if @current.is_admin || current_user.id == f.id  %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
@@ -59,4 +61,5 @@
       <%= f.submit %>
     </div>
   <% end %>
+ <% end %>
 <% end %>
