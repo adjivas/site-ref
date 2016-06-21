@@ -2,6 +2,7 @@
   <% if user_signed_in? %>
    <% 
      @current = User.all.find(current_user.id)
+     puts @current
      if @current.is_admin || current_user.id == f.id  %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
