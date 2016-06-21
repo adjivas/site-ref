@@ -1,59 +1,62 @@
 <%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <% if current_user.is_admin? or
+         current_user.id == f.id %>
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+        <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-  <% if current_user.is_admin? %>
+    <% if current_user.is_admin? %>
+      <div class="field">
+        <%= f.label :is_admin %><br>
+        <%= f.check_box :is_admin %>
+      </div>
+    <% end %>
     <div class="field">
-      <%= f.label :is_admin %><br>
-      <%= f.check_box :is_admin %>
+      <%= f.label :link %><br>
+      <%= f.text_field :link %>
+    </div>
+    <div class="field">
+      <%= f.label :gender %><br>
+      <%= f.number_field :gender %>
+    </div>
+    <div class="field">
+      <%= f.label :birthdate %><br>
+      <%= f.date_select :birthdate %>
+    </div>
+    <div class="field">
+      <%= f.label :begin %><br>
+      <%= f.date_select :begin %>
+    </div>
+    <div class="field">
+      <%= f.label :end %><br>
+      <%= f.date_select :end %>
+    </div>
+    <div class="field">
+      <%= f.label :info_research %><br>
+      <%= f.check_box :info_research %>
+    </div>
+    <div class="field">
+      <%= f.label :email_research %><br>
+      <%= f.check_box :email_research %>
+    </div>
+    <div class="field">
+      <%= f.label :departement_id %><br>
+      <%= f.text_field :departement_id %>
+    </div>
+    <div class="field">
+      <%= f.label :diagnostic_id %><br>
+      <%= f.text_field :diagnostic_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :link %><br>
-    <%= f.text_field :link %>
-  </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.number_field :gender %>
-  </div>
-  <div class="field">
-    <%= f.label :birthdate %><br>
-    <%= f.date_select :birthdate %>
-  </div>
-  <div class="field">
-    <%= f.label :begin %><br>
-    <%= f.date_select :begin %>
-  </div>
-  <div class="field">
-    <%= f.label :end %><br>
-    <%= f.date_select :end %>
-  </div>
-  <div class="field">
-    <%= f.label :info_research %><br>
-    <%= f.check_box :info_research %>
-  </div>
-  <div class="field">
-    <%= f.label :email_research %><br>
-    <%= f.check_box :email_research %>
-  </div>
-  <div class="field">
-    <%= f.label :departement_id %><br>
-    <%= f.text_field :departement_id %>
-  </div>
-  <div class="field">
-    <%= f.label :diagnostic_id %><br>
-    <%= f.text_field :diagnostic_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>
