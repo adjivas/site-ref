@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :departement_id %><br>
-    <%= f.text_field :departement_id %>
+    <%= f.collection_select :departement_id, Departement.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="actions">
     <%= f.submit %>
