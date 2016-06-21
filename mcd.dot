@@ -4,6 +4,17 @@ graph siteRef {
  splines=true;
  node [fontsize = 11];
 
+ /// Knowledge
+
+ nodeTableKnowledge [label = "{
+  Knowledge
+   |
+   name (string)\l
+   presentation (string)\l
+   pos_x (integer)\l
+   pos_y (integer)\l
+ }", shape=record]
+
  /// Table
 
  nodeTablePaper [label = "{
