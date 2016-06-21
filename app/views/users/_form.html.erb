@@ -11,10 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :is_admin %><br>
-    <%= f.check_box :is_admin %>
-  </div>
+  <% if current_user.is_admin? %>
+    <div class="field">
+      <%= f.label :is_admin %><br>
+      <%= f.check_box :is_admin %>
+    </div>
+  <% end %>
   <div class="field">
     <%= f.label :link %><br>
     <%= f.text_field :link %>
