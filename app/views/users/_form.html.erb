@@ -1,7 +1,7 @@
 <%= form_for(@user) do |f| %>
   <% if user_signed_in? %>
    <% 
-     @current = User.all.find(current_user.id)
+     @current = User.all.find(current_user)
      puts @current
      if @current.is_admin || current_user.id == f.id  %>
     <% if @user.errors.any? %>
