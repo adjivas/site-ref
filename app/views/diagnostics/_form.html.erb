@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :diagnostic_id %><br>
-    <%= f.collection_select(:diagnostic_id, Diagnostic.all, :id, :name, {:prompt => "Selectionner votre dependence"}, {:multiple => true}) %>
+    <%= f.collection_select(:diagnostic_ids, Diagnostic.all, :id, :name, {:prompt => "Selectionner votre dependence"}, {:multiple => true}) %>
   </div>
   <div class="field">
     <%= f.label :departement_id %><br>
