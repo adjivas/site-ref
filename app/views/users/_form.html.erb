@@ -1,6 +1,8 @@
 <%= form_for(@user) do |f| %>
   <% if user_signed_in? %>
    <%= current_user.id %>
+   <%= current_user.is_admin %>
+   <%= f.id %>
    <% if true
      # @current.is_admin || current_user.id == f.id 
     %>
