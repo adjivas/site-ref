@@ -16,6 +16,9 @@
 
   <tbody>
     <% @diagnostics.each do |diagnostic| %>
+      <%= diagnostic.to_json %>
+    <% end %>
+    <% @diagnostics.each do |diagnostic| %>
       <tr>
         <td><%= diagnostic.name %></td>
         <td><%= diagnostic.description %></td>
