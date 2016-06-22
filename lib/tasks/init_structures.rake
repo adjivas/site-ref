@@ -17,5 +17,5 @@ task :import, [:filename] => :environment do
 #        c.link = row['link']
 #	c.approved = true
 #	c.save
-    end
+#    end
 end
