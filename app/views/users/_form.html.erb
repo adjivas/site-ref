@@ -3,7 +3,9 @@
    <% 
      @current = User.all.find(current_user)
      puts @current
-     if @current.is_admin || current_user.id == f.id  %>
+     if true
+     # @current.is_admin || current_user.id == f.id 
+    %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
