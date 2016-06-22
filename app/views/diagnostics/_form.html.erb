@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :diagnostic_id %><br>
-    <%= f.collection_select :diagnostic_id, Diagnostic.order(:name), :id, :name, include_blank: true, {:multiple => true} %>
+    <%= f.collection_select (:diagnostic_id, Diagnostic.order(:name), :id, :name, include_blank: true, {:multiple => true}) %>
   </div>
   <div class="field">
     <%= f.label :departement_id %><br>
