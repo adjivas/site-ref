@@ -1,11 +1,6 @@
 <%= form_for(@user) do |f| %>
   <% if user_signed_in? %>
-   <%= current_user.id %>
-   <%= current_user.is_admin %>
-   <%= @user.id %>
-   <% if true
-     # @current.is_admin || current_user.id == f.id 
-    %>
+   <% if current_user.id == user.id || current_user.is_admin? %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
