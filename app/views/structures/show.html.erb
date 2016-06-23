@@ -55,25 +55,27 @@
   <%= @structure.published %>
 </p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @structure.message %>
-</p>
+<% if current_user.is_admin %>
+  <p>
+    <strong>Message:</strong>
+    <%= @structure.message %>
+  </p>
 
-<p>
-  <strong>Reply:</strong>
-  <%= @structure.reply %>
-</p>
+  <p>
+    <strong>Reply:</strong>
+    <%= @structure.reply %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @structure.user %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @structure.user %>
+  </p>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @structure.admin %>
-</p>
+  <p>
+    <strong>Admin:</strong>
+    <%= @structure.admin %>
+  </p>
+<% end %>
 
 <p>
   <strong>Approved:</strong>

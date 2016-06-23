@@ -27,30 +27,31 @@
 
   <tbody>
     <% @structures.each do |structure| %>
-      <%= if current_user.is_admin ?
-          or structure.approved == 1 %>
+      <% if current_user.is_admin? || structure.approved == 1 %>
         <tr>
-        <td><%= structure.name %></td>
-        <td><%= structure.juridical %></td>
-        <td><%= structure.description %></td>
-        <td><%= structure.address %></td>
-        <td><%= structure.longitude %></td>
-        <td><%= structure.latitude %></td>
-        <td><%= structure.email %></td>
-        <td><%= structure.phone %></td>
-        <td><%= structure.link %></td>
-        <td><%= structure.departement %></td>
-        <td><%= structure.published %></td>
-        <td><%= structure.message %></td>
-        <td><%= structure.reply %></td>
-        <td><%= structure.user %></td>
-        <td><%= structure.admin %></td>
-        <td><%= structure.approved %></td>
-	<%= if current_user.is_admin ? %>
-        <td><%= link_to 'Show', structure %></td>
-        <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
-        <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-         <%= end %>
+          <td><%= structure.name %></td>
+          <td><%= structure.juridical %></td>
+          <td><%= structure.description %></td>
+          <td><%= structure.address %></td>
+          <td><%= structure.longitude %></td>
+          <td><%= structure.latitude %></td>
+          <td><%= structure.email %></td>
+          <td><%= structure.phone %></td>
+          <td><%= structure.link %></td>
+          <td><%= structure.departement %></td>
+          <td><%= structure.published %></td>
+          <td><%= structure.message %></td>
+          <td><%= structure.reply %></td>
+          <td><%= structure.user %></td>
+          <td><%= structure.admin %></td>
+          <td><%= structure.approved %></td>
+          <td><%= link_to 'Show', structure %></td>
+          <% if user_signed_in? %>
+            <% if current_user.is_admin? || current_user == structure.user %>
+              <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
+              <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+          <% end %>
         </tr>
       <% end %>
     <% end %>

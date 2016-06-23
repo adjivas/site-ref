@@ -30,25 +30,27 @@
   <%= @project.published %>
 </p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @project.message %>
-</p>
+<% if current_user.is_admin %>
+  <p>
+    <strong>Message:</strong>
+    <%= @project.message %>
+  </p>
 
-<p>
-  <strong>Reply:</strong>
-  <%= @project.reply %>
-</p>
+  <p>
+    <strong>Reply:</strong>
+    <%= @project.reply %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @project.user %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @project.user %>
+  </p>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @project.admin %>
-</p>
+  <p>
+    <strong>Admin:</strong>
+    <%= @project.admin %>
+  </p>
+<% end %>
 
 <p>
   <strong>Approved:</strong>

@@ -1,6 +1,10 @@
-<h1>Editing structure</h1>
+<% if user_signed_in? %>
+  <% if current_user.is_admin? || current_user == @structure.user %>
+    <h1>Editing structure</h1>
 
-<%= render 'form' %>
+    <%= render 'form' %>
 
-<%= link_to 'Show', @structure %> |
-<%= link_to 'Back', structures_path %>
+    <%= link_to 'Show', @structure %> |
+    <%= link_to 'Back', structures_path %>
+  <% end %>
+<% end %>

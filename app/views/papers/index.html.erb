@@ -21,27 +21,29 @@
 
   <tbody>
     <% @papers.each do |paper| %>
-      <tr>
-        <td><%= paper.name %></td>
-        <td><%= paper.link %></td>
-        <td><%= paper.description %></td>
-        <td><%= paper.from %></td>
-        <td><%= paper.language %></td>
-        <td><%= paper.diagnostic %></td>
-        <td><%= paper.published %></td>
-        <td><%= paper.message %></td>
-        <td><%= paper.reply %></td>
-        <td><%= paper.user %></td>
-        <td><%= paper.admin %></td>
-        <td><%= paper.approved %></td>
-        <td><%= link_to 'Show', paper %></td>
-        <% if user_signed_in? %>
-          <% if current_user.is_admin? || current_user == paper.user %>
-            <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
-            <td><%= link_to 'Destroy', paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% if current_user.is_admin? || paper.approved == 1 %>
+        <tr>
+          <td><%= paper.name %></td>
+          <td><%= paper.link %></td>
+          <td><%= paper.description %></td>
+          <td><%= paper.from %></td>
+          <td><%= paper.language %></td>
+          <td><%= paper.diagnostic %></td>
+          <td><%= paper.published %></td>
+          <td><%= paper.message %></td>
+          <td><%= paper.reply %></td>
+          <td><%= paper.user %></td>
+          <td><%= paper.admin %></td>
+          <td><%= paper.approved %></td>
+          <td><%= link_to 'Show', paper %></td>
+          <% if user_signed_in? %>
+            <% if current_user.is_admin? || current_user == paper.user %>
+              <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
+              <td><%= link_to 'Destroy', paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
           <% end %>
-        <% end %>
-      </tr>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
