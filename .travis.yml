@@ -2,9 +2,6 @@ language: ruby
 sudo: false
 group: stable
 cache: bundler
-branches:
-  except:
-    - notes
 addons:
   postgresql: '9.3'
   apt:
