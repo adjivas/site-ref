@@ -1,35 +1,9 @@
-language: ruby
-sudo: false
-group: stable
-cache: bundler
-addons:
-  postgresql: '9.3'
-  apt:
-    packages:
-    - libpcap-dev
-    - graphviz
-node_js:
-- '5'
-rvm:
-- 2.2
-deploy:
-  provider: heroku
-  api_key:
-    secure: CwM+ifAeefcDF+RhPQXsDFxX/QHCkRsuN0M8qBVIx2mWQJx9cfm3t/GE0CTIkexRk6GlwxD+AbixWdgULMp+fYhucC/YZ2Wj4QRb7q+jomYXpMwmnPilf6X6VPMI6sUxNIfP3xSie7zYiue/vQ+wEZAsFEcVytFIooSO5n3RlTJj8XrHxHT1tliTCVYl4vcMQdKoYlqAGswkD4fcTIrE/hg7z5UQ0E4a6nsEe8bnOD3/o5HkD1snkrRoYA997JZeLF28E4yj7jkf9mumpgl+XMyloGrrwXqHMNX/rovHMV50XFzTLe/EVJ7jLUIzV8borddkQH/GmMzumvP6Mp3RF5uyJn5KOC+PfvCM+AvkhXjU+2a1vTKYu4PMF8///Rz2cPsj8bD5jyYn4yyyRRXFIZrUAKRNWMg13E9m0wkGoxbZg5pUUWSQpsICQQOllLi1v8jKR0udk8bZQEo81fENHp2bTeOsJVLTHwZDZfE0Anpo9EKe34jM/c+qU1LX4796baKGHbEL5851nY4aqyD+lhoOumiWN1cvIdguY0dHxkBre/9M5NqWCzezJwBYICgscywNDjNgFcrC6bDM4S5AUJ+gisgXZ2QWiVZX8BGzN51ACLRp1xqWKi9Eo8xbxQxV3HkRpp5ocPEQRkc1tTog1P+7+ZMmIkACh0Km+hHq5YI=
-  app:
-    master: site-ref-adjivas
-  run: rake db:migrate
+language: dot
+sudo: true
+os:
+  - linux
 before_install:
-- 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
-- rake --version
-before_script:
-- bundle exec rake --version
-- bundle exec rake db:create
-- bundle exec rake db:migrate
-install:
-- bundle install --path vendor/bundle
+  - sudo apt-get update -qq 
+  - sudo apt-get install graphviz
 script:
-- bundle update
-- bundle update rake
-- bundle install
-- bundle exec rake db:migrate
+  - dot -Tpng > mcd.png mcd.dot
