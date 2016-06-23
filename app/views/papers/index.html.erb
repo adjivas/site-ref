@@ -36,7 +36,8 @@
         <td><%= paper.approved %></td>
         <td><%= link_to 'Show', paper %></td>
         <% if user_signed_in? %>
-          <% if current_user.is_admin? || current_user == paper.user %>
+          <% if current_user.is_admin?
+             || current_user == paper.user %>
             <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
             <td><%= link_to 'Destroy', paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
