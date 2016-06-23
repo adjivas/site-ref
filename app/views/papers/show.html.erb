@@ -35,25 +35,27 @@
   <%= @paper.published %>
 </p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @paper.message %>
-</p>
+<% if current_user.is_admin %>
+  <p>
+    <strong>Message:</strong>
+    <%= @paper.message %>
+  </p>
 
-<p>
-  <strong>Reply:</strong>
-  <%= @paper.reply %>
-</p>
+  <p>
+    <strong>Reply:</strong>
+    <%= @paper.reply %>
+  </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @paper.user %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @paper.user %>
+  </p>
 
-<p>
-  <strong>Admin:</strong>
-  <%= @paper.admin %>
-</p>
+  <p>
+    <strong>Admin:</strong>
+    <%= @paper.admin %>
+  </p>
+<% end %>
 
 <p>
   <strong>Approved:</strong>
