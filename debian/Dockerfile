@@ -41,6 +41,10 @@ RUN git clone https://github.com/adjivas/site-ref.git $HOME/ref ;
 RUN chown $USER -R $HOME/ref
 USER $USER
 
+# Heroku
+
+RUN curl -L https://toolbelt.heroku.com/install.sh | sh
+
 # Configuration *Ruby on Rails*
 
 ENV GEM_HOME="\$(ruby -e 'print Gem.user_dir')"
@@ -61,13 +65,16 @@ if [[ \"\$SHLVL\" == \"2\" ]];then\\n\
 	gem install gmaps4rails\\n\
 	gem install postgresql\\n\
 	gem install sqlite3\\n\
-	curl -L https://toolbelt.heroku.com/install.sh | sudo sh\\n\
 fi" >> $HOME/.bashrc ;
 RUN echo "export PATH=\"/usr/local/heroku/bin:\$PATH\"" >> $HOME/.bashrc ;
 
 # Perso
 RUN echo "alias gpush=\"git push origin master\"" >> $HOME/.bashrc ;
 RUN echo "alias hpush=\"git push heroku master\"" >> $HOME/.bashrc ;
+RUN echo "git config --global user.email \"$USER@users.noreply.github.com\"" >> $HOME/.bashrc ;
+RUN echo "git config --global user.name \"$USER\"" >> $HOME/.bashrc ;
+RUN echo "git config --global credential.helper \"cache --timeout 7200\"" >> $HOME/.bashrc ;
+
 RUN echo ":syntax on" >> $HOME/.vimrc ;
 RUN echo ":set number" >> $HOME/.vimrc ;
 
