@@ -11,10 +11,10 @@
        <p class="alert"><%= alert %></p>
 
        <% if user_signed_in? %>
-         <a href="users/sign_out">sign out</a>
+         <%= link_to('Logout', destroy_user_session, :method => :delete) %>
          <p><%= current_user.email %></p>
        <% else %>
-         <a href="users/sign_in">sign in</a>
+          <%= link_to('Logint', new_user_session, :method => :get) %>
        <% end %>
 
 <%= yield %>

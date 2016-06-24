@@ -5,6 +5,7 @@
 [![license-badge][]][license]
 
 [license-badge]: https://img.shields.io/badge/license-GPL_3-green.svg?style=flat-square
+[license]: LICENSE
 
 ##### Wiki
 * [Authorization](https://github.com/adjivas/site-ref/wiki/Authorization)
