@@ -1,6 +1,10 @@
 # Site-Ref
 
-[![Build Status](https://travis-ci.org/adjivas/site-ref.svg?branch=master)](https://travis-ci.org/adjivas/site-ref)
+[![Build Status](https://travis-ci.org/adjivas/site-ref.svg?branch=master&style=flat-square)](https://travis-ci.org/adjivas/site-ref)
+[![Inline docs](http://inch-ci.org/github/adjivas/site-ref.svg?branch=master&style=shields)](http://inch-ci.org/github/adjivas/site-ref)
+
+Wiki:
+* [Authorization](https://github.com/adjivas/site-ref/wiki/Authorization)
 
 #### Merise'MCD-Modeling
 ![Screen Shot](https://raw.githubusercontent.com/adjivas/site-ref/notes/mcd.png)
