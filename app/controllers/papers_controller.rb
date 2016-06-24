@@ -26,6 +26,7 @@ class PapersController < ApplicationController
   def create
     @paper = Paper.new(paper_params)
 
+    @paper.user = current_user
     respond_to do |format|
       if @paper.save
         format.html { redirect_to @paper, notice: 'Paper was successfully created.' }
