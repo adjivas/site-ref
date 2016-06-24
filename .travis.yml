@@ -33,6 +33,5 @@ script:
 - bundle update rake
 - bundle install
 - bundle exec rake db:migrate
-- bundle exec rake import
 - bundle exec rake import_departement
 - bundle exec rake import_language
