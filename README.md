@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/adjivas/site-ref.svg?branch=master&style=flat-square)](https://travis-ci.org/adjivas/site-ref)
 [![Inline docs](http://inch-ci.org/github/adjivas/site-ref.svg?branch=master&style=shields)](http://inch-ci.org/github/adjivas/site-ref)
+[![license-badge][]][license]
+
+[license-badge]: https://img.shields.io/badge/license-GPL_3-green.svg?style=flat-square
 
 ##### Wiki
 * [Authorization](https://github.com/adjivas/site-ref/wiki/Authorization)

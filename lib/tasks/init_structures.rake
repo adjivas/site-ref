@@ -3,7 +3,7 @@ require 'csv'
 
 # rake import
 desc "Imports a CSV file into an Structure table"
-task :import, [:filename] => :environment do    
+task :import_structure, [:filename] => :environment do    
 #    CSV.foreach('db/structures.csv', :headers => true) do |row|
 #	c = Structure.new()
 #        c.name = row['name']
