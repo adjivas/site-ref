@@ -82,5 +82,7 @@
   <%= @structure.approved %>
 </p>
 
-<%= link_to 'Edit', edit_structure_path(@structure) %> |
+<% if current_user.is_admin || current_user == @structure.user %>
+  <%= link_to 'Edit', edit_structure_path(@structure) %> |
+<% end %>
 <%= link_to 'Back', structures_path %>

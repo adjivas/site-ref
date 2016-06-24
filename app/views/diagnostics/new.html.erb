@@ -1,5 +1,7 @@
-<h1>New diagnostic</h1>
+<% current_user.is_admin? %>
+  <h1>New diagnostic</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Back', diagnostics_path %>
+  <%= link_to 'Back', diagnostics_path %>
+<% end %>

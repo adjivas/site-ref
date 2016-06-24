@@ -1,45 +1,49 @@
-<h1>Listing users</h1>
+<% if user_signed_in? %>
+  <h1>Listing users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th>Is admin</th>
-      <th>Link</th>
-      <th>Gender</th>
-      <th>Birthdate</th>
-      <th>Begin</th>
-      <th>End</th>
-      <th>Info research</th>
-      <th>Email research</th>
-      <th>Departement</th>
-      <th>Diagnostic</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+  <table>
+    <thead>
       <tr>
-	<td><%= user.email %></td>
-        <td><%= user.is_admin %></td>
-        <td><%= user.link %></td>
-        <td><%= user.gender %></td>
-        <td><%= user.birthdate %></td>
-        <td><%= user.begin %></td>
-        <td><%= user.end %></td>
-        <td><%= user.info_research %></td>
-        <td><%= user.email_research %></td>
-        <td><%= user.departement %></td>
-        <td><%= user.diagnostic %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Email</th>
+        <th>Is admin</th>
+        <th>Link</th>
+        <th>Gender</th>
+        <th>Birthdate</th>
+        <th>Begin</th>
+        <th>End</th>
+        <th>Info research</th>
+        <th>Email research</th>
+        <th>Departement</th>
+        <th>Diagnostic</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @users.each do |user| %>
+        <% if current_user.is_admin || current_user == user %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.is_admin %></td>
+            <td><%= user.link %></td>
+            <td><%= user.gender %></td>
+            <td><%= user.birthdate %></td>
+            <td><%= user.begin %></td>
+            <td><%= user.end %></td>
+            <td><%= user.info_research %></td>
+            <td><%= user.email_research %></td>
+            <td><%= user.departement %></td>
+            <td><%= user.diagnostic %></td>
+            <td><%= link_to 'Show', user %></td>
+            <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New User', new_user_path %>
+  <br>
+
+  <%= link_to 'New User', new_user_path %>
+<% end %>

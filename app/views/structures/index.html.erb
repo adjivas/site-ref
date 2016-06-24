@@ -1,6 +1,4 @@
 <h1>Listing structures</h1>
-<p>current user: <%= current_user.is_admin %></p>
-
 
 <table>
   <thead>
@@ -46,11 +44,9 @@
           <td><%= structure.admin %></td>
           <td><%= structure.approved %></td>
           <td><%= link_to 'Show', structure %></td>
-          <% if user_signed_in? %>
-            <% if current_user.is_admin? || current_user == structure.user %>
-              <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
-              <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <% end %>
+          <% if current_user.is_admin? || current_user == structure.user %>
+            <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
+            <td><%= link_to 'Destroy', structure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         </tr>
       <% end %>
@@ -58,35 +54,34 @@
   </tbody>
 </table>
 
-
-<br>
+<br />
 
 <div style='width: 800px;'>
-		<div id="map" style='width: 800px; height: 400px;'></div>
+  <div id="map" style='width: 800px; height: 400px;'></div>
 </div>
 
-<br>
+<br />
 
 <script type="text/javascript">
-handler = Gmaps.build('Google');
-handler.buildMap({
-	provider: {
-		disableDefaultUI: true
-			// pass in other Google Maps API options here
-	},
-	internal: {
-		id: 'map'
-	}
-},
-function(){
-	markers = handler.addMarkers(<%=raw @hash.to_json %>);
-	handler.bounds.extendWith(markers);
-	handler.fitMapToBounds();
-}
-);
+  handler = Gmaps.build('Google');
+    handler.buildMap({
+      provider: {
+        disableDefaultUI: true
+        // pass in other Google Maps API options here
+      },
+      internal: {
+        id: 'map'
+      }
+    },
+    function() {
+          markers = handler.addMarkers(<%=raw @hash.to_json %>);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+    }
+  );
 </script>
 
 
-<br>
+<br />
 
 <%= link_to 'New Structure', new_structure_path %>
