@@ -2,10 +2,10 @@
 require 'csv'
 
 # rake import
-desc "Imports a CSV file into an Langue table"
+desc "Imports a CSV file into an Language table"
 task :import, [:filename] => :environment do
   CSV.foreach('db/langues.csv', :headers => true) do |row|
-    c = Langue.new()
+    c = Language.new()
     c.name = row['name']
     c.save
   end
