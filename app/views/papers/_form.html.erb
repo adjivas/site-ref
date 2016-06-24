@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :language_id %><br>
-    <%= f.text_field :language_id %>
+    <%= f.collection_select :language_id, Language.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :diagnostic_id %><br>
