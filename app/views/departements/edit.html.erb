@@ -1,6 +1,8 @@
-<h1>Editing departement</h1>
+<% if current_user.is_admin? %>
+  <h1>Editing departement</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Show', @departement %> |
-<%= link_to 'Back', departements_path %>
+  <%= link_to 'Show', @departement %> |
+  <%= link_to 'Back', departements_path %>
+<% end %>

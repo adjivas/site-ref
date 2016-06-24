@@ -1,25 +1,27 @@
-<h1>Listing juridicals</h1>
+<% if current_user.is_admin? %>
+  <h1>Listing juridicals</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @juridicals.each do |juridical| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= juridical.name %></td>
-        <td><%= link_to 'Show', juridical %></td>
-        <td><%= link_to 'Edit', edit_juridical_path(juridical) %></td>
-        <td><%= link_to 'Destroy', juridical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @juridicals.each do |juridical| %>
+        <tr>
+          <td><%= juridical.name %></td>
+          <td><%= link_to 'Show', juridical %></td>
+          <td><%= link_to 'Edit', edit_juridical_path(juridical) %></td>
+          <td><%= link_to 'Destroy', juridical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Juridical', new_juridical_path %>
+  <br>
+
+  <%= link_to 'New Juridical', new_juridical_path %>
+<% end %>

@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+<% if current_user.is_admin? %>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @juridical.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @juridical.name %>
+  </p>
 
-<%= link_to 'Edit', edit_juridical_path(@juridical) %> |
-<%= link_to 'Back', juridicals_path %>
+  <%= link_to 'Edit', edit_juridical_path(@juridical) %> |
+  <%= link_to 'Back', juridicals_path %>
+<% end %>
