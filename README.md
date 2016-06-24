@@ -5,6 +5,7 @@
 
 ##### Wiki
 * [Authorization](https://github.com/adjivas/site-ref/wiki/Authorization)
+* [Select](https://github.com/adjivas/site-ref/wiki/Select)
 
 ##### Merise'MCD-Modeling
 ![Screen Shot](https://raw.githubusercontent.com/adjivas/site-ref/notes/mcd.png)
