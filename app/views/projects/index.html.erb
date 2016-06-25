@@ -30,7 +30,7 @@
           <td><%= project.published %></td>
           <td><%= project.message %></td>
           <td><%= project.reply %></td>
-          <td><%= project.user ? project.user.email %></td>
+          <td><%= project.user ? project.user.email : "" %></td>
           <td><%= project.admin ? project.admin.email : "" %></td>
           <td><%= project.approved %></td>
           <td><%= link_to 'Show', project %></td>
