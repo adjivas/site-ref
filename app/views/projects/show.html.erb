@@ -38,12 +38,12 @@
 <% if current_user.is_admin || current_user == @project.user %>
   <p>
     <strong>User:</strong>
-    <%= @project.user.email %>
+    <%= @project.user ? @project.user.email : "" %>
   </p>
 
   <p>
     <strong>Admin:</strong>
-    <%= @project.admin %>
+    <%= @project.admin ? @project.admin.email : "" %>
   </p>
 
   <p>

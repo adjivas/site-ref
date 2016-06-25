@@ -47,7 +47,7 @@
 
 <p>
   <strong>Departement:</strong>
-  <%= @structure.departement.name %>
+  <%= @structure.departement ? @structure.departement.name : "" %>
 </p>
 
 <p>
@@ -63,12 +63,12 @@
 <% if current_user.is_admin || current_user == @structure.user %>
   <p>
     <strong>User:</strong>
-    <%= @structure.user.email %>
+    <%= @structure.user ? @structure.user.email : "" %>
   </p>
 
   <p>
     <strong>Admin:</strong>
-    <%= @structure.admin %>
+    <%= @structure.admin ? @structure.admin.email : "" %>
   </p>
 
   <p>
