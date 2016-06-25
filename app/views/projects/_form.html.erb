@@ -33,15 +33,15 @@
   </div>
   <div class="field">
     <%= f.label :published %><br>
-    <%= f.date_select :published %>
+    <%= f.date_select :published, disabled: true %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.text_field :user_id, disabled: true %>
   </div>
   <div class="field">
     <%= f.label :admin_id %><br>
-    <%= f.text_field :admin_id %>
+    <%= f.text_field :admin_id, disabled: true %>
   </div>
   <% if current_user.is_admin? || @project.user == current_user %>
     <div class="field">
