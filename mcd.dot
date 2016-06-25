@@ -90,7 +90,7 @@ graph siteRef {
  nodeTableUser [label = "{
   User
    |
-   is_admin:boolean\l
+   is_admin (bool)\l
    pseudonym (string)\l
    link (string)\l
    email (string)\l
