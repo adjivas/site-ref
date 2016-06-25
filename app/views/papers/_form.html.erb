@@ -57,7 +57,7 @@
   </div>
   <div class="field">
     <%= f.label :approved %><br>
-    <%= f.select_tag( :approved, options_for_select([['Pending', '0'], ['Accepted', '1'], ['Refused', '2']])) %>
+    <%= select_tag( :approved , options_for_select([['Pending', '0'], ['Accepted', '1'], ['Refused', '2']])) %>
   </div>
   <div class="actions">
     <%= f.submit %>
