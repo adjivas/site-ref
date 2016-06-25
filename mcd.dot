@@ -95,7 +95,6 @@ graph siteRef {
    link (string)\l
    email (string)\l
    password (string)\l
-   patient (int)\l
    gender (int)\l
    birthdate (date)\l
    begin (date)\l
