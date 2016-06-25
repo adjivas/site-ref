@@ -42,12 +42,12 @@
 
 <p>
   <strong>Juridical:</strong>
-  <%= @structure.juridical.name %>
+  <%= @structure.juridical ? @structure.juridical.name : "" %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @structure.description.name %>
+  <%= @structure.description ? @structure.description.name : "" %>
 </p>
 
 <p>
