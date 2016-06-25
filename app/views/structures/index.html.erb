@@ -25,7 +25,7 @@
 
   <tbody>
     <% @structures.each do |structure| %>
-      <% if current_user.is_admin? || structure.approved == 1 %>
+      <% if current_user.is_admin? || current_user == structure.user || structure.approved == 1 %>
         <tr>
           <td><%= structure.name %></td>
           <td><%= structure.juridical %></td>

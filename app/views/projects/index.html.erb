@@ -20,7 +20,7 @@
 
   <tbody>
     <% @projects.each do |project| %>
-      <% if current_user.is_admin? || project.approved == 1 %>
+      <% if current_user.is_admin? || current_user == project.user || project.approved == 1 %>
         <tr>
           <td><%= project.name %></td>
           <td><%= project.link %></td>

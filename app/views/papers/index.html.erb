@@ -21,7 +21,7 @@
 
   <tbody>
     <% @papers.each do |paper| %>
-      <% if current_user.is_admin? || paper.approved == 1 %>
+      <% if current_user.is_admin? || current_user == paper.user || paper.approved == 1 %>
         <tr>
           <td><%= paper.name %></td>
           <td><%= paper.link %></td>
