@@ -30,7 +30,22 @@
   <%= @project.published %>
 </p>
 
-<% if current_user.is_admin %>
+<p>
+  <strong>Approved:</strong>
+  <%= @project.approved %>
+</p>
+
+<% if current_user.is_admin || current_user == @project.user %>
+  <p>
+    <strong>User:</strong>
+    <%= @project.user.email %>
+  </p>
+
+  <p>
+    <strong>Admin:</strong>
+    <%= @project.admin %>
+  </p>
+
   <p>
     <strong>Message:</strong>
     <%= @project.message %>
@@ -40,22 +55,7 @@
     <strong>Reply:</strong>
     <%= @project.reply %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= @project.user %>
-  </p>
-
-  <p>
-    <strong>Admin:</strong>
-    <%= @project.admin %>
-  </p>
 <% end %>
-
-<p>
-  <strong>Approved:</strong>
-  <%= @project.approved %>
-</p>
 
 <% if current_user.is_admin || (current_user == @project.user && @project.approved == 0) %>
   <%= link_to 'Edit', edit_project_path(@project) %> |

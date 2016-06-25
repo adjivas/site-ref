@@ -11,11 +11,11 @@
       <th>Email</th>
       <th>Phone</th>
       <th>Link</th>
+      <th>Juridical</th>
+      <th>Departement</th>
       <th>Published</th>
       <th>Message</th>
       <th>Reply</th>
-      <th>Juridical</th>
-      <th>Departement</th>
       <th>User</th>
       <th>Admin</th>
       <th>Approved</th>
@@ -35,11 +35,11 @@
           <td><%= structure.email %></td>
           <td><%= structure.phone %></td>
           <td><%= structure.link %></td>
+          <td><%= structure.juridical ? structure.juridical.name : "" %></td>
+          <td><%= structure.departement ? structure.departement : "" %></td>
           <td><%= structure.published %></td>
           <td><%= structure.message %></td>
           <td><%= structure.reply %></td>
-          <td><%= structure.juridical ? structure.juridical.name : "" %></td>
-          <td><%= structure.departement ? structure.departement : "" %></td>
           <td><%= structure.user ? structure.user.email : "" %></td>
           <td><%= structure.admin ? structure.admin.email : "" %></td>
           <td><%= structure.approved %></td>

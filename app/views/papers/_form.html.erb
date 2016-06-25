@@ -36,10 +36,6 @@
     <%= f.collection_select :diagnostic_id, Diagnostic.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :message %><br>
-    <%= f.text_area :message %>
-  </div>
-  <div class="field">
     <%= f.label :published %><br>
     <%= f.date_select :published, disabled: true %>
   </div>
@@ -51,6 +47,12 @@
     <%= f.label :admin_id %><br>
     <%= f.text_field :admin_id, disabled: true %>
   </div>
+  <% if current_user.is_admin? || @paper.user == current_user %>
+    <div class="field">
+      <%= f.label :message %><br>
+      <%= f.text_area :message %>
+    </div>
+  <% end %>
   <% if current_user.is_admin? %>
     <div class="field">
       <%= f.label :reply %><br>

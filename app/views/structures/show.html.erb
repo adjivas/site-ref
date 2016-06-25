@@ -6,28 +6,13 @@
 </p>
 
 <p>
-  <strong>Juridical:</strong>
-  <%= @structure.juridical %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @structure.description %>
+  <strong>Departement:</strong>
+  <%= @structure.departement.name %>
 </p>
 
 <p>
   <strong>Address:</strong>
   <%= @structure.address %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @structure.longitude %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @structure.latitude %>
 </p>
 
 <p>
@@ -46,8 +31,23 @@
 </p>
 
 <p>
-  <strong>Departement:</strong>
-  <%= @structure.departement %>
+  <strong>Longitude:</strong>
+  <%= @structure.longitude %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @structure.latitude %>
+</p>
+
+<p>
+  <strong>Juridical:</strong>
+  <%= @structure.juridical.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @structure.description.name %>
 </p>
 
 <p>
@@ -55,7 +55,22 @@
   <%= @structure.published %>
 </p>
 
-<% if current_user.is_admin %>
+<p>
+  <strong>Approved:</strong>
+  <%= @structure.approved %>
+</p>
+
+<% if current_user.is_admin || current_user == @structure.user %>
+  <p>
+    <strong>User:</strong>
+    <%= @structure.user.email %>
+  </p>
+
+  <p>
+    <strong>Admin:</strong>
+    <%= @structure.admin %>
+  </p>
+
   <p>
     <strong>Message:</strong>
     <%= @structure.message %>
@@ -65,22 +80,7 @@
     <strong>Reply:</strong>
     <%= @structure.reply %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= @structure.user %>
-  </p>
-
-  <p>
-    <strong>Admin:</strong>
-    <%= @structure.admin %>
-  </p>
 <% end %>
-
-<p>
-  <strong>Approved:</strong>
-  <%= @structure.approved %>
-</p>
 
 <% if current_user.is_admin || (current_user == @structure.user && @structure.approved == 0) %>
   <%= link_to 'Edit', edit_structure_path(@structure) %> |

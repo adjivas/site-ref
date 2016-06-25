@@ -7,11 +7,11 @@
       <th>Link</th>
       <th>Description</th>
       <th>From</th>
+      <th>Language</th>
+      <th>Diagnostic</th>
       <th>Published</th>
       <th>Message</th>
       <th>Reply</th>
-      <th>Language</th>
-      <th>Diagnostic</th>
       <th>User</th>
       <th>Admin</th>
       <th>Approved</th>
@@ -27,11 +27,11 @@
           <td><%= paper.link %></td>
           <td><%= paper.description %></td>
           <td><%= paper.from %></td>
+          <td><%= paper.language ? paper.language.name : "" %></td>
+          <td><%= paper.diagnostic ? paper.diagnostic.name : "" %></td>
           <td><%= paper.published %></td>
           <td><%= paper.message %></td>
           <td><%= paper.reply %></td>
-          <td><%= paper.language ? paper.language.name : "" %></td>
-          <td><%= paper.diagnostic ? paper.diagnostic.name : "" %></td>
           <td><%= paper.user ? paper.user.email : "" %></td>
           <td><%= paper.admin ? paper.admin.email : "" %></td>
           <td><%= paper.approved %></td>

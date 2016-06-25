@@ -16,24 +16,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :juridical_id %><br>
-    <%= f.collection_select :juridical_id, Juridical.order(:name), :id, :name, include_blank: true %>
-  </div>
-  <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
   </div>
   <div class="field">
     <%= f.label :email %><br>
@@ -48,33 +36,49 @@
     <%= f.text_field :link %>
   </div>
   <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude, disabled: true %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude, disabled: true %>
+  </div>
+  <div class="field">
+    <%= f.label :juridical_id %><br>
+    <%= f.collection_select :juridical_id, Juridical.order(:name), :id, :name, include_blank: true %>
+  </div>
+  <div class="field">
     <%= f.label :departement_id %><br>
     <%= f.collection_select :departement_id, Departement.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :published %><br>
-    <%= f.date_select :published %>
-  </div>
-  <div class="field">
-    <%= f.label :message %><br>
-    <%= f.text_area :message %>
-  </div>
-  <div class="field">
-    <%= f.label :reply %><br>
-    <%= f.text_area :reply %>
+    <%= f.date_select :published, disabled: true %>
   </div>
   <div class="field">
     <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
+    <%= f.text_field :user_id, disabled: true %>
   </div>
   <div class="field">
     <%= f.label :admin_id %><br>
-    <%= f.text_field :admin_id %>
+    <%= f.text_field :admin_id, disabled: true %>
   </div>
-  <div class="field">
-    <%= f.label :approved %><br>
-    <%= select_tag( :approved , options_for_select([['Pending', '0'], ['Accepted', '1'], ['Refused', '2']])) %>
-  </div>
+  <% if current_user.is_admin? || @structure.user == current_user %>
+    <div class="field">
+      <%= f.label :message %><br>
+      <%= f.text_area :message %>
+    </div>
+  <% end %>
+  <% if current_user.is_admin? %>
+     <div class="field">
+      <%= f.label :reply %><br>
+      <%= f.text_area :reply %>
+    </div>
+     <div class="field">
+      <%= f.label :approved %><br>
+      <%= select_tag( :approved , options_for_select([['Pending', '0'], ['Accepted', '1'], ['Refused', '2']])) %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
