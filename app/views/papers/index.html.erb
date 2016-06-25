@@ -32,8 +32,8 @@
           <td><%= paper.published %></td>
           <td><%= paper.message %></td>
           <td><%= paper.reply %></td>
-          <td><%= paper.user ? paper.user.name : "" %></td>
-          <td><%= paper.admin ? paper.admin.name : "" %></td>
+          <td><%= paper.user ? paper.user.email : "" %></td>
+          <td><%= paper.admin ? paper.admin.email : "" %></td>
           <td><%= paper.approved %></td>
           <td><%= link_to 'Show', paper %></td>
           <% if current_user.is_admin? || (current_user == paper.user && paper.approved == 0) %>

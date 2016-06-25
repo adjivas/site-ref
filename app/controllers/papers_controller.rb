@@ -29,6 +29,9 @@ class PapersController < ApplicationController
     @paper.published = Time.now
     @paper.user = current_user
     @paper.approved = 0
+    if current_user.is_admin?
+      @paper.admin = current_user
+    end
     respond_to do |format|
       if @paper.save
         format.html { redirect_to @paper, notice: 'Paper was successfully created.' }
@@ -44,6 +47,9 @@ class PapersController < ApplicationController
   # PATCH/PUT /papers/1.json
   def update
     respond_to do |format|
+      if current_user.is_admin?
+        @paper.admin = current_user
+      end
       if @paper.update(paper_params)
         format.html { redirect_to @paper, notice: 'Paper was successfully updated.' }
         format.json { render :show, status: :ok, location: @paper }
