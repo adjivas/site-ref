@@ -42,12 +42,12 @@
 
 <p>
   <strong>Departement:</strong>
-  <%= @user.departement %>
+  <%= @user.departement.name %>
 </p>
 
 <p>
   <strong>Diagnostic:</strong>
-  <%= @user.diagnostic %>
+  <%= @user.diagnostic.name %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

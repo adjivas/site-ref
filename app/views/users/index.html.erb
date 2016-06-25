@@ -32,8 +32,8 @@
             <td><%= user.end %></td>
             <td><%= user.info_research %></td>
             <td><%= user.email_research %></td>
-            <td><%= user.departement %></td>
-            <td><%= user.diagnostic %></td>
+            <td><%= user.departement ? user.departement.name : ""%></td>
+            <td><%= user.diagnostic ? user.diagnostic.name : "" %></td>
             <td><%= link_to 'Show', user %></td>
             <td><%= link_to 'Edit', edit_user_path(user) %></td>
             <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
