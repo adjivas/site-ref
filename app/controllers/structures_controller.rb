@@ -30,6 +30,9 @@ class StructuresController < ApplicationController
   def create
     @structure = Structure.new(structure_params)
 
+    @structure.published = Time.now
+    @structure.user = current_user
+    @structure.approved = 0
     respond_to do |format|
       if @structure.save
         format.html { redirect_to @structure, notice: 'Structure was successfully created.' }
