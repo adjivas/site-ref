@@ -57,7 +57,7 @@
 
 <p>
   <strong>Approved:</strong>
-  <%= @structure.approved %>
+  <%= @structure.approved == 1 ? "accepted" : (@structure.approved == "2" ? "refused" : "pending") %>
 </p>
 
 <% if current_user.is_admin || current_user == @structure.user %>

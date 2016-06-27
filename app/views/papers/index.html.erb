@@ -34,7 +34,7 @@
           <td><%= paper.reply %></td>
           <td><%= paper.user ? paper.user.email : "" %></td>
           <td><%= paper.admin ? paper.admin.email : "" %></td>
-          <td><%= paper.approved %></td>
+          <td><%= paper.approved == 1 ? "accepted" : (paper.approved == "2" ? "refused" : "pending") %></td>
           <td><%= link_to 'Show', paper %></td>
           <% if current_user.is_admin? || (current_user == paper.user && paper.approved == 0) %>
             <td><%= link_to 'Edit', edit_paper_path(paper) %></td>

@@ -13,7 +13,7 @@
 
   <p>
     <strong>Gender:</strong>
-    <%= @user.gender %>
+    <%= @user.gender == 1 ? "man" : (@user.gender == "2" ? "women" : "anonym") %>
   </p>
 
   <p>
