@@ -43,7 +43,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        Rails.logger.debug("My object: #{@user.to_json}")
+        Rails.logger.debug("My object: #{@user.to_json} Second: #{user_params.to_json} ")
         format.html { redirect_to @user, notice: 'User was successfully updated. ' }
         format.json { render :show, status: :ok, location: @user }
       else
