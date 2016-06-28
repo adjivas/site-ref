@@ -1,6 +1,6 @@
 <%= form_for(@user) do |f| %>
   <% if user_signed_in? %>
-    <% if current_user == user || current_user.is_admin? %>
+    <% if current_user == @user || current_user.is_admin? %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -19,7 +19,7 @@
         <%= f.check_box :is_admin %>
       </div>
     <% end %>
-    <% if current_user == user %>
+    <% if current_user == @user %>
       <div class="field">
         <%= f.label :link %><br>
         <%= f.text_field :link %>
