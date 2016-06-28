@@ -21,23 +21,25 @@
 
   <tbody>
     <% @papers.each do |paper| %>
-      <% if current_user.is_admin? || paper.approved == 1 %>
+      <% if current_user.is_admin? || current_user == paper.user || paper.approved == 1 %>
         <tr>
           <td><%= paper.name %></td>
           <td><%= paper.link %></td>
           <td><%= paper.description %></td>
           <td><%= paper.from %></td>
-          <td><%= paper.language %></td>
-          <td><%= paper.diagnostic %></td>
+          <td><%= paper.language ? paper.language.name : "" %></td>
+          <td><%= paper.diagnostic ? paper.diagnostic.name : "" %></td>
           <td><%= paper.published %></td>
           <td><%= paper.message %></td>
           <td><%= paper.reply %></td>
-          <td><%= paper.user %></td>
-          <td><%= paper.admin %></td>
-          <td><%= paper.approved %></td>
+          <td><%= paper.user ? paper.user.email : "" %></td>
+          <td><%= paper.admin ? paper.admin.email : "" %></td>
+          <td><%= paper.approved == 1 ? "accepted" : (paper.approved == "2" ? "refused" : "pending") %></td>
           <td><%= link_to 'Show', paper %></td>
-          <% if current_user.is_admin? || current_user.id == paper.user %>
+          <% if current_user.is_admin? || (current_user == paper.user && paper.approved == 0) %>
             <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
+          <% end %>
+          <% if current_user.is_admin? || current_user == paper.user %>
             <td><%= link_to 'Destroy', paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         </tr>

@@ -20,7 +20,7 @@
 
   <tbody>
     <% @projects.each do |project| %>
-      <% if current_user.is_admin? || project.approved == 1 %>
+      <% if current_user.is_admin? || current_user == project.user || project.approved == 1 %>
         <tr>
           <td><%= project.name %></td>
           <td><%= project.link %></td>
@@ -30,12 +30,14 @@
           <td><%= project.published %></td>
           <td><%= project.message %></td>
           <td><%= project.reply %></td>
-          <td><%= project.user %></td>
-          <td><%= project.admin %></td>
-          <td><%= project.approved %></td>
+          <td><%= project.user ? project.user.email : "" %></td>
+          <td><%= project.admin ? project.admin.email : "" %></td>
+          <td><%= project.approved == 1 ? "accepted" : (project.approved == "2" ? "refused" : "pending") %></td>
           <td><%= link_to 'Show', project %></td>
-          <% if current_user.is_admin? || current_user == project.user %>
+          <% if current_user.is_admin? || (current_user == project.user && project.approved == 0) %>
             <td><%= link_to 'Edit', edit_project_path(project) %></td>
+          <% end %>
+          <% if current_user.is_admin? || current_user == project.user %>
             <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <% end %>
         </tr>

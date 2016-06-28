@@ -27,12 +27,12 @@
 
 <p>
   <strong>Diagnostic:</strong>
-  <%= @diagnostic.diagnostic %>
+  <%= @diagnostic.diagnostic ? @diagnostic.diagnostic.name : "" %>
 </p>
 
 <p>
   <strong>Departement:</strong>
-  <%= @diagnostic.departement %>
+  <%= @diagnostic.departement ? @diagnostic.departement.name : "" %>
 </p>
 
 <% if current_user.is_admin? %>

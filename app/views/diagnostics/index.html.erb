@@ -23,8 +23,8 @@
           <td><%= diagnostic.help %></td>
           <td><%= diagnostic.adult %></td>
           <td><%= diagnostic.duration %></td>
-          <td><%= diagnostic.diagnostic %></td>
-          <td><%= diagnostic.departement %></td>
+          <td><%= diagnostic.diagnostic ? diagnostic.diagnostic : "" %></td>
+          <td><%= diagnostic.departement ? diagnostic.departement.name : "" %></td>
           <td><%= link_to 'Show', diagnostic %></td>
           <td><%= link_to 'Edit', edit_diagnostic_path(diagnostic) %></td>
           <td><%= link_to 'Destroy', diagnostic, method: :delete, data: { confirm: 'Are you sure?' } %></td>

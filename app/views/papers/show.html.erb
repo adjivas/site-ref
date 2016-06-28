@@ -22,12 +22,12 @@
 
 <p>
   <strong>Language:</strong>
-  <%= @paper.language %>
+  <%= @paper.language ? @paper.language.name : "" %>
 </p>
 
 <p>
   <strong>Diagnostic:</strong>
-  <%= @paper.diagnostic %>
+  <%= @paper.diagnostic ? @paper.diagnostic.name : "" %>
 </p>
 
 <p>
@@ -35,7 +35,22 @@
   <%= @paper.published %>
 </p>
 
-<% if current_user.is_admin %>
+<p>
+  <strong>Approved:</strong>
+  <%= @paper.approved == 1 ? "accepted" : (@paper.approved == "2" ? "refused" : "pending") %>
+</p>
+
+<% if current_user.is_admin || current_user == @paper.user %>
+  <p>
+    <strong>User:</strong>
+    <%= @paper.user ? @paper.user.email : "" %>
+  </p>
+
+  <p>
+    <strong>Admin:</strong>
+    <%= @paper.admin ? @paper.admin.email : "" %>
+  </p>
+
   <p>
     <strong>Message:</strong>
     <%= @paper.message %>
@@ -45,24 +60,9 @@
     <strong>Reply:</strong>
     <%= @paper.reply %>
   </p>
-
-  <p>
-    <strong>User:</strong>
-    <%= @paper.user %>
-  </p>
-
-  <p>
-    <strong>Admin:</strong>
-    <%= @paper.admin %>
-  </p>
 <% end %>
 
-<p>
-  <strong>Approved:</strong>
-  <%= @paper.approved %>
-</p>
-
-<% if current_user.is_admin || current_user == @paper.user %>
+<% if current_user.is_admin || (current_user == @paper.user && @paper.approved == 0) %>
   <%= link_to 'Edit', edit_paper_path(@paper) %> |
 <% end %>
 <%= link_to 'Back', papers_path %>
