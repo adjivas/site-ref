@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% if current_user.is_admin? %>
+    <% if user_signed_in? && current_user.is_admin? %>
       <% @diagnostics.each do |diagnostic| %>
         <tr>
           <td><%= diagnostic.name %></td>
@@ -23,12 +23,14 @@
           <td><%= diagnostic.help %></td>
           <td><%= diagnostic.adult %></td>
           <td><%= diagnostic.duration %></td>
-          <td><%= diagnostic.diagnostic %></td>
-          <td><%= diagnostic.departement %></td>
+          <td><%= diagnostic.diagnostic ? diagnostic.diagnostic : "" %></td>
+          <td><%= diagnostic.departement ? diagnostic.departement.name : "" %></td>
           <td><%= link_to 'Show', diagnostic %></td>
           <td><%= link_to 'Edit', edit_diagnostic_path(diagnostic) %></td>
           <td><%= link_to 'Destroy', diagnostic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
+        <br />
+        <%= link_to 'New Diagnostic', new_diagnostic_path %>
       <% end %>
     <% else %>
       <% @diagnostics.each do |diagnostic| %>
@@ -37,7 +39,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Diagnostic', new_diagnostic_path %>

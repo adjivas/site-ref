@@ -13,10 +13,23 @@
        <% if user_signed_in? %>
          <%= link_to('Logout', destroy_user_session_path) %>
          <p><%= current_user.email %></p>
+         <% if current_user.is_admin? %>
+           <ul>
+             <li><%= link_to('User', users_path) %></li>
+             <li><%= link_to('Language', languages_path) %></li>
+             <li><%= link_to('Juridical', juridicals_path) %></li>
+             <li><%= link_to('departement', departements_path) %></li>
+           </ul>
+         <% end %>
        <% else %>
           <%= link_to('Logint', new_user_session_path) %>
        <% end %>
-
+       <ul>
+         <li><%= link_to('Paper', papers_path) %></li>
+         <li><%= link_to('Project', projects_path) %></li>
+         <li><%= link_to('Structure', structures_path) %></li>
+         <li><%= link_to('Diagnostic', diagnostics_path) %></li>
+       </ul>
 <%= yield %>
 
 </body>
