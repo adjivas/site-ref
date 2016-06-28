@@ -52,4 +52,6 @@
 
 <br>
 
-<%= link_to 'New Paper', new_paper_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Paper', new_paper_path %>
+<% end %>

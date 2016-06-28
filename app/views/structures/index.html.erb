@@ -92,4 +92,6 @@
 
 <br />
 
-<%= link_to 'New Structure', new_structure_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Structure', new_structure_path %>
+<% end %>
