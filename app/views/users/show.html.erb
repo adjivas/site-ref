@@ -1,56 +1,62 @@
 <% if user_signed_in? %>
-  <% if current_user.is_admin || current_user == @user %>
+  <% if current_user == user || (current_user.is_admin? && (user.info_research? || user.email_research?)) %>
     <p id="notice"><%= notice %></p>
 
-    <p>
-      <strong>Is admin:</strong>
-      <%= @user.is_admin %>
-    </p>
+    <% if current_user.is_admin? %>
+      <p>
+        <strong>Is admin:</strong>
+        <%= @user.is_admin %>
+      </p>
+    <% end %>
 
-    <p>
-      <strong>Link:</strong>
-      <%= @user.link %>
-    </p>
+    <% if current_user == user || (current_user.is_admin? && user.email_research?) %>
+      <p>
+        <strong>Email research:</strong>
+        <%= @user.email_research %>
+      </p>
+    <% end %>
 
-    <p>
-      <strong>Gender:</strong>
-      <%= @user.gender == 1 ? "man" : (@user.gender == "2" ? "women" : "anonym") %>
-    </p>
+    <% if current_user == user || (current_user.is_admin? && user.info_research?) %>
+      <p>
+        <strong>Link:</strong>
+        <%= @user.link %>
+      </p>
 
-    <p>
-      <strong>Birthdate:</strong>
-      <%= @user.birthdate %>
-    </p>
+      <p>
+        <strong>Gender:</strong>
+        <%= @user.gender == 1 ? "man" : (@user.gender == "2" ? "women" : "anonym") %>
+      </p>
 
-    <p>
-      <strong>Begin:</strong>
-      <%= @user.begin %>
-    </p>
+      <p>
+        <strong>Birthdate:</strong>
+        <%= @user.birthdate %>
+      </p>
 
-    <p>
-      <strong>End:</strong>
-      <%= @user.end %>
-    </p>
+      <p>
+        <strong>Begin:</strong>
+        <%= @user.begin %>
+      </p>
 
-    <p>
-      <strong>Info research:</strong>
-      <%= @user.info_research %>
-    </p>
+      <p>
+        <strong>End:</strong>
+        <%= @user.end %>
+      </p>
 
-    <p>
-      <strong>Email research:</strong>
-      <%= @user.email_research %>
-    </p>
+      <p>
+        <strong>Info research:</strong>
+        <%= @user.info_research %>
+      </p>
 
-    <p>
-      <strong>Departement:</strong>
-      <%= @user.departement ? @user.departement.name : "" %>
-    </p>
+      <p>
+        <strong>Departement:</strong>
+        <%= @user.departement ? @user.departement.name : "" %>
+      </p>
 
-    <p>
-      <strong>Diagnostic:</strong>
-      <%= @user.diagnostic ? @user.diagnostic.name : "" %>
-    </p>
+      <p>
+        <strong>Diagnostic:</strong>
+        <%= @user.diagnostic ? @user.diagnostic.name : "" %>
+      </p>
+    <% end %>
 
     <%= link_to 'Edit', edit_user_path(@user) %> |
     <%= link_to 'Back', users_path %>
