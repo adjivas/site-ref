@@ -20,7 +20,7 @@
 
   <tbody>
     <% @projects.each do |project| %>
-      <% if current_user.is_admin? || current_user == project.user || project.approved == 1 %>
+      <% if project.approved == 1 || (user_signed_in? && (current_user.is_admin? || current_user == project.user)) %>
         <tr>
           <td><%= project.name %></td>
           <td><%= project.link %></td>
@@ -34,11 +34,13 @@
           <td><%= project.admin ? project.admin.email : "" %></td>
           <td><%= project.approved == 1 ? "accepted" : (project.approved == "2" ? "refused" : "pending") %></td>
           <td><%= link_to 'Show', project %></td>
-          <% if current_user.is_admin? || (current_user == project.user && project.approved == 0) %>
-            <td><%= link_to 'Edit', edit_project_path(project) %></td>
-          <% end %>
-          <% if current_user.is_admin? || current_user == project.user %>
-            <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% if user_signed_in? %>
+            <% if current_user.is_admin? || (current_user == project.user && project.approved == 0) %>
+              <td><%= link_to 'Edit', edit_project_path(project) %></td>
+            <% end %>
+            <% if current_user.is_admin? || current_user == project.user %>
+              <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
           <% end %>
         </tr>
       <% end %>

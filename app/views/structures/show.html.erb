@@ -60,29 +60,31 @@
   <%= @structure.approved == 1 ? "accepted" : (@structure.approved == "2" ? "refused" : "pending") %>
 </p>
 
-<% if current_user.is_admin || current_user == @structure.user %>
-  <p>
-    <strong>User:</strong>
-    <%= @structure.user ? @structure.user.email : "" %>
-  </p>
+<% if user_signed_in? %>
+  <% if current_user.is_admin || current_user == @structure.user %>
+    <p>
+      <strong>User:</strong>
+      <%= @structure.user ? @structure.user.email : "" %>
+    </p>
 
-  <p>
-    <strong>Admin:</strong>
-    <%= @structure.admin ? @structure.admin.email : "" %>
-  </p>
+    <p>
+      <strong>Admin:</strong>
+      <%= @structure.admin ? @structure.admin.email : "" %>
+    </p>
 
-  <p>
-    <strong>Message:</strong>
-    <%= @structure.message %>
-  </p>
+    <p>
+      <strong>Message:</strong>
+      <%= @structure.message %>
+    </p>
 
-  <p>
-    <strong>Reply:</strong>
-    <%= @structure.reply %>
-  </p>
-<% end %>
+    <p>
+      <strong>Reply:</strong>
+      <%= @structure.reply %>
+    </p>
+  <% end %>
 
-<% if current_user.is_admin || (current_user == @structure.user && @structure.approved == 0) %>
-  <%= link_to 'Edit', edit_structure_path(@structure) %> |
+  <% if current_user.is_admin || (current_user == @structure.user && @structure.approved == 0) %>
+    <%= link_to 'Edit', edit_structure_path(@structure) %> |
+  <% end %>
 <% end %>
 <%= link_to 'Back', structures_path %>

@@ -1,56 +1,58 @@
-<% if current_user.is_admin || current_user == @user %>
-  <p id="notice"><%= notice %></p>
+<% if user_signed_in? %>
+  <% if current_user.is_admin || current_user == @user %>
+    <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Is admin:</strong>
-    <%= @user.is_admin %>
-  </p>
+    <p>
+      <strong>Is admin:</strong>
+      <%= @user.is_admin %>
+    </p>
 
-  <p>
-    <strong>Link:</strong>
-    <%= @user.link %>
-  </p>
+    <p>
+      <strong>Link:</strong>
+      <%= @user.link %>
+    </p>
 
-  <p>
-    <strong>Gender:</strong>
-    <%= @user.gender == 1 ? "man" : (@user.gender == "2" ? "women" : "anonym") %>
-  </p>
+    <p>
+      <strong>Gender:</strong>
+      <%= @user.gender == 1 ? "man" : (@user.gender == "2" ? "women" : "anonym") %>
+    </p>
 
-  <p>
-    <strong>Birthdate:</strong>
-    <%= @user.birthdate %>
-  </p>
+    <p>
+      <strong>Birthdate:</strong>
+      <%= @user.birthdate %>
+    </p>
 
-  <p>
-    <strong>Begin:</strong>
-    <%= @user.begin %>
-  </p>
+    <p>
+      <strong>Begin:</strong>
+      <%= @user.begin %>
+    </p>
 
-  <p>
-    <strong>End:</strong>
-    <%= @user.end %>
-  </p>
+    <p>
+      <strong>End:</strong>
+      <%= @user.end %>
+    </p>
 
-  <p>
-    <strong>Info research:</strong>
-    <%= @user.info_research %>
-  </p>
+    <p>
+      <strong>Info research:</strong>
+      <%= @user.info_research %>
+    </p>
 
-  <p>
-    <strong>Email research:</strong>
-    <%= @user.email_research %>
-  </p>
+    <p>
+      <strong>Email research:</strong>
+      <%= @user.email_research %>
+    </p>
 
-  <p>
-    <strong>Departement:</strong>
-    <%= @user.departement ? @user.departement.name : "" %>
-  </p>
+    <p>
+      <strong>Departement:</strong>
+      <%= @user.departement ? @user.departement.name : "" %>
+    </p>
 
-  <p>
-    <strong>Diagnostic:</strong>
-    <%= @user.diagnostic ? @user.diagnostic.name : "" %>
-  </p>
+    <p>
+      <strong>Diagnostic:</strong>
+      <%= @user.diagnostic ? @user.diagnostic.name : "" %>
+    </p>
 
-  <%= link_to 'Edit', edit_user_path(@user) %> |
-  <%= link_to 'Back', users_path %>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', users_path %>
+  <% end %>
 <% end %>

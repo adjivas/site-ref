@@ -29,6 +29,8 @@
           <td><%= link_to 'Edit', edit_diagnostic_path(diagnostic) %></td>
           <td><%= link_to 'Destroy', diagnostic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
+        <br />
+        <%= link_to 'New Diagnostic', new_diagnostic_path %>
       <% end %>
     <% else %>
       <% @diagnostics.each do |diagnostic| %>
@@ -37,7 +39,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Diagnostic', new_diagnostic_path %>

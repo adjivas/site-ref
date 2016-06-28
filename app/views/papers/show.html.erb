@@ -40,29 +40,31 @@
   <%= @paper.approved == 1 ? "accepted" : (@paper.approved == "2" ? "refused" : "pending") %>
 </p>
 
-<% if current_user.is_admin || current_user == @paper.user %>
-  <p>
-    <strong>User:</strong>
-    <%= @paper.user ? @paper.user.email : "" %>
-  </p>
+<% if user_signed_in? %>
+  <% if current_user.is_admin || current_user == @paper.user %>
+    <p>
+      <strong>User:</strong>
+      <%= @paper.user ? @paper.user.email : "" %>
+    </p>
 
-  <p>
-    <strong>Admin:</strong>
-    <%= @paper.admin ? @paper.admin.email : "" %>
-  </p>
+    <p>
+      <strong>Admin:</strong>
+      <%= @paper.admin ? @paper.admin.email : "" %>
+    </p>
 
-  <p>
-    <strong>Message:</strong>
-    <%= @paper.message %>
-  </p>
+    <p>
+      <strong>Message:</strong>
+      <%= @paper.message %>
+    </p>
 
-  <p>
-    <strong>Reply:</strong>
-    <%= @paper.reply %>
-  </p>
-<% end %>
+    <p>
+      <strong>Reply:</strong>
+      <%= @paper.reply %>
+    </p>
+  <% end %>
 
-<% if current_user.is_admin || (current_user == @paper.user && @paper.approved == 0) %>
-  <%= link_to 'Edit', edit_paper_path(@paper) %> |
+  <% if current_user.is_admin || (current_user == @paper.user && @paper.approved == 0) %>
+    <%= link_to 'Edit', edit_paper_path(@paper) %> |
+  <% end %>
 <% end %>
 <%= link_to 'Back', papers_path %>

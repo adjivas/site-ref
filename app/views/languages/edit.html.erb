@@ -1,4 +1,4 @@
-<% if current_user.is_admin? %>
+<% if user_signed_in? && current_user.is_admin? %>
   <h1>Editing language</h1>
 
   <%= render 'form' %>

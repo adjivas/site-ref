@@ -35,7 +35,7 @@
   <%= @diagnostic.departement ? @diagnostic.departement.name : "" %>
 </p>
 
-<% if current_user.is_admin? %>
+<% if user_signed_in? && current_user.is_admin? %>
   <%= link_to 'Edit', edit_diagnostic_path(@diagnostic) %> |
 <% end %>
 <%= link_to 'Back', diagnostics_path %>
