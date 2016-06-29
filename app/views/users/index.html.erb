@@ -33,12 +33,14 @@
               <td><%= user.birthdate %></td>
               <td><%= user.begin %></td>
               <td><%= user.end %></td>
-              <td><%= user.departement ? user.departement.name : ""%></td>
+              <td><%= user.departement ? user.departement.name : "" %></td>
               <td><%= user.diagnostic ? user.diagnostic.name : "" %></td>
             <% end %>
             <td><%= link_to 'Show', user %></td>
-            <% if current_user == user %>
+            <% if current_user == user || current_user.is_admin? %>
               <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <% end %>
+            <% if current_user == user %>
               <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <% end %>
           </tr>
