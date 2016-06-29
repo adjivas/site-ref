@@ -32,6 +32,7 @@
 
 <p>
   <strong>Approved:</strong>
+  <%= @project.approved %>
   <%= @project.approved == true ? "accepted" : (@project.approved == false ? "refused" : "pending") %>
 </p>
 
