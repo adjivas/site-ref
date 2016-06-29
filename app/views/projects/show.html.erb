@@ -32,7 +32,7 @@
 
 <p>
   <strong>Approved:</strong>
-  <%= @project.approved == 1 ? "accepted" : (@project.approved == "2" ? "refused" : "pending") %>
+  <%= @project.approved == true ? "accepted" : (@project.approved == false ? "refused" : "pending") %>
 </p>
 
 <% if current_user.is_admin || current_user == @project.user %>

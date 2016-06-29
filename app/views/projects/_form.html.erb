@@ -56,7 +56,7 @@
     </div>
     <div class="field">
       <%= f.label :approved %><br>
-      <%= select_tag( :approved , options_for_select([['Pending', '0'], ['Accepted', '1'], ['Refused', '2']])) %>
+      <%= f.check_box :approved %>
     </div>
   <% end %>
   <div class="actions">
