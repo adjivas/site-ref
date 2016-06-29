@@ -28,7 +28,6 @@ class ProjectsController < ApplicationController
 
     @project.published = Time.now
     @project.user = current_user
-    @project.approved = 0
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
