@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <% if current_user.is_admin || current_user == @user %>
-    <h1>Editing user</h1>
+    <h1>Paramétrage compte Utilisateur</h1>
 
     <%= render 'form' %>
 

@@ -1,58 +1,58 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nom :</strong>
   <%= @project.name %>
 </p>
 
 <p>
-  <strong>Link:</strong>
+  <strong>Lien :</strong>
   <%= @project.link %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Description :</strong>
   <%= @project.description %>
 </p>
 
 <p>
-  <strong>From:</strong>
+  <strong>From :</strong>
   <%= @project.from %>
 </p>
 
 <p>
-  <strong>Logo:</strong>
+  <strong>Logo :</strong>
   <%= @project.logo %>
 </p>
 
 <p>
-  <strong>Published:</strong>
+  <strong>Publié :</strong>
   <%= @project.published %>
 </p>
 
 <p>
-  <strong>Approved:</strong>
+  <strong>Approuvé :</strong>
   <%= @project.approved == 1 ? "accepted" : (@project.approved == "2" ? "refused" : "pending") %>
 </p>
 
 <% if current_user.is_admin || current_user == @project.user %>
   <p>
-    <strong>User:</strong>
+    <strong>Utilisateur :</strong>
     <%= @project.user ? @project.user.email : "" %>
   </p>
 
   <p>
-    <strong>Admin:</strong>
+    <strong>Administrateur :</strong>
     <%= @project.admin ? @project.admin.email : "" %>
   </p>
 
   <p>
-    <strong>Message:</strong>
+    <strong>Message :</strong>
     <%= @project.message %>
   </p>
 
   <p>
-    <strong>Reply:</strong>
+    <strong>Réponse :</strong>
     <%= @project.reply %>
   </p>
 <% end %>
