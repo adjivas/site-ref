@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <% if current_user.is_admin? || (current_user == @paper.user && @paper.approved == 0) %>
+  <% if current_user.is_admin? || (current_user == @paper.user && @paper.approved != 1) %>
     <h1>Editing paper</h1>
 
     <%= render 'form' %>

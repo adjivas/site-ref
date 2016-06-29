@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <% if current_user.is_admin? || (current_user == @structure.user && @structure.approved == 0) %>
+  <% if current_user.is_admin? || (current_user == @structure.user && @structure.approved != 1) %>
     <h1>Editing structure</h1>
 
     <%= render 'form' %>

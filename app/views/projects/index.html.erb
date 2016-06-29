@@ -32,7 +32,7 @@
           <td><%= project.reply %></td>
           <td><%= project.user ? project.user.email : "" %></td>
           <td><%= project.admin ? project.admin.email : "" %></td>
-          <td><%= project.approved == 1 ? "accepted" : (project.approved == 0 ? "refused" : "pending") %></td>
+          <td><%= project.approved == 1 ? "accepted" : "pending" %></td>
           <td><%= link_to 'Show', project %></td>
           <% if user_signed_in? %>
             <% if current_user.is_admin? || (current_user == project.user && project.approved != 1) %>

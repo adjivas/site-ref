@@ -46,10 +46,10 @@
           <td><%= structure.reply %></td>
           <td><%= structure.user ? structure.user.email : "" %></td>
           <td><%= structure.admin ? structure.admin.email : "" %></td>
-          <td><%= structure.approved == 1 ? "accepted" : (structure.approved == "2" ? "refused" : "pending") %></td>
+          <td><%= structure.approved == 1 ? "accepted" : "pending" %></td>
           <td><%= link_to 'Show', structure %></td>
           <% if user_signed_in? %>
-            <% if current_user.is_admin? || (current_user == structure.user && structure.approved == 0) %>
+            <% if current_user.is_admin? || (current_user == structure.user && structure.approved != 1) %>
               <td><%= link_to 'Edit', edit_structure_path(structure) %></td>
             <% end %>
             <% if current_user.is_admin? || current_user == structure.user %>
