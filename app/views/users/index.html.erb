@@ -29,7 +29,7 @@
             <% if current_user == user || user.info_research? %>
               <td><%= user.is_admin %></td>
               <td><%= user.link %></td>
-              <td><%= user.gender == 1 ? "man" : (user.gender == "2" ? "women" : "anonym") %></td>
+              <td><%= user.gender == 0 ? "man" : "women" %></td>
               <td><%= user.birthdate %></td>
               <td><%= user.begin %></td>
               <td><%= user.end %></td>

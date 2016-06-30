@@ -23,7 +23,7 @@
       </div>
       <div class="field">
         <%= f.label :gender %><br>
-        <%= select_tag( :gender , options_for_select([['Anonyme', 0], ['Man', 1], ['Women', 2]], ['Anonyme', 0])) %>
+        <%= f.check_box :gender %>
       </div>
       <div class="field">
         <%= f.label :birthdate %><br>
