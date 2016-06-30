@@ -37,7 +37,7 @@
 
 <p>
   <strong>Approved:</strong>
-  <%= @paper.approved == 1 ? "accepted" : (@paper.approved == "2" ? "refused" : "pending") %>
+  <%= @paper.approved == 1 ? "accepted" : "pending" %>
 </p>
 
 <% if user_signed_in? %>

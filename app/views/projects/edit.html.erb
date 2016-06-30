@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <% if current_user.is_admin? || (current_user == @project.user && @project.approved == 0) %>
+  <% if current_user.is_admin? || (current_user == @project.user && @project.approved != 1) %>
     <h1>Editing project</h1>
 
     <%= render 'form' %>

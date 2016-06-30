@@ -21,29 +21,35 @@
 
     <tbody>
       <% @users.each do |user| %>
-        <% if current_user.is_admin || current_user == user %>
+        <% if current_user == user || (current_user.is_admin? && (user.info_research? || user.email_research?)) %>'
           <tr>
-            <td><%= user.email %></td>
-            <td><%= user.is_admin %></td>
-            <td><%= user.link %></td>
-            <td><%= user.gender == 1 ? "man" : (user.gender == "2" ? "women" : "anonym") %></td>
-            <td><%= user.birthdate %></td>
-            <td><%= user.begin %></td>
-            <td><%= user.end %></td>
-            <td><%= user.info_research %></td>
-            <td><%= user.email_research %></td>
-            <td><%= user.departement ? user.departement.name : ""%></td>
-            <td><%= user.diagnostic ? user.diagnostic.name : "" %></td>
+            <% if current_user == user || user.email_research? %>
+              <td><%= user.email %></td>
+            <% end %>
+            <% if current_user == user || user.info_research? %>
+              <td><%= user.is_admin %></td>
+              <td><%= user.link %></td>
+              <td><%= user.gender == 0 ? "man" : "women" %></td>
+              <td><%= user.birthdate %></td>
+              <td><%= user.begin %></td>
+              <td><%= user.end %></td>
+              <td><%= user.departement ? user.departement.name : "" %></td>
+              <td><%= user.diagnostic ? user.diagnostic.name : "" %></td>
+            <% end %>
             <td><%= link_to 'Show', user %></td>
-            <td><%= link_to 'Edit', edit_user_path(user) %></td>
-            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% if current_user == user || current_user.is_admin? %>
+              <td><%= link_to 'Edit', edit_user_path(user) %></td>
+            <% end %>
+            <% if current_user == user %>
+              <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
           </tr>
         <% end %>
       <% end %>
     </tbody>
   </table>
 
-  <br>
+  <br />
 
   <%= link_to 'New User', new_user_path %>
 <% end %>

@@ -1,57 +1,68 @@
 <% if user_signed_in? %>
-  <% if current_user.is_admin || current_user == @user %>
-    <p id="notice"><%= notice %></p>
 
+  <% if current_user.is_admin? %>
     <p>
       <strong>Administrateur :</strong>
       <%= @user.is_admin %>
     </p>
+  <% end %>
 
-    <p>
-      <strong>Lien :</strong>
-      <%= @user.link %>
-    </p>
+  <% if current_user == @user || (current_user.is_admin? && (@user.info_research? || @user.email_research?)) %>
+    <p id="notice"><%= notice %></p>
 
-    <p>
-      <strong>Sexe :</strong>
-      <%= @user.gender == 1 ? "Homme" : (@user.gender == "2" ? "Femme" : "Non Renseigné") %>
-    </p>
+    <% if current_user == @user || (current_user.is_admin? && @user.email_research?) %>
+      <p>
+        <strong>Permettre l'accès à son email par des chercheurs :</strong>
+        <%= @user.email_research %>
+      </p>
 
-    <p>
-      <strong>Date de Naissance :</strong>
-      <%= @user.birthdate %>
-    </p>
+      <p>
+        <strong>
+        <%= @user.email %>
+      </p>
 
-    <p>
-      <strong>Begin :</strong>
-      <%= @user.begin %>
-    </p>
+      <p>
+        <strong>Permettre l'accès à ses informations par des chercheurs :</strong>
+        <%= @user.info_research %>
+      </p>
+    <% end %>
 
-    <p>
-      <strong>End :</strong>
-      <%= @user.end %>
-    </p>
+    <% if current_user == @user || (current_user.is_admin? && @user.info_research?) %>
+      <p>
+        <strong>Lien :</strong>
+        <%= @user.link %>
+      </p>
 
-    <p>
-      <strong>Permettre l'accès à ses informations par des chercheurs :</strong>
-      <%= @user.info_research %>
-    </p>
+      <p>
+        <strong>Genre :</strong>
+        <%= @user.gender == 0 ? "Homme" : "Femme" %>
+      </p>
 
-    <p>
-      <strong>Permettre l'accès à son email par des chercheurs :</strong>
-      <%= @user.email_research %>
-    </p>
+      <p>
+        <strong>Date de Naissance :</strong>
+        <%= @user.birthdate %>
+      </p>
 
-    <p>
-      <strong>Adresse (Département):</strong>
-      <%= @user.departement ? @user.departement.name : "" %>
-    </p>
+      <p>
+        <strong>Begin :</strong>
+        <%= @user.begin %>
+      </p>
 
-    <p>
-      <strong>Diagnostic:</strong>
-      <%= @user.diagnostic ? @user.diagnostic.name : "" %>
-    </p>
+      <p>
+        <strong>End :</strong>
+        <%= @user.end %>
+      </p>
 
+      <p>
+        <strong>Adresse (Département) :</strong>
+        <%= @user.departement ? @user.departement.name : "" %>
+      </p>
+
+      <p>
+        <strong>Diagnostic:</strong>
+        <%= @user.diagnostic ? @user.diagnostic.name : "" %>
+      </p>
+    <% end %>
     <%= link_to 'Edit', edit_user_path(@user) %> |
     <%= link_to 'Back', users_path %>
   <% end %>
