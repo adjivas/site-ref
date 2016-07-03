@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'authorrails/controller'
 
-  get 'authorrails/tree'
+  get 'tree/index'
 
   devise_for :users
   get 'authorrails/g'

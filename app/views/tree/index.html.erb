@@ -1,23 +1,13 @@
-<h1>Listing tree</h1>
-
+<%= javascript_include_tag 'https://cdn.rawgit.com/konvajs/konva/0.13.0/konva.min.js' %>
 <%= html_import_tag 'application'%>
 
-<div class="row">
-<div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
-  <ktree-selector></ktree-selector>
+<div id="ktreetext">
 </div>
 
-<div class="sizetxt pull-right scrollbar pre-scrollable col-lg-6 col-md-6 col-xs-6 col-sm-6" style="padding: 25px;right: 6vw;border-radius: 40px ;width: 30vw; height: 50vw; background-color: #226070; border: 2px solid #00ff97" id="ktreetext">
-</div>
+<ktree-selector></ktree-selector>
 
-<div class="row " style="margin-left: 60%; padding-top: 30%;">
-  <section class=" col-md-12 col-sm-12 col-xs-12">
-    <div class="col-md-6" style="text-align: left; left: 20%; top: 50%">
-      <div id="ktreebouton">
-        <button id="retourKtree" style="width: 100%; height: 40px; background-color: #00ff97; color: #226070; border-radius: 15px">
-          Revenir au début
-        </button>
-      </div>
-    </div>
-  </section>
+<div id="ktreebouton">
+  <button id="retourKtree">
+    Revenir au début
+  </button>
 </div>
