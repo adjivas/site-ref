@@ -14,3 +14,98 @@
  *= require_self
  *= require bootstrap.min
  */
+
+$nav-bcolor: rgb(55, 63, 82);
+$nav-sfont: 1em;
+$nav-sfont-trigram: 1.5em;
+$nav-bg: url("https://raw.githubusercontent.com/tiprata/site-ref/master/app/assets/images/interactblanc.png");
+
+body {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    font-size: $nav-sfont;
+    padding: 3vw;
+    padding-top: 5em;
+    & {
+      resize: horizontal;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    & {
+      background-color: $nav-bcolor;
+      background-image: $nav-bg;
+      background-repeat: no-repeat;
+      background-size: 117px;
+      background-position-x: 3vw;
+      background-position-y: 2vw;
+    }
+    a, input {
+      color: rgb(255, 255, 255);
+    }
+    input[type="submit"] {
+      position: absolute;
+      background: none;
+      border: none;
+      right: 0px;
+      top: 0px;
+      color: #d5dae6;
+      font-size: $nav-sfont-trigram;
+    }
+    input[type="search"] {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #959595;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        border: 3px solid transparent;
+        padding-left: 10px;
+        &:hover {
+          border-left: 3px solid #9768d1;
+        }
+      }
+      a {
+        text-transform: uppercase;
+        color: rgb(213, 218, 230);
+        &:active, &:hover {
+          color: rgb(255, 255, 255);
+        }
+        &:link, &:visited, &:active, &:hover {
+          text-decoration: none;
+        }
+      }
+      &, li {
+        padding-left: 0px;
+      }
+    }
+  }
+  article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+    tr {
+      border-bottom: 1px solid #d5dae6;
+      vertical-align: bottom;
+      height: 2.5em;
+    }
+  }
+}

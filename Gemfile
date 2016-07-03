@@ -1,13 +1,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.8'
+gem 'rails', '4.2.6'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.5'
+gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
+gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
@@ -46,9 +46,6 @@ group :development do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
 end
 
 gem 'geocoder'
@@ -61,3 +58,10 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+ # front-end gems
+gem 'gsdk', '>= 1.0.0.4'
+gem 'polymer-rails', github: 'alchapone/polymer-rails'
+gem 'polymer-paper-rails', github: 'alchapone/polymer-paper-rails'
+gem 'polymer-elements-rails', github: 'alchapone/polymer-elements-rails'
+gem 'polymer-iron-rails', github: 'alchapone/polymer-iron-rails'
+gem 'polymer-neon-rails', github: 'alchapone/polymer-neon-rails'

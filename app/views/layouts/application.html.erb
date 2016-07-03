@@ -7,30 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+       <nav>
 
-       <% if user_signed_in? %>
-         <%= link_to('Logout', destroy_user_session_path) %>
-         <p><%= current_user.email %></p>
-         <% if current_user.is_admin? %>
-           <ul>
-             <li><%= link_to('User', users_path) %></li>
-             <li><%= link_to('Language', languages_path) %></li>
-             <li><%= link_to('Juridical', juridicals_path) %></li>
-             <li><%= link_to('departement', departements_path) %></li>
+          <% if user_signed_in? %>
+            <%= link_to('Logout', destroy_user_session_path) %>
+            <a><%= current_user.email %></a>
+          <% else %>
+            <%= link_to('Logint', new_user_session_path) %>
+          <% end %>
+
+          <input type="submit" value="&#9776;"></input>
+          <input type="search" type="search" placeholder="search" autocomplete="off" />
+
+          <ul>
+           <% if user_signed_in? %>
+             <% if current_user.is_admin? %>
+                 <li><%= link_to('User', users_path) %></li>
+                 <li><%= link_to('Language', languages_path) %></li>
+                 <li><%= link_to('Juridical', juridicals_path) %></li>
+                 <li><%= link_to('departement', departements_path) %></li>
+             <% end %>
+           <% end %>
+             <li><%= link_to('Paper', papers_path) %></li>
+             <li><%= link_to('Project', projects_path) %></li>
+             <li><%= link_to('Structure', structures_path) %></li>
+             <li><%= link_to('Diagnostic', diagnostics_path) %></li>
            </ul>
-         <% end %>
-       <% else %>
-          <%= link_to('Logint', new_user_session_path) %>
-       <% end %>
-       <ul>
-         <li><%= link_to('Paper', papers_path) %></li>
-         <li><%= link_to('Project', projects_path) %></li>
-         <li><%= link_to('Structure', structures_path) %></li>
-         <li><%= link_to('Diagnostic', diagnostics_path) %></li>
-       </ul>
-<%= yield %>
-
+           <aside>
+             hello
+           </aside>
+         </nav>
+         <article>
+           <%= yield %>
+         </article>
 </body>
 </html>

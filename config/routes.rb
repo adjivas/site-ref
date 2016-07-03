@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'authorrails/g'
+
+  get 'authorrails/controller'
+
+  get 'authorrails/tree'
+
   devise_for :users
   get 'authorrails/g'
 
