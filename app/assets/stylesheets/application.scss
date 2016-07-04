@@ -18,7 +18,8 @@
 $nav-bcolor: rgb(55, 63, 82);
 $nav-sfont: 1em;
 $nav-sfont-trigram: 1.5em;
-$nav-bg: url("https://raw.githubusercontent.com/tiprata/site-ref/master/app/assets/images/interactblanc.png");
+$nav-bg: url("interactblanc.png");
+$loutre-bg: url("loutre/loutre neutre.png");
 
 body {
   position: absolute;
@@ -35,22 +36,18 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     height: 100%;
-    font-size: $nav-sfont;
     padding: 3vw;
     padding-top: 5em;
-    & {
-      resize: horizontal;
-      overflow-y: auto;
-      overflow-x: hidden;
-    }
-    & {
-      background-color: $nav-bcolor;
-      background-image: $nav-bg;
-      background-repeat: no-repeat;
-      background-size: 117px;
-      background-position-x: 3vw;
-      background-position-y: 2vw;
-    }
+    font-size: $nav-sfont;
+    resize: horizontal;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: $nav-bcolor;
+    background-image: $nav-bg;
+    background-repeat: no-repeat;
+    background-size: 117px;
+    background-position-x: 3vw;
+    background-position-y: 2vw;
     a, input {
       color: rgb(255, 255, 255);
     }
@@ -65,6 +62,7 @@ body {
     }
     input[type="search"] {
       background-color: transparent;
+      margin-top: 1em;
       border: none;
       border-bottom: 1px solid #959595;
     }
@@ -91,8 +89,37 @@ body {
         padding-left: 0px;
       }
     }
+    aside {
+      background-image: $loutre-bg;
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      pointer-events: none;
+      height: 33%;
+      width: 100%;
+      bottom: 0px;
+      left: 0px;
+      &::after {
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #ffffff transparent transparent;
+        content: 's';
+        right: 0px;
+        position: absolute;
+      }
+    }
+    &[class="ghost"] {
+      position: absolute;
+      input[type="submit"] {
+        position: absolute;
+        color: black;
+        left: 0px;
+        z-index: 1;
+      }
+    }
   }
-  article {
+  section {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -102,10 +129,50 @@ body {
     height: 100%;
     overflow-y: auto;
     background-color: rgb(255, 255, 255);
-    tr {
-      border-bottom: 1px solid #d5dae6;
-      vertical-align: bottom;
-      height: 2.5em;
+    article {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 2.5em;
+      padding-right: 2.5em;
+      width: 100%;
+      height: 100%;
+      tr {
+        border-bottom: 1px solid #d5dae6;
+        vertical-align: bottom;
+        height: 2.5em;
+      }
+    }
+    & > input[type="submit"] {
+      position: absolute;
+      background: none;
+      border: none;
+      top: 0em;
+      right: 1em;
+      color: #d5dae6;
+      font-size: $nav-sfont-trigram;
+      &:hover {
+        color: black;
+      }
+    }
+    &, &[class="horizontal"] {
+      flex-direction: column;
+      article {
+        resize: vertical;
+        overflow-y: auto;
+        overflow-x: scroll;
+      }
+    }
+    &[class="vertical"] {
+      flex-direction: row;
+      article {
+        resize: horizontal;
+        overflow-y: scroll;
+        overflow-x: auto;
+      }
+      & > input[type="submit"] {
+        transform: rotate(90deg);
+      }
     }
   }
 }

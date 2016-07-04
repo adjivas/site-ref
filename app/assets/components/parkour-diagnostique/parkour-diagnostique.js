@@ -146,7 +146,7 @@
                 });
                 layer.add(node);
                     node.on('click', function () {
-                        document.getElementById("parktext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>" + "<div style=\"color: #00ff97\">" + obj.description + "</div>";
+                        document.getElementById("parktext").innerHTML = "<h2>" + obj.name + ": </h2>" + obj.presentation + "<br/>" + "<div>" + obj.description + "</div>";
                         document.getElementById("parkbouton").innerHTML = "<paper-button raised " +
                             " onClick=\"document.querySelector('parkour-diagnostiquePrecoce').changeStatus('" + obj.name + "', \'Success\')\">Réussite</paper-button>" +
                             "<paper-button raised onClick=\"document.querySelector('parkour-diagnostiquePrecoce').changeStatus('" + obj.name + "', \'Failure\')\">Echec</paper-button>" +
@@ -275,7 +275,7 @@
                 }*/
                 this.keychain = ["en cour", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre"];
                 this.getMatch();
-                this.drawNodes();  
+                this.drawNodes();
                 /*$("#datepicker").datepicker({
                     altField: "#datepicker",
                     closeText: 'Fermer',

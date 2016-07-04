@@ -1,10 +1,12 @@
-<% if user_signed_in? %>
-  <% if current_user.is_admin? || (current_user == @paper.user && @paper.approved != 1) %>
-    <h1>Editing paper</h1>
+<article>
+  <% if user_signed_in? %>
+    <% if current_user.is_admin? || (current_user == @paper.user && @paper.approved != 1) %>
+      <h1>Editing paper</h1>
 
-    <%= render 'form' %>
+      <%= render 'form' %>
 
-    <%= link_to 'Show', @paper %> |
-    <%= link_to 'Back', papers_path %>
+      <%= link_to 'Show', @paper %> |
+      <%= link_to 'Back', papers_path %>
+    <% end %>
   <% end %>
-<% end %>
+</article>

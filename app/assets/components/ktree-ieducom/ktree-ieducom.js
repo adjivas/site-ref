@@ -84,7 +84,7 @@
                 document.getElementById("ktreetext").innerHTML = " ";
                 document.getElementById("ktreebouton").innerHTML = " ";
             },
-            
+
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
@@ -94,7 +94,7 @@
                 } else if (obj.enfant == "") {
                     nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorSuccess;
-                } 
+                }
                 var node = new Konva.Circle({
                     x: obj.pos[0] * coeff,
                     y: obj.pos[1] * coeff,
@@ -108,7 +108,7 @@
                 layer.add(node);
                 if (obj.enfant == "") {
                     node.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + "<p  style=\"color: #00ff97\">" + obj.presentation + "</p><br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2>" + obj.name + ": </h2>" + "<p>" + obj.presentation + "</p><br/>";
                         document.getElementById("ktreebouton").innerHTML = " ";
                     });
                     node.on('mouseover', function () {
@@ -127,8 +127,8 @@
                         document.querySelector('ktree-selector').showKtree(obj.enfant);
                     });
                     node.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + "<p  style=\"color: #00ff97\">" + obj.presentation + "</p><br/>";
-                        document.getElementById("ktreebouton").innerHTML = "<a><button style=\"width: 100%; height: 40px; background-color: #00ff97; color: #226070; border-radius: 15px\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">En savoir plus</button></a>";
+                        document.getElementById("ktreetext").innerHTML = "<h2>" + obj.name + ": </h2>" + "<p>" + obj.presentation + "</p><br/>";
+                        document.getElementById("ktreebouton").innerHTML = "<a><button onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">En savoir plus</button></a>";
                     });
                     node.on('mouseover', function () {
                         this.opacity(0.5);

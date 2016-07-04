@@ -60,7 +60,7 @@
                 document.getElementById("parktext").innerHTML = " ";
                 document.getElementById("parkbouton").innerHTML = " ";
             },
-            
+
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
@@ -94,7 +94,7 @@
                     });
                     layer.add(logo);*/
                     node.on('click', function () {
-                        document.getElementById("parktext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.description + ": </h2>";
+                        document.getElementById("parktext").innerHTML = "<h2>" + obj.description + ": </h2>";
                         document.getElementById("parkbouton").innerHTML = "<paper-button raised onClick=\"document.querySelector('parkour-selector').showParkour('" + obj.name + "')\">Afficher</paper-button>";
                     });
                     node.on('mouseover', function () {

@@ -1,55 +1,57 @@
-<h1>Listing projects</h1>
+<article>
+  <h1>Listing projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Link</th>
-      <th>Description</th>
-      <th>From</th>
-      <th>Logo</th>
-      <th>Published</th>
-      <th>Message</th>
-      <th>Reply</th>
-      <th>User</th>
-      <th>Admin</th>
-      <th>Approved</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Link</th>
+        <th>Description</th>
+        <th>From</th>
+        <th>Logo</th>
+        <th>Published</th>
+        <th>Message</th>
+        <th>Reply</th>
+        <th>User</th>
+        <th>Admin</th>
+        <th>Approved</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <% if project.approved == 1 || (user_signed_in? && (current_user.is_admin? || current_user == project.user)) %>
-        <tr>
-          <td><%= project.name %></td>
-          <td><%= project.link %></td>
-          <td><%= project.description %></td>
-          <td><%= project.from %></td>
-          <td><%= project.logo %></td>
-          <td><%= project.published %></td>
-          <td><%= project.message %></td>
-          <td><%= project.reply %></td>
-          <td><%= project.user ? project.user.email : "" %></td>
-          <td><%= project.admin ? project.admin.email : "" %></td>
-          <td><%= project.approved == 1 ? "accepted" : "pending" %></td>
-          <td><%= link_to 'Show', project %></td>
-          <% if user_signed_in? %>
-            <% if current_user.is_admin? || (current_user == project.user && project.approved != 1) %>
-              <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <tbody>
+      <% @projects.each do |project| %>
+        <% if project.approved == 1 || (user_signed_in? && (current_user.is_admin? || current_user == project.user)) %>
+          <tr>
+            <td><%= project.name %></td>
+            <td><%= project.link %></td>
+            <td><%= project.description %></td>
+            <td><%= project.from %></td>
+            <td><%= project.logo %></td>
+            <td><%= project.published %></td>
+            <td><%= project.message %></td>
+            <td><%= project.reply %></td>
+            <td><%= project.user ? project.user.email : "" %></td>
+            <td><%= project.admin ? project.admin.email : "" %></td>
+            <td><%= project.approved == 1 ? "accepted" : "pending" %></td>
+            <td><%= link_to 'Show', project %></td>
+            <% if user_signed_in? %>
+              <% if current_user.is_admin? || (current_user == project.user && project.approved != 1) %>
+                <td><%= link_to 'Edit', edit_project_path(project) %></td>
+              <% end %>
+              <% if current_user.is_admin? || current_user == project.user %>
+                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <% end %>
             <% end %>
-            <% if current_user.is_admin? || current_user == project.user %>
-              <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <% end %>
-          <% end %>
-        </tr>
+          </tr>
+        <% end %>
       <% end %>
-    <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<% if user_signed_in? %>
-  <%= link_to 'New Project', new_project_path %>
-<% end %>
+  <% if user_signed_in? %>
+    <%= link_to 'New Project', new_project_path %>
+  <% end %>
+</article>
