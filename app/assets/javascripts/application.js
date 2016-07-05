@@ -38,4 +38,5 @@ function event_rotate () {
   else {
     node.setAttribute("class", "vertical");
   }
+  document.querySelector('ktree-selector').drawNodes();
 }

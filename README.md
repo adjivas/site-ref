@@ -23,5 +23,11 @@ rake import_paper
 rake import_structure
 ```
 
+##### How to run
+On _CloundLine_:
+```shell
+rails  server -p $PORT -b $IP
+```
+
 ##### License
 **SiteRef**'s code in this repo uses the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) [license](LICENSE).
