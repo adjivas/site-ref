@@ -1,90 +1,92 @@
-<p id="notice"><%= notice %></p>
+<article>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @structure.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @structure.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @structure.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @structure.description %>
+  </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @structure.address %>
-</p>
+  <p>
+    <strong>Address:</strong>
+    <%= @structure.address %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @structure.email %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @structure.email %>
+  </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @structure.phone %>
-</p>
+  <p>
+    <strong>Phone:</strong>
+    <%= @structure.phone %>
+  </p>
 
-<p>
-  <strong>Link:</strong>
-  <%= @structure.link %>
-</p>
+  <p>
+    <strong>Link:</strong>
+    <%= @structure.link %>
+  </p>
 
-<p>
-  <strong>Longitude:</strong>
-  <%= @structure.longitude %>
-</p>
+  <p>
+    <strong>Longitude:</strong>
+    <%= @structure.longitude %>
+  </p>
 
-<p>
-  <strong>Latitude:</strong>
-  <%= @structure.latitude %>
-</p>
+  <p>
+    <strong>Latitude:</strong>
+    <%= @structure.latitude %>
+  </p>
 
-<p>
-  <strong>Juridical:</strong>
-  <%= @structure.juridical ? @structure.juridical.name : "" %>
-</p>
+  <p>
+    <strong>Juridical:</strong>
+    <%= @structure.juridical ? @structure.juridical.name : "" %>
+  </p>
 
-<p>
-  <strong>Departement:</strong>
-  <%= @structure.departement ? @structure.departement.name : "" %>
-</p>
+  <p>
+    <strong>Departement:</strong>
+    <%= @structure.departement ? @structure.departement.name : "" %>
+  </p>
 
-<p>
-  <strong>Published:</strong>
-  <%= @structure.published %>
-</p>
+  <p>
+    <strong>Published:</strong>
+    <%= @structure.published %>
+  </p>
 
-<p>
-  <strong>Approved:</strong>
-  <%= @structure.approved == 1 ? "accepted" : "pending" %>
-</p>
+  <p>
+    <strong>Approved:</strong>
+    <%= @structure.approved == 1 ? "accepted" : "pending" %>
+  </p>
 
-<% if user_signed_in? %>
-  <% if current_user.is_admin || current_user == @structure.user %>
-    <p>
-      <strong>User:</strong>
-      <%= @structure.user ? @structure.user.email : "" %>
-    </p>
+  <% if user_signed_in? %>
+    <% if current_user.is_admin || current_user == @structure.user %>
+      <p>
+        <strong>User:</strong>
+        <%= @structure.user ? @structure.user.email : "" %>
+      </p>
 
-    <p>
-      <strong>Admin:</strong>
-      <%= @structure.admin ? @structure.admin.email : "" %>
-    </p>
+      <p>
+        <strong>Admin:</strong>
+        <%= @structure.admin ? @structure.admin.email : "" %>
+      </p>
 
-    <p>
-      <strong>Message:</strong>
-      <%= @structure.message %>
-    </p>
+      <p>
+        <strong>Message:</strong>
+        <%= @structure.message %>
+      </p>
 
-    <p>
-      <strong>Reply:</strong>
-      <%= @structure.reply %>
-    </p>
+      <p>
+        <strong>Reply:</strong>
+        <%= @structure.reply %>
+      </p>
+    <% end %>
+
+    <% if current_user.is_admin || (current_user == @structure.user && @structure.approved == 0) %>
+      <%= link_to 'Edit', edit_structure_path(@structure) %> |
+    <% end %>
   <% end %>
-
-  <% if current_user.is_admin || (current_user == @structure.user && @structure.approved == 0) %>
-    <%= link_to 'Edit', edit_structure_path(@structure) %> |
-  <% end %>
-<% end %>
-<%= link_to 'Back', structures_path %>
+  <%= link_to 'Back', structures_path %>
+</article>

@@ -1,41 +1,43 @@
-<h1>Listing diagnostics</h1>
+<article>
+  <h1>Listing diagnostics</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Help</th>
-      <th>Adult</th>
-      <th>Duration</th>
-      <th>Diagnostic</th>
-      <th>Departement</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Help</th>
+        <th>Adult</th>
+        <th>Duration</th>
+        <th>Diagnostic</th>
+        <th>Departement</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <% if user_signed_in? && current_user.is_admin? %>
-      <% @diagnostics.each do |diagnostic| %>
-        <tr>
-          <td><%= diagnostic.name %></td>
-          <td><%= diagnostic.description %></td>
-          <td><%= diagnostic.help %></td>
-          <td><%= diagnostic.adult %></td>
-          <td><%= diagnostic.duration %></td>
-          <td><%= diagnostic.diagnostic ? diagnostic.diagnostic : "" %></td>
-          <td><%= diagnostic.departement ? diagnostic.departement.name : "" %></td>
-          <td><%= link_to 'Show', diagnostic %></td>
-          <td><%= link_to 'Edit', edit_diagnostic_path(diagnostic) %></td>
-          <td><%= link_to 'Destroy', diagnostic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-        <br />
-        <%= link_to 'New Diagnostic', new_diagnostic_path %>
+    <tbody>
+      <% if user_signed_in? && current_user.is_admin? %>
+        <% @diagnostics.each do |diagnostic| %>
+          <tr>
+            <td><%= diagnostic.name %></td>
+            <td><%= diagnostic.description %></td>
+            <td><%= diagnostic.help %></td>
+            <td><%= diagnostic.adult %></td>
+            <td><%= diagnostic.duration %></td>
+            <td><%= diagnostic.diagnostic ? diagnostic.diagnostic : "" %></td>
+            <td><%= diagnostic.departement ? diagnostic.departement.name : "" %></td>
+            <td><%= link_to 'Show', diagnostic %></td>
+            <td><%= link_to 'Edit', edit_diagnostic_path(diagnostic) %></td>
+            <td><%= link_to 'Destroy', diagnostic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+          <br />
+          <%= link_to 'New Diagnostic', new_diagnostic_path %>
+        <% end %>
+      <% else %>
+        <% @diagnostics.each do |diagnostic| %>
+          <%= diagnostic.to_json %>
+        <% end %>
       <% end %>
-    <% else %>
-      <% @diagnostics.each do |diagnostic| %>
-        <%= diagnostic.to_json %>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</article>

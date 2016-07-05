@@ -1,8 +1,10 @@
-<% if user_signed_in? && current_user.is_admin? %>
-  <h1>Editing diagnostic</h1>
+<article>
+  <% if user_signed_in? && current_user.is_admin? %>
+    <h1>Editing diagnostic</h1>
 
-  <%= render 'form' %>
+    <%= render 'form' %>
 
-  <%= link_to 'Show', @diagnostic %> |
-  <%= link_to 'Back', diagnostics_path %>
-<% end %>
+    <%= link_to 'Show', @diagnostic %> |
+    <%= link_to 'Back', diagnostics_path %>
+  <% end %>
+</article>
