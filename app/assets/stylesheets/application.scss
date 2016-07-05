@@ -45,11 +45,20 @@ body {
     background-color: $nav-bcolor;
     background-image: $nav-bg;
     background-repeat: no-repeat;
-    background-size: 117px;
-    background-position-x: 3vw;
-    background-position-y: 2vw;
-    a, input {
+    background-size: 10em;
+    background-position-x: 1em;
+    background-position-y: 2em;
+    input {
       color: rgb(255, 255, 255);
+    }
+    a {
+      color: rgb(255, 255, 255);
+      &:active, &:hover {
+        color: rgb(255, 255, 255);
+      }
+      &:link, &:visited, &:active, &:hover {
+        text-decoration: none;
+      }
     }
     input[type="submit"] {
       position: absolute;
@@ -78,12 +87,6 @@ body {
       a {
         text-transform: uppercase;
         color: rgb(213, 218, 230);
-        &:active, &:hover {
-          color: rgb(255, 255, 255);
-        }
-        &:link, &:visited, &:active, &:hover {
-          text-decoration: none;
-        }
       }
       &, li {
         padding-left: 0px;
@@ -92,7 +95,7 @@ body {
     aside {
       background-image: $loutre-bg;
       position: absolute;
-      background-position: center;
+      background-position: center bottom;
       background-repeat: no-repeat;
       background-size: contain;
       pointer-events: none;
@@ -101,12 +104,14 @@ body {
       bottom: 0px;
       left: 0px;
       &::after {
+        position: absolute;
         border-style: solid;
         border-width: 10px 10px 10px 0;
         border-color: transparent #ffffff transparent transparent;
-        content: 's';
+        content: '\00a0';
+        height: 0px;
         right: 0px;
-        position: absolute;
+        bottom: 60%;
       }
     }
     &[class="ghost"] {

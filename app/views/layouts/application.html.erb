@@ -19,6 +19,11 @@
       <input type="search" placeholder="search" autocomplete="off" />
 
       <ul>
+        <li><%= link_to('Author', authorrails_Author_path) %></li>
+        <li><%= link_to('Paper', papers_path) %></li>
+        <li><%= link_to('Project', projects_path) %></li>
+        <li><%= link_to('Tree', tree_index_path) %></li>
+        <li><%= link_to('Structure', structures_path) %></li>
         <% if user_signed_in? %>
           <% if current_user.is_admin? %>
             <li><%= link_to('User', users_path) %></li>
@@ -27,10 +32,6 @@
             <li><%= link_to('departement', departements_path) %></li>
           <% end %>
         <% end %>
-        <li><%= link_to('Paper', papers_path) %></li>
-        <li><%= link_to('Project', projects_path) %></li>
-        <li><%= link_to('Structure', structures_path) %></li>
-        <li><%= link_to('Diagnostic', diagnostics_path) %></li>
       </ul>
        <aside id="loutre">loutre</aside>
     </nav>

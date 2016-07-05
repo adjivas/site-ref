@@ -326,7 +326,7 @@
                     x: obj.pos[0] * coeff,
                     y: obj.pos[1] * coeff,
                     radius: coeff / 2,
-                    fill: (obj.par === 0) ? "#268e7b" : "#00ff97",
+                    fill: (obj.par === 0) ? "#268e7b" : "#8FB0B9",
                     stroke: "#226070",
                     id: obj.name,
                     strokeWidth: coeff / 12,

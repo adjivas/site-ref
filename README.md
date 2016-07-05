@@ -14,6 +14,14 @@
 ##### Merise'MCD-Modeling
 ![Screen Shot](https://raw.githubusercontent.com/adjivas/site-ref/notes/mcd.png)
 
+##### Import basical data
+```shell
+rake db:migrate
+rake import_departement
+rake import_language
+rake import_paper
+rake import_structure
+```
+
 ##### License
 **SiteRef**'s code in this repo uses the [GNU GPL v3](http://www.gnu.org/licenses/gpl-3.0.html) [license](LICENSE).
-

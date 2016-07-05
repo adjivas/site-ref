@@ -18,13 +18,10 @@
                                 enfant: "ktree-cmb",
                             },
                             {
-                                name: 'Comportements problèmes',
-                                presentation: '<p>Le job coaching, ou supported employment, est un accompagnement personnalisé et structuré auprès d’une personne pour son accès et son maintien dans l’emploi. L’accent est mis sur l’autonomisation et la responsabilisation de la personne. L’accompagnement est centré sur la mise en valeur et l’expression des ressources personnelles du salarié en équilibre avec les besoins de l’entreprise. Ce service spécifique peut être proposé par des associations ou des cabinets spécialisés.</p><p>Si, au début de son intervention sur le lieu de travail, le job coach accompagne de façon intensive la personne avec TSA, son accompagnement devient ensuite plus ponctuel, et il se retire progressivement pour viser l’autonomie complète de la personne accompagnée. Des interventions exceptionnelles peuvent néanmoins être proposées en cas de difficultés à gérer des changements, rencontrées par la personne avec TSA ou par ses collègues</p><p>Sur le plan pratique, le job coaching implique non seulement un travail préalable avec l’adulte en situation de handicap pour identifier ses compétences et ses diffi cultés (ateliers autour des compétences sociales à mettre en œuvre en entreprise par exemple), mais aussi avec l’entreprise. Le job coach réalise ainsi une analyse de poste et propose des aménagements à l’entreprise (structuration du temps et de l’espace, décomposition des tâches et des consignes en énoncés élémentaires, transformation des consignes verbales en consignes visuelles, recours à des casques audio pour permettre à la personne de mieux se concentrer et diminuer le bruit environnant…). Outre l’accompagnement proposé à la personne avec TSA, le job coach accompagne ainsi l’employeur et ses salariés dans la compréhension du fonctionnement de la personne avec TSA et dans la mise en place d’un environnement facilitateur pour celle-ci. L’ajustement est mutuel et facilité par ce tiers extérieur à l’entreprise.</p><p>Il convient de souligner que le job coach peut aussi être amené à intervenir au domicile de la personne pour l’aider dans les actes de sa vie personnelle, qui peuvent influencer la qualité de son travail (connexion internet, travaux sur son trajet habituel…).</p>',
-                                pos: [5, 6],
-                                enfant: "",
-                            }
-                        ]
-                    }
+                                name: "Comorbidités",
+                                presentation: '<p>Comme précédemment, la description suivante des interventions par domaine fonctionnel est extraite des recommandations de bonnes pratiques professionnelles publiées en 2012 par la HAS et l’ANESM. Pour en savoir plus, il est vivement conseillé de se reporter aux recommandations publiées.</p>',
+                                pos: [1, 6],
+                                enfant: "ktree-cmb",
                 },
                 connect: {
                     type: Array,
@@ -53,7 +50,7 @@
             nodeColorNeutral: "#226070",
             nodeColorSuccess: "#226070",
             nodeColorFail: "red",
-            strokeColorNeutral: "#00ff97",
+            strokeColorNeutral: "#8FB0B9",
             strokeColorSuccess: "white",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
