@@ -2,84 +2,79 @@
   <p id="notice"><%= notice %></p>
 
   <p>
-    <strong>Name:</strong>
+    <strong>Nom :</strong>
     <%= @structure.name %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong>Description :</strong>
     <%= @structure.description %>
   </p>
 
   <p>
-    <strong>Address:</strong>
+    <strong>Adresse :</strong>
     <%= @structure.address %>
   </p>
 
   <p>
-    <strong>Email:</strong>
+    <strong>Courriel :</strong>
     <%= @structure.email %>
   </p>
 
   <p>
-    <strong>Phone:</strong>
+    <strong>Numéro de Téléphone :</strong>
     <%= @structure.phone %>
   </p>
 
   <p>
-    <strong>Link:</strong>
+    <strong>Lien :</strong>
     <%= @structure.link %>
   </p>
 
   <p>
-    <strong>Longitude:</strong>
+    <strong>Longitude :</strong>
     <%= @structure.longitude %>
   </p>
 
   <p>
-    <strong>Latitude:</strong>
+    <strong>Latitude :</strong>
     <%= @structure.latitude %>
   </p>
 
   <p>
-    <strong>Juridical:</strong>
+    <strong>Type d'Etablissement :</strong>
     <%= @structure.juridical ? @structure.juridical.name : "" %>
   </p>
 
   <p>
-    <strong>Departement:</strong>
-    <%= @structure.departement ? @structure.departement.name : "" %>
-  </p>
-
-  <p>
-    <strong>Published:</strong>
+    <strong>Publié :</strong>
     <%= @structure.published %>
   </p>
 
   <p>
-    <strong>Approved:</strong>
-    <%= @structure.approved == 1 ? "accepted" : "pending" %>
+    <strong>Approuvé :</strong>
+    <%= @structure.approved == true ? "accepted" : "pending" %>
   </p>
 
   <% if user_signed_in? %>
     <% if current_user.is_admin || current_user == @structure.user %>
       <p>
-        <strong>User:</strong>
+        <strong>Utilisateur :</strong>
         <%= @structure.user ? @structure.user.email : "" %>
       </p>
 
       <p>
-        <strong>Admin:</strong>
+        <strong>Administrateur :</strong>
         <%= @structure.admin ? @structure.admin.email : "" %>
       </p>
 
       <p>
-        <strong>Message:</strong>
+        <strong>Message :</strong>
         <%= @structure.message %>
       </p>
 
       <p>
-        <strong>Reply:</strong>
+        <strong>Réponse :</strong>
         <%= @structure.reply %>
       </p>
     <% end %>

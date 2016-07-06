@@ -1,8 +1,7 @@
 <article>
-  <% if user_signed_in? %>
-    <% if current_user == @user || current_user.is_admin? %>
-      <h1>Editing user</h1>
-
+<% if user_signed_in? %>
+  <% if current_user == @user || current_user.is_admin? %>
+   <h1>Paramétrage compte Utilisateur</h1>
       <%= render 'form' %>
 
       <%= link_to 'Show', @user %> |

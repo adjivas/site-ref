@@ -3,68 +3,74 @@
 
     <% if current_user.is_admin? %>
       <p>
-        <strong>Is admin:</strong>
+        <strong>Administrateur :</strong>
         <%= @user.is_admin %>
       </p>
     <% end %>
 
-    <% if current_user == @user || (current_user.is_admin? && (@user.info_research? || @user.email_research?)) %>
-      <p id="notice"><%= notice %></p>
+    <% if current_user == @user || current_user.is_admin? %>
+      <p>
+        <strong>Permettre l'accès à son email par des chercheurs :</strong>
+        <%= @user.email_research %>
+      </p>
 
-      <% if current_user == @user || (current_user.is_admin? && @user.email_research?) %>
-        <p>
-          <strong>Email research:</strong>
-          <%= @user.email_research %>
-        </p>
-        <p>
-          <strong>Email :</strong>
-          <%= @user.email %>
-        </p>
-      <% end %>
-
-      <% if current_user == @user || (current_user.is_admin? && @user.info_research?) %>
-        <p>
-          <strong>Link:</strong>
-          <%= @user.link %>
-        </p>
-
-        <p>
-          <strong>Gender:</strong>
-          <%= @user.gender == 0 ? "man" : "women" %>
-        </p>
-
-        <p>
-          <strong>Birthdate:</strong>
-          <%= @user.birthdate %>
-        </p>
-
-        <p>
-          <strong>Begin:</strong>
-          <%= @user.begin %>
-        </p>
-
-        <p>
-          <strong>End:</strong>
-          <%= @user.end %>
-        </p>
-
-        <p>
-          <strong>Info research:</strong>
-          <%= @user.info_research %>
-        </p>
-
-        <p>
-          <strong>Departement:</strong>
-          <%= @user.departement ? @user.departement.name : "" %>
-        </p>
-
-        <p>
-          <strong>Diagnostic:</strong>
-          <%= @user.diagnostic ? @user.diagnostic.name : "" %>
-        </p>
-      <% end %>
-      <%= link_to 'Edit', edit_user_path(@user) %> |
-      <%= link_to 'Back', users_path %>
+      <p>
+        <strong>Permettre l'accès à ses informations par des chercheurs :</strong>
+        <%= @user.info_research %>
+      </p>
     <% end %>
+
+    <% if current_user == @user || (current_user.is_admin? && @user.email_research?) %>
+      <p>
+        <strong>Email :</strong>
+        <%= @user.email %>
+      </p>
+    <% end %>
+
+    <% if current_user == @user || (current_user.is_admin? && @user.info_research?) %>
+      <p>
+        <strong>Lien :</strong>
+        <%= @user.link %>
+      </p>
+
+      <p>
+        <strong>Genre :</strong>
+        <%= @user.gender == false ? "Homme" : "Femme" %>
+      </p>
+
+      <p>
+        <strong>Date de Naissance :</strong>
+        <%= @user.birthdate %>
+      </p>
+
+      <p>
+        <strong>Begin:</strong>
+        <%= @user.begin %>
+      </p>
+
+      <p>
+        <strong>End:</strong>
+        <%= @user.end %>
+      </p>
+
+      <p>
+        <strong>Info research:</strong>
+        <%= @user.info_research %>
+      </p>
+
+      <p>
+        <strong>Adresse (Département) :</strong>
+        <%= @user.departement ? @user.departement.name : "" %>
+      </p>
+
+      <p>
+        <strong>Diagnostic:</strong>
+        <%= @user.diagnostic ? @user.diagnostic.name : "" %>
+      </p>
+    <% end %>
+
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Back', users_path %>
+
   <% end %>
 </article>
