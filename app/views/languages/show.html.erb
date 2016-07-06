@@ -1,11 +1,13 @@
-<% if user_signed_in? && current_user.is_admin? %>
-  <p id="notice"><%= notice %></p>
+<article>
+  <% if user_signed_in? && current_user.is_admin? %>
+    <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @language.name %>
-  </p>
+    <p>
+      <strong>Name:</strong>
+      <%= @language.name %>
+    </p>
 
-  <%= link_to 'Edit', edit_language_path(@language) %> |
-  <%= link_to 'Back', languages_path %>
-<% end %>
+    <%= link_to 'Edit', edit_language_path(@language) %> |
+    <%= link_to 'Back', languages_path %>
+  <% end %>
+</article>

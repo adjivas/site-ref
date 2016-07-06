@@ -1,32 +1,30 @@
 body {
   background-color: #fff;
   color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
 
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 1.5em;
+  word-wrap: break-word;
+}
+
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 13px;
   line-height: 18px;
+  color: rgb(51, 51, 51);
 }
 
 pre {
   background-color: #eee;
   padding: 10px;
   font-size: 11px;
-}
-
-a {
-  color: #000;
-  &:visited {
-    color: #666;
-  }
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
 }
 
 div {
@@ -65,5 +63,6 @@ div {
   ul li {
     font-size: 12px;
     list-style: square;
+    font-family: "Open Sans", sans-serif;
   }
 }

@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160629223421) do
+ActiveRecord::Schema.define(version: 20160629235213) do
 
-  create_table "departements", force: true do |t|
+  create_table "departements", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "diagnostics", force: true do |t|
+  create_table "diagnostics", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.string   "help"
@@ -34,19 +34,19 @@ ActiveRecord::Schema.define(version: 20160629223421) do
   add_index "diagnostics", ["departement_id"], name: "index_diagnostics_on_departement_id"
   add_index "diagnostics", ["diagnostic_id"], name: "index_diagnostics_on_diagnostic_id"
 
-  create_table "juridicals", force: true do |t|
+  create_table "juridicals", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "languages", force: true do |t|
+  create_table "languages", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "papers", force: true do |t|
+  create_table "papers", force: :cascade do |t|
     t.string   "name"
     t.string   "link"
     t.string   "description"
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 20160629223421) do
     t.text     "reply"
     t.integer  "user_id"
     t.integer  "admin_id"
-    t.integer  "approved"
+    t.boolean  "approved"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20160629223421) do
   add_index "papers", ["language_id"], name: "index_papers_on_language_id"
   add_index "papers", ["user_id"], name: "index_papers_on_user_id"
 
-  create_table "projects", force: true do |t|
+  create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.string   "link"
     t.string   "description"
@@ -87,7 +87,7 @@ ActiveRecord::Schema.define(version: 20160629223421) do
   add_index "projects", ["admin_id"], name: "index_projects_on_admin_id"
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"
 
-  create_table "structures", force: true do |t|
+  create_table "structures", force: :cascade do |t|
     t.string   "name"
     t.integer  "juridical_id"
     t.string   "description"
@@ -113,10 +113,10 @@ ActiveRecord::Schema.define(version: 20160629223421) do
   add_index "structures", ["juridical_id"], name: "index_structures_on_juridical_id"
   add_index "structures", ["user_id"], name: "index_structures_on_user_id"
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.boolean  "is_admin"
     t.string   "link"
-    t.integer  "gender"
+    t.boolean  "gender"
     t.date     "birthdate"
     t.date     "begin"
     t.date     "end"

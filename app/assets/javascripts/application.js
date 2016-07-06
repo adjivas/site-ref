@@ -17,3 +17,26 @@
 //= require gmaps/google
 //= require bootstrap.min
 //= require_tree .
+
+function event_hidden () {
+  const node = document.querySelector("nav");
+
+  if (node.getAttribute("class") === "ghost") {
+    node.removeAttribute("class");
+  }
+  else {
+    node.setAttribute("class", "ghost");
+  }
+}
+
+function event_rotate () {
+  const node = document.querySelector('section');
+
+  if (node.getAttribute("class") === "vertical") {
+    node.setAttribute("class", "horizontal");
+  }
+  else {
+    node.setAttribute("class", "vertical");
+  }
+  document.querySelector('ktree-selector').drawNodes();
+}

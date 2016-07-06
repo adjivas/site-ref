@@ -1,11 +1,13 @@
-<% if user_signed_in? && current_user.is_admin? %>
-  <p id="notice"><%= notice %></p>
+<article>
+  <% if user_signed_in? && current_user.is_admin? %>
+    <p id="notice"><%= notice %></p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @departement.name %>
-  </p>
+    <p>
+      <strong>Name:</strong>
+      <%= @departement.name %>
+    </p>
 
-  <%= link_to 'Edit', edit_departement_path(@departement) %> |
-  <%= link_to 'Back', departements_path %>
-<% end %>
+    <%= link_to 'Edit', edit_departement_path(@departement) %> |
+    <%= link_to 'Back', departements_path %>
+  <% end %>
+</article>

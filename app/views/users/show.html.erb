@@ -1,29 +1,29 @@
-<% if user_signed_in? %>
+<article>
+  <% if user_signed_in? %>
 
-  <% if current_user.is_admin? %>
-    <p>
-      <strong>Administrateur :</strong>
-      <%= @user.is_admin %>
-    </p>
-  <% end %>
+    <% if current_user.is_admin? %>
+      <p>
+        <strong>Administrateur :</strong>
+        <%= @user.is_admin %>
+      </p>
+    <% end %>
 
-  <% if current_user == @user || (current_user.is_admin? && (@user.info_research? || @user.email_research?)) %>
-    <p id="notice"><%= notice %></p>
-
-    <% if current_user == @user || (current_user.is_admin? && @user.email_research?) %>
+    <% if current_user == @user || current_user.is_admin? %>
       <p>
         <strong>Permettre l'accès à son email par des chercheurs :</strong>
         <%= @user.email_research %>
       </p>
 
       <p>
-        <strong>
-        <%= @user.email %>
-      </p>
-
-      <p>
         <strong>Permettre l'accès à ses informations par des chercheurs :</strong>
         <%= @user.info_research %>
+      </p>
+    <% end %>
+
+    <% if current_user == @user || (current_user.is_admin? && @user.email_research?) %>
+      <p>
+        <strong>Email :</strong>
+        <%= @user.email %>
       </p>
     <% end %>
 
@@ -35,7 +35,7 @@
 
       <p>
         <strong>Genre :</strong>
-        <%= @user.gender == 0 ? "Homme" : "Femme" %>
+        <%= @user.gender == false ? "Homme" : "Femme" %>
       </p>
 
       <p>
@@ -44,13 +44,18 @@
       </p>
 
       <p>
-        <strong>Begin :</strong>
+        <strong>Begin:</strong>
         <%= @user.begin %>
       </p>
 
       <p>
-        <strong>End :</strong>
+        <strong>End:</strong>
         <%= @user.end %>
+      </p>
+
+      <p>
+        <strong>Info research:</strong>
+        <%= @user.info_research %>
       </p>
 
       <p>
@@ -63,7 +68,9 @@
         <%= @user.diagnostic ? @user.diagnostic.name : "" %>
       </p>
     <% end %>
+
     <%= link_to 'Edit', edit_user_path(@user) %> |
     <%= link_to 'Back', users_path %>
+
   <% end %>
-<% end %>
+</article>

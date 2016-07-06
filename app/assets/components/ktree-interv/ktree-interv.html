@@ -1,0 +1,27 @@
+<dom-module id="ktree-interv">
+
+    <style>
+        #dres-diag {
+            position: absolute;
+            top: 20px;
+            margin-left: 310px;            
+        }
+        #stats {
+            position: absolute;
+            margin-left: 320px;
+            margin-right: 0px;
+        }
+    </style>
+    <template>
+        <div id="desc-diag" class="col-lg-6 co-md-6 col-xs-6 co-sm-6" style="left: 60%">
+            <p style="color: #226070" id="presentation-paragraph"></p>
+            <p style="color: #226070" id="description-paragraph"></p>
+            <p id="status"></p>
+        </div>
+<!-- Add pop up boostrap avec la description on click, un autre pour remplir la date sur pression d'un des boutons -->
+        <div style="left: 60%" id="stats">
+            <p>Quand: <input type="text" id="datepicker"></p>
+        </div>
+    </template>
+    <script src="ktree-interv.js"></script>
+</dom-module>

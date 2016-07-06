@@ -1,64 +1,66 @@
-<p id="notice"><%= notice %></p>
+<article>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nom :</strong>
-  <%= @project.name %>
-</p>
-
-<p>
-  <strong>Lien :</strong>
-  <%= @project.link %>
-</p>
-
-<p>
-  <strong>Description :</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>From :</strong>
-  <%= @project.from %>
-</p>
-
-<p>
-  <strong>Logo :</strong>
-  <%= @project.logo %>
-</p>
-
-<p>
-  <strong>Publié :</strong>
-  <%= @project.published %>
-</p>
-
-<p>
-  <strong>Approuvé :</strong>
-  <%= @project.approved %>
-  <%= @project.approved == 1 ? "accepted" : "pending" %>
-</p>
-
-<% if current_user.is_admin || current_user == @project.user %>
   <p>
-    <strong>Utilisateur :</strong>
-    <%= @project.user ? @project.user.email : "" %>
+    <strong>Nom :</strong>
+    <%= @project.name %>
   </p>
 
   <p>
-    <strong>Administrateur :</strong>
-    <%= @project.admin ? @project.admin.email : "" %>
+    <strong>Lien :</strong>
+    <%= @project.link %>
   </p>
 
   <p>
-    <strong>Message :</strong>
-    <%= @project.message %>
+    <strong>Description :</strong>
+    <%= @project.description %>
   </p>
 
   <p>
-    <strong>Réponse :</strong>
-    <%= @project.reply %>
+    <strong>From :</strong>
+    <%= @project.from %>
   </p>
-<% end %>
 
-<% if current_user.is_admin || (current_user == @project.user && @project.approved == 0) %>
-  <%= link_to 'Edit', edit_project_path(@project) %> |
-<% end %>
-<%= link_to 'Back', projects_path %>
+  <p>
+    <strong>Logo :</strong>
+    <%= @project.logo %>
+  </p>
+
+  <p>
+    <strong>Publié :</strong>
+    <%= @project.published %>
+  </p>
+
+  <p>
+    <strong>Approuvé :</strong>
+    <%= @project.approved %>
+    <%= @project.approved == true ? "accepted" : "pending" %>
+  </p>
+
+  <% if current_user.is_admin || current_user == @project.user %>
+    <p>
+      <strong>Utilisateur :</strong>
+      <%= @project.user ? @project.user.email : "" %>
+    </p>
+
+    <p>
+      <strong>Administrateur :</strong>
+      <%= @project.admin ? @project.admin.email : "" %>
+    </p>
+
+    <p>
+      <strong>Message :</strong>
+      <%= @project.message %>
+    </p>
+
+    <p>
+      <strong>Réponse :</strong>
+      <%= @project.reply %>
+    </p>
+  <% end %>
+
+  <% if current_user.is_admin || (current_user == @project.user && @project.approved == 0) %>
+    <%= link_to 'Edit', edit_project_path(@project) %> |
+  <% end %>
+  <%= link_to 'Back', projects_path %>
+</article>

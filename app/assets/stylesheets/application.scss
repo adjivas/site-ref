@@ -14,3 +14,170 @@
  *= require_self
  *= require bootstrap.min
  */
+
+$nav-bcolor: rgb(55, 63, 82);
+$nav-sfont: 1em;
+$nav-sfont-trigram: 1.5em;
+$nav-bg: url("interactblanc.png");
+$loutre-bg: url("loutre/loutre neutre.png");
+
+body {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 3vw;
+    padding-top: 5em;
+    font-size: $nav-sfont;
+    resize: horizontal;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: $nav-bcolor;
+    background-image: $nav-bg;
+    background-repeat: no-repeat;
+    background-size: 10em;
+    background-position-x: 1em;
+    background-position-y: 2em;
+    input {
+      color: rgb(255, 255, 255);
+    }
+    a {
+      color: rgb(255, 255, 255);
+      &:active, &:hover {
+        color: rgb(255, 255, 255);
+      }
+      &:link, &:visited, &:active, &:hover {
+        text-decoration: none;
+      }
+    }
+    input[type="submit"] {
+      position: absolute;
+      background: none;
+      border: none;
+      right: 0px;
+      top: 0px;
+      color: #d5dae6;
+      font-size: $nav-sfont-trigram;
+    }
+    input[type="search"] {
+      background-color: transparent;
+      margin-top: 1em;
+      border: none;
+      border-bottom: 1px solid #959595;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        border: 3px solid transparent;
+        padding-left: 10px;
+        &:hover {
+          border-left: 3px solid #9768d1;
+        }
+      }
+      a {
+        text-transform: uppercase;
+        color: rgb(213, 218, 230);
+      }
+      &, li {
+        padding-left: 0px;
+      }
+    }
+    aside {
+      background-image: $loutre-bg;
+      position: absolute;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      pointer-events: none;
+      height: 33%;
+      width: 100%;
+      bottom: 0px;
+      left: 0px;
+      &::after {
+        position: absolute;
+        border-style: solid;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #ffffff transparent transparent;
+        content: '\00a0';
+        height: 0px;
+        right: 0px;
+        bottom: 60%;
+      }
+    }
+    &[class="ghost"] {
+      position: absolute;
+      input[type="submit"] {
+        position: absolute;
+        color: black;
+        left: 0px;
+        z-index: 1;
+      }
+    }
+  }
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(255, 255, 255);
+    article {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 2.5em;
+      padding-right: 2.5em;
+      width: 100%;
+      height: 100%;
+      tr {
+        border-bottom: 1px solid #d5dae6;
+        vertical-align: bottom;
+        height: 2.5em;
+      }
+    }
+    & > input[type="submit"] {
+      position: absolute;
+      background: none;
+      border: none;
+      top: 0em;
+      right: 1em;
+      color: #d5dae6;
+      font-size: $nav-sfont-trigram;
+      &:hover {
+        color: black;
+      }
+    }
+    &, &[class="horizontal"] {
+      flex-direction: column;
+      article {
+        resize: vertical;
+        overflow-y: auto;
+        overflow-x: scroll;
+      }
+    }
+    &[class="vertical"] {
+      flex-direction: row;
+      article {
+        resize: horizontal;
+        overflow-y: scroll;
+        overflow-x: auto;
+      }
+      & > input[type="submit"] {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
