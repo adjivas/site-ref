@@ -22,7 +22,7 @@
 
     <% if current_user == @user || (current_user.is_admin? && @user.email_research?) %>
       <p>
-        <strong>Email :</strong>
+        <strong>Courriel :</strong>
         <%= @user.email %>
       </p>
     <% end %>
@@ -44,33 +44,23 @@
       </p>
 
       <p>
-        <strong>Begin:</strong>
+        <strong>Début des demarches administratives :</strong>
         <%= @user.begin %>
       </p>
 
       <p>
-        <strong>End:</strong>
+        <strong>Fin des demarches administratives :</strong>
         <%= @user.end %>
-      </p>
-
-      <p>
-        <strong>Info research:</strong>
-        <%= @user.info_research %>
       </p>
 
       <p>
         <strong>Adresse (Département) :</strong>
         <%= @user.departement ? @user.departement.name : "" %>
       </p>
-
-      <p>
-        <strong>Diagnostic:</strong>
-        <%= @user.diagnostic ? @user.diagnostic.name : "" %>
-      </p>
     <% end %>
 
-    <%= link_to 'Edit', edit_user_path(@user) %> |
-    <%= link_to 'Back', users_path %>
+    <%= link_to 'Éditer', edit_user_path(@user) %> |
+    <%= link_to 'Retour', users_path %>
 
   <% end %>
 </article>

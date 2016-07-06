@@ -1,10 +1,10 @@
 <article>
   <% if user_signed_in? && current_user.is_admin? %>
-    <h1>Editing language</h1>
+    <h1>Modifier la langue</h1>
 
     <%= render 'form' %>
 
-    <%= link_to 'Show', @language %> |
-    <%= link_to 'Back', languages_path %>
+    <%= link_to 'Voir', @language %> |
+    <%= link_to 'Retour', languages_path %>
   <% end %>
 </article>

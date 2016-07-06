@@ -2,71 +2,71 @@
   <p id="notice"><%= notice %></p>
 
   <p>
-    <strong>Name:</strong>
+    <strong>Nom :</strong>
     <%= @paper.name %>
   </p>
 
   <p>
-    <strong>Link:</strong>
+    <strong>Lien :</strong>
     <%= @paper.link %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong>Description :</strong>
     <%= @paper.description %>
   </p>
 
   <p>
-    <strong>From:</strong>
+    <strong>Date de parution :</strong>
     <%= @paper.from %>
   </p>
 
   <p>
-    <strong>Language:</strong>
+    <strong>Langue :</strong>
     <%= @paper.language ? @paper.language.name : "" %>
   </p>
 
   <p>
-    <strong>Diagnostic:</strong>
+    <strong>Diagnostique :</strong>
     <%= @paper.diagnostic ? @paper.diagnostic.name : "" %>
   </p>
 
   <p>
-    <strong>Published:</strong>
+    <strong>Publié le :</strong>
     <%= @paper.published %>
   </p>
 
   <p>
-    <strong>Approved:</strong>
-    <%= @paper.approved == 1 ? "accepted" : "pending" %>
+    <strong>Approuvé :</strong>
+    <%= @paper.approved == true ? "Oui" : "En attente" %>
   </p>
 
   <% if user_signed_in? %>
     <% if current_user.is_admin || current_user == @paper.user %>
       <p>
-        <strong>User:</strong>
+        <strong>Utilisateur :</strong>
         <%= @paper.user ? @paper.user.email : "" %>
       </p>
 
       <p>
-        <strong>Admin:</strong>
+        <strong>Administrateur :</strong>
         <%= @paper.admin ? @paper.admin.email : "" %>
       </p>
 
       <p>
-        <strong>Message:</strong>
+        <strong>Message :</strong>
         <%= @paper.message %>
       </p>
 
       <p>
-        <strong>Reply:</strong>
+        <strong>Réponse :</strong>
         <%= @paper.reply %>
       </p>
     <% end %>
 
-    <% if current_user.is_admin || (current_user == @paper.user && @paper.approved == 0) %>
-      <%= link_to 'Edit', edit_paper_path(@paper) %> |
+    <% if current_user.is_admin || (current_user == @paper.user && @paper.approved == false) %>
+      <%= link_to 'Éditer', edit_paper_path(@paper) %> |
     <% end %>
   <% end %>
-  <%= link_to 'Back', papers_path %>
+  <%= link_to 'Retour', papers_path %>
 </article>

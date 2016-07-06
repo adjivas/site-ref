@@ -1,17 +1,15 @@
-<%= javascript_include_tag 'https://cdn.rawgit.com/konvajs/konva/0.13.0/konva.min.js' %>
-<%= html_import_tag 'application'%>
-
 <div id="ktreebouton">
   <button id="retourKtree">
     Revenir au début
   </button>
 </div>
-
-<article id="ktreetext">
+<article><div id="menuktree" style=" line-height: 5vw;"></div></article>
+<article style="margin-top: 30%; height: 70%">
+  <div id="ktreetext" ></div>
 </article>
 
 <article id="ktree">
   <ktree-selector></ktree-selector>
 </article>
-
+<script>document.querySelector('ktree-selector').ready();</script>
 <input type="submit" onClick="javascript:event_rotate()" value="&#9868;"></input>

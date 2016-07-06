@@ -1,21 +1,20 @@
 <article>
   <% if user_signed_in? %>
-    <h1>Listing users</h1>
+    <h1>Liste des comptes utilisateurs</h1>
 
   <table>
     <thead>
       <tr>
-        <th>Email</th>
+        <th>Courriel</th>
         <th>Administrateur</th>
         <th>Lien</th>
-        <th>Sexe</th>
+        <th>Genre</th>
         <th>Date de Naissance</th>
-        <th>Begin</th>
-        <th>End</th>
+        <th>Début des demarches administratives</th>
+        <th>Fin des demarches administratives</th>
         <th>Info research</th>
         <th>Email research</th>
-        <th>Adresse</th>
-        <th>Diagnostic</th>
+        <th>Département</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -30,19 +29,18 @@
               <% if current_user == user || user.info_research? %>
                 <td><%= user.is_admin %></td>
                 <td><%= user.link %></td>
-                <td><%= user.gender == false ? "man" : "women" %></td>
+                <td><%= user.gender == false ? "Homme" : "Femme" %></td>
                 <td><%= user.birthdate %></td>
                 <td><%= user.begin %></td>
                 <td><%= user.end %></td>
                 <td><%= user.departement ? user.departement.name : "" %></td>
-                <td><%= user.diagnostic ? user.diagnostic.name : "" %></td>
               <% end %>
-              <td><%= link_to 'Show', user %></td>
+              <td><%= link_to 'Voir', user %></td>
               <% if current_user == user || current_user.is_admin? %>
-                <td><%= link_to 'Edit', edit_user_path(user) %></td>
+                <td><%= link_to 'Éditer', edit_user_path(user) %></td>
               <% end %>
               <% if current_user == user %>
-                <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Détruire', user, method: :delete, data: { confirm: 'Êtes-vous sur ?' } %></td>
               <% end %>
             </tr>
           <% end %>
@@ -51,7 +49,5 @@
     </table>
 
     <br />
-
-    <%= link_to 'New User', new_user_path %>
   <% end %>
 </article>

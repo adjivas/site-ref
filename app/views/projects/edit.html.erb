@@ -1,12 +1,12 @@
 <article>
   <% if user_signed_in? %>
-    <% if current_user.is_admin? || (current_user == @project.user && @project.approved != 1) %>
-      <h1>Editing project</h1>
+    <% if current_user.is_admin? || (current_user == @project.user && @project.approved == false) %>
+      <h1>Modifier le projet</h1>
 
       <%= render 'form' %>
 
-      <%= link_to 'Show', @project %> |
-      <%= link_to 'Back', projects_path %>
+      <%= link_to 'Voir', @project %> |
+      <%= link_to 'Retour', projects_path %>
     <% end %>
   <% end %>
 </article>

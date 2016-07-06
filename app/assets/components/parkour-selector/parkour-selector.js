@@ -8,26 +8,26 @@
                             {
                                 name: "parkour-diagnostiquePrecoce",
                                 description: "Parcour diagnostique précoce (moins de trois ans)",
-                                presentation: "",
-                                pos: [2, 6],
+                                presentation: "Parcour diagnostique précoce (enfant de moins de trois ans).",
+                                pos: [2, 4],
                             },
                             {
                                 name: "parkour-diagnostique",
-                                description: "Parcour diagnostique généraliste",
-                                presentation: "",
-                                pos: [4, 6],
+                                description: "Parcour diagnostique standard.",
+                                presentation: "Parcour diagnostique standard.",
+                                pos: [4, 4],
                             },
                             {
                                 name: "Parkour diagnostique2",
                                 description: "Parcour diagnostique2 généraliste",
                                 presentation: "",
-                                pos: [6, 6],
+                                pos: [6, 4],
                             },
                             {
                                 name: "Parkour diagnostique3",
                                 description: "Parcour diagnostique3 généraliste",
                                 presentation: "",
-                                pos: [8, 6],
+                                pos: [8, 4],
                             }
                         ]
                     }
@@ -40,25 +40,22 @@
                 }
             },
 
-            width: window.innerWidth * 3 / 5,
-            height: null,
-            nodeColorNeutral: "#46464c",
+            nodeColorNeutral: "#373f52",
             nodeColorSuccess: "#8FB0B9",
-            nodeColorFail: "red",
-            strokeColorNeutral: "#46464c",
+            nodeColorFail: "#ef3e3e",
+            strokeColorNeutral: "#373f52",
             strokeColorSuccess: "#8FB0B9",
-            strokeColorFail: "red",
+            strokeColorFail: "#ef3e3e",
             strokeColorCurrent: "#00babc",
-            linkColorNeutral: "white",
-            linkColorSuccess: "white",
-            linkColorFail: "red",
+            linkColorNeutral: "#373f52",
+            linkColorSuccess: "#8FB0B9",
+            linkColorFail: "#ef3e3e",
             keychain: [],
             matchChain: [],
 
             showParkour: function (parkour) {
                 document.getElementById('current-parkour').innerHTML = "<" + parkour + "></" + parkour+ ">";
                 document.getElementById("parktext").innerHTML = " ";
-                document.getElementById("parkbouton").innerHTML = " ";
             },
 
             addNode: function(obj, coeff, layer, i) {
@@ -85,7 +82,7 @@
                     fill: nodeColor,
                     stroke: strokeColor,
                     id: obj.name,
-                    text: obj.name,
+                    presentation: obj.presentation,
                     strokeWidth: coeff / 12
                 });
                 layer.add(node);
@@ -95,17 +92,22 @@
                     layer.add(logo);*/
                     node.on('click', function () {
                         document.getElementById("parktext").innerHTML = "<h2>" + obj.description + ": </h2>";
-                        document.getElementById("parkbouton").innerHTML = "<paper-button raised onClick=\"document.querySelector('parkour-selector').showParkour('" + obj.name + "')\">Afficher</paper-button>";
-                    });
+                        });
                     node.on('mouseover', function () {
                         this.opacity(0.5);
+                        var pres = document.getElementById("pres-diag");
                         document.body.style.cursor = 'pointer';
                         layer.draw();
+                        document.getElementById("presentation-paragraph").innerHTML = obj.presentation;
+                        pres.open();
                     });
                     node.on('mouseleave', function () {
                         this.opacity(1);
                         document.body.style.cursor = 'default';
                         layer.draw();
+                        var pres = document.getElementById("pres-diag");
+                        document.getElementById("presentation-paragraph").innerHTML = obj.presentation;
+                        //pres.close();
                     });
             },
 
@@ -151,14 +153,16 @@
             },
 
             drawNodes: function () {
-                console.log("j'aime les arbres");
-                var coeff = this.width / this.dimensions[0];
+                var stageWidth = window.innerWidth / 3;
+                var stageHeight = window.innerHeight / 2;
+                var coeff = stageWidth / this.dimensions[0];
                 this.height = coeff * this.dimensions[1];
                 var stage = new Konva.Stage({
-                    container: "container",
-                    width: this.width,
-                    height: this.height
+                    container: "parkour",
+                    width: stageWidth,
+                    height: stageHeight 
                 });
+                console.log(stage);
                 var layer = new Konva.Layer();
                 for (var i = 0; i < this.steps.length; i++) {
                     this.addNode(this.steps[i], coeff, layer, i);

@@ -1,10 +1,10 @@
 <article>
   <% if user_signed_in? && current_user.is_admin? %>
-    <h1>Editing diagnostic</h1>
+    <h1>Modifier un diagnostique</h1>
 
     <%= render 'form' %>
 
-    <%= link_to 'Show', @diagnostic %> |
-    <%= link_to 'Back', diagnostics_path %>
+    <%= link_to 'Voir', @diagnostic %> |
+    <%= link_to 'Retour', diagnostics_path %>
   <% end %>
 </article>

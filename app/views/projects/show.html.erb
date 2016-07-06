@@ -17,7 +17,7 @@
   </p>
 
   <p>
-    <strong>From :</strong>
+    <strong>Date de parution :</strong>
     <%= @project.from %>
   </p>
 
@@ -27,14 +27,14 @@
   </p>
 
   <p>
-    <strong>Publié :</strong>
+    <strong>Publié le :</strong>
     <%= @project.published %>
   </p>
 
   <p>
     <strong>Approuvé :</strong>
     <%= @project.approved %>
-    <%= @project.approved == true ? "accepted" : "pending" %>
+    <%= @project.approved == true ? "Oui" : "En attente" %>
   </p>
 
   <% if current_user.is_admin || current_user == @project.user %>
@@ -59,8 +59,8 @@
     </p>
   <% end %>
 
-  <% if current_user.is_admin || (current_user == @project.user && @project.approved == 0) %>
-    <%= link_to 'Edit', edit_project_path(@project) %> |
+  <% if current_user.is_admin || (current_user == @project.user && @project.approved == false) %>
+    <%= link_to 'Éditer', edit_project_path(@project) %> |
   <% end %>
-  <%= link_to 'Back', projects_path %>
+  <%= link_to 'Retour', projects_path %>
 </article>

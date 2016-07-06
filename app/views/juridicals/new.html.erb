@@ -1,9 +1,9 @@
 <article>
   <% if user_signed_in? && current_user.is_admin? %>
-    <h1>New juridical</h1>
+    <h1>Ajouter un nouveau type d'établissement</h1>
 
     <%= render 'form' %>
 
-    <%= link_to 'Back', juridicals_path %>
+    <%= link_to 'Retour', juridicals_path %>
   <% end %>
 </article>

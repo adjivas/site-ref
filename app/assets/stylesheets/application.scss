@@ -84,7 +84,8 @@ body {
           border-left: 3px solid #9768d1;
         }
       }
-      a {
+      
+      & {
         text-transform: uppercase;
         color: rgb(213, 218, 230);
       }
@@ -161,14 +162,6 @@ body {
       }
     }
     &, &[class="horizontal"] {
-      flex-direction: column;
-      article {
-        resize: vertical;
-        overflow-y: auto;
-        overflow-x: scroll;
-      }
-    }
-    &[class="vertical"] {
       flex-direction: row;
       article {
         resize: horizontal;
@@ -177,6 +170,14 @@ body {
       }
       & > input[type="submit"] {
         transform: rotate(90deg);
+      }
+    }
+    &[class="vertical"] {
+      flex-direction: column;
+      article {
+        resize: vertical;
+        overflow-y: auto;
+        overflow-x: scroll;
       }
     }
   }

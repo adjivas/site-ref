@@ -1,9 +1,9 @@
 <article>
   <% if user_signed_in? && current_user.is_admin? %>
-    <h1>New language</h1>
+    <h1>Ajouter une nouvelle langue</h1>
 
     <%= render 'form' %>
 
-    <%= link_to 'Back', languages_path %>
+    <%= link_to 'Retour', languages_path %>
   <% end %>
 </article>

@@ -1,9 +1,9 @@
 <article>
   <% user_signed_in? && current_user.is_admin? %>
-    <h1>New diagnostic</h1>
+    <h1>Ajouter un nouveau diagnostique</h1>
 
     <%= render 'form' %>
 
-    <%= link_to 'Back', diagnostics_path %>
+    <%= link_to 'Retour', diagnostics_path %>
   <% end %>
 </article>

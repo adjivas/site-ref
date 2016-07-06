@@ -33,14 +33,14 @@
             <td><%= project.reply %></td>
             <td><%= project.user ? project.user.email : "" %></td>
             <td><%= project.admin ? project.admin.email : "" %></td>
-            <td><%= project.approved == 1 ? "accepted" : "pending" %></td>
-            <td><%= link_to 'Show', project %></td>
+            <td><%= project.approved == true ? "Oui" : "En attente" %></td>
+            <td><%= link_to 'Voir', project %></td>
             <% if user_signed_in? %>
               <% if current_user.is_admin? || (current_user == project.user && project.approved == false) %>
-                <td><%= link_to 'Edit', edit_project_path(project) %></td>
+                <td><%= link_to 'Éditer', edit_project_path(project) %></td>
               <% end %>
               <% if current_user.is_admin? || current_user == project.user %>
-                <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Détruire', project, method: :delete, data: { confirm: 'Êtes-vous sur ?' } %></td>
               <% end %>
             <% end %>
           </tr>
@@ -52,6 +52,6 @@
   <br>
 
   <% if user_signed_in? %>
-    <%= link_to 'New Project', new_project_path %>
+    <%= link_to 'Proposer un project', new_project_path %>
   <% end %>
 </article>

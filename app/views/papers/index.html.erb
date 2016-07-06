@@ -1,28 +1,24 @@
 <article>
-  <h1>Listing papers</h1>
+  <h1>Liste des documents</h1>
 
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Link</th>
+        <th>Nom</th>
+        <th>Lien</th>
         <th>Description</th>
-        <th>From</th>
-        <th>Language</th>
-        <th>Diagnostic</th>
-        <th>Published</th>
-        <th>Message</th>
-        <th>Reply</th>
-        <th>User</th>
-        <th>Admin</th>
-        <th>Approved</th>
+        <th>Date de parution</th>
+        <th>Langue</th>
+        <th>Diagnostique</th>
+        <th>Publié le</th>
+        <th>Approuvé</th>
         <th colspan="3"></th>
       </tr>
     </thead>
 
     <tbody>
       <% @papers.each do |paper| %>
-        <% if paper.approved == 1 || (user_signed_in? && (current_user.is_admin? || current_user == paper.user)) %>
+        <% if paper.approved == true || (user_signed_in? && (current_user.is_admin? || current_user == paper.user)) %>
           <tr>
             <td><%= paper.name %></td>
             <td><%= paper.link %></td>
@@ -31,18 +27,14 @@
             <td><%= paper.language ? paper.language.name : "" %></td>
             <td><%= paper.diagnostic ? paper.diagnostic.name : "" %></td>
             <td><%= paper.published %></td>
-            <td><%= paper.message %></td>
-            <td><%= paper.reply %></td>
-            <td><%= paper.user ? paper.user.email : "" %></td>
-            <td><%= paper.admin ? paper.admin.email : "" %></td>
-            <td><%= paper.approved == 1 ? "accepted" : "pending" %></td>
-            <td><%= link_to 'Show', paper %></td>
+            <td><%= paper.approved == true ? "Oui" : "En attente" %></td>
+            <td><%= link_to 'Voir', paper %></td>
             <% if user_signed_in? %>
               <% if current_user.is_admin? || (current_user == paper.user && paper.approved != 1) %>
-                <td><%= link_to 'Edit', edit_paper_path(paper) %></td>
+                <td><%= link_to 'Éditer', edit_paper_path(paper) %></td>
               <% end %>
               <% if current_user.is_admin? || current_user == paper.user %>
-                <td><%= link_to 'Destroy', paper, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Détruire', paper, method: :delete, data: { confirm: 'Êtes-vous sur ?' } %></td>
               <% end %>
             <% end %>
           </tr>
@@ -54,6 +46,6 @@
   <br>
 
   <% if user_signed_in? %>
-    <%= link_to 'New Paper', new_paper_path %>
+    <%= link_to 'Proposer un document', new_paper_path %>
   <% end %>
 </article>

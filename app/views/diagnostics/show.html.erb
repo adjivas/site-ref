@@ -2,42 +2,42 @@
   <p id="notice"><%= notice %></p>
 
   <p>
-    <strong>Name:</strong>
+    <strong>Nom :</strong>
     <%= @diagnostic.name %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong>Description :</strong>
     <%= @diagnostic.description %>
   </p>
 
   <p>
-    <strong>Help:</strong>
+    <strong>Aide :</strong>
     <%= @diagnostic.help %>
   </p>
 
   <p>
-    <strong>Adult:</strong>
+    <strong>Adulte :</strong>
     <%= @diagnostic.adult %>
   </p>
 
   <p>
-    <strong>Duration:</strong>
+    <strong>Durée :</strong>
     <%= @diagnostic.duration %>
   </p>
 
   <p>
-    <strong>Diagnostic:</strong>
+    <strong>Diagnostique :</strong>
     <%= @diagnostic.diagnostic ? @diagnostic.diagnostic.name : "" %>
   </p>
 
   <p>
-    <strong>Departement:</strong>
+    <strong>Département :</strong>
     <%= @diagnostic.departement ? @diagnostic.departement.name : "" %>
   </p>
 
   <% if user_signed_in? && current_user.is_admin? %>
-    <%= link_to 'Edit', edit_diagnostic_path(@diagnostic) %> |
+    <%= link_to 'Éditer', edit_diagnostic_path(@diagnostic) %> |
   <% end %>
-  <%= link_to 'Back', diagnostics_path %>
+  <%= link_to 'Retour', diagnostics_path %>
 </article>

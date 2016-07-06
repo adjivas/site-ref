@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'tree/index'
 
+  get 'journey/index'
+
   devise_for :users
   get 'authorrails/g'
 

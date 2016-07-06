@@ -155,55 +155,6 @@ Polymer({
     keychain: [],
     matchChain: [],
 
-    drawLegend: function (coeff) {
-         var stageLegend = new Konva.Stage({
-            container: "parkbouton",
-            width: this.width,
-            height: this.height
-        });
-        var layerLegend = new Konva.Layer();
-        stageLegend.add(layerLegend);
-        var legendBox = new Konva.Rect ({
-            width: 500,
-            height: 500,
-            x: 500,
-            y: 500,
-            stroke: "white",
-            strokeWidth: 1
-        })
-        layerLegend.add(legendBox);
-        var nodeNeutral = new Konva.Circle({
-            radius: coeff / 2,
-            fill: this.nodeColorNeutral,
-            stroke: this.strokeColorNeutral,
-            id: "nodeNeutral",
-            strokeWidth: coeff / 12
-        });
-        var nodeSuccess = new Konva.Circle({
-            x: window.innerWidth - coeff / 2 + 50,
-            y: window.innerHeight - coeff / 2,
-            radius: coeff / 2,
-            fill: this.nodeColorSuccess,
-            stroke: this.strokeColorSuccess,
-            id: "nodeSuccess",
-            strokeWidth: coeff / 12
-        });
-        var nodeFail = new Konva.Circle({
-            x: window.innerWidth - coeff / 2 + 150,
-            y: window.innerHeight - coeff / 2,
-            radius: coeff / 2,
-            fill: this.nodeColorFail,
-            stroke: this.strokeColorFail,
-            id: "nodeFail",
-            strokeWidth: coeff / 12
-        });
-        layerLegend.add(nodeNeutral);
-        layerLegend.add(nodeSuccess);
-        layerLegend.add(nodeFail);
-        layerLegend.draw();
-
-    },
-
     addNode: function(obj, coeff, layer, layerTooltip, i) {
         var nodeColor;
         var strokeColor;
@@ -287,20 +238,10 @@ Polymer({
             valid.on("mouseover", function () {
                 this.opacity(0.5);
                 document.body.style.cursor = 'pointer';
-                var stage = node.getStage();
-                var mousePos = stage.getPointerPosition();
-                tooltip.position({
-                    x : mousePos.x + 5,
-                    y : mousePos.y + 5
-                });
-                tooltip.text('Réussite');
-                tooltip.show();
-                layerTooltip.batchDraw();
             });
             valid.on("mouseleave", function () {
                 this.opacity(1);
                 document.body.style.cursor = 'default';
-                tooltip.hide();
                 layerTooltip.draw();
             });
         };
@@ -390,12 +331,6 @@ Polymer({
         //layer.add(box);
             group.on('click', function () {
                 document.getElementById("parktext").innerHTML = "<h2>" + obj.name + ": </h2>" + obj.presentation + "<br/>" + "<div>" + obj.description + "</div>";
-                document.getElementById("parkbouton").innerHTML = "<paper-button raised " +
-                    " onClick=\"document.querySelector('parkour-diagnostiquePrecoce').changeStatus('" + obj.name + "', \'Success\')\">Réussite</paper-button>" +
-                    "<paper-button raised onClick=\"document.querySelector('parkour-diagnostiquePrecoce').changeStatus('" + obj.name + "', \'Failure\')\">Echec</paper-button>" +
-                    "<paper-button raised onClick=\"document.querySelector('parkour-diagnostiquePrecoce').changeStatus('" + obj.name + "', \'ok\')\">Retour</paper-button>"
-                    +
-                    "<paper-button raised onClick=\"document.querySelector('parkour-diagnostiquePrecoce').changeStatus('" + obj.name + "', \'Reset\')\">Annulation</paper-button>";
                 });
             group.on('mouseover', function () {
                 node.opacity(0.5);
@@ -437,7 +372,6 @@ Polymer({
             this.matchChain[id] = ((res === true) || (count === 0)) ? "en cour" : "neutre";
         } else if (rep == "ok") {
             document.getElementById("parktext").innerHTML = " ";
-            document.getElementById("parkbouton").innerHTML = " ";
         }
         this.sortChain(id);
     },
@@ -456,7 +390,7 @@ Polymer({
         y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
         var line = new Konva.Line({
             points: [x1, y1, x2, y2],
-            stroke: 'white',
+            stroke: '#373f52',
             strokeWidth: coeff / 12,
         });
         layer2.add(line);
@@ -506,7 +440,7 @@ Polymer({
         var coeff = this.width / this.dimensions[0];
         this.height = coeff * this.dimensions[1];
         var stage = new Konva.Stage({
-            container: "container",
+            container: "parkour",
             width: this.width,
             height: this.height
         });
@@ -515,7 +449,6 @@ Polymer({
         for (var i = 0; i < this.steps.length; i++) {
             this.addNode(this.steps[i], coeff, layerNode, layerTooltip, i);
         }
-        this.drawLegend(coeff);
         var layerConnect = new Konva.Layer();
         this.drawConnect(layerConnect, layerNode, coeff);
         stage.add(layerConnect);

@@ -2,6 +2,9 @@
 <html>
   <head>
     <title>Ref</title>
+    <link rel="icon" href="/assets/loutre/loutre neutre.png">
+    <%= javascript_include_tag 'https://cdn.rawgit.com/konvajs/konva/0.13.0/konva.min.js' %>
+    <%= html_import_tag 'application'%>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
@@ -9,21 +12,33 @@
   <body>
     <nav>
       <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path) %>
+        <%= link_to('Se déconnecter', destroy_user_session_path) %>
         <a><%= current_user.email %></a>
       <% else %>
-        <%= link_to('Logint', new_user_session_path) %>
+        <%= link_to('Se connecter', new_user_session_path) %>
       <% end %>
 
       <input type="submit" value="&#9776;" onClick="javascript:event_hidden()" />
-      <input type="search" placeholder="search" autocomplete="off" />
+      <input type="search" placeholder="Chercher" autocomplete="off" />
 
       <ul>
-        <li><%= link_to('Author', authorrails_Author_path) %></li>
-        <li><%= link_to('Paper', papers_path) %></li>
-        <li><%= link_to('Project', projects_path) %></li>
-        <li><%= link_to('Tree', tree_index_path) %></li>
-        <li><%= link_to('Structure', structures_path) %></li>
+        <li><%= link_to('Document', papers_path) %></li>
+        <li><%= link_to('Projet', projects_path) %></li>
+        <li><%= link_to('Arbre des connaissances', tree_index_path) %></li>
+        <li>
+          <% if journey_index_path == request.original_fullpath %>
+            <details open="open">
+          <% else %>
+            <details>
+          <% end %>
+            <summary><%= link_to('Parcour', journey_index_path) %></summary>
+            <ul>
+              <li onClick="document.getElementById('parkour').innerHTML='<parkour-diagnostiquePrecoce></parkour-diagnostiquePrecoce>'">Diagnostique Précoce</li>
+            </ul>
+          </details>
+        </li>
+        </li>
+        <li><%= link_to('Cartographie', structures_path) %></li>
         <% if user_signed_in? %>
           <% if current_user.is_admin? %>
             <li><%= link_to('User', users_path) %></li>
@@ -32,8 +47,10 @@
             <li><%= link_to('departement', departements_path) %></li>
           <% end %>
         <% end %>
+        <li><%= link_to('Auteur', authorrails_Author_path) %></li>
       </ul>
-       <aside id="loutre">loutre</aside>
+       <aside id="loutre">
+       </aside>
     </nav>
     <section>
       <%= yield %>

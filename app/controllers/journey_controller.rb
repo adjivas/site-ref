@@ -1,5 +1,6 @@
 class JourneyController < ApplicationController
+
     # GET /journey
-    def new
+    def index
     end
 end

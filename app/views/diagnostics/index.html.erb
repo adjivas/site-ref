@@ -1,16 +1,16 @@
 <article>
-  <h1>Listing diagnostics</h1>
+  <h1>Liste des diagnostiques</h1>
 
   <table>
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Nom</th>
         <th>Description</th>
-        <th>Help</th>
-        <th>Adult</th>
-        <th>Duration</th>
-        <th>Diagnostic</th>
-        <th>Departement</th>
+        <th>Aide</th>
+        <th>Adulte</th>
+        <th>Durée</th>
+        <th>Diagnostique</th>
+        <th>Département</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -26,12 +26,12 @@
             <td><%= diagnostic.duration %></td>
             <td><%= diagnostic.diagnostic ? diagnostic.diagnostic : "" %></td>
             <td><%= diagnostic.departement ? diagnostic.departement.name : "" %></td>
-            <td><%= link_to 'Show', diagnostic %></td>
-            <td><%= link_to 'Edit', edit_diagnostic_path(diagnostic) %></td>
-            <td><%= link_to 'Destroy', diagnostic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Voir', diagnostic %></td>
+            <td><%= link_to 'Éditer', edit_diagnostic_path(diagnostic) %></td>
+            <td><%= link_to 'Détruire', diagnostic, method: :delete, data: { confirm: 'Êtes-vous sur ?' } %></td>
           </tr>
           <br />
-          <%= link_to 'New Diagnostic', new_diagnostic_path %>
+          <%= link_to 'Ajouter un diagnostique', new_diagnostic_path %>
         <% end %>
       <% else %>
         <% @diagnostics.each do |diagnostic| %>

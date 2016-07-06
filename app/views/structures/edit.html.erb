@@ -1,12 +1,12 @@
 <article>
   <% if user_signed_in? %>
     <% if current_user.is_admin? || (current_user == @structure.user && @structure.approved == false) %>
-      <h1>Modification Etablissement</h1>
+      <h1>Modifier l'établissement</h1>
 
       <%= render 'form' %>
 
-      <%= link_to 'Show', @structure %> |
-      <%= link_to 'Back', structures_path %>
+      <%= link_to 'Voir', @structure %> |
+      <%= link_to 'Retour', structures_path %>
     <% end %>
   <% end %>
 </article>

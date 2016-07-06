@@ -47,13 +47,13 @@
   </p>
 
   <p>
-    <strong>Publié :</strong>
+    <strong>Publié le :</strong>
     <%= @structure.published %>
   </p>
 
   <p>
     <strong>Approuvé :</strong>
-    <%= @structure.approved == true ? "accepted" : "pending" %>
+    <%= @structure.approved == true ? "Oui" : "En attente" %>
   </p>
 
   <% if user_signed_in? %>
@@ -79,9 +79,9 @@
       </p>
     <% end %>
 
-    <% if current_user.is_admin || (current_user == @structure.user && @structure.approved == 0) %>
-      <%= link_to 'Edit', edit_structure_path(@structure) %> |
+    <% if current_user.is_admin || (current_user == @structure.user && @structure.approved == false) %>
+      <%= link_to 'Éditer', edit_structure_path(@structure) %> |
     <% end %>
   <% end %>
-  <%= link_to 'Back', structures_path %>
+  <%= link_to 'Retour', structures_path %>
 </article>
