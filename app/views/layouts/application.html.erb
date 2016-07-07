@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Ref</title>
-    <link rel="icon" href="/assets/loutre/loutre neutre.png">
+    <link rel="icon" href="/assets/loutre/loutre neutre.svg">
     <%= javascript_include_tag 'https://cdn.rawgit.com/konvajs/konva/0.13.0/konva.min.js' %>
     <%= html_import_tag 'application'%>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -17,6 +17,7 @@
         <%= link_to(current_user.email, edit_user_path(current_user)) %>
       <% else %>
         <%= link_to('Se connecter', new_user_session_path) %>
+        <%= link_to('S\'inscrire', new_user_registration_path) %>
       <% end %>
 
       <input type="submit" value="&#9776;" onClick="javascript:event_hidden()" />
@@ -29,9 +30,15 @@
         <li>
           <% if journey_index_path == request.original_fullpath %>
             <details open="open">
-              <summary><%= link_to('Parcour', journey_index_path) %></summary>
+              <summary><a onClick="document.querySelector('parkour-selector').start();">Parcour</a></summary>
               <ul>
-                <li onClick="document.getElementById('current-parkour').innerHTML='<parkour-diagnostiquePrecoce></parkour-diagnostiquePrecoce>'">Diagnostique Précoce</li>
+                <li onClick="document.querySelector('parkour-diagnostiquePrecoce').start()">Diagnostique Précoce</li>
+                <li onClick="document.querySelector('parkour-diagnostique').start()">Diagnostique</li>
+                <li onClick="document.querySelector('parkour-diagnostique').start()">Génétique</li>
+                <li onClick="document.querySelector('parkour-diagnostique').start()">Bilan Ethiologique</li>
+                <li onClick="document.querySelector('parkour-diagnostique').start()">MDPH</li>
+                <li onClick="document.querySelector('parkour-diagnostique').start()">Truc</li>
+                <li onClick="document.querySelector('parkour-diagnostique').start()">Machin</li>
               </ul>
             </details>
           <% else %>

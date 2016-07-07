@@ -41,20 +41,20 @@
             },
 
             nodeColorNeutral: "#373f52",
-            nodeColorSuccess: "#8FB0B9",
-            nodeColorFail: "#ef3e3e",
+            nodeColorSuccess: "#1c7d5f",
+            nodeColorFail: "#cc0000",
             strokeColorNeutral: "#373f52",
-            strokeColorSuccess: "#8FB0B9",
-            strokeColorFail: "#ef3e3e",
-            strokeColorCurrent: "#00babc",
+            strokeColorSuccess: "#1c7d5f",
+            strokeColorFail: "#cc0000",
+            strokeColorCurrent: "#1c7d5f",
             linkColorNeutral: "#373f52",
-            linkColorSuccess: "#8FB0B9",
-            linkColorFail: "#ef3e3e",
+            linkColorSuccess: "#1c7d5f",
+            linkColorFail: "#cc0000",
             keychain: [],
             matchChain: [],
 
             showParkour: function (parkour) {
-                document.getElementById('current-parkour').innerHTML = "<" + parkour + "></" + parkour+ ">";
+                document.querySelector(parkour).start();
                 document.getElementById("parktext").innerHTML = " ";
             },
 
@@ -91,7 +91,7 @@
                     });
                     layer.add(logo);*/
                     node.on('click', function () {
-                        document.getElementById('current-parkour').innerHTML= '<parkour-diagnostiquePrecoce></parkour-diagnostiquePrecoce>';
+                        document.querySelector(obj.name).start();
                         document.getElementById("parktext").innerHTML = "<h2>" + obj.description + ": </h2>";
                         });
                     node.on('mouseover', function () {
@@ -122,7 +122,6 @@
                     this.matchChain[id] = "en cour";
                 } else if (rep == "ok") {
                     document.getElementById("parktext").innerHTML = " ";
-                    document.getElementById("parkbouton").innerHTML = " ";
                 }
                 this.sortChain(id);
             },
@@ -154,16 +153,15 @@
             },
 
             drawNodes: function () {
-                var stageWidth = window.innerWidth / 3;
-                var stageHeight = window.innerHeight / 2;
-                var coeff = stageWidth / this.dimensions[0];
-                this.height = coeff * this.dimensions[1];
+                var test = document.querySelector("#parkour").getBoundingClientRect();
+                var coeff = test.width / this.dimensions[0];
                 var stage = new Konva.Stage({
                     container: "container",
-                    width: stageWidth,
-                    height: stageHeight 
+                    width: test.width,
+                    height: test.height,
+                    y: 0,
+                    x: 0
                 });
-                console.log(stage);
                 var layer = new Konva.Layer();
                 for (var i = 0; i < this.steps.length; i++) {
                     this.addNode(this.steps[i], coeff, layer, i);
@@ -171,7 +169,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.keychain = ["en cour", "neutre", "neutre", "neutre"];
                 this.getMatch();
                 this.drawNodes();

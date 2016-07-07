@@ -19,7 +19,7 @@ $nav-bcolor: rgb(55, 63, 82);
 $nav-sfont: 1em;
 $nav-sfont-trigram: 1.5em;
 $nav-bg: url("interactblanc.png");
-$loutre-bg: url("loutre/loutre neutre.png");
+$loutre-bg: url("loutre/loutre neutre.svg");
 $article-padding-border: 2.5em;
 
 details summary::-webkit-details-marker {
@@ -32,6 +32,15 @@ details summary::after {
   width: 100%;
   left: 0;
   padding-left: calc(3vw/2);
+}
+
+nav {
+  summary {
+     pointer-events: none;
+     a {
+        pointer-events: all;
+     }
+  }
 }
 
 body {
@@ -59,7 +68,7 @@ body {
     background-image: $nav-bg;
     background-repeat: no-repeat;
     background-size: 10em;
-    background-position: 1em 2em;
+    background-position: 3vw 2em;
     input {
       color: rgb(255, 255, 255);
     }

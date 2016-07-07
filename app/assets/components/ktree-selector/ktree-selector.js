@@ -59,8 +59,8 @@
             nodeColorNeutral: "#226070",
             nodeColorSuccess: "#00ff97",
             nodeColorFail: "red",
-            strokeColorNeutral: "#00ff97",
-            strokeColorSuccess: "#fff",
+            strokeColorNeutral: "#5cc666",
+            strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
 

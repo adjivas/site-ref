@@ -65,8 +65,8 @@
             nodeColorNeutral: "#226070",
             nodeColorSuccess: "#226070",
             nodeColorFail: "red",
-            strokeColorNeutral: "#00ff97",
-            strokeColorSuccess: "white",
+            strokeColorNeutral: "#5cc666",
+            strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
 
@@ -189,7 +189,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: 'white',
+                    stroke: '#9AEED8',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);

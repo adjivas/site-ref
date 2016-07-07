@@ -5,12 +5,10 @@
     <thead>
       <tr>
         <th>Nom</th>
-        <th>Lien</th>
         <th>Description</th>
-        <th>Date de parution</th>
+        <th>Date-de-parution</th>
         <th>Langue</th>
-        <th>Diagnostique</th>
-        <th>Publié le</th>
+        <th>Publié-le</th>
         <th>Approuvé</th>
         <th colspan="3"></th>
       </tr>
@@ -20,12 +18,10 @@
       <% @papers.each do |paper| %>
         <% if paper.approved == true || (user_signed_in? && (current_user.is_admin? || current_user == paper.user)) %>
           <tr>
-            <td><%= paper.name %></td>
-            <td><%= paper.link %></td>
+            <td><%= link_to(paper.name, paper.link) %></td>
             <td><%= paper.description %></td>
             <td><%= paper.from %></td>
             <td><%= paper.language ? paper.language.name : "" %></td>
-            <td><%= paper.diagnostic ? paper.diagnostic.name : "" %></td>
             <td><%= paper.published %></td>
             <td><%= paper.approved == true ? "Oui" : "En attente" %></td>
             <td><%= link_to 'Voir', paper %></td>
