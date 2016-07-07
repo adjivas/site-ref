@@ -9,6 +9,8 @@ task :import_paper, [:filename] => :environment do
     c.name = row['name']
     c.description = row['description']
     c.published = row['published']
+    c.link = row['link']
+    c.approved = true
     c.save
   end
 end

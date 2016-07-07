@@ -1,4 +1,4 @@
-# Site-Ref - French
+# Site-Ref — French
 
 [![Build Status](https://travis-ci.org/adjivas/site-ref.svg?branch=master&style=flat-square)](https://travis-ci.org/adjivas/site-ref)
 [![Inline docs](http://inch-ci.org/github/adjivas/site-ref.svg?branch=master&style=shields)](http://inch-ci.org/github/adjivas/site-ref)

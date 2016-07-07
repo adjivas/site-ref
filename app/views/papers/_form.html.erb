@@ -12,58 +12,58 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, 'Nom :' %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :link %><br>
+    <%= f.label :link, 'Lien :' %><br>
     <%= f.text_field :link %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <%= f.label :description, 'Description :' %><br>
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label :from %><br>
+    <%= f.label :from, 'Date de parution :' %><br>
     <%= f.date_select :from %>
   </div>
   <div class="field">
-    <%= f.label :language_id %><br>
+    <%= f.label :language_id, 'Langue :' %><br>
     <%= f.collection_select :language_id, Language.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :diagnostic_id %><br>
+    <%= f.label :diagnostic_id, 'Diagnostique :' %><br>
     <%= f.collection_select :diagnostic_id, Diagnostic.order(:name), :id, :name, include_blank: true %>
   </div>
   <div class="field">
-    <%= f.label :published %><br>
+    <%= f.label :published, 'Publié le :' %><br>
     <%= f.date_select :published, disabled: true %>
   </div>
   <div class="field">
-    <%= f.label :user_id %><br>
+    <%= f.label :user_id, 'Utilisateur :' %><br>
     <%= f.text_field :user_id, disabled: true %>
   </div>
   <div class="field">
-    <%= f.label :admin_id %><br>
+    <%= f.label :admin_id, 'Administrateur :' %><br>
     <%= f.text_field :admin_id, disabled: true %>
   </div>
   <% if current_user.is_admin? || @paper.user == current_user %>
     <div class="field">
-      <%= f.label :message %><br>
+      <%= f.label :message, 'Message :' %><br>
       <%= f.text_area :message %>
     </div>
   <% end %>
   <% if current_user.is_admin? %>
     <div class="field">
-      <%= f.label :reply %><br>
+      <%= f.label :reply, 'Réponse :' %><br>
       <%= f.text_area :reply %>
     </div>
     <div class="field">
-      <%= f.label :approved %><br>
+      <%= f.label :approved, 'Approuvé :' %><br>
       <%= f.check_box :approved %>
     </div>
   <% end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Enregistrer" %>
   </div>
 <% end %>

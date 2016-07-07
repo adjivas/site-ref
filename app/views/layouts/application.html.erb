@@ -14,7 +14,7 @@
     <nav>
       <% if user_signed_in? %>
         <%= link_to('Se déconnecter', destroy_user_session_path) %>
-        <a><%= current_user.email %></a>
+        <%= link_to(current_user.email, edit_user_path(current_user)) %>
       <% else %>
         <%= link_to('Se connecter', new_user_session_path) %>
       <% end %>
@@ -48,7 +48,7 @@
             <li><%= link_to('departement', departements_path) %></li>
           <% end %>
         <% end %>
-        <li><%= link_to('Auteur', authorrails_Author_path) %></li>
+        <li><%= link_to('À propos', author_index_path) %></li>
       </ul>
        <aside id="loutre">
        </aside>

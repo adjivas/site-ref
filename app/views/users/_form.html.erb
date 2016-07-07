@@ -12,50 +12,49 @@
     <% end %>
     <% if current_user.is_admin? %>
       <div class="field">
-        <%= f.label :is_admin %><br>
+        <%= f.label :is_admin, 'Administrateur :' %><br>
         <%= f.check_box :is_admin %>
       </div>
     <% end %>
     <% if current_user == @user %>
       <div class="field">
-        <%= f.label :link %><br>
+        <%= f.label :link, 'Lien :' %><br>
         <%= f.text_field :link %>
       </div>
       <div class="field">
-        <%= f.label :gender %><br>
-        <%= f.check_box :gender %>
+        <%= f.label :gender, 'Genre :' %><br />
+        <%= f.label :gender, "Homme", :value => "false" %>
+        <%= f.radio_button :gender, false, :checked => current_user.gender == false %>
+        <%= f.label :gender, "Femme", :value => "true"  %>
+        <%= f.radio_button :gender, true, :checked => current_user.gender == true %>
       </div>
       <div class="field">
-        <%= f.label :birthdate %><br>
+        <%= f.label :birthdate, 'Date de Naissance :' %><br>
         <%= f.date_select :birthdate %>
       </div>
       <div class="field">
-        <%= f.label :begin %><br>
+        <%= f.label :begin, 'Début des demarches administratives :' %><br>
         <%= f.date_select :begin %>
       </div>
       <div class="field">
-        <%= f.label :end %><br>
+        <%= f.label :end, 'Fin des demarches administratives :' %><br>
         <%= f.date_select :end %>
       </div>
       <div class="field">
-        <%= f.label :info_research %><br>
+        <%= f.label :info_research, 'Permettre l\'accès à ses informations par des chercheurs : ' %><br>
         <%= f.check_box :info_research %>
       </div>
       <div class="field">
-        <%= f.label :email_research %><br>
+        <%= f.label :email_research, `Permettre l'accès à son email par des chercheurs :` %><br>
         <%= f.check_box :email_research %>
       </div>
       <div class="field">
-        <%= f.label :departement_id %><br>
+        <%= f.label :departement_id, 'Adresse (Département) :' %><br>
         <%= f.collection_select :departement_id, Departement.order(:name), :id, :name, include_blank: true %>
-      </div>
-      <div class="field">
-        <%= f.label :diagnostic_id %><br>
-        <%= f.collection_select :diagnostic_id, Diagnostic.order(:name), :id, :name, include_blank: true %>
       </div>
     <% end %>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Enregistrer" %>
     </div>
   <% end %>
 <% end %>

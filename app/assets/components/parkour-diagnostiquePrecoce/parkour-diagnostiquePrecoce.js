@@ -17,70 +17,70 @@ Polymer({
                         name: "Dépistage",
                         description: "Il existe certains tests de dépistage standardisés pour évaluer le risque de TSA :<ul>le Checklist for Autism in Toddlers (CHAT – Baron-Cohen et coll., 1996) intègre des observations comportementales directes ; il peut également être utilisé par des médecins ne possédant pas de formation spécifique sur les TSA ;</ul><li>le Modifi ed Cheklist for Autism in Toddlers (M-CHAT – Robins, Fein, Barton and Green, 2001) est un court questionnaire qui peut être donné aux parents d’enfants âgés de seize à trente mois et renseigné dans la salle d’attente.</li><li>Si les résultats du dépistage sont positifs, cela ne signifi e pas que l’enfant est susceptible de présenter un diagnostic de TSA. Il est alors recommandé d’orienter l’enfant vers une équipe de diagnostic pluridisciplinaire pour une évaluation complète des différents domaines de fonctionnement de l’enfant et pour écarter d’autres troubles de la communication.</li><ul>Enfin, dans le cadre des missions qui leur sont confi ées, les centres de protection maternelle et infantile (PMI) peuvent également jouer un rôle dans le repérage précoce des TSA lors des consultations infantiles. Ils peuvent faire le lien entre l’équipe de soins de l’enfant et l’équipe scolaire qui va l’accueillir. Ils ont également un rôle d’accompagnement des familles confrontées à cette pathologie. Étant donné le manque de spécifi cité des signes d’appel chez l’adulte28, il est important, devant des diffi cultés persistantes de communication et d’adaptation sociale de la personne à son environnement, de penser aussi à un TSA. Les signes d’appel impliquent pour les médecins de rechercher leur survenue précoce et de les replacer dans l’histoire des personnes. Il est souhaitable d’impliquer également les équipes des structures médico-sociales dans le repérage des TSA et, plus largement, les professionnels travaillant au quotidien avec les adultes.</ul>",
                         presentation: "Depistage systematique des TSA chez l'enfant de moins de 3 ans",
-                        pos: [4, 6],
+                        pos: [5, 6],
                     },
                     {
                         label: "Consultation",
                         name: "Consultation Pedopsychiatre",
                         description: "Receuil d’un certain nombre de données auprès de l’entourage: histoire du développement, description des comportements, aptitudes, particularités, difficultés et observation directe de la personne.<li>Questionnaire et procédure d’observation : Austin Diagnostic Observation Schedule (ADOS) ; Childhood Autisme Ratio Scale (CARS)</li>",
                         presentation: "Pédopsychiatre",
-                        pos: [6, 2],
+                        pos: [8, 2],
                     },
                     {
                         label: "Consultation",
                         name: "Consultation Genetique",
                         description: "Le but est d’éclairer utilement les différents acteurs : <li>Famille</li><li>MDPH</li><li>Professionnels de l’intervention</li> Quant aux orientation et choix à prendre. Ces évaluations doivent aboutir à l’identification dans le dossier à présenté à la MDPH des éléments éclairants sur les répercussions dans la vie quotidienne.",
                         presentation: "<li>Evaluation psychologique</li><li>Evaluation orthophonique du langage et de la communication</li><li>Evaluation du développement psychomoteur et sensori-moteur</li>",
-                        pos: [6, 4],
+                        pos: [8, 5],
                     },
                     {
                         label: "Bilan",
                         name: "Bilan Ethiologique",
                         description: "<li>Consultation neuropédiatriques et/ou génétiques</li><li>Bilans neurométaboliques</li><li>EEG avec sieste</li><li>IRM cérébrale</li>… etc",
                         presentation: "",
-                        pos: [6, 6],
+                        pos: [8, 8],
                     },
                     {
                         label: "Recour",
                         name: "Recour Pedopsychiatre",
                         description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
                         presentation: "Recour légal possible",
-                        pos: [5, 10],
+                        pos: [3, 17],
                     },
                     {
                         label: "Consultation",
                         name: "Psychologue",
                         description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
                         presentation: "Bilan diagnostique multi-disciplinaire",
-                        pos: [8, 1],
+                        pos: [11, 2],
                     },
                     {
                         label: "Consultation",
                         name: "Orthophoniste",
                         description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
                         presentation: "Bilan diagnostique multi-disciplinaire",
-                        pos: [8, 3],
+                        pos: [11, 5],
                     },
                     {
                         label: "Consultation",
                         name: "Psychométricien",
                         description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
                         presentation: "Bilan diagnostique multi-disciplinaire",
-                        pos: [8, 5],
+                        pos: [11, 8],
                     },
                     {
                         label: "Consultation",
                         name: "Neuropediatre",
                         description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
                         presentation: "Bilan diagnostique multi-disciplinaire",
-                        pos: [8, 7],
+                        pos: [11, 11],
                     },
                     {
                         label: "Recour",
                         name: "Recour Medecin",
-                        description: "Recours contre le médecin en se basant sur l’article R. 4127-33 du Code de la sante publique :<br><li>Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés.</li><li>Le défaut de diagnostic, diagnostic erroné et le retard de diagnostic, sont sanctionnés par les tribunaux qui les qualifient comme fautes d’imprudence et de négligence.</li><br><li>(Crim., 12 sept. 2006 : Bull. 2006 N° 219 p. 772, La semaine juridique, edition generale, 2007-01-17, n° 3, II-10006, p. 31-33, observations Thierry Faict et Patrick Mistretta</li><li>Retard de diagnostic : Civ. 1ere, 29 nov. 2005, Bulletin 2005 I N° 455 p. 382).</li><li><br></li>La Cour de Cassation a cependant retenu que ce retard de diagnostic doit être la cause directe du dommage, qui peut être même une simple perte de chance (c’est-à-dire la disparition actuelle et certaine d’une éventualité favorable). (Arret n° 112 du 28 janvier 2010 (08-20.755 ; 08- 21.692) - Cour de cassation - Premiere chambre civile).<br><br><table><tbody><tr><td><span>Recommandations pour la pratique professionnelle du diagnostic de l’autisme, HAS, Juin 2005&nbsp; :<br></span><span>«&nbsp;Il est fortement recommandé d’utiliser pour le diagnostic nosologique la terminologie employée par la Classification internationale des maladies (CIM10) pour homogénéiser la formulation des diagnostics donnés aux parents et faciliter les comparaisons en recherche. Quand une autre classification est utilisée en complément (DSM IV…), la correspondance du diagnostic avec la CIM10 doit être indiquée.&nbsp;»<br><br></span>Concernant l’âge «&nbsp;Les troubles sont suffisamment stables à partir de 3 ans pour permettre un diagnostic fiable; pour un fort pourcentage de cas, un diagnostic peut être posé de façon fiable aussi à partir de 2 ans. En dessous de 2 ans, la fiabilité du diagnostic n’est pas établie.&nbsp;»\",</td></tr></tbody></table>",
+                        description: "Recours contre le médecin en se basant sur l’article R. 4127-33 du Code de la sante publique :<br><li>Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés.</li><li>Le défaut de diagnostic, diagnostic erroné et le retard de diagnostic, sont sanctionnés par les tribunaux qui les qualifient comme fautes d’imprudence et de négligence.</li><br>(Crim., 12 sept. 2006 : Bull. 2006 N° 219 p. 772, La semaine juridique, edition generale, 2007-01-17, n° 3, II-10006, p. 31-33, observations Thierry Faict et Patrick Mistretta<br />Retard de diagnostic : Civ. 1ere, 29 nov. 2005, Bulletin 2005 I N° 455 p. 382).<br>La Cour de Cassation a cependant retenu que ce retard de diagnostic doit être la cause directe du dommage, qui peut être même une simple perte de chance (c’est-à-dire la disparition actuelle et certaine d’une éventualité favorable). (Arret n° 112 du 28 janvier 2010 (08-20.755 ; 08- 21.692) - Cour de cassation - Premiere chambre civile).<br><br><table><tbody><tr><td><span>Recommandations pour la pratique professionnelle du diagnostic de l’autisme, HAS, Juin 2005&nbsp; :<br></span><span>«&nbsp;Il est fortement recommandé d’utiliser pour le diagnostic nosologique la terminologie employée par la Classification internationale des maladies (CIM10) pour homogénéiser la formulation des diagnostics donnés aux parents et faciliter les comparaisons en recherche. Quand une autre classification est utilisée en complément (DSM IV…), la correspondance du diagnostic avec la CIM10 doit être indiquée.&nbsp;»<br><br></span>Concernant l’âge «&nbsp;Les troubles sont suffisamment stables à partir de 3 ans pour permettre un diagnostic fiable; pour un fort pourcentage de cas, un diagnostic peut être posé de façon fiable aussi à partir de 2 ans. En dessous de 2 ans, la fiabilité du diagnostic n’est pas établie.&nbsp;»\",</td></tr></tbody></table>",
                         presentation: "Recour légal contre le professionnel de santée",
-                        pos: [7, 10],
+                        pos: [8, 17],
                     }
                 ]
             }
@@ -135,13 +135,11 @@ Polymer({
         dimensions: {
             type: Array,
             value: function () {
-                return [10, 11]
+                return [20, 20]
             }
         }
     },
 
-    width: window.innerWidth * 3 / 8,
-    height: null,
     nodeColorNeutral: "#373f52",
     nodeColorSuccess: "#8FB0B9",
     nodeColorFail: "#cc0000",
@@ -173,9 +171,9 @@ Polymer({
             strokeColor = this.strokeColorFail;
         }
         var node = new Konva.Circle({
-            x: obj.pos[0] * coeff,
-            y: obj.pos[1] * coeff,
-            radius: coeff / 2,
+            x: obj.pos[0] * (coeff / 3),
+            y: obj.pos[1] * (coeff / 3),
+            radius: coeff * 2,
             fill: nodeColor,
             stroke: strokeColor,
             id: obj.name,
@@ -218,7 +216,7 @@ Polymer({
         var img1 = new Image();
         img1.onload = function () {
             var valid = new Konva.Image({
-                x: node.x() - coeff / 2 - coeff / 10,
+                x: node.x() - coeff - coeff / 5,
                 y: node.y() + coeff / 4,
                 width: coeff / 4 + coeff / 12,
                 height: coeff / 4 + coeff / 12,
@@ -305,21 +303,10 @@ Polymer({
             reset.on("mouseover", function () {
                 this.opacity(0.5);
                 document.body.style.cursor = 'pointer';
-                var stage = node.getStage();
-                var mousePos = stage.getPointerPosition();
-                tooltip.position({
-                    x : mousePos.x + 5,
-                    y : mousePos.y + 5
-                });
-                tooltip.text('Réinitialiser');
-                tooltip.show();
-                layerTooltip.batchDraw();
             });
             reset.on("mouseleave", function () {
                 this.opacity(1);
                 document.body.style.cursor = 'default';
-                tooltip.hide();
-                layerTooltip.draw();
             });
         };
         img1.src = '/assets/valider.png';
@@ -441,12 +428,14 @@ Polymer({
     },
 
     drawNodes: function () {
-        var coeff = this.width / this.dimensions[0];
-        this.height = coeff * this.dimensions[1];
+        var test = document.querySelector("#parkour").getBoundingClientRect();
+        var coeff = test.width / this.dimensions[0];
         var stage = new Konva.Stage({
             container: "container",
-            width: this.width,
-            height: this.height
+            width: test.width,
+            height: test.height,
+            y: test.left,
+            x: test.top
         });
         var layerNode = new Konva.Layer();
         var layerTooltip = new Konva.Layer();
@@ -470,6 +459,9 @@ Polymer({
         this.keychain = ["en cour", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre", "neutre"];
         this.getMatch();
         this.drawNodes();
+        var test = document.querySelector("#container").getBoundingClientRect();
+        console.log("test : ");
+        console.log(test);
         /*$("#datepicker").datepicker({
             altField: "#datepicker",
             closeText: 'Fermer',

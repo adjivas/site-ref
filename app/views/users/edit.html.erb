@@ -1,7 +1,7 @@
 <article>
-<% if user_signed_in? %>
-  <% if current_user == @user || current_user.is_admin? %>
-   <h1>Votre profile</h1>
+  <% if user_signed_in? %>
+    <% if current_user == @user || current_user.is_admin? %>
+      <h1>Votre profile</h1>
       <%= render 'form' %>
 
       <%= link_to 'Voir', @user %> |

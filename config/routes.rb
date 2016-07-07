@@ -1,18 +1,13 @@
 Rails.application.routes.draw do
-  get 'authorrails/g'
-
-  get 'authorrails/controller'
-
   get 'tree/index'
 
   get 'journey/index'
 
+  get 'author/index'
+  
+  get 'welcome/index'
+
   devise_for :users
-  get 'authorrails/g'
-
-  get 'authorrails/controller'
-
-  get 'authorrails/Author'
 
   resources :projects
 

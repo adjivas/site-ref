@@ -1,37 +1,72 @@
         Polymer({
-            is: "ktree-anogchro",
+            is: "ktree-achromoso",
             properties: {
                 steps: {
                     type: Array,
                     value: function () {
                         return [
                             {
-                                name: 'Anomalies génétiques et chrosomiques',
-                                presentation: '',
-                                pos: [5, 6],
-                                label: "I",
-                                enfant: "ktree-cmb",
-                            },
-                            {
-                                name: 'Syndromes génétiques associées aux TSA',
-                                presentation: '<p>Syndromes génétiques qui incluent dans leur phénotype la possibilité de TSA</p>',
-                                pos: [3, 5],
-                                label: "II",
-                                enfant: "ktree-syngenassoc",
-                            },
-                            {
                                 name: "Anomalies chromosomiques mises en évidence chez des enfants avec TSA",
                                 presentation: '',
                                 pos: [5, 4],
-                                label: "III",
-                                enfant: "ktree-achros",
+                                label: "I",
+                                enfant: "ktree-anogchro",
                             },
                             {
-                                name: "Autres maladies Métaboliques",
-                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
+                                name: 'Trisomie 21',
+                                presentation: '<p>Syndromes génétiques qui incluent dans leur phénotype la possibilité de TSA</p>',
+                                pos: [10, 10],
+                                label: "II",
+                                enfant: "",
+                            },
+                            {
+                                name: 'Délétion 22q11 (Syndrome de Di George)',
+                                presentation: '',
+                                pos: [5, 6],
+                                label: "III",
+                                enfant: "",
+                            },
+                            {
+                                name: "Syndrome de Williams-Beuren",
+                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D\’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
                                 pos: [7, 5],
                                 label: "IV",
-                                enfant: "ktree-metabol",
+                                enfant: "",
+                            },
+                            {
+                                name: "Syndrome 47 XXY",
+                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D\’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
+                                pos: [7, 5],
+                                label: "V",
+                                enfant: "",
+                            },
+                            {
+                                name: "Microdélétions ou microduplications récurrentes récemment identifiées",
+                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
+                                pos: [7, 5],
+                                label: "VI",
+                                enfant: "",
+                            },
+                            {
+                                name: "Anomalies géniques mises en évidence chez des enfants avec TSA",
+                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
+                                pos: [7, 5],
+                                label: "VII",
+                                enfant: "",
+                            },
+                            {
+                                name: "Neuroligines 3 et 4 (Chromosome X)",
+                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
+                                pos: [7, 5],
+                                label: "VIII",
+                                enfant: "",
+                            },
+                            {
+                                name: "Shank 3 (22q13.3)",
+                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
+                                pos: [7, 5],
+                                label: "IX",
+                                enfant: "",
                             }
                         ]
                     }
@@ -42,17 +77,33 @@
                         return [
                             //[parent, child, mode]
                             [
-                                "Anomalies génétiques et chrosomiques", 'Syndromes génétiques associées aux TSA', 0
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Trisomie 21', 0
                             ],
                             [
-                                "Anomalies génétiques et chrosomiques", 'Anomalies chromosomiques mises en évidence chez des enfants avec TSA', 0
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Délétion 22q11 (Syndrome de Di George)', 0
                             ],
                             [
-                                "Anomalies génétiques et chrosomiques", 'Autres maladies Métaboliques', 0
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Syndrome de Williams-Beuren', 0
+                            ],
+                            [
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Syndrome 47 XXY', 0
+                            ],
+                            [
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Microdélétions ou microduplications récurrentes récemment identifées', 0
+                            ],
+                            [
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Anomalies géniques mises en évidence chez des enfants avec TSA', 0
+                            ],
+                            [
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Neuroligines 3 et 4 (Chromosome X)', 0
+                            ],
+                            [
+                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Shank 3 (22q13.3)', 0
                             ]
                         ]
                     }
                 },
+
                 dimensions: {
                     type: Array,
                     value: function () {
@@ -133,9 +184,9 @@
                         this.opacity(1);
                         document.body.style.cursor = 'default';
                         var title = document.getElementById('ktreetext').getAttribute('title');
-                        that = document.querySelector('ktree-anogchro');
+                        that = document.querySelector('ktree-achromoso');
                         if (title != "") {
-                            that = document.querySelector('ktree-anogchro');
+                            that = document.querySelector('ktree-achromoso');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
                                     document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
@@ -164,9 +215,9 @@
                         this.opacity(1);
                         document.body.style.cursor = 'default';
                         var title = document.getElementById('ktreetext').getAttribute('title');
-                        that = document.querySelector('ktree-anogchro');
+                        that = document.querySelector('ktree-achromoso');
                         if (title != "") {
-                            that = document.querySelector('ktree-anogchro');
+                            that = document.querySelector('ktree-achromoso');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
                                     document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";

@@ -34,12 +34,6 @@ details summary::after {
   padding-left: calc(3vw/2);
 }
 
-details {
-  ul > li {
-    padding-left: 1em;
-  }
-}
-
 body {
   position: absolute;
   display: flex;
@@ -65,8 +59,7 @@ body {
     background-image: $nav-bg;
     background-repeat: no-repeat;
     background-size: 10em;
-    background-position-x: 1em;
-    background-position-y: 2em;
+    background-position: 1em 2em;
     input {
       color: rgb(255, 255, 255);
     }
