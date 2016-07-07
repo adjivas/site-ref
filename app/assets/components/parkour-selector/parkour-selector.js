@@ -13,7 +13,7 @@
                             },
                             {
                                 name: "parkour-diagnostique",
-                                description: "Parcour diagnostique standard.",
+                                description: "Parcour diagnostique standard",
                                 presentation: "Parcour diagnostique standard.",
                                 pos: [4, 4],
                             },
@@ -91,6 +91,7 @@
                     });
                     layer.add(logo);*/
                     node.on('click', function () {
+                        document.getElementById('current-parkour').innerHTML= '<parkour-diagnostiquePrecoce></parkour-diagnostiquePrecoce>';
                         document.getElementById("parktext").innerHTML = "<h2>" + obj.description + ": </h2>";
                         });
                     node.on('mouseover', function () {
@@ -107,7 +108,7 @@
                         layer.draw();
                         var pres = document.getElementById("pres-diag");
                         document.getElementById("presentation-paragraph").innerHTML = obj.presentation;
-                        //pres.close();
+                        pres.close();
                     });
             },
 
@@ -158,7 +159,7 @@
                 var coeff = stageWidth / this.dimensions[0];
                 this.height = coeff * this.dimensions[1];
                 var stage = new Konva.Stage({
-                    container: "parkour",
+                    container: "container",
                     width: stageWidth,
                     height: stageHeight 
                 });

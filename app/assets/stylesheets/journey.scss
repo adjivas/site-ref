@@ -3,11 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
    #pres-diag {
           position: fixed;
-          display: flex;
-          width: 14em;
-          height: 8em;
           bottom: 13vh;
-          left: 0vw;
-          overflow: auto;
-          background-color: red;
+          left: 12vw;
+          background-color: #373f52;
+          max-width: 30vw;
         }
+    
+    #presentation-paragraph {
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5em;
+    }
+    
+    html #parktext {
+        font-family: 'Roboto', sans-serif;
+    }

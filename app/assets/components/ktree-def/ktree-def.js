@@ -70,7 +70,7 @@
                     }
                 }
             },
-            width: window.innerWidth * 3 / 5,
+            width: window.innerWidth / 3,
             height: null,
             nodeColorNeutral: "#226070",
             nodeColorSuccess: "#226070",

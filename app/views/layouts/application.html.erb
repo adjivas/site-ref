@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <nav>
@@ -28,14 +29,14 @@
         <li>
           <% if journey_index_path == request.original_fullpath %>
             <details open="open">
+              <summary><%= link_to('Parcour', journey_index_path) %></summary>
+              <ul>
+                <li onClick="document.getElementById('current-parkour').innerHTML='<parkour-diagnostiquePrecoce></parkour-diagnostiquePrecoce>'">Diagnostique Précoce</li>
+              </ul>
+            </details>
           <% else %>
-            <details>
+            <%= link_to('Parcour', journey_index_path) %>
           <% end %>
-            <summary><%= link_to('Parcour', journey_index_path) %></summary>
-            <ul>
-              <li onClick="document.getElementById('parkour').innerHTML='<parkour-diagnostiquePrecoce></parkour-diagnostiquePrecoce>'">Diagnostique Précoce</li>
-            </ul>
-          </details>
         </li>
         </li>
         <li><%= link_to('Cartographie', structures_path) %></li>

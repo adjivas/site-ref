@@ -1,11 +1,13 @@
 <paper-dialog id="pres-diag">
-         <p id="presentation-paragraph"></p>
+    <p id="presentation-paragraph"></p>
 </paper-dialog>
+
 <article id="parktext">
 </article>
 
 <article id="parkour">
-  <parkour-selector></parkour-selector>
+  <div id="container"></div>
+  <div id="current-parkour"><parkour-selector></parkour-selector></div>
 </article>
+
 <script>document.querySelector('parkour-selector').ready();</script>
-<input type="submit" onClick="javascript:event_rotate()" value="&#9868;"></input>

@@ -20,6 +20,25 @@ $nav-sfont: 1em;
 $nav-sfont-trigram: 1.5em;
 $nav-bg: url("interactblanc.png");
 $loutre-bg: url("loutre/loutre neutre.png");
+$article-padding-border: 2.5em;
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::after {
+  content: '→';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding-left: calc(3vw/2);
+}
+
+details {
+  ul > li {
+    padding-left: 1em;
+  }
+}
 
 body {
   position: absolute;
@@ -52,11 +71,11 @@ body {
       color: rgb(255, 255, 255);
     }
     a {
-      color: rgb(255, 255, 255);
-      &:active, &:hover {
+      color: rgb(213, 218, 230);
+      &:active, &:hover, &:focus {
         color: rgb(255, 255, 255);
       }
-      &:link, &:visited, &:active, &:hover {
+      &:link, &:visited, &:active, &:hover, &:focus {
         text-decoration: none;
       }
     }
@@ -139,8 +158,8 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding-left: 2.5em;
-      padding-right: 2.5em;
+      padding-left: $article-padding-border;
+      padding-right: $article-padding-border;
       width: 100%;
       height: 100%;
       tr {
@@ -149,36 +168,38 @@ body {
         height: 2.5em;
       }
     }
-    & > input[type="submit"] {
-      position: absolute;
-      background: none;
-      border: none;
-      top: 0em;
-      right: 1em;
-      color: #d5dae6;
-      font-size: $nav-sfont-trigram;
-      &:hover {
-        color: black;
-      }
-    }
-    &, &[class="horizontal"] {
+    & {
       flex-direction: row;
       article {
         resize: horizontal;
         overflow-y: scroll;
         overflow-x: auto;
+        &[disabled="disabled"] {
+          overflow-x: none;
+          overflow-y: none;
+          resize: none;
+        }
       }
       & > input[type="submit"] {
         transform: rotate(90deg);
       }
     }
-    &[class="vertical"] {
-      flex-direction: column;
-      article {
-        resize: vertical;
-        overflow-y: auto;
-        overflow-x: scroll;
-      }
-    }
   }
+}
+
+$height-kmenu: 20vh;
+
+#menuktree {
+  position: absolute;
+  height: calc(#{$height-kmenu} - #{$article-padding-border});
+  width: calc(100%/2 - #{$article-padding-border}*2);
+  margin-top: #{$article-padding-border};
+}
+
+#ktreetext {
+  position: absolute;
+  height: calc(100vh - #{$height-kmenu} - #{$article-padding-border});
+  width: calc(100%/2 - #{$article-padding-border}*2);
+  margin-top: $height-kmenu;
+  overflow-y: auto;
 }
