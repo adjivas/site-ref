@@ -186,6 +186,11 @@ body {
           display: none;
         }
       }
+      li {
+        &[class="ghost"] {
+          display: none;
+        }
+      }
     }
     & {
       flex-direction: row;

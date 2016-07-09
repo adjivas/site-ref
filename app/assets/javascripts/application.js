@@ -43,12 +43,14 @@ function event_rotate () {
 
 function event_clear_search () {
   document.querySelector ("input[type=\"search\"]").value = "";
-  document.querySelectorAll("td").forEach(
+  document.querySelectorAll("article td, article li").forEach(
     function (node) {
       node.innerHTML = node.innerHTML.replace(/<\/?span[^>]*>/g,"");
     }
   );
-  document.querySelectorAll("tr[class=\"ghost\"]").forEach(
+  document.querySelectorAll(
+    "articletr[class=\"ghost\"], article li[class=\"ghost\"]"
+  ).forEach(
     function (node) {
       node.removeAttribute("class");
     }
@@ -59,16 +61,16 @@ function event_search () {
     "input[type=\"search\"]"
   ).value;
 
-  document.querySelectorAll("td").forEach(
+  document.querySelectorAll("article td").forEach(
     function (node) {
       node.innerHTML = node.innerHTML.replace(/<\/?span[^>]*>/g,"");
     }
   );
-  document.querySelectorAll("article tbody tr").forEach(
+  document.querySelectorAll("article tbody tr, article li").forEach(
     function (node) {
       if (node.textContent.search(word) > -1) {
         node.removeAttribute("class");
-        node.querySelectorAll("td").forEach(
+        node.querySelectorAll("article td, article li").forEach(
           function (node) {
             if (node.textContent.search(word) > -1) {
               node.innerHTML = node.innerHTML.replace(
