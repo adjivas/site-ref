@@ -60,13 +60,6 @@
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
 
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
-            
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
@@ -207,7 +200,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Comorbidités et troubles associés</p><p class=\" summary\"><b style=\"color: white\">II</b>] Comorbidités</p><p class=\" summary\"><b style=\"color: white\">III</b>] Comportements problèmes</p>";
             }

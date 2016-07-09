@@ -81,13 +81,6 @@
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
@@ -229,7 +222,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Les principales manifestations</p><p class=\" summary\"><b style=\"color: white\">II</b>] Communication et interactions sociales</p><p class=\" summary\"><b style=\"color: white\">III</b>] Comportements stéréotypés et intérêts restreints</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Les particularités communes aux TSA</p><p class=\" summary\"><b style=\"color: white\">V</b>] Evolution des troubles</p>";
             }

@@ -72,31 +72,24 @@
             },
             width: window.innerWidth / 3,
             height: null,
-            nodeColorNeutral: "#226070",
-            nodeColorSuccess: "#226070",
+            nodeColorNeutral: "#9AEED8",
+            nodeColorSuccess: "#373f52",
             nodeColorFail: "red",
-            strokeColorNeutral: "#5cc666",
+            strokeColorNeutral: "#373f52",
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
                 if (obj.enfant != "") {
-                    nodeColor = this.nodeColorSuccess;
+                    nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorNeutral;
                 } else if (obj.enfant == "") {
                     nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorSuccess;
-                } 
+                }
                 var node = new Konva.Circle({
                     x: obj.pos[0] * coeff,
                     y: obj.pos[1] * coeff,
@@ -109,15 +102,15 @@
                 });
                 var box = new Konva.Text({
                     x: node.x() - node.radius(),
-                    y: node.y() - node.strokeWidth(),
+                    y: node.y() - node.strokeWidth() - 6,
                     width: 2 * node.radius(),
                     height: 2 * node.strokeWidth(),
                     text: obj.label,
-                    fontSize: 3 * node.strokeWidth(),
+                    fontSize: 7 * node.strokeWidth(),
                     fontFamily: "Arial",
                     fontStyle: "bold",
                     fontVariant: "small-caps",
-                    fill: "white",
+                    fill: "#373f52",
                     align: "center"
                 });
                 var group = new Konva.Group();
@@ -127,12 +120,12 @@
                 var tmp = 0;
                if (obj.enfant == "") {
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
                         document.getElementById("ktreebouton").innerHTML = " ";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -148,7 +141,7 @@
                             that = document.querySelector('ktree-def');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -160,12 +153,12 @@
                         document.querySelector('ktree-selector').showKtree(obj.enfant);
                     });
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + "<p  style=\"color: #00ff97\">" + obj.presentation + "</p><br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
                         document.getElementById("ktreebouton").innerHTML = "<a><button style=\"width: 100%; height: 40px; background-color: #00ff97; color: #226070; border-radius: 15px\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">En savoir plus</button></a>";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -179,7 +172,7 @@
                             that = document.querySelector('ktree-def');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -199,7 +192,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: '#9AEED8',
+                    stroke: '#373f52',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -227,8 +220,8 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
-                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Définir l'autisme</p><p class=\" summary\"><b style=\"color: white\">II</b>] Les principales manifestations</p><p class=\" summary\"><b style=\"color: white\">III</b>] Comorbidités et troubles associés</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Etiologie</p><p class=\" summary\"><b style=\"color: white\">V</b>] Classifications</p>";
+                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b> Définir l'autisme</p><p class=\" summary\"><b class=\"romanumb\">II</b> Les principales manifestations</p><p class=\" summary\"><b class=\"romanumb\">III</b> Comorbidités et troubles associés</p><p class=\" summary\"><b class=\"romanumb\">IV</b> Etiologie</p><p class=\" summary\"><b class=\"romanumb\">V</b> Classifications</p>";
             }
  });

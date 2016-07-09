@@ -80,13 +80,6 @@
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
 
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
-            
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
@@ -199,7 +192,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: 'white',
+                    stroke: '#9AEED8',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -227,7 +220,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Les interventions de nature éducative, comportementale et développementales</p><p class=\" summary\"><b style=\"color: white\">II</b>] ABA</p><p class=\" summary\"><b style=\"color: white\">III</b>] ESDM</p><p class=\" summary\"><b style=\"color: white\">IV</b>] TEACCH</p><p class=\" summary\"><b style=\"color: white\">V</b>] Prise en charge intégrative</p>";
             }

@@ -40,3 +40,51 @@ function event_rotate () {
   }
   document.querySelector('ktree-selector').drawNodes();
 }
+
+function event_clear_search () {
+  document.querySelector ("input[type=\"search\"]").value = "";
+  document.querySelectorAll("td").forEach(
+    function (node) {
+      node.innerHTML = node.innerHTML.replace(/<\/?span[^>]*>/g,"");
+    }
+  );
+  document.querySelectorAll("tr[class=\"ghost\"]").forEach(
+    function (node) {
+      node.removeAttribute("class");
+    }
+  );
+}
+function event_search () {
+  const word = document.querySelector (
+    "input[type=\"search\"]"
+  ).value;
+
+  document.querySelectorAll("td").forEach(
+    function (node) {
+      node.innerHTML = node.innerHTML.replace(/<\/?span[^>]*>/g,"");
+    }
+  );
+  document.querySelectorAll("article tbody tr").forEach(
+    function (node) {
+      if (node.textContent.search(word) > -1) {
+        node.removeAttribute("class");
+        node.querySelectorAll("td").forEach(
+          function (node) {
+            if (node.textContent.search(word) > -1) {
+              node.innerHTML = node.innerHTML.replace(
+                node.textContent,
+                node.textContent.replace(
+                  new RegExp(word, 'g'),
+                  "<span>".concat(word, "</span>")
+                )
+              );
+            }
+          }
+        );
+      }
+      else {
+        node.setAttribute("class", "ghost");
+      }
+    }
+  );
+}

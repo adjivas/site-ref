@@ -70,12 +70,6 @@
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
 
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
@@ -217,7 +211,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Autres troubles neurodéveloppementaux </p><p class=\" summary\"><b style=\"color: white\">II</b>] Déficience intellectuelle</p><p class=\" summary\"><b style=\"color: white\">III</b>] Troubles de la communication</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Troubles Dys</p>";
             }

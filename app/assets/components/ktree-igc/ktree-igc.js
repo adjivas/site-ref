@@ -80,13 +80,6 @@
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
 
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
-            
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
@@ -199,7 +192,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: 'white',
+                    stroke: '#9AEED8',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -227,7 +220,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Les interventions globales et coordonnées</p><p class=\" summary\"><b style=\"color: white\">II</b>] Les programmes d’interventions personnalisés, globaux et coordonnés</p><p class=\" summary\"><b style=\"color: white\">III</b>] Les interventions par domaines fonctionnels</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Le job coaching, “travail chaperonné” ou “travail accompagné”</p><p class=\" summary\"><b style=\"color: white\">V</b>] La guidance parentale</p>";
             }

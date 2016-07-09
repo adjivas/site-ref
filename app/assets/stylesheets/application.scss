@@ -81,7 +81,7 @@ body {
         text-decoration: none;
       }
     }
-    input[type="submit"] {
+    input[value="☰"] {
       position: absolute;
       background: none;
       border: none;
@@ -95,6 +95,17 @@ body {
       margin-top: 1em;
       border: none;
       border-bottom: 1px solid #959595;
+    }
+    div {
+      display: flex;
+      input:not(:first-child) {
+        display: flex;
+        background: none;
+        margin-top: 1em;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid #959595;
+      }
     }
     ul {
       list-style-type: none;
@@ -168,6 +179,12 @@ body {
         border-bottom: 1px solid #d5dae6;
         vertical-align: bottom;
         height: 2.5em;
+        span {
+          font-size: 1.5em;
+        }
+        &[class="ghost"] {
+          display: none;
+        }
       }
     }
     & {

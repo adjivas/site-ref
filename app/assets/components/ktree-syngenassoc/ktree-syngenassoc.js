@@ -109,13 +109,6 @@
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
@@ -229,7 +222,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: 'white',
+                    stroke: '#9AEED8',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -257,7 +250,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Syndromes génétiques associées aux TSA</p><p class=\" summary\"><b style=\"color: white\">II</b>] Syndrome de Rett</p><p class=\" summary\"><b style=\"color: white\">III</b>] Le syndrome de l’X-fragile</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Sclérose tubéreuse de Bourneville</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Neurofibromatose type 1</p><p class=\" summary\"><b style=\"color: white\">V</b>] Syndrome d’angelman</p><p class=\" summary\"><b style=\"color: white\">VI</b>] Syndrome de Prader-Willi</p><p class=\" summary\"><b style=\"color: white\">VII</b>] Autres syndromes</p>";
             }

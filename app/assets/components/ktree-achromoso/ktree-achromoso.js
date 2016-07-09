@@ -120,13 +120,6 @@
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
@@ -268,7 +261,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Anomalies génétiques et chrosomiques</p><p class=\" summary\"><b style=\"color: white\">II</b>] Syndromes génétiques associées aux TSA (DSM-5)</p><p class=\" summary\"><b style=\"color: white\">III</b>] Anomalies chromosomiques mises en évidence chez des enfants avec TSA</p><p class=\" summary\"><b style=\"color: white\">IV</b>]Autres maladies Métaboliquess</p>";
             }

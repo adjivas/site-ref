@@ -21,12 +21,43 @@
       <% end %>
 
       <input type="submit" value="&#9776;" onClick="javascript:event_hidden()" />
-      <input type="search" placeholder="Chercher" autocomplete="off" />
+      <div>
+        <input type="search" onkeyup="javascript:event_search()" placeholder="Chercher" autocomplete="off" />
+        <input type="submit" value="&#10006;" onClick="javascript:event_clear_search()" />
+      </div>
 
       <ul>
         <li><%= link_to('Document', papers_path) %></li>
-        <li><%= link_to('Projet', projects_path) %></li>
-        <li><%= link_to('Arbre des connaissances', tree_index_path) %></li>
+        <li><%= link_to('Applications', projects_path) %></li>
+        <li>
+          <% if tree_index_path == request.original_fullpath %>
+            <details open="open">
+              <summary>
+                <a onClick="document.querySelector('ktree-selector').start();">
+                  Arbre des connaissances
+                </a>
+              </summary>
+              <ul>
+                <li>
+                  <details>
+                  <summary>
+                    <a onClick="document.querySelector('ktree-def').start()">
+                      Définir l'autisme
+                    </a>
+                  </summary>
+                    <ul>
+                      <li onClick="document.querySelector('ktree-manif').start()">Les principales manifestations</li>
+                      <li onClick="document.querySelector('ktree-cmtra').start()">Comorbidités et troubles associés</li>
+                      <li onClick="document.querySelector('ktree-etio').start()">Etiologie</li>
+                    </ul>
+                  </details>
+                </li>
+                <li onClick="document.querySelector('ktree-igc').start()">Les interventions globales et coordonnées</li>
+              </ul>
+            </details>
+          <% else %>
+            <%= link_to('Arbre des connaissances', tree_index_path) %></li>
+          <% end %>
         <li>
           <% if journey_index_path == request.original_fullpath %>
             <details open="open">

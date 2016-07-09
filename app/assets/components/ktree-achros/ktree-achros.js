@@ -69,13 +69,6 @@
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
@@ -217,7 +210,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Comorbidités</p><p class=\" summary\"><b style=\"color: white\">II</b>] Autres troubles neurodeveloppementaux (DSM-5)</p><p class=\" summary\"><b style=\"color: white\">III</b>] Troubles neuropsychiatriques</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Anomalies génétiques et chrosomiques</p>";
             }

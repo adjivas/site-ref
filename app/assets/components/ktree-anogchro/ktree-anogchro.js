@@ -27,8 +27,8 @@
                                 enfant: "ktree-achros",
                             },
                             {
-                                name: "Autres maladies Métaboliques",
-                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
+                                name: "Maladies Métaboliques",
+                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.44)</small><p class="textktree">S’il est clair que la majorité des cas d’autisme n’ont pas d’origine métabolique, plusieurs maladies neurométaboliques peuvent comporter un phénotype autistique. </br>La majorité des maladies métaboliques sont d’origine génétique avec une hérédité le plus souvent autosomique récessive (AR). Ce type d\'hérédité, le risque de récidive après un premier enfant atteint et parfois les possibilités thérapeutiques, rendent important la mise en évidence des étiologies métaboliques.</p>',
                                 pos: [7, 5],
                                 label: "IV",
                                 enfant: "ktree-metabol",
@@ -48,7 +48,7 @@
                                 "Anomalies génétiques et chrosomiques", 'Anomalies chromosomiques mises en évidence chez des enfants avec TSA', 0
                             ],
                             [
-                                "Anomalies génétiques et chrosomiques", 'Autres maladies Métaboliques', 0
+                                "Anomalies génétiques et chrosomiques", 'Maladies Métaboliques', 0
                             ]
                         ]
                     }
@@ -69,13 +69,6 @@
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
@@ -217,7 +210,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Anomalies génétiques et chrosomiques</p><p class=\" summary\"><b style=\"color: white\">II</b>] Syndromes génétiques associées aux TSA (DSM-5)</p><p class=\" summary\"><b style=\"color: white\">III</b>] Anomalies chromosomiques mises en évidence chez des enfants avec TSA</p><p class=\" summary\"><b style=\"color: white\">IV</b>]Autres maladies Métaboliquess</p>";
             }

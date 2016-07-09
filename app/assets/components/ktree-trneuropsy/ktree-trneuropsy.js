@@ -8,7 +8,7 @@
                             {
                                 name: 'Troubles neuropsychiatriques',
                                 presentation: '<p>Le job coaching, ou supported employment, est un accompagnement personnalisé et structuré auprès d’une personne pour son accès et son maintien dans l’emploi. L’accent est mis sur l’autonomisation et la responsabilisation de la personne. L’accompagnement est centré sur la mise en valeur et l’expression des ressources personnelles du salarié en équilibre avec les besoins de l’entreprise. Ce service spécifique peut être proposé par des associations ou des cabinets spécialisés.</p><p>Si, au début de son intervention sur le lieu de travail, le job coach accompagne de façon intensive la personne avec TSA, son accompagnement devient ensuite plus ponctuel, et il se retire progressivement pour viser l’autonomie complète de la personne accompagnée. Des interventions exceptionnelles peuvent néanmoins être proposées en cas de difficultés à gérer des changements, rencontrées par la personne avec TSA ou par ses collègues</p><p>Sur le plan pratique, le job coaching implique non seulement un travail préalable avec l’adulte en situation de handicap pour identifier ses compétences et ses diffi cultés (ateliers autour des compétences sociales à mettre en œuvre en entreprise par exemple), mais aussi avec l’entreprise. Le job coach réalise ainsi une analyse de poste et propose des aménagements à l’entreprise (structuration du temps et de l’espace, décomposition des tâches et des consignes en énoncés élémentaires, transformation des consignes verbales en consignes visuelles, recours à des casques audio pour permettre à la personne de mieux se concentrer et diminuer le bruit environnant…). Outre l’accompagnement proposé à la personne avec TSA, le job coach accompagne ainsi l’employeur et ses salariés dans la compréhension du fonctionnement de la personne avec TSA et dans la mise en place d’un environnement facilitateur pour celle-ci. L’ajustement est mutuel et facilité par ce tiers extérieur à l’entreprise.</p><p>Il convient de souligner que le job coach peut aussi être amené à intervenir au domicile de la personne pour l’aider dans les actes de sa vie personnelle, qui peuvent influencer la qualité de son travail (connexion internet, travaux sur son trajet habituel…).</p>',
-                                pos: [3, 5],
+                                pos: [3, 4],
                                 label: "I",
                                 enfant: "ktree-cmb",
                             },
@@ -59,13 +59,6 @@
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
-
-            showKtree: function (ktree) {
-                document.getElementById('current-ktree').innerHTML = "<" + ktree + "></" + ktree + ">";
-                document.getElementById("ktreetext").innerHTML = " ";
-                document.getElementById("ktreebouton").innerHTML = " ";
-            },
             
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
@@ -179,7 +172,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: 'white',
+                    stroke: '#9AEED8',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -207,7 +200,7 @@
                 stage.add(layer);
             },
 
-            ready: function () {
+            start: function () {
                 this.drawNodes();
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Troubles neuropsychiatriques</p><p class=\" summary\"><b style=\"color: white\">II</b>] Troubles neurologiques : l\'Epilepsie</p><p class=\" summary\"><b style=\"color: white\">III</b>] Troubles psychiatriques</p>";
             }
