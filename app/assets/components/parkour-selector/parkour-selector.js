@@ -6,24 +6,28 @@
                     value: function () {
                         return [
                             {
+                                label: "Precoce",
                                 name: "parkour-diagnosticPrecoce",
                                 description: "Parcour diagnostic précoce (moins de trois ans)",
                                 presentation: "Parcour diagnostic précoce (enfant de moins de trois ans).",
                                 pos: [2, 4],
                             },
                             {
+                                label: "Diagnostic",
                                 name: "parkour-diagnostic",
                                 description: "Parcour diagnostic standard",
                                 presentation: "Parcour diagnostic standard.",
                                 pos: [4, 4],
                             },
                             {
+                                label: "Bilan Ethiologique",
                                 name: "Parkour diagnostic2",
                                 description: "Parcour diagnostic2 généraliste",
                                 presentation: "",
                                 pos: [6, 4],
                             },
                             {
+                                label: "MDPH",
                                 name: "Parkour diagnostic3",
                                 description: "Parcour diagnostic3 généraliste",
                                 presentation: "",
@@ -41,15 +45,15 @@
             },
 
             nodeColorNeutral: "#373f52",
-            nodeColorSuccess: "#1c7d5f",
-            nodeColorFail: "#cc0000",
+            nodeColorSuccess: "#5cc666",
+            nodeColorFail: "#d11919",
             strokeColorNeutral: "#373f52",
-            strokeColorSuccess: "#1c7d5f",
-            strokeColorFail: "#cc0000",
-            strokeColorCurrent: "#1c7d5f",
+            strokeColorSuccess: "#5cc666",
+            strokeColorFail: "#d11919",
+            strokeColorCurrent: "##67dd72",
             linkColorNeutral: "#373f52",
-            linkColorSuccess: "#1c7d5f",
-            linkColorFail: "#cc0000",
+            linkColorSuccess: "#5cc666",
+            linkColorFail: "#d11919",
             keychain: [],
             matchChain: [],
 
@@ -85,16 +89,28 @@
                     presentation: obj.presentation,
                     strokeWidth: coeff / 12
                 });
-                layer.add(node);
-                    /* var logo = new Konva.Image({
-                        //add logo
-                    });
-                    layer.add(logo);*/
-                    node.on('click', function () {
+                var text = new Konva.Text({
+                    x: node.x() - node.radius(),
+                    y: node.y() - node.strokeWidth(),
+                    width: 2 * node.radius(),
+                    height: 3 * node.strokeWidth(),
+                    text: obj.label,
+                    fontSize: 2 * node.strokeWidth(),
+                    fontFamily: "Roboto",
+                    fontStyle: "sans-serif",
+                    fontVariant: "small-caps",
+                    fill: "white",
+                    align: "center"
+                });
+                var group = new Konva.Group();
+                group.add(node);
+                group.add(text);
+                layer.add(group);
+                group.on('click', function () {
                         document.querySelector(obj.name).start();
                         document.getElementById("parktext").innerHTML = "<h2>" + obj.description + ": </h2>";
                         });
-                    node.on('mouseover', function () {
+                group.on('mouseover', function () {
                         this.opacity(0.5);
                         var pres = document.getElementById("pres-diag");
                         document.body.style.cursor = 'pointer';
@@ -102,7 +118,7 @@
                         document.getElementById("presentation-paragraph").innerHTML = obj.presentation;
                         pres.open();
                     });
-                    node.on('mouseleave', function () {
+                group.on('mouseleave', function () {
                         this.opacity(1);
                         document.body.style.cursor = 'default';
                         layer.draw();

@@ -142,21 +142,21 @@
                   </details>
                 </li>
                 <!-- Fin Définir l'autisme-->
-                <!-- Debut demarches diagnostiques et outils validés d'évaluation-->
+                <!-- Debut demarches diagnostics et outils validés d'évaluation-->
                 <li>
                   <details class="bgyel" >
                   <summary>
                     <a class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-diagval').start()">
-                      Démarche diagnostique et outils validés d’évaluation 
+                      Démarche diagnostic et outils validés d’évaluation 
                     </a>
                   </summary>
                     <ul>
-                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-voldemdiag').start()">Les trois volets de la démarche diagnostique</li>
-                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-orgdemdiag').start()">L’organisation de la démarche diagnostique</li>
+                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-voldemdiag').start()">Les trois volets de la démarche diagnostic</li>
+                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-orgdemdiag').start()">L’organisation de la démarche diagnostic</li>
                     </ul>
                   </details>
                 </li>
-                <!-- Fin demarches diagnostiques et outils validés d'évaluation-->
+                <!-- Fin demarches diagnostics et outils validés d'évaluation-->
                 <!-- Debut Les Interventions globales et coordonnées-->
                 <li>
                   <details class="bgblue">
@@ -180,15 +180,13 @@
         <li>
           <% if journey_index_path == request.original_fullpath %>
             <details open="open">
-              <summary><a onClick="document.querySelector('parkour-selector').start();">Parcour</a></summary>
+              <summary><a onClick="document.querySelector('parkour-selector').start();">Parcours</a></summary>
               <ul>
-                <li onClick="document.querySelector('parkour-diagnostiquePrecoce').start()">Diagnostique Précoce</li>
-                <li onClick="document.querySelector('parkour-diagnostique').start()">Diagnostique</li>
-                <li onClick="document.querySelector('parkour-diagnostique').start()">Génétique</li>
-                <li onClick="document.querySelector('parkour-diagnostique').start()">Bilan Ethiologique</li>
-                <li onClick="document.querySelector('parkour-diagnostique').start()">MDPH</li>
-                <li onClick="document.querySelector('parkour-diagnostique').start()">Truc</li>
-                <li onClick="document.querySelector('parkour-diagnostique').start()">Machin</li>
+                <li onClick="document.querySelector('parkour-diagnosticPrecoce').start()">Diagnostic Précoce</li>
+                <li onClick="document.querySelector('parkour-diagnostic').start()">Diagnostic</li>
+                <li onClick="document.querySelector('parkour-diagnostic').start()">Génétique</li>
+                <li onClick="document.querySelector('parkour-diagnostic').start()">Bilan Ethiologique</li>
+                <li onClick="document.querySelector('parkour-diagnostic').start()">MDPH</li>
               </ul>
             </details>
           <% else %>
