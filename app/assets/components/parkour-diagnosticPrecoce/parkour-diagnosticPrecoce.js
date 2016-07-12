@@ -1,5 +1,5 @@
 Polymer({
-    is: "parkour-diagnostiquePrecoce",
+    is: "parkour-diagnosticPrecoce",
     properties: {
         steps: {
             type: Array,
@@ -8,8 +8,8 @@ Polymer({
                     {
                         label: "Inquietudes",
                         name: "Inquietudes",
-                        description: "<div>HAS p70 paragraphe 5.1.1<div></div></div><span><div>5.1.1 Signes d’alerte<br></div><div><span>Ce paragraphe fait état des signes d’alerte que recherchent les médecins de première ligne (médecins généralistes, pédiatres, médecins de PMI...) par l’interrogatoire des parents et l’examen de l’enfant.<br>Dans notre pays, les enfants sont examinés dans le cadre d’examens de santé systématiques pratiqués au cours des deux premières années. Habituellement, ces examens sont effectués par des médecins généralistes, des pédiatres ou des médecins de PMI. Ces professionnels sont donc dans une position stratégique pour le repérage d’enfants à risque et ils doivent être capables de rechercher et d’identifier les signes d’alerte pour prendre en charge et orienter ces enfants de façon appropriée (8).<br>Les inquiétudes des parents évoquant une difficulté de développement de leur enfant (langage et socialisation) doivent être prises en compte car elles sont fortement corrélées à une anomalie effective du développement. Elles doivent donc être un signe d’alerte pour les professionnels de santé et faire rechercher un trouble du développement et/ou un TED (8).<br><br>Dès la première année, on peut mettre en évidence comparativement à des groupes d’enfants au développement typique des différences comportementales dans les groupes d’enfants ayant évolué vers l’autisme. Des résultats d’études prospectives récentes (frères et sœurs puînés d’enfants avec autisme) (222) suggèrent la valeur prédictive dès 12 mois de l’absence ou de la rareté :<br>du sourire social ;<br>du contact par le regard ;<br>de l’orientation à l’appel du prénom.<br>De nouveaux items ont été ajoutés aux examens systématiques de la première année dans la dernière version du carnet de santé (en vigueur depuis le 1er janvier 2006) :<br>à l’examen du 4e mois, les items « vocalise » et « rit aux éclats » ;</span><div></div><i><br></i></div></span><span><div><a rel=\"nofollow\" target=\"_blank\" href=\"https://interact-autism.slack.com/archives/D1E88MUA3/p1465126371000041\"><i>[</i>1:32<i>]</i></a>&nbsp;</div><div><span>à l’examen du 9e mois, les items « pointe du doigt » et « joue à : \“Coucou, le voilà\” ».<br>Autour de 18 mois en moyenne mais parfois avant, certains signes doivent alerter sur un risque d’évolution vers un TED et nécessitent avis et bilans spécialisés, en même temps que démarrent des mesures d’accompagnement de l’enfant et de sa famille (8) :<br>passivité, niveau faible de réactivité/anticipation aux stimuli sociaux ;<br>difficultés dans l’accrochage visuel, difficultés dans l’attention conjointe ;<br>retard de langage, absence de pointage, absence de comportement de désignation des objets à autrui, absence de jeu de « faire semblant ».<br>Chez un enfant de moins de 3 ans, les signes d’alerte d’un risque de TED sont les suivants (8) :<br>communication : perturbations dans le développement du langage, utilisation inappropriée du langage, peu de réponses quand on l’appelle par son prénom, déficits dans la communication non verbale ;<br>socialisation : manque d’imitation, ne montre pas les objets à l’adulte, manque d’intérêt pour les autres enfants ou intérêts inhabituels, difficultés à reconnaître les émotions d’autrui, restriction des jeux imaginatifs en particulier, dans son monde, n’initie pas des jeux simples ou ne participe pas à des jeux sociaux imitatifs, préfère les activités solitaires, relation étrange avec les adultes (indifférence ou familiarité excessive) ; intérêts, activité et autres comportements : hypersensibilité tactile ou auditive, maniérisme moteur, balancements, agressivité, conduites oppositionnelles, résistance aux changements, activités répétitives avec les objets (par exemple pour les aligner ou éteindre/allumer la lumière).<br>Quel que soit l’âge, l’existence d’une régression dans le développement (du langage ou sociocommunicatif en particulier) doit motiver avis et bilans spécialisés (8).<br>Une attention particulière doit être portée aux fratries, en raison :<br>du risque de récurrence d’un TED ;<br>du risque de problèmes de développement ou de problèmes psychopathologiques.<br>Quelques signes ont une valeur « d’alerte absolue » d’un trouble du développement et doivent conduire à demander rapidement un avis et des examens spécialisés. Ces signes sont les suivants (8) :<br>absence de babillage, de pointer ou d’autres gestes sociaux à 12 mois ; absence de mots à 18 mois ;<br>absence d’association de mots (non écholaliques) à 24 mois ;<br>perte de langage ou de compétences sociales quel que soit l’âge.</span></div></span>",
-                        presentation: "TSA - Guide d'appui pour l'élaboration de réponses aux besoins des personnes présentant des troubles du spectre de l'autisme : <br><br>Le médecin de famille doit rester attentif à la détection de tout signe ou symptôme de TSA : <li>en écoutant les parents lorsqu’ils font part de préoccupations concernant&nbsp;le développement de leur enfant (la recherche a démontré la validité des&nbsp;préoccupations des parents);</li><li>si les parents n’expriment pas d’inquiétude, en leur demandant directement&nbsp;s’ils ont des préoccupations au sujet de leur enfant;</li><li>en se renseignant au sujet des antécédents familiaux de TSA ou&nbsp;d’autres difficultés de développement;</li><li>en constatant l’incapacité de l’enfant à atteindre certains stades de développement&nbsp;ou en faisant participer l’enfant à des activités permettant de révéler les difficultés de développement.</li>",
+                        description: "<div><a onClick=\"document.querySelector('parkour-diagnosticPrecoce').putDefinition('HAS');\">HAS</a> p70 paragraphe 5.1.1<div></div></div><span><div>5.1.1 Signes d’alerte<br></div><div><span>Ce paragraphe fait état des signes d’alerte que recherchent les médecins de première ligne (médecins généralistes, pédiatres, médecins de <a onClick=\"document.querySelector('parkour-diagnosticPrecoce').putDefinition('PMI');\">PMI</a>...) par l’interrogatoire des parents et l’examen de l’enfant.<br>Dans notre pays, les enfants sont examinés dans le cadre d’examens de santé systématiques pratiqués au cours des deux premières années. Habituellement, ces examens sont effectués par des médecins généralistes, des pédiatres ou des médecins de <a onClick=\"document.querySelector('parkour-diagnosticPrecoce').putDefinition('PMI');\">PMI</a>. Ces professionnels sont donc dans une position stratégique pour le repérage d’enfants à risque et ils doivent être capables de rechercher et d’identifier les signes d’alerte pour prendre en charge et orienter ces enfants de façon appropriée.<br>Les inquiétudes des parents évoquant une difficulté de développement de leur enfant (langage et socialisation) doivent être prises en compte car elles sont fortement corrélées à une anomalie effective du développement. Elles doivent donc être un signe d’alerte pour les professionnels de santé et faire rechercher un trouble du développement et/ou un <a onClick=\"document.querySelector('parkour-diagnosticPrecoce').putDefinition('TED');\">TED</a>.<br><br>Dès la première année, on peut mettre en évidence comparativement à des groupes d’enfants au développement typique des différences comportementales dans les groupes d’enfants ayant évolué vers l’autisme. Des résultats d’études prospectives récentes (frères et sœurs puînés d’enfants avec autisme) (222) suggèrent la valeur prédictive dès 12 mois de l’absence ou de la rareté :<br>du sourire social ;<br>du contact par le regard ;<br>de l’orientation à l’appel du prénom.<br>De nouveaux items ont été ajoutés aux examens systématiques de la première année dans la dernière version du carnet de santé (en vigueur depuis le 1er janvier 2006) :<br>à l’examen du 4e mois, les items « vocalise » et « rit aux éclats » ;</span><div></div><i><br></i></div></span><span><div><a rel=\"nofollow\" target=\"_blank\" href=\"https://interact-autism.slack.com/archives/D1E88MUA3/p1465126371000041\"><i>[</i>1:32<i>]</i></a>&nbsp;</div><div><span>à l’examen du 9e mois, les items « pointe du doigt » et « joue à : \“Coucou, le voilà\” ».<br>Autour de 18 mois en moyenne mais parfois avant, certains signes doivent alerter sur un risque d’évolution vers un TED et nécessitent avis et bilans spécialisés, en même temps que démarrent des mesures d’accompagnement de l’enfant et de sa famille (8) :<br>passivité, niveau faible de réactivité/anticipation aux stimuli sociaux ;<br>difficultés dans l’accrochage visuel, difficultés dans l’attention conjointe ;<br>retard de langage, absence de pointage, absence de comportement de désignation des objets à autrui, absence de jeu de « faire semblant ».<br>Chez un enfant de moins de 3 ans, les signes d’alerte d’un risque de TED sont les suivants (8) :<br>communication : perturbations dans le développement du langage, utilisation inappropriée du langage, peu de réponses quand on l’appelle par son prénom, déficits dans la communication non verbale ;<br>socialisation : manque d’imitation, ne montre pas les objets à l’adulte, manque d’intérêt pour les autres enfants ou intérêts inhabituels, difficultés à reconnaître les émotions d’autrui, restriction des jeux imaginatifs en particulier, dans son monde, n’initie pas des jeux simples ou ne participe pas à des jeux sociaux imitatifs, préfère les activités solitaires, relation étrange avec les adultes (indifférence ou familiarité excessive) ; intérêts, activité et autres comportements : hypersensibilité tactile ou auditive, maniérisme moteur, balancements, agressivité, conduites oppositionnelles, résistance aux changements, activités répétitives avec les objets (par exemple pour les aligner ou éteindre/allumer la lumière).<br>Quel que soit l’âge, l’existence d’une régression dans le développement (du langage ou sociocommunicatif en particulier) doit motiver avis et bilans spécialisés (8).<br>Une attention particulière doit être portée aux fratries, en raison :<br>du risque de récurrence d’un TED ;<br>du risque de problèmes de développement ou de problèmes psychopathologiques.<br>Quelques signes ont une valeur « d’alerte absolue » d’un trouble du développement et doivent conduire à demander rapidement un avis et des examens spécialisés. Ces signes sont les suivants (8) :<br>absence de babillage, de pointer ou d’autres gestes sociaux à 12 mois ; absence de mots à 18 mois ;<br>absence d’association de mots (non écholaliques) à 24 mois ;<br>perte de langage ou de compétences sociales quel que soit l’âge.</span></div></span>",
+                        presentation: "<a onClick=\"document.querySelector('parkour-diagnosticPrecoce').putDefinition('TSA');\">TSA</a> - Guide d'appui pour l'élaboration de réponses aux besoins des personnes présentant des troubles du spectre de l'autisme : <br><br>Le médecin de famille doit rester attentif à la détection de tout signe ou symptôme de <a onClick=\"document.querySelector('parkour-diagnosticPrecoce').putDefinition('TSA');\">TSA</a> : <li>en écoutant les parents lorsqu’ils font part de préoccupations concernant&nbsp;le développement de leur enfant (la recherche a démontré la validité des&nbsp;préoccupations des parents);</li><li>si les parents n’expriment pas d’inquiétude, en leur demandant directement&nbsp;s’ils ont des préoccupations au sujet de leur enfant;</li><li>en se renseignant au sujet des antécédents familiaux de <a onClick=\"document.querySelector('parkour-diagnosticPrecoce').putDefinition('TSA');\">TSA</a> ou&nbsp;d’autres difficultés de développement;</li><li>en constatant l’incapacité de l’enfant à atteindre certains stades de développement&nbsp;ou en faisant participer l’enfant à des activités permettant de révéler les difficultés de développement.</li>",
                         pos: [2, 5],
                     },
                     {
@@ -20,14 +20,14 @@ Polymer({
                         pos: [5, 5],
                     },
                     {
-                        label: "Consultation",
+                        label: "Pedopsychiatre",
                         name: "Consultation Pedopsychiatre",
                         description: "Receuil d’un certain nombre de données auprès de l’entourage: histoire du développement, description des comportements, aptitudes, particularités, difficultés et observation directe de la personne.<li>Questionnaire et procédure d’observation : Austin Diagnostic Observation Schedule (ADOS) ; Childhood Autisme Ratio Scale (CARS)</li>",
                         presentation: "Pédopsychiatre",
                         pos: [8, 2],
                     },
                     {
-                        label: "Consultation",
+                        label: "Genetique",
                         name: "Consultation Genetique",
                         description: "Le but est d’éclairer utilement les différents acteurs : <li>Famille</li><li>MDPH</li><li>Professionnels de l’intervention</li> Quant aux orientation et choix à prendre. Ces évaluations doivent aboutir à l’identification dans le dossier à présenté à la MDPH des éléments éclairants sur les répercussions dans la vie quotidienne.",
                         presentation: "<li>Evaluation psychologique</li><li>Evaluation orthophonique du langage et de la communication</li><li>Evaluation du développement psychomoteur et sensori-moteur</li>",
@@ -37,49 +37,49 @@ Polymer({
                         label: "Bilan",
                         name: "Bilan Ethiologique",
                         description: "<li>Consultation neuropédiatriques et/ou génétiques</li><li>Bilans neurométaboliques</li><li>EEG avec sieste</li><li>IRM cérébrale</li>… etc",
-                        presentation: "",
+                        presentation: "Bilan Ethiologique",
                         pos: [8, 8],
                     },
                     {
-                        label: "Recour",
-                        name: "Recour Pedopsychiatre",
-                        description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
-                        presentation: "Recour légal possible",
+                        label: "Recours",
+                        name: "recours Pedopsychiatre",
+                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        presentation: "recours légal possible",
                         pos: [2, 14],
                     },
                     {
-                        label: "Consultation",
+                        label: "Psychologue",
                         name: "Psychologue",
-                        description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
-                        presentation: "Bilan diagnostique multi-disciplinaire",
+                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        presentation: "Bilan diagnostic multi-disciplinaire : Psychologue",
                         pos: [12, 3],
                     },
                     {
-                        label: "Consultation",
+                        label: "Orthophoniste",
                         name: "Orthophoniste",
-                        description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
-                        presentation: "Bilan diagnostique multi-disciplinaire",
+                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        presentation: "Bilan diagnostic multi-disciplinaire : Orthophoniste",
                         pos: [12, 6],
                     },
                     {
-                        label: "Consultation",
+                        label: "Psychometricien",
                         name: "Psychométricien",
-                        description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
-                        presentation: "Bilan diagnostique multi-disciplinaire",
+                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        presentation: "Bilan diagnostic multi-disciplinaire : Psychometricien",
                         pos: [12, 9],
                     },
                     {
-                        label: "Consultation",
+                        label: "Neuropediatre",
                         name: "Neuropediatre",
-                        description: "Recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
-                        presentation: "Bilan diagnostique multi-disciplinaire",
+                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        presentation: "Bilan diagnostic multi-disciplinaire : Neuropediatre",
                         pos: [12, 12],
                     },
                     {
-                        label: "Recour",
-                        name: "Recour Medecin",
-                        description: "Recours contre le médecin en se basant sur l’article R. 4127-33 du Code de la sante publique :<br><li>Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés.</li><li>Le défaut de diagnostic, diagnostic erroné et le retard de diagnostic, sont sanctionnés par les tribunaux qui les qualifient comme fautes d’imprudence et de négligence.</li><br>(Crim., 12 sept. 2006 : Bull. 2006 N° 219 p. 772, La semaine juridique, edition generale, 2007-01-17, n° 3, II-10006, p. 31-33, observations Thierry Faict et Patrick Mistretta<br />Retard de diagnostic : Civ. 1ere, 29 nov. 2005, Bulletin 2005 I N° 455 p. 382).<br>La Cour de Cassation a cependant retenu que ce retard de diagnostic doit être la cause directe du dommage, qui peut être même une simple perte de chance (c’est-à-dire la disparition actuelle et certaine d’une éventualité favorable). (Arret n° 112 du 28 janvier 2010 (08-20.755 ; 08- 21.692) - Cour de cassation - Premiere chambre civile).<br><br><table><tbody><tr><td><span>Recommandations pour la pratique professionnelle du diagnostic de l’autisme, HAS, Juin 2005&nbsp; :<br></span><span>«&nbsp;Il est fortement recommandé d’utiliser pour le diagnostic nosologique la terminologie employée par la Classification internationale des maladies (CIM10) pour homogénéiser la formulation des diagnostics donnés aux parents et faciliter les comparaisons en recherche. Quand une autre classification est utilisée en complément (DSM IV…), la correspondance du diagnostic avec la CIM10 doit être indiquée.&nbsp;»<br><br></span>Concernant l’âge «&nbsp;Les troubles sont suffisamment stables à partir de 3 ans pour permettre un diagnostic fiable; pour un fort pourcentage de cas, un diagnostic peut être posé de façon fiable aussi à partir de 2 ans. En dessous de 2 ans, la fiabilité du diagnostic n’est pas établie.&nbsp;»\",</td></tr></tbody></table>",
-                        presentation: "Recour légal contre le professionnel de santée",
+                        label: "Recours",
+                        name: "recours Medecin",
+                        description: "recours contre le médecin en se basant sur l’article R. 4127-33 du Code de la sante publique :<br><li>Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés.</li><li>Le défaut de diagnostic, diagnostic erroné et le retard de diagnostic, sont sanctionnés par les tribunaux qui les qualifient comme fautes d’imprudence et de négligence.</li><br>(Crim., 12 sept. 2006 : Bull. 2006 N° 219 p. 772, La semaine juridique, edition generale, 2007-01-17, n° 3, II-10006, p. 31-33, observations Thierry Faict et Patrick Mistretta<br />Retard de diagnostic : Civ. 1ere, 29 nov. 2005, Bulletin 2005 I N° 455 p. 382).<br>La Cour de Cassation a cependant retenu que ce retard de diagnostic doit être la cause directe du dommage, qui peut être même une simple perte de chance (c’est-à-dire la disparition actuelle et certaine d’une éventualité favorable). (Arret n° 112 du 28 janvier 2010 (08-20.755 ; 08- 21.692) - Cour de cassation - Premiere chambre civile).<br><br><table><tbody><tr><td><span>Recommandations pour la pratique professionnelle du diagnostic de l’autisme, HAS, Juin 2005&nbsp; :<br></span><span>«&nbsp;Il est fortement recommandé d’utiliser pour le diagnostic nosologique la terminologie employée par la Classification internationale des maladies (CIM10) pour homogénéiser la formulation des diagnostics donnés aux parents et faciliter les comparaisons en recherche. Quand une autre classification est utilisée en complément (DSM IV…), la correspondance du diagnostic avec la CIM10 doit être indiquée.&nbsp;»<br><br></span>Concernant l’âge «&nbsp;Les troubles sont suffisamment stables à partir de 3 ans pour permettre un diagnostic fiable; pour un fort pourcentage de cas, un diagnostic peut être posé de façon fiable aussi à partir de 2 ans. En dessous de 2 ans, la fiabilité du diagnostic n’est pas établie.&nbsp;»\",</td></tr></tbody></table>",
+                        presentation: "recours légal contre le professionnel de santée",
                         pos: [7, 14],
                     }
                 ]
@@ -115,19 +115,19 @@ Polymer({
                         "Consultation Pedopsychiatre", "Neuropediatre", 0
                     ],
                     [
-                        "Psychologue", "Recour Medecin", 1
+                        "Psychologue", "recours Medecin", 1
                     ],
                     [
-                        "Orthophoniste", "Recour Medecin", 1
+                        "Orthophoniste", "recours Medecin", 1
                     ],
                     [
-                        "Psychométricien", "Recour Medecin", 1
+                        "Psychométricien", "recours Medecin", 1
                     ],
                     [
-                        "Neuropediatre", "Recour Medecin", 1
+                        "Neuropediatre", "recours Medecin", 1
                     ],
                     [
-                        "Consultation Pedopsychiatre", "Recour Pedopsychiatre", 1
+                        "Consultation Pedopsychiatre", "recours Pedopsychiatre", 1
                     ]
                 ]
             }
@@ -153,6 +153,20 @@ Polymer({
     keychain: [],
     matchChain: [],
 
+    putDefinition: function (def) {
+        var pres = document.getElementById("pres-diag");
+        if (def == 'HAS') {
+            document.getElementById("presentation-paragraph").innerHTML = "Haute Autorité de  Santé : <a href='http://www.has-sante.fr/portail/'>http://www.has-sante.fr/portail/</a>";
+        } else if (def == 'TSA') {
+            document.getElementById("presentation-paragraph").innerHTML = "Trouble du Spectre de l'Autisme";
+        } else if (def == 'TED') {
+            document.getElementById("presentation-paragraph").innerHTML = "Trouble Envahissant du Développement";
+        } else if (def == 'PMI') {
+            document.getElementById("presentation-paragraph").innerHTML = "<h1>Protection Maternelle et Infantile :</h1><h2>Qu’y fait-on ?</h2><h1><p>Dans chaque département, les&nbsp;centres de PMI&nbsp;accueillent, informent et accompagnent les familles au quotidien. Ils assurent :</p><ul><li>des&nbsp;consultations&nbsp;(examens cliniques et vaccinations) ;</li><li>des&nbsp;activités d’éveil&nbsp;>(séances d’accueil-jeu) ;</li><li>un&nbsp;accompagnement de sortie de maternité&nbsp;(conseils, visite à domicile d’une puéricultrice…) ;</li><li>des&nbsp;réunions de parents&nbsp;(futurs parents, allaitement…) ;</li><li>des&nbsp;actions de prévention et de sensibilisation&nbsp;(alimentation, accidents domestiques…) ;</li><li>des&nbspactions de santé en école maternelle&nbsp;;</li><li>le&nbsp;contrôle des assistantes maternelles&nbsp;et des&nbsp;structures de petite enfance.<br></li></ul></h1><h2>Qui y voit-on ?</h2><h1><div><ul><li>Le&nbsp;médecin&nbsp;: suit le développement de l’enfant, s’assure de son état de santé et le vaccine.</li><li>La<strong>&nbsp;puéricultrice&nbsp;</strong>: accompagne les parents dans la découverte des soins du bébé lors des consultations ou à domicile.</li><li>L’<strong>auxiliaire de puériculture&nbsp;</strong>: accueille, informe et oriente les futures mères et jeunes parents.</li><li>L’<strong>éducatrice de jeunes enfants&nbsp;</strong>: assure les séances d’accueil-jeu (activités manuelles, jeux de langage, motricité…).</li><li>La<strong>&nbsp;psychologue&nbsp;</strong>: écoute, soutient et accompagne les parents dans leurs relations avec l’enfant en consultation ou à domicile (troubles du sommeil, pleurs prolongés…).</li><li>La&nbsp;<strong>secrétaire assistante maternelle&nbsp;</strong>: informe les parents et les met en relation avec les assistantes maternelles.</li><li>L’<strong>orthoptiste</strong>&nbsp;: propose un dépistage des troubles visuels dès 9 mois et oriente l’enfant vers un ophtalmologiste si nécessaire.<br></li></ul></div></h1><h2>Où s’adresser ?</h2><h1><div><div><p>Les centres de PMI dépendent des conseils généraux. Pour obtenir les coordonnées du centre le plus proche de chez vous,&nbsp;<strong>contactez le conseil général de votre département ou le service social de votre mairie</strong>.</p></div></div></h1><a href='http://www.lasantedevotreenfant.fr/'>Source</a>";
+        }
+        pres.open();
+    },
+    
     addNode: function(obj, coeff, layer, i) {
         var nodeColor;
         var strokeColor;
@@ -216,7 +230,7 @@ Polymer({
             });
             group.add(valid);
             valid.on('touchstart click', function () {
-               document.querySelector("parkour-diagnostiquePrecoce").changeStatus(obj.name, "Success");
+               document.querySelector("parkour-diagnosticPrecoce").changeStatus(obj.name, "Success");
                layer._getNodeById("success" + String(i)).hide();
                 layer._getNodeById("return" + String(i)).hide();
                 layer._getNodeById("fail" + String(i)).hide();
@@ -236,7 +250,7 @@ Polymer({
             });
             group.add(fail);
             fail.on("touchstart click", function () {
-               document.querySelector("parkour-diagnostiquePrecoce").changeStatus(obj.name, "Failure");
+               document.querySelector("parkour-diagnosticPrecoce").changeStatus(obj.name, "Failure");
                layer._getNodeById("success" + String(i)).hide();
                 layer._getNodeById("return" + String(i)).hide();
                 layer._getNodeById("fail" + String(i)).hide();
@@ -256,7 +270,7 @@ Polymer({
             });
             group.add(reset);
             reset.on("touchstart click", function () {
-               document.querySelector("parkour-diagnostiquePrecoce").changeStatus(obj.name, "Reset");
+               document.querySelector("parkour-diagnosticPrecoce").changeStatus(obj.name, "Reset");
                layer._getNodeById("success" + String(i)).hide();
                 layer._getNodeById("return" + String(i)).hide();
                 layer._getNodeById("fail" + String(i)).hide();
@@ -302,7 +316,7 @@ Polymer({
             this.matchChain[id] = "success";
         } else if (rep == "Failure") {
             this.matchChain[id] = "echec";
-            this.matchChain["Recour " + id] = "en cour";
+            this.matchChain["recours " + id] = "en cour";
         } else if (rep == "Reset") {
             var count = 0;
             var res = false;

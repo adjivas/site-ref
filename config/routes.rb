@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   
   get 'welcome/index'
 
+  get 'histogram/index'
+
+  get 'night/index'
+
   devise_for :users
 
   resources :projects

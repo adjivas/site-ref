@@ -12,6 +12,7 @@
   </head>
   <body>
     <nav>
+      <%= link_to(image_tag("interactblanc"), welcome_index_path) %>
       <% if user_signed_in? %>
         <%= link_to('Se déconnecter', destroy_user_session_path) %>
         <%= link_to(current_user.email, edit_user_path(current_user)) %>
@@ -27,7 +28,8 @@
       </div>
 
       <ul>
-        <li><%= link_to('Document', papers_path) %></li>
+        <li><%= link_to('Historique', histogram_index_path) %></li>
+        <li><%= link_to('Documents', papers_path) %></li>
         <li><%= link_to('Applications', projects_path) %></li>
         <li>
           <% if tree_index_path == request.original_fullpath %>
@@ -38,21 +40,138 @@
                 </a>
               </summary>
               <ul>
+                <!-- Debut Définir l'autisme -->
                 <li>
-                  <details>
-                  <summary>
-                    <a onClick="document.querySelector('ktree-def').start()">
+                  <details class="bggreen" >
+                  <summary style="border: 1px solid #373f52">
+                    <a class="texmtktree" style="color: #373f52;" onClick="document.querySelector('ktree-def').start()">
                       Définir l'autisme
                     </a>
                   </summary>
                     <ul>
-                      <li onClick="document.querySelector('ktree-manif').start()">Les principales manifestations</li>
-                      <li onClick="document.querySelector('ktree-cmtra').start()">Comorbidités et troubles associés</li>
-                      <li onClick="document.querySelector('ktree-etio').start()">Etiologie</li>
+                      <!-- Debut Les principales manifestations -->
+                      <li>
+                        <details class="bggreen" >
+                          <summary style="border: 3px solid #373f52">
+                            <a class="textmktree" style="color: #373f52;" onClick="document.querySelector('ktree-manif').start()">
+                              Les principales manifestations
+                            </a>
+                          </summary>
+                          <ul>
+                            <li class="textmktree" style="color: #373f52; border: 5px solid #373f52" onClick="document.querySelector('ktree-cominter').start()">Communication et interactions sociales</li>
+                            <li class="textmktree" style="color: #373f52; border: 5px solid #373f52" onClick="document.querySelector('ktree-parcom').start()">Les particularités communes aux TSA</li>
+                            <li class="textmktree" style="color: #373f52; border: 5px solid #373f52" onClick="document.querySelector('ktree-evotr').start()">Evolution des troubles</li>
+                          </ul>
+                        </details>
+                      </li>
+                      <!-- Fin Les principales manifestations -->
+                      <!-- Debut Comorbidités et troubles associés -->
+                      <li>
+                        <details class="bggreen" >
+                          <summary style="border: 3px solid #373f52">
+                            <a class="textmktree" style="color: #373f52;" onClick="document.querySelector('ktree-cmtra').start()">
+                              Comorbidités et troubles associés
+                            </a>
+                          </summary>
+                          <ul>
+                            <!-- Debut Comorbidités -->
+                            <li>
+                              <details class="bggreen" >
+                                <summary style="border: 5px solid #373f52">
+                                  <a class="textmktree" style="color: #373f52;" onClick="document.querySelector('ktree-cmb').start()">
+                                    Comorbidités
+                                  </a>
+                                </summary>
+                                <ul>
+                                  <li class="textmktree" style="color: #373f52; border: 7px solid #373f52" onClick="document.querySelector('ktree-autrneuro').start()">Autres troubles neurodeveloppementaux (DSM-5)</li>
+                                  <!-- Debut Troubles neuropsychiatrique -->
+                                  <li>
+                                    <details class="bggreen" >
+                                      <summary style="border: 7px solid #373f52">
+                                        <a class="textmktree" style="color: #373f52;" onClick="document.querySelector('ktree-trpsych').start()">
+                                          Troubles neuropsychiatriques
+                                        </a>
+                                      </summary>
+                                      <ul>
+                                        <li class="textmktree" style="color: #373f52; border: 9px solid #373f52" onClick="document.querySelector('ktree-trpsych').start()">Troubles psychiatriques</li>
+                                      </ul>
+                                    </details>
+                                  </li>
+                                  <!-- Fin Troubles neuropsychiatrique -->
+                                  <!-- Debut Anomalies génétiques et chrosomiques -->
+                                  <li>
+                                    <details class="bggreen" >
+                                      <summary style="border: 7px solid #373f52">
+                                        <a class="textmktree" style="color: #373f52;" onClick="document.querySelector('ktree-cmb').start()">
+                                          Anomalies génétiques et chrosomiques
+                                        </a>
+                                      </summary>
+                                      <ul>
+                                        <li class="textmktree" style="color: #373f52; border: 9px solid #373f52" onClick="document.querySelector('ktree-syngenassoc').start()">Syndromes génétiques associées aux TSA</li>
+                                        <li class="textmktree" style="color: #373f52; border: 9px solid #373f52" onClick="document.querySelector('ktree-cmb').start()">Anomalies chromosomiques mises en évidence chez des enfants avec TSA</li>
+                                        <!-- Debut Maladies métaboliques -->
+                                        <li>
+                                          <details class="bggreen">
+                                            <summary style="border: 9px solid #373f52">
+                                              <a class="textmktree" style="color: #373f52;" onClick="document.querySelector('ktree-metabol').start()">
+                                                Maladies métaboliques
+                                              </a>
+                                            </summary>
+                                            <ul>
+                                              <li class="textmktree" style="color: #373f52; border: 11px solid #373f52" onClick="document.querySelector('ktree-creat').start()">Déficits dans le métabolisme de la créatine</li>
+                                            </ul>
+                                          </details>
+                                        </li>
+                                        <!-- Fin Maladies métaboliques -->
+                                      </ul>
+                                    </details>
+                                  </li>
+                                  <!-- Fin Anomalies génétiques et chrosomiques -->
+                                  <li class="textmktree" style="color: #373f52; border: 7px solid #373f52" onClick="document.querySelector('ktree-senso').start()">Troubles sensoriels : déficiences sensorielles</li>
+                                </ul>
+                              </details>
+                            </li>
+                            <!-- Fin Comorbidités -->
+                          </ul>
+                        </details>
+                      </li>
+                      <!-- Fin Comorbidités et troubles associés -->
+                      <li class="textmktree" style="color: #373f52; border: 3px solid #373f52" onClick="document.querySelector('ktree-etio').start()">Etiologie</li>
+                      <li class="textmktree" style="color: #373f52; border: 3px solid #373f52" onClick="document.querySelector('ktree-clas').start()">Classifications</li>
                     </ul>
                   </details>
                 </li>
-                <li onClick="document.querySelector('ktree-igc').start()">Les interventions globales et coordonnées</li>
+                <!-- Fin Définir l'autisme-->
+                <!-- Debut demarches diagnostiques et outils validés d'évaluation-->
+                <li>
+                  <details class="bgyel" >
+                  <summary>
+                    <a class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-diagval').start()">
+                      Démarche diagnostique et outils validés d’évaluation 
+                    </a>
+                  </summary>
+                    <ul>
+                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-voldemdiag').start()">Les trois volets de la démarche diagnostique</li>
+                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-orgdemdiag').start()">L’organisation de la démarche diagnostique</li>
+                    </ul>
+                  </details>
+                </li>
+                <!-- Fin demarches diagnostiques et outils validés d'évaluation-->
+                <!-- Debut Les Interventions globales et coordonnées-->
+                <li>
+                  <details class="bgblue">
+                  <summary>
+                    <a class="textkmtree" style="color: #373f52" onClick="document.querySelector('ktree-igc').start()">
+                      Les interventions globales et coordonnées
+                    </a>
+                  </summary>
+                    <ul>
+                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-comorbpipgec').start()">Les programmes d’interventions personnalisés, globaux et coordonnés</li>
+                      <li class="textmktree" style="color: #373f52" onClick="document.querySelector('ktree-fonc').start()">Les interventions par domaines fonctionnels</li>
+                    </ul>
+                  </details>
+                </li>
+                <!-- Fin Les Interventions globales et coordonnées-->
               </ul>
             </details>
           <% else %>
@@ -73,7 +192,7 @@
               </ul>
             </details>
           <% else %>
-            <%= link_to('Parcour', journey_index_path) %>
+            <%= link_to('Parcours', journey_index_path) %>
           <% end %>
         </li>
         </li>

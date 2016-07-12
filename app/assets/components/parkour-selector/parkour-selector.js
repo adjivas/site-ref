@@ -6,26 +6,26 @@
                     value: function () {
                         return [
                             {
-                                name: "parkour-diagnostiquePrecoce",
-                                description: "Parcour diagnostique précoce (moins de trois ans)",
-                                presentation: "Parcour diagnostique précoce (enfant de moins de trois ans).",
+                                name: "parkour-diagnosticPrecoce",
+                                description: "Parcour diagnostic précoce (moins de trois ans)",
+                                presentation: "Parcour diagnostic précoce (enfant de moins de trois ans).",
                                 pos: [2, 4],
                             },
                             {
-                                name: "parkour-diagnostique",
-                                description: "Parcour diagnostique standard",
-                                presentation: "Parcour diagnostique standard.",
+                                name: "parkour-diagnostic",
+                                description: "Parcour diagnostic standard",
+                                presentation: "Parcour diagnostic standard.",
                                 pos: [4, 4],
                             },
                             {
-                                name: "Parkour diagnostique2",
-                                description: "Parcour diagnostique2 généraliste",
+                                name: "Parkour diagnostic2",
+                                description: "Parcour diagnostic2 généraliste",
                                 presentation: "",
                                 pos: [6, 4],
                             },
                             {
-                                name: "Parkour diagnostique3",
-                                description: "Parcour diagnostique3 généraliste",
+                                name: "Parkour diagnostic3",
+                                description: "Parcour diagnostic3 généraliste",
                                 presentation: "",
                                 pos: [8, 4],
                             }

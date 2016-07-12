@@ -122,24 +122,24 @@
             },
             width: window.innerWidth / 3,
             height: null,
-            nodeColorNeutral: "#226070",
-            nodeColorSuccess: "#226070",
+            nodeColorNeutral: "#9AEED8",
+            nodeColorSuccess: "#373f52",
             nodeColorFail: "red",
-            strokeColorNeutral: "#5cc666",
+            strokeColorNeutral: "#373f52",
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
+            
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
                 if (obj.enfant != "") {
-                    nodeColor = this.nodeColorSuccess;
+                    nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorNeutral;
                 } else if (obj.enfant == "") {
                     nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorSuccess;
-                } 
+                }
                 var node = new Konva.Circle({
                     x: obj.pos[0] * coeff,
                     y: obj.pos[1] * coeff,
@@ -152,15 +152,15 @@
                 });
                 var box = new Konva.Text({
                     x: node.x() - node.radius(),
-                    y: node.y() - node.strokeWidth(),
+                    y: node.y() - node.strokeWidth() - 6,
                     width: 2 * node.radius(),
                     height: 2 * node.strokeWidth(),
                     text: obj.label,
-                    fontSize: 3 * node.strokeWidth(),
+                    fontSize: 7 * node.strokeWidth(),
                     fontFamily: "Arial",
                     fontStyle: "bold",
                     fontVariant: "small-caps",
-                    fill: "white",
+                    fill: "#373f52",
                     align: "center"
                 });
                 var group = new Konva.Group();
@@ -170,12 +170,12 @@
                 var tmp = 0;
                if (obj.enfant == "") {
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
                         document.getElementById("ktreebouton").innerHTML = " ";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -191,7 +191,7 @@
                             that = document.querySelector('ktree-fonc');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -203,12 +203,12 @@
                         document.querySelector('ktree-selector').showKtree(obj.enfant);
                     });
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + "<p  style=\"color: #00ff97\">" + obj.presentation + "</p><br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
-                        document.getElementById("ktreebouton").innerHTML = "<a><button style=\"width: 100%; height: 40px; background-color: #00ff97; color: #226070; border-radius: 15px\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">En savoir plus</button></a>";
+                        document.getElementById("ktreebouton").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">Aller plus loin</button></a>";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -222,7 +222,7 @@
                             that = document.querySelector('ktree-fonc');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -242,7 +242,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: '#9AEED8',
+                    stroke: '#373f52',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -272,6 +272,7 @@
 
             start: function () {
                 this.drawNodes();
-                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Les interventions par domaines fonctionnels</p><p class=\" summary\"><b style=\"color: white\">II</b>] Domaine de la communication et du language</p><p class=\" summary\"><b style=\"color: white\">III</b>] Domaine des interactions sociales</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Domaine cognitif</p><p class=\" summary\"><b style=\"color: white\">V</b>] Domaine sensoriel et moteur</p><p class=\" summary\"><b style=\"color: white\">VI</b>Domaine des emotions et du comportement</p><p class=\" summary\"><b style=\"color: white\">VII</b>Domaine somatique</p><p class=\" summary\"><b style=\"color: white\">VIII</b>Domaine de l’autonomie dans les activites de la vie quotidienne</p><p class=\" summary\"><b style=\"color: white\">IX</b>Domaine des apprentissages scolaires et préprofessionels</p><p class=\" summary\"><b style=\"color: white\">X</b>Domaine de l’environnement materiel</p>";
+                document.getElementById("ktreebouton2").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('ktree-igc')\">Revenir en arrière</button></a>";
+                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b>] Les interventions par domaines fonctionnels</p><p class=\" summary\"><b class=\"romanumb\">II</b>] Domaine de la communication et du language</p><p class=\" summary\"><b class=\"romanumb\">III</b>] Domaine des interactions sociales</p><p class=\" summary\"><b class=\"romanumb\">IV</b>] Domaine cognitif</p><p class=\" summary\"><b class=\"romanumb\">V</b>] Domaine sensoriel et moteur</p><p class=\" summary\"><b class=\"romanumb\">VI</b>Domaine des emotions et du comportement</p><p class=\" summary\"><b class=\"romanumb\">VII</b>Domaine somatique</p><p class=\" summary\"><b class=\"romanumb\">VIII</b>Domaine de l’autonomie dans les activites de la vie quotidienne</p><p class=\" summary\"><b class=\"romanumb\">IX</b>Domaine des apprentissages scolaires et préprofessionels</p><p class=\" summary\"><b class=\"romanumb\">X</b>Domaine de l’environnement materiel</p>";
             }
  });

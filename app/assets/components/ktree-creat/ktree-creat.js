@@ -8,21 +8,21 @@
                             {
                                 name: 'Déficits dans le métabolisme de la créatine',
                                 presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.45)</small>',
-                                pos: [5, 4],
+                                pos: [5, 2],
                                 label: "I",
                                 enfant: "ktree-metabol",
                             },
                             {
                                 name: "Les déficits en synthèse de la créatine",
                                 presentation: '<p class="textktree">Les déficits en Guanidinoacétate méthyltransférase (GAM) et en arginine glycine amidinotransférase (AGAT) sont responsables de retard de développement psychomoteur, de retard mental, d’épilepsie, de troubles d’acquisition du langage et d’autisme. Une supplémentation orale en <a>créatine</a> améliore l’évolution des enfants. Ces maladies métaboliques ont une hérédité autosomique récessive.</p>',
-                                pos: [3, 3],
+                                pos: [3, 1],
                                 label: "II",
                                 enfant: "",
                             },
                             {
                                 name: "Le déficit en transporteur de la créatinine",
                                 presentation: '<p class="textktree">Le déficit en transporteur de la <a>créatine</a> donne un phénotype neurologique peu spécifique. Le retard est habituellement sévère, l’épilepsie et les signes autistiques sont inconstants. Des signes plus généraux, inconstants, incluent un retard de croissance <a>staturopondéral</a>, une <a>microcéphalie</a>, des troubles du transit intestinal (constipation, vomissements...). Contrairement au déficit de synthèse de la <a>créatine</a>, le déficit en transporteur n’est pas amélioré par une supplémentation orale en créatine et se transmet sur le mode d’une hérédité récessive liée à l’X.</p><p class="textktree">Les déficits dans le métabolisme de la créatine sont repérables lors de la réalisation d’une IRM cérébrale avec séquences spectroscopiques qui montrent une absence du pic de créatine. En cas de suspicion de maladie métabolique, la réalisation de séquences spectroscopiques, lors de l\'examen IRM, est d\'un intérêt majeur.</p>',
-                                pos: [5, 2],
+                                pos: [7, 1],
                                 label: "III",
                                 enfant: "",
                             }
@@ -52,24 +52,24 @@
             },
             width: window.innerWidth / 3,
             height: null,
-            nodeColorNeutral: "#226070",
-            nodeColorSuccess: "#226070",
+            nodeColorNeutral: "#5cc666",
+            nodeColorSuccess: "#373f52",
             nodeColorFail: "red",
-            strokeColorNeutral: "#5cc666",
-            strokeColorSuccess: "#9AEED8",
+            strokeColorNeutral: "#373f52",
+            strokeColorSuccess: "#5cc666",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
+            
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
                 if (obj.enfant != "") {
-                    nodeColor = this.nodeColorSuccess;
+                    nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorNeutral;
                 } else if (obj.enfant == "") {
                     nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorSuccess;
-                } 
+                }
                 var node = new Konva.Circle({
                     x: obj.pos[0] * coeff,
                     y: obj.pos[1] * coeff,
@@ -82,15 +82,15 @@
                 });
                 var box = new Konva.Text({
                     x: node.x() - node.radius(),
-                    y: node.y() - node.strokeWidth(),
+                    y: node.y() - node.strokeWidth() - 6,
                     width: 2 * node.radius(),
                     height: 2 * node.strokeWidth(),
                     text: obj.label,
-                    fontSize: 3 * node.strokeWidth(),
+                    fontSize: 7 * node.strokeWidth(),
                     fontFamily: "Arial",
                     fontStyle: "bold",
                     fontVariant: "small-caps",
-                    fill: "white",
+                    fill: "#373f52",
                     align: "center"
                 });
                 var group = new Konva.Group();
@@ -100,12 +100,12 @@
                 var tmp = 0;
                if (obj.enfant == "") {
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
                         document.getElementById("ktreebouton").innerHTML = " ";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -121,7 +121,7 @@
                             that = document.querySelector('ktree-creat');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -133,12 +133,12 @@
                         document.querySelector('ktree-selector').showKtree(obj.enfant);
                     });
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + "<p  style=\"color: #00ff97\">" + obj.presentation + "</p><br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
-                        document.getElementById("ktreebouton").innerHTML = "<a><button style=\"width: 100%; height: 40px; background-color: #00ff97; color: #226070; border-radius: 15px\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">En savoir plus</button></a>";
+                        document.getElementById("ktreebouton").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">Aller plus loin</button></a>";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -152,7 +152,7 @@
                             that = document.querySelector('ktree-creat');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -172,7 +172,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: '#9AEED8',
+                    stroke: '#373f52',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -201,7 +201,10 @@
             },
 
             start: function () {
+                var fond = document.getElementById('menuktree');
+                fond.style.backgroundColor = '#5cc666';
                 this.drawNodes();
-                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Comorbidités</p><p class=\" summary\"><b style=\"color: white\">II</b>] Autres troubles neurodeveloppementaux (DSM-5)</p><p class=\" summary\"><b style=\"color: white\">III</b>] Troubles neuropsychiatriques</p><p class=\" summary\"><b style=\"color: white\">IV</b>] Anomalies génétiques et chrosomiques</p>";
+                document.getElementById("ktreebouton2").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('ktree-metabol')\">Revenir en arrière</button></a>";
+                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b>] Comorbidités</p><p class=\" summary\"><b class=\"romanumb\">II</b>] Autres troubles neurodeveloppementaux (DSM-5)</p><p class=\" summary\"><b class=\"romanumb\">III</b>] Troubles neuropsychiatriques</p><p class=\" summary\"><b class=\"romanumb\">IV</b>] Anomalies génétiques et chrosomiques</p>";
             }
  });

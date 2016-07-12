@@ -6,7 +6,7 @@
                     value: function () {
                         return [
                             {
-                                name: "Anomalies chromosomiques mises en évidence chez des enfants avec TSA",
+                                name: 'Anomalies chromosomiques mises en évidence chez des enfants avec TSA',
                                 presentation: '',
                                 pos: [5, 4],
                                 label: "I",
@@ -27,42 +27,35 @@
                                 enfant: "",
                             },
                             {
-                                name: "Syndrome de Williams-Beuren",
+                                name: 'Syndrome de Williams-Beuren',
                                 presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D\’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
                                 pos: [7, 5],
                                 label: "IV",
                                 enfant: "",
                             },
                             {
-                                name: "Syndrome 47 XXY",
+                                name: 'Syndrome 47 XXY',
                                 presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D\’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
                                 pos: [7, 5],
                                 label: "V",
                                 enfant: "",
                             },
                             {
-                                name: "Microdélétions ou microduplications récurrentes récemment identifiées",
+                                name: 'Microdélétions ou microduplications récurrentes récemment identifiées',
                                 presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
                                 pos: [7, 5],
                                 label: "VI",
                                 enfant: "",
                             },
                             {
-                                name: "Anomalies géniques mises en évidence chez des enfants avec TSA",
-                                presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
-                                pos: [7, 5],
-                                label: "VII",
-                                enfant: "",
-                            },
-                            {
-                                name: "Neuroligines 3 et 4 (Chromosome X)",
+                                name: 'Neuroligines 3 et 4 (Chromosome X)',
                                 presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
                                 pos: [7, 5],
                                 label: "VIII",
                                 enfant: "",
                             },
                             {
-                                name: "Shank 3 (22q13.3)",
+                                name: 'Shank 3 (22q13.3)',
                                 presentation: '<small class="subtitle" style="color: red">(HAS,Paragraphe 3.4.4, p.46)</small><p class="textktree">D’autres anomalies métaboliques (AR) peuvent comporter un autisme: déficit en adénylosuccinase, déficit en biotinidase, déficit en succinyl semialdéhyde déshydrogénase. </p>',
                                 pos: [7, 5],
                                 label: "IX",
@@ -92,9 +85,6 @@
                                 "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Microdélétions ou microduplications récurrentes récemment identifées', 0
                             ],
                             [
-                                "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Anomalies géniques mises en évidence chez des enfants avec TSA', 0
-                            ],
-                            [
                                 "Anomalies chromosomiques mises en évidence chez des enfants avec TSA", 'Neuroligines 3 et 4 (Chromosome X)', 0
                             ],
                             [
@@ -113,11 +103,11 @@
             },
             width: window.innerWidth / 3,
             height: null,
-            nodeColorNeutral: "#226070",
+            nodeColorNeutral: "#5cc666",
             nodeColorSuccess: "#226070",
             nodeColorFail: "red",
             strokeColorNeutral: "#5cc666",
-            strokeColorSuccess: "#9AEED8",
+            strokeColorSuccess: "#5cc666",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
             
@@ -196,7 +186,7 @@
                     group.on('click', function () {
                         document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + "<p  style=\"color: #00ff97\">" + obj.presentation + "</p><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
-                        document.getElementById("ktreebouton").innerHTML = "<a><button style=\"width: 100%; height: 40px; background-color: #00ff97; color: #226070; border-radius: 15px\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">En savoir plus</button></a>";
+                        document.getElementById("ktreebouton").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">Aller plus loin</button></a>";
                     });
                     group.on('mouseover', function () {
                         document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
@@ -262,7 +252,10 @@
             },
 
             start: function () {
+                var fond = document.getElementById('menuktree');
+                fond.style.backgroundColor = '#5cc666';
                 this.drawNodes();
-                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Anomalies génétiques et chrosomiques</p><p class=\" summary\"><b style=\"color: white\">II</b>] Syndromes génétiques associées aux TSA (DSM-5)</p><p class=\" summary\"><b style=\"color: white\">III</b>] Anomalies chromosomiques mises en évidence chez des enfants avec TSA</p><p class=\" summary\"><b style=\"color: white\">IV</b>]Autres maladies Métaboliquess</p>";
+                document.getElementById("ktreebouton2").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('ktree-anogchro')\">Revenir en arrière</button></a>";
+                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b>] Anomalies génétiques et chrosomiques</p><p class=\" summary\"><b class=\"romanumb\">II</b>] Syndromes génétiques associées aux TSA (DSM-5)</p><p class=\" summary\"><b class=\"romanumb\">III</b>] Anomalies chromosomiques mises en évidence chez des enfants avec TSA</p><p class=\" summary\"><b class=\"romanumb\">IV</b>]Autres maladies Métaboliquess</p>";
             }
  });

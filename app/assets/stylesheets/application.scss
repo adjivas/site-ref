@@ -58,6 +58,7 @@ body {
     align-items: flex-start;
     justify-content: flex-start;
     height: 100%;
+    width: 14vw;
     padding: 3vw;
     padding-top: 5em;
     font-size: $nav-sfont;
@@ -65,15 +66,16 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     background-color: $nav-bcolor;
-    background-image: $nav-bg;
-    background-repeat: no-repeat;
-    background-size: 10em;
-    background-position: 3vw 2em;
+    img {
+      background-repeat: no-repeat;
+      width: 100%;
+    }
     input {
       color: rgb(255, 255, 255);
     }
     a {
       color: rgb(213, 218, 230);
+      z-index: 1;
       &:active, &:hover, &:focus {
         color: rgb(255, 255, 255);
       }
@@ -102,18 +104,20 @@ body {
         display: flex;
         background: none;
         margin-top: 1em;
-        height: 100%;
         border: none;
         border-bottom: 1px solid #959595;
       }
     }
     ul {
       list-style-type: none;
+      z-index: 1;
       li {
         border: 3px solid transparent;
         padding-left: 10px;
         &:hover {
-          border-left: 3px solid #9768d1;
+          border-left-width: 3px;
+          border-left-style: solid;
+          border-left-color: #9768d1;
         }
       }
       
@@ -149,7 +153,8 @@ body {
     }
     &[class="ghost"] {
       position: absolute;
-      input[type="submit"] {
+      display: block;
+      input[value="☰"] {
         position: absolute;
         color: black;
         left: 0px;

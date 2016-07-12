@@ -1,5 +1,5 @@
         Polymer({
-            is: "parkour-diagnostique",
+            is: "parkour-diagnostic",
             properties: {
                 steps: {
                     type: Array,
@@ -20,7 +20,7 @@
                                 pos: [4, 2],
                             },
                             {
-                                label: "Diagnostique",
+                                label: "diagnostic",
                                 name: "Diagnostic",
                                 description: "",
                                 presentation: "",
@@ -187,7 +187,7 @@
             });
             group.add(valid);
             valid.on('touchstart click', function () {
-               document.querySelector("parkour-diagnostique").changeStatus(obj.name, "Success");
+               document.querySelector("parkour-diagnostic").changeStatus(obj.name, "Success");
                layer._getNodeById("success" + String(i)).hide();
                 layer._getNodeById("return" + String(i)).hide();
                 layer._getNodeById("fail" + String(i)).hide();
@@ -215,7 +215,7 @@
             });
             group.add(fail);
             fail.on("touchstart click", function () {
-               document.querySelector("parkour-diagnostique").changeStatus(obj.name, "Failure");
+               document.querySelector("parkour-diagnostic").changeStatus(obj.name, "Failure");
                layer._getNodeById("success" + String(i)).hide();
                 layer._getNodeById("return" + String(i)).hide();
                 layer._getNodeById("fail" + String(i)).hide();
@@ -243,7 +243,7 @@
             });
             group.add(reset);
             reset.on("touchstart click", function () {
-               document.querySelector("parkour-diagnostique").changeStatus(obj.name, "Reset");
+               document.querySelector("parkour-diagnostic").changeStatus(obj.name, "Reset");
                layer._getNodeById("success" + String(i)).hide();
                 layer._getNodeById("return" + String(i)).hide();
                 layer._getNodeById("fail" + String(i)).hide();

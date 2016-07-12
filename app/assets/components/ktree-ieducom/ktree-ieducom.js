@@ -14,7 +14,7 @@
                             },
                             {
                                 name: "ABA",
-                                presentation: '<div class="panel-body"><div class="tim-title"><h3>Définir l\'ABA</h3><p>Voici la définition proposée par le site "ABA : principes et application" : <a class="btn btn-click btn-lg btn-info btn-success" href="http://www.aba-sd.info" onclick="window.open(this.href); return false;" role="button">site d\'Olivier Bourgueil</a></p></div><div id="acordeon"><div class="panel-group" id="accordion"><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse1">De façon simple</a></h4></div><div id="collapse1" class="panel-collapse collapse"><div class="panel-body"><p>L\'ABA c\'est l\'application de principes et lois scientifiques afin de <b>créer ou modifier</b> des comportements qui revêtent une importance sociale pour la personne et la société.</p><p>L\'ABA ne s\'applique pas qu\'à l\'autisme ! Il existe des professionnels spécialisés en ABA (mais encore très peu en France) qui aident des patients atteints de nombreuses pathologies (ex : addictions - TOC - dépression - schizophrénie etc.) ou des professionnels qui ne s\'occupent pas directement de "pathologies" mais qui fournissent des aides pour la vie quotidienne (ex : gestion des comportements alimentaires - thérapies de couples ou familiales etc.). </p><p>L\'ABA n\'est pas non plus une "méthode" miracle ou innovante, ce n\'est d\'ailleurs pas du tout une "méthode" : c\'est plutôt un cadre théorique et pratique qui oriente les professionnels dans leurs actions afin d\'aider les patients. L\'ABA existe depuis de nombreuses années mais ce n\'est que récemment que les médias ont découvert son existence. </p><p>Les lettres A.B.A viennent de l\'anglais "Applied Behavior Analysis", ce qui se traduit en français par différents termes : Analyse appliquée du comportement, Analyse comportementale appliquée, analyse du comportement appliquée etc.</p></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse2">Définition plus complexe</a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body"><p>Une bonne définition de l\'ABA, mais un peu plus compliquée, est celle de Baer, Wolf et Risley (1968) :</p> <p>"l\'ABA est le processus d\'application des principes du comportement à l\'amélioration de comportements spécifiques et consiste simultanément à évaluer si les changements observés sont attribuables au processus d\'application, et si oui, à quelle partie de ce processus." </p></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse3">Un peu d\'histoire</a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body"><p>L\'analyse du comportement est la science qui étudie les comportements des organismes. Cette science est née au début du 20ème siècle et on considère que c\'est John B. Watson qui a initié le changement de cap de la psychologie de l\'époque, qui s\'occupait alors quasiment exclusivement des "états de conscience", des "images mentales" et autres processus mentaux.</p><p>Selon Watson (1913) : "Les objectifs [de la psychologie] sont la prédiction et le contrôle du comportement". Ici, Watson place bien la psychologie comme une science, qui doit être capable de donner des prédictions quant à l\'apparition ou pas de certains phénomènes (ici des comportements) et qui de plus doit être capable de les contrôler.</p><p>Une des branches de l\'analyse du comportement est l\'analyse expérimentale du comportement qui, pour simplifier, consiste en la recherche et la mise en évidence, en laboratoire des principes guidant l\'apparition des comportements des organismes.</p></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse4">Donc en fin de compte</a></h4></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body"><p>L\'analyse du comportement appliquée est la branche de l\'analyse du comportement qui se préoccupe de la façon d\'utiliser (d\'appliquer) auprès de sujets humains les résultats obtenus en laboratoire, afin de comprendre et de modifier les comportements humains qui revêtent une importance sociale.</p></div></div></div></div></div></br><span class="label label-info">En savoir plus :</span><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/outils-devaluation" onclick="window.open(this.href); return false;" role="button">Les outils d\'évaluation</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/pratiques-guidees-par-laba" onclick="window.open(this.href); return false;" role="button">Modèles d\'intervention</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/communication" onclick="window.open(this.href); return false;" role="button">Communication</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/comprehension-de-lenvironnement" onclick="window.open(this.href); return false;" role="button">Compréhension de l\'environnement</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/comportements-repetitifs" onclick="window.open(this.href); return false;" role="button">Comportements répétitifs</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/comportements-sociaux" onclick="window.open(this.href); return false;" role="button">Comportements sociaux</a></div>',
+                                presentation: '<div class="panel-body"><div class="tim-title"><h3>Définir l\'ABA</h3><p>Voici la définition proposée par le site "ABA : principes et application" : <a class="btn btn-click btn-lg btn-info" href="http://www.aba-sd.info" onclick="window.open(this.href); return false;" role="button">site d\'Olivier Bourgueil</a></p></div><div id="acordeon"><div class="panel-group" id="accordion"><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse1">De façon simple</a></h4></div><div id="collapse1" class="panel-collapse collapse"><div class="panel-body"><p>L\'ABA c\'est l\'application de principes et lois scientifiques afin de <b>créer ou modifier</b> des comportements qui revêtent une importance sociale pour la personne et la société.</p><p>L\'ABA ne s\'applique pas qu\'à l\'autisme ! Il existe des professionnels spécialisés en ABA (mais encore très peu en France) qui aident des patients atteints de nombreuses pathologies (ex : addictions - TOC - dépression - schizophrénie etc.) ou des professionnels qui ne s\'occupent pas directement de "pathologies" mais qui fournissent des aides pour la vie quotidienne (ex : gestion des comportements alimentaires - thérapies de couples ou familiales etc.). </p><p>L\'ABA n\'est pas non plus une "méthode" miracle ou innovante, ce n\'est d\'ailleurs pas du tout une "méthode" : c\'est plutôt un cadre théorique et pratique qui oriente les professionnels dans leurs actions afin d\'aider les patients. L\'ABA existe depuis de nombreuses années mais ce n\'est que récemment que les médias ont découvert son existence. </p><p>Les lettres A.B.A viennent de l\'anglais "Applied Behavior Analysis", ce qui se traduit en français par différents termes : Analyse appliquée du comportement, Analyse comportementale appliquée, analyse du comportement appliquée etc.</p></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse2">Définition plus complexe</a></h4></div><div id="collapse2" class="panel-collapse collapse"><div class="panel-body"><p>Une bonne définition de l\'ABA, mais un peu plus compliquée, est celle de Baer, Wolf et Risley (1968) :</p> <p>"l\'ABA est le processus d\'application des principes du comportement à l\'amélioration de comportements spécifiques et consiste simultanément à évaluer si les changements observés sont attribuables au processus d\'application, et si oui, à quelle partie de ce processus." </p></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse3">Un peu d\'histoire</a></h4></div><div id="collapse3" class="panel-collapse collapse"><div class="panel-body"><p>L\'analyse du comportement est la science qui étudie les comportements des organismes. Cette science est née au début du 20ème siècle et on considère que c\'est John B. Watson qui a initié le changement de cap de la psychologie de l\'époque, qui s\'occupait alors quasiment exclusivement des "états de conscience", des "images mentales" et autres processus mentaux.</p><p>Selon Watson (1913) : "Les objectifs [de la psychologie] sont la prédiction et le contrôle du comportement". Ici, Watson place bien la psychologie comme une science, qui doit être capable de donner des prédictions quant à l\'apparition ou pas de certains phénomènes (ici des comportements) et qui de plus doit être capable de les contrôler.</p><p>Une des branches de l\'analyse du comportement est l\'analyse expérimentale du comportement qui, pour simplifier, consiste en la recherche et la mise en évidence, en laboratoire des principes guidant l\'apparition des comportements des organismes.</p></div></div></div><div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title"><a data-toggle="collapse" href="#collapse4">Donc en fin de compte</a></h4></div><div id="collapse4" class="panel-collapse collapse"><div class="panel-body"><p>L\'analyse du comportement appliquée est la branche de l\'analyse du comportement qui se préoccupe de la façon d\'utiliser (d\'appliquer) auprès de sujets humains les résultats obtenus en laboratoire, afin de comprendre et de modifier les comportements humains qui revêtent une importance sociale.</p></div></div></div></div></div></br><span class="label label-info">En savoir plus :</span><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/outils-devaluation" onclick="window.open(this.href); return false;" role="button">Les outils d\'évaluation</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/pratiques-guidees-par-laba" onclick="window.open(this.href); return false;" role="button">Modèles d\'intervention</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/communication" onclick="window.open(this.href); return false;" role="button">Communication</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/comprehension-de-lenvironnement" onclick="window.open(this.href); return false;" role="button">Compréhension de l\'environnement</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/comportements-repetitifs" onclick="window.open(this.href); return false;" role="button">Comportements répétitifs</a><a class="btn btn-block btn-click btn-success" href="http:\/\/www.aba-sd.info/aba-autisme/comportements-sociaux" onclick="window.open(this.href); return false;" role="button">Comportements sociaux</a></div>',
                                 pos: [1, 3.5],
                                 label: "II",
                                 enfant: "",
@@ -72,24 +72,24 @@
             },
             width: window.innerWidth / 3,
             height: null,
-            nodeColorNeutral: "#226070",
-            nodeColorSuccess: "#226070",
+            nodeColorNeutral: "#9AEED8",
+            nodeColorSuccess: "#373f52",
             nodeColorFail: "red",
-            strokeColorNeutral: "#5cc666",
+            strokeColorNeutral: "#373f52",
             strokeColorSuccess: "#9AEED8",
             strokeColorFail: "red",
             strokeColorCurrent: "#00babc",
-
+            
             addNode: function(obj, coeff, layer, i) {
                 var nodeColor;
                 var strokeColor;
                 if (obj.enfant != "") {
-                    nodeColor = this.nodeColorSuccess;
+                    nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorNeutral;
                 } else if (obj.enfant == "") {
                     nodeColor = this.nodeColorNeutral;
                     strokeColor = this.strokeColorSuccess;
-                } 
+                }
                 var node = new Konva.Circle({
                     x: obj.pos[0] * coeff,
                     y: obj.pos[1] * coeff,
@@ -102,15 +102,15 @@
                 });
                 var box = new Konva.Text({
                     x: node.x() - node.radius(),
-                    y: node.y() - node.strokeWidth(),
+                    y: node.y() - node.strokeWidth() - 6,
                     width: 2 * node.radius(),
                     height: 2 * node.strokeWidth(),
                     text: obj.label,
-                    fontSize: 3 * node.strokeWidth(),
+                    fontSize: 7 * node.strokeWidth(),
                     fontFamily: "Arial",
                     fontStyle: "bold",
                     fontVariant: "small-caps",
-                    fill: "white",
+                    fill: "#373f52",
                     align: "center"
                 });
                 var group = new Konva.Group();
@@ -120,12 +120,12 @@
                 var tmp = 0;
                if (obj.enfant == "") {
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
                         document.getElementById("ktreebouton").innerHTML = " ";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -141,7 +141,7 @@
                             that = document.querySelector('ktree-ieducom');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -153,12 +153,12 @@
                         document.querySelector('ktree-selector').showKtree(obj.enfant);
                     });
                     group.on('click', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + "<p  style=\"color: #00ff97\">" + obj.presentation + "</p><br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         document.getElementById('ktreetext').setAttribute("title", obj.name);
-                        document.getElementById("ktreebouton").innerHTML = "<a><button style=\"width: 100%; height: 40px; background-color: #00ff97; color: #226070; border-radius: 15px\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">En savoir plus</button></a>";
+                        document.getElementById("ktreebouton").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('" + obj.enfant + "')\">Aller plus loin</button></a>";
                     });
                     group.on('mouseover', function () {
-                        document.getElementById("ktreetext").innerHTML = "<h2 style=\"color: #00ff97\">" + obj.name + ": </h2>" + obj.presentation + "<br/>";
+                        document.getElementById("ktreetext").innerHTML = "<h2 class=\"textktree padktree\">" + obj.name + ": </h2><div class=\"padktree\">" + obj.presentation + "</div><br/>";
                         this.opacity(0.5);
                         document.body.style.cursor = 'pointer';
                         layer.draw();
@@ -172,7 +172,7 @@
                             that = document.querySelector('ktree-ieducom');
                             for (i = 0; i < that.steps.length - 1; i++) {
                                 if (that.steps[i].name == title) {
-                                    document.getElementById('ktreetext').innerHTML = "<h2 style=\"color: #00ff97\">" + that.steps[i].name + ": </h2>" + that.steps[i].presentation + "<br/>";
+                                    document.getElementById('ktreetext').innerHTML = "<h2 class=\"textktree padktree\">" + that.steps[i].name + ": </h2><div class=\"padktree\">" + that.steps[i].presentation + "</div><br/>";
                                 }
                             }
                         }
@@ -192,7 +192,7 @@
                 y2 = Math.abs(node2.y() + ((node1.radius() + node1.strokeWidth() / 2) * ((node1.y() - node2.y()) / h)));
                 var line = new Konva.Line({
                     points: [x1, y1, x2, y2],
-                    stroke: '#9AEED8',
+                    stroke: '#373f52',
                     strokeWidth: coeff / 12,
                 });
                 layer.add(line);
@@ -222,6 +222,7 @@
 
             start: function () {
                 this.drawNodes();
-                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b style=\"color: white\">I</b>] Les interventions de nature éducative, comportementale et développementales</p><p class=\" summary\"><b style=\"color: white\">II</b>] ABA</p><p class=\" summary\"><b style=\"color: white\">III</b>] ESDM</p><p class=\" summary\"><b style=\"color: white\">IV</b>] TEACCH</p><p class=\" summary\"><b style=\"color: white\">V</b>] Prise en charge intégrative</p>";
+                document.getElementById("ktreebouton2").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('ktree-comorbpipgec')\">Revenir en arrière</button></a>";
+                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b>] Les interventions de nature éducative, comportementale et développementales</p><p class=\" summary\"><b class=\"romanumb\">II</b>] ABA</p><p class=\" summary\"><b class=\"romanumb\">III</b>] ESDM</p><p class=\" summary\"><b class=\"romanumb\">IV</b>] TEACCH</p><p class=\" summary\"><b class=\"romanumb\">V</b>] Prise en charge intégrative</p>";
             }
  });

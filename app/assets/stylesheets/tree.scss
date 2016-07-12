@@ -2,27 +2,91 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#retourKtree {
+  padding-top: 25%;
+  border-left: none;
+  border-top: 3px solid #373f52;
+  border-bottom: 3px solid #373f52;
+  border-right: 3px solid #373f52;
+  border-radius: 25px;
+  margin-left: -5px;
+  color: #373f52;
+  background-color: white;
+}
+#boutonactive {
+  padding-top: 25%;
+  border-left: none;
+  border-top: 3px solid #373f52;
+  border-bottom: 3px solid #373f52;
+  border-right: 3px solid #373f52;
+  border-radius: 25px;
+  margin-left: -5px;
+  color: #373f52;
+  background-color: white;
+
+}
 #ktreebouton {
-  display: none;
+  padding-top: 30%;
+  border: none;
+  background-color: white;
 }
 
+#ktreebouton2 {
+  padding-top: 30%;
+  border: none;
+  background-color: white;
+}
 #ktree {
   padding: 0em;
 }
 #menuktree {
-
   background-color: #9AEED8;
 }
-#ktreetext {
-  
+html .btn-info {
+  background-color: #373f52;
 }
-
+html .label-info {
+  background-color: #373f52;
+}
+html .btn-success {
+  background-color: #9AEED8;
+  color: #373f52;
+}
+.subktree {
+  font-size: 120%;
+  color: #5cc666;
+}
+.bgblue {
+  background-color: #9AEED8;
+}
+.bgpurp {
+  background-color: #BBB3E6;
+}
+.bgyel {
+  background-color: #d8e6ad;
+}
+.bggreen {
+  background-color: #5cc666;
+}
+.tgreen {
+  color: #5cc666;
+}
+.tyel {
+  color: #d8e6ad;
+}
+.tblue {
+  color: #9AEED8;
+}
 .padktree {
   padding: 15px; 
 }
 .textktree {
   color: #373f52;
   letter-spacing: 1.2px;
+}
+html summary a.textmktree {
+  color: #373f52;
+
 }
 .romanumb {
   font-size: 2em;

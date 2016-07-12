@@ -1,0 +1,2 @@
+class HistogramController < ApplicationController
+end
