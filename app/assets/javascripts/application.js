@@ -68,16 +68,18 @@ function event_search () {
   );
   document.querySelectorAll("article tbody tr, article li").forEach(
     function (node) {
-      if (node.textContent.search(word) > -1) {
+      if (node.textContent.toLowerCase()
+                          .search(word.toLowerCase()) > -1) {
         node.removeAttribute("class");
         node.querySelectorAll("article td, article li").forEach(
           function (node) {
-            if (node.textContent.search(word) > -1) {
+            if (node.textContent.toLowerCase()
+                                .search(word.toLowerCase()) > -1) {
               node.innerHTML = node.innerHTML.replace(
-                node.textContent,
+                node.textContent.toLowerCase(),
                 node.textContent.replace(
-                  new RegExp(word, 'g'),
-                  "<span>".concat(word, "</span>")
+                  new RegExp(word.toLowerCase(), 'g'),
+                  "<span>".concat(word.toLowerCase(), "</span>")
                 )
               );
             }

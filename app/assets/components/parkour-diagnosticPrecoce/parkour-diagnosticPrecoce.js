@@ -15,7 +15,7 @@ Polymer({
                     {
                         label: "Dépistage",
                         name: "Dépistage",
-                        description: "Il existe certains tests de dépistage standardisés pour évaluer le risque de TSA :<ul>le Checklist for Autism in Toddlers (CHAT – Baron-Cohen et coll., 1996) intègre des observations comportementales directes ; il peut également être utilisé par des médecins ne possédant pas de formation spécifique sur les TSA ;</ul><li>le Modifi ed Cheklist for Autism in Toddlers (M-CHAT – Robins, Fein, Barton and Green, 2001) est un court questionnaire qui peut être donné aux parents d’enfants âgés de seize à trente mois et renseigné dans la salle d’attente.</li><li>Si les résultats du dépistage sont positifs, cela ne signifi e pas que l’enfant est susceptible de présenter un diagnostic de TSA. Il est alors recommandé d’orienter l’enfant vers une équipe de diagnostic pluridisciplinaire pour une évaluation complète des différents domaines de fonctionnement de l’enfant et pour écarter d’autres troubles de la communication.</li><ul>Enfin, dans le cadre des missions qui leur sont confi ées, les centres de protection maternelle et infantile (PMI) peuvent également jouer un rôle dans le repérage précoce des TSA lors des consultations infantiles. Ils peuvent faire le lien entre l’équipe de soins de l’enfant et l’équipe scolaire qui va l’accueillir. Ils ont également un rôle d’accompagnement des familles confrontées à cette pathologie. Étant donné le manque de spécifi cité des signes d’appel chez l’adulte28, il est important, devant des diffi cultés persistantes de communication et d’adaptation sociale de la personne à son environnement, de penser aussi à un TSA. Les signes d’appel impliquent pour les médecins de rechercher leur survenue précoce et de les replacer dans l’histoire des personnes. Il est souhaitable d’impliquer également les équipes des structures médico-sociales dans le repérage des TSA et, plus largement, les professionnels travaillant au quotidien avec les adultes.</ul>",
+                        description: "Il existe certains tests de dépistage standardisés pour évaluer le risque de TSA :<ul></ul><li>le Modified Cheklist for Autism in Toddlers (M-CHAT – Robins, Fein, Barton and Green, 2001) est un court questionnaire qui peut être donné aux parents d’enfants âgés de seize à trente mois et renseigné dans la salle d’attente.</li><li>Si les résultats du dépistage sont positifs, cela ne signifi e pas que l’enfant est susceptible de présenter un diagnostic de TSA. Il est alors recommandé d’orienter l’enfant vers une équipe de diagnostic pluridisciplinaire pour une évaluation complète des différents domaines de fonctionnement de l’enfant et pour écarter d’autres troubles de la communication.</li><ul>Enfin, dans le cadre des missions qui leur sont confi ées, les centres de protection maternelle et infantile (PMI) peuvent également jouer un rôle dans le repérage précoce des TSA lors des consultations infantiles. Ils peuvent faire le lien entre l’équipe de soins de l’enfant et l’équipe scolaire qui va l’accueillir. Ils ont également un rôle d’accompagnement des familles confrontées à cette pathologie. Étant donné le manque de spécifi cité des signes d’appel chez l’adulte28, il est important, devant des diffi cultés persistantes de communication et d’adaptation sociale de la personne à son environnement, de penser aussi à un TSA. Les signes d’appel impliquent pour les médecins de rechercher leur survenue précoce et de les replacer dans l’histoire des personnes. Il est souhaitable d’impliquer également les équipes des structures médico-sociales dans le repérage des TSA et, plus largement, les professionnels travaillant au quotidien avec les adultes.</ul>",
                         presentation: "Depistage systematique des TSA chez l'enfant de moins de 3 ans",
                         pos: [5, 5],
                     },
@@ -42,36 +42,36 @@ Polymer({
                     },
                     {
                         label: "Recours",
-                        name: "recours Pedopsychiatre",
-                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        name: "recours legal",
+                        description: "Le tribunal administratif de Paris a condamné l’Etat français (le 15 juillet 2015) à verser plus de 240 000 euros de dommages au profit de sept familles d’enfants autistes, reconnaissant notamment pour la première fois le \"préjudice moral\" vécu par les famille du à certaines carences de prise en charge. Le tribunal reconnait notamment que la carence de structure adaptée en France entraine \"l'exil\" de milliers d'enfants en Belgique, provoquant ainsi une séparation avec sa famille. Le tribunal s'est basé sur cette séparation pour caractérisé le préjudice moral.",
                         presentation: "recours légal possible",
                         pos: [2, 14],
                     },
                     {
                         label: "Psychologue",
                         name: "Psychologue",
-                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        description: "Interactions sociales.",
                         presentation: "Bilan diagnostic multi-disciplinaire : Psychologue",
                         pos: [12, 3],
                     },
                     {
                         label: "Orthophoniste",
                         name: "Orthophoniste",
-                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        description: "Language.",
                         presentation: "Bilan diagnostic multi-disciplinaire : Orthophoniste",
                         pos: [12, 6],
                     },
                     {
                         label: "Psychometricien",
                         name: "Psychométricien",
-                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        description: "Coordinations motrices et graphisme.",
                         presentation: "Bilan diagnostic multi-disciplinaire : Psychometricien",
                         pos: [12, 9],
                     },
                     {
                         label: "Neuropediatre",
                         name: "Neuropediatre",
-                        description: "recours contre le médecin en se basant sur l’ article R. 4127-33 du Code de la sante publique : Le médecin doit toujours élaborer son diagnostic avec le plus grand soin, en y consacrant le temps nécessaire, en s’aidant dans toute la mesure du possible des méthodes scientifiques les mieux adaptées et, s’il y a lieu, de concours appropriés ».",
+                        description: "Vie familiale.",
                         presentation: "Bilan diagnostic multi-disciplinaire : Neuropediatre",
                         pos: [12, 12],
                     },
@@ -127,7 +127,7 @@ Polymer({
                         "Neuropediatre", "recours Medecin", 1
                     ],
                     [
-                        "Consultation Pedopsychiatre", "recours Pedopsychiatre", 1
+                        "Consultation Pedopsychiatre", "recours legal", 1
                     ]
                 ]
             }
@@ -156,13 +156,13 @@ Polymer({
     putDefinition: function (def) {
         var pres = document.getElementById("pres-diag");
         if (def == 'HAS') {
-            document.getElementById("presentation-paragraph").innerHTML = "Haute Autorité de  Santé : <a href='http://www.has-sante.fr/portail/'>http://www.has-sante.fr/portail/</a>";
+            document.getElementById("presentation-paragraph").innerHTML = "Haute Autorité de  Santé : <a href='http://www.has-sante.fr/portail/' target='_blank'>http://www.has-sante.fr/portail/</a>";
         } else if (def == 'TSA') {
             document.getElementById("presentation-paragraph").innerHTML = "Trouble du Spectre de l'Autisme : Les troubles du spectre de l’autisme sont des troubles neurologiques qui affectent principalement les relations sociales et la communication chez l’enfant. Ces troubles se manifestent par l’apparition de comportements atypiques et le développement d’intérêts restreints chez la personne qui en est atteint.<br /><a href='http://www.has-sante.fr/portail/upload/docs/application/pdf/2010-03/autisme__etat_des_connaissances_argumentaire.pdf#page=18' target='_blank'>En savoir plus</a>";
         } else if (def == 'TED') {
             document.getElementById("presentation-paragraph").innerHTML = "Trouble Envahissant du Développement : groupe hétérogène de pathologies, caractérisées par des altérations qualitatives des interactions sociales, des problèmes de communication (langage et communication non verbale), et des troubles du comportement correspondant à un répertoire d’intérêts et d’activités restreint, stéréotypé et répétitif. Le handicap associé est variable, allant de léger à sévère. Il est presque toujours associé à des difficultés d’apprentissage. L'autisme fait partie des troubles envahissants du développement.<br /><a href='http://www.has-sante.fr/portail/upload/docs/application/pdf/2010-03/autisme__etat_des_connaissances_argumentaire.pdf#page=18' target='_blank'>En savoir plus</a>";
         } else if (def == 'PMI') {
-            document.getElementById("presentation-paragraph").innerHTML = "<h1>Protection Maternelle et Infantile :</h1><h2>Qu’y fait-on ?</h2><h1><p>Dans chaque département, les&nbsp;centres de PMI&nbsp;accueillent, informent et accompagnent les familles au quotidien. Ils assurent :</p><ul><li>des&nbsp;consultations&nbsp;(examens cliniques et vaccinations) ;</li><li>des&nbsp;activités d’éveil&nbsp;>(séances d’accueil-jeu) ;</li><li>un&nbsp;accompagnement de sortie de maternité&nbsp;(conseils, visite à domicile d’une puéricultrice…) ;</li><li>des&nbsp;réunions de parents&nbsp;(futurs parents, allaitement…) ;</li><li>des&nbsp;actions de prévention et de sensibilisation&nbsp;(alimentation, accidents domestiques…) ;</li><li>des&nbspactions de santé en école maternelle&nbsp;;</li><li>le&nbsp;contrôle des assistantes maternelles&nbsp;et des&nbsp;structures de petite enfance.<br></li></ul></h1><h2>Qui y voit-on ?</h2><h1><div><ul><li>Le&nbsp;médecin&nbsp;: suit le développement de l’enfant, s’assure de son état de santé et le vaccine.</li><li>La<strong>&nbsp;puéricultrice&nbsp;</strong>: accompagne les parents dans la découverte des soins du bébé lors des consultations ou à domicile.</li><li>L’<strong>auxiliaire de puériculture&nbsp;</strong>: accueille, informe et oriente les futures mères et jeunes parents.</li><li>L’<strong>éducatrice de jeunes enfants&nbsp;</strong>: assure les séances d’accueil-jeu (activités manuelles, jeux de langage, motricité…).</li><li>La<strong>&nbsp;psychologue&nbsp;</strong>: écoute, soutient et accompagne les parents dans leurs relations avec l’enfant en consultation ou à domicile (troubles du sommeil, pleurs prolongés…).</li><li>La&nbsp;<strong>secrétaire assistante maternelle&nbsp;</strong>: informe les parents et les met en relation avec les assistantes maternelles.</li><li>L’<strong>orthoptiste</strong>&nbsp;: propose un dépistage des troubles visuels dès 9 mois et oriente l’enfant vers un ophtalmologiste si nécessaire.<br></li></ul></div></h1><h2>Où s’adresser ?</h2><h1><div><div><p>Les centres de PMI dépendent des conseils généraux. Pour obtenir les coordonnées du centre le plus proche de chez vous,&nbsp;<strong>contactez le conseil général de votre département ou le service social de votre mairie</strong>.</p></div></div></h1><a href='http://www.lasantedevotreenfant.fr/'>Source</a>";
+            document.getElementById("presentation-paragraph").innerHTML = "<h1>Protection Maternelle et Infantile :</h1><h2>Qu’y fait-on ?</h2><h1><p>Dans chaque département, les&nbsp;centres de PMI&nbsp;accueillent, informent et accompagnent les familles au quotidien. Ils assurent :</p><ul><li>des&nbsp;consultations&nbsp;(examens cliniques et vaccinations) ;</li><li>des&nbsp;activités d’éveil&nbsp;>(séances d’accueil-jeu) ;</li><li>un&nbsp;accompagnement de sortie de maternité&nbsp;(conseils, visite à domicile d’une puéricultrice…) ;</li><li>des&nbsp;réunions de parents&nbsp;(futurs parents, allaitement…) ;</li><li>des&nbsp;actions de prévention et de sensibilisation&nbsp;(alimentation, accidents domestiques…) ;</li><li>des&nbspactions de santé en école maternelle&nbsp;;</li><li>le&nbsp;contrôle des assistantes maternelles&nbsp;et des&nbsp;structures de petite enfance.<br></li></ul></h1><h2>Qui y voit-on ?</h2><h1><div><ul><li>Le&nbsp;médecin&nbsp;: suit le développement de l’enfant, s’assure de son état de santé et le vaccine.</li><li>La<strong>&nbsp;puéricultrice&nbsp;</strong>: accompagne les parents dans la découverte des soins du bébé lors des consultations ou à domicile.</li><li>L’<strong>auxiliaire de puériculture&nbsp;</strong>: accueille, informe et oriente les futures mères et jeunes parents.</li><li>L’<strong>éducatrice de jeunes enfants&nbsp;</strong>: assure les séances d’accueil-jeu (activités manuelles, jeux de langage, motricité…).</li><li>La<strong>&nbsp;psychologue&nbsp;</strong>: écoute, soutient et accompagne les parents dans leurs relations avec l’enfant en consultation ou à domicile (troubles du sommeil, pleurs prolongés…).</li><li>La&nbsp;<strong>secrétaire assistante maternelle&nbsp;</strong>: informe les parents et les met en relation avec les assistantes maternelles.</li><li>L’<strong>orthoptiste</strong>&nbsp;: propose un dépistage des troubles visuels dès 9 mois et oriente l’enfant vers un ophtalmologiste si nécessaire.<br></li></ul></div></h1><h2>Où s’adresser ?</h2><h1><div><div><p>Les centres de PMI dépendent des conseils généraux. Pour obtenir les coordonnées du centre le plus proche de chez vous,&nbsp;<strong>contactez le conseil général de votre département ou le service social de votre mairie</strong>.</p></div></div></h1><a href='http://www.lasantedevotreenfant.fr/' target='_blank'>Source</a>";
         }
         pres.open();
     },

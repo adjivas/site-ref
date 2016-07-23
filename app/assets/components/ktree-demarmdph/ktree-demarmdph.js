@@ -215,7 +215,7 @@
                 fond.style.backgroundColor = '#BBB3E6';
                 this.drawNodes();
                 document.getElementById("ktreebouton2").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('ktree-selector')\">Revenir en arrière</button></a>";
-                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b> Définir l'autisme</p><p class=\" summary\"><b class=\"romanumb\">II</b> Les principales manifestations</p><p class=\" summary\"><b class=\"romanumb\">III</b> Comorbidités et troubles associés</p><p class=\" summary\"><b class=\"romanumb\">IV</b> Etiologie</p><p class=\" summary\"><b class=\"romanumb\">V</b> Classifications</p>";
+                document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b> Les démarches administratives et sociales</p><p class=\" summary\"><b class=\"romanumb\">II</b> Les informations nécessaires aux MDPH pour identifier les besoins</p><p class=\" summary\"><b class=\"romanumb\">III</b> Les besoins de compensation et leur identification : la démarche d’évaluation</p><p class=\" summary\"><b class=\"romanumb\">IV</b> Des clés de lecture pour l’utilisation du GEVA</p>";
                 
             }
  });

@@ -46,13 +46,6 @@
                                 pos: [9.25, 1.75],
                                 label: "VI",
                                 enfant: "",
-                            },
-                            {
-                                name: 'TDAH',
-                                presentation: '',
-                                pos: [10.5, 3.5],
-                                label: "VII",
-                                enfant: "",
                             }
                         ]
                     }
@@ -76,9 +69,6 @@
                             ],
                             [
                                 "Troubles psychiatriques", 'Syndrome de Gilles de la Tourette', 0
-                            ],
-                            [
-                                "Troubles psychiatriques", 'TDAH', 0
                             ]
                         ]
                     }

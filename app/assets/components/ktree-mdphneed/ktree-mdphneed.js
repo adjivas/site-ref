@@ -9,14 +9,14 @@
                                 name: "Les informations nécessaires aux MDPH pour identifier les besoins",
                                 presentation: "<p class=\"textktree\">Depuis la loi du 11 février 2005, la Maison Départementale des Personnes Handicapées a pour mission d’évaluer les situations de handicap. Cette évaluation est confiée à une instance pluridisplinaire (art L. 146-8 du Code de l’Action Sociale et des Familles).</p><p class=\"textktree\">Cette évaluation permet de proposer des réponses adaptées et personnalisées en fonction des besoins des personnes et de respecter un droit essentiel : le droit à la compensation.</p><p class=\"textktree\">Afin d’évaluer de façon précise la situation de la personne, l’équipe pluridisciplinaire de la MDPH a besoin de plusieurs informations : </p>",
                                 enfant: "ktree-demarmdph",
-                                label: "II",
+                                label: "I",
                                 pos: [6, 7.4],
                             },
                             {
                                 name: "Les altérations de fonctions",
                                 presentation: "<p class=\"textktree\">Puisqu’il ne s’agit que d’altération, cela signifie que l’intervention de la MDPH peut se faire alors même qu’il n’existe pas (encore) de diagnostic. En effet, une altération peut être révélée lors du dépistage ou au cours du diagnostic, sans que celui-ci ne soit définitif. Pour que l’altération soit retenue, il faut :</p><ul><li class=\"textktree\">Qu’elle soit confirmée</li><li class=\"textktree\">Que son évaluation soit supérieure à un an</li><li class=\"textktree\">Qu’il existe des conséquences dans la vie de la personne</li></ul><p class=\"textktree\">Une fois cette altération prouvée, la MDPH peut envisager l’application d’un droit à la compensation et élaborer un plan afin de mettre en place toutes les mesures répondant aux besoins de la personne handicapée.</p>",
-                                enfant: "ktree-selector",
-                                label: "I",
+                                enfant: "",
+                                label: "II",
                                 pos: [4, 5.4],
                             },
                             {

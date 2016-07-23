@@ -221,6 +221,8 @@
             },
 
             start: function () {
+                var fond = document.getElementById('menuktree');
+                fond.style.backgroundColor = '#9AEED8';
                 this.drawNodes();
                 document.getElementById("ktreebouton2").innerHTML = "<a><button id=\"boutonactive\" onClick=\"document.querySelector('ktree-selector').showKtree('ktree-selector')\">Revenir en arrière</button></a>";
                 document.getElementById("menuktree").innerHTML = "<p class=\" summary\"><b class=\"romanumb\">I</b>] Les interventions globales et coordonnées</p><p class=\" summary\"><b class=\"romanumb\">II</b>] Les programmes d’interventions personnalisés, globaux et coordonnés</p><p class=\" summary\"><b class=\"romanumb\">III</b>] Les interventions par domaines fonctionnels</p><p class=\" summary\"><b class=\"romanumb\">IV</b>] Le job coaching, “travail chaperonné” ou “travail accompagné”</p><p class=\" summary\"><b class=\"romanumb\">V</b>] La guidance parentale</p>";

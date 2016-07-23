@@ -21,7 +21,7 @@
                             },
                             {
                                 name: "Anomalies chromosomiques mises en évidence chez des enfants avec TSA",
-                                presentation: 'uhyguyg',
+                                presentation: '',
                                 pos: [5, 4],
                                 label: "III",
                                 enfant: "ktree-anoma"
