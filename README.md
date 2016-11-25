@@ -24,7 +24,7 @@ zsh --login "/Applications/Docker/Docker Quickstart Terminal.app/Contents/Resour
 # ```
 # If `Host does not exist: "default"`
 # docker-machine create --driver virtualbox default
-# eval $(docker-machine env dev)
+# eval $(docker-machine env default)
 # ```
 git clone -b docker https://github.com/adjivas/site-ref.git && cd site-ref/debian
 make run
